@@ -1,0 +1,62 @@
+header.header
+  .container
+    .header__container
+      .overlay
+      .logo 
+        a(href="index.html").logo__link
+          .logo__image
+            img(src="../../img/logos/logo.png", alt="logo")
+      nav.nav
+        .nav__head
+          .search
+            form(action="").search__form
+              input(type="text" placeholder="Поиск" required).input.input_style1.search__input
+              button.search__button
+                i.fas.fa-search
+          button.nav__close.mobile-button
+            i.fas.fa-times
+        ul.nav__list
+          li.nav__item  
+            a(href="#").nav__link Барбершопы
+          li.nav__item  
+            a(href="#").nav__link новости            
+          li.nav__item  
+            a(href="#").nav__link ищу сотрудника
+          li.nav__item  
+            a(href="#").nav__link Ищу работу
+      .sub-nav
+        ul.sub-nav__list
+          li.sub-nav__item
+            a(href="#").sub-nav__link.sub-nav__link_city.mobile-button
+              i.fas.fa-map-marker-alt
+              | Выбрать город
+          li.sub-nav__item
+            a(href="#").sub-nav__link.sub-nav__link_lc.mobile-button
+              i.fas.fa-user
+              | Мой Barbershop
+          li.sub-nav__item.sub-nav__item_hamburger
+            a(href="#").sub-nav__link.sub-nav__nav-open.mobile-button
+              i.fas.fa-bars
+        .search-city
+          .search-city__container
+            input(type="text" placeholder='Поиск по городу, индексу').input.input_style1.search-city__input
+            .search-city__content
+              ul.search-city__list.sl--scrollable
+                li.search-city__item.search-city__item_nothing
+                  span.search-city__link.search-city__link_nothing Ничего не найдено!
+                li.search-city__item.search-city__item_city(data-city='Москва')
+                  a(href="#").search-city__link Москва
+                li.search-city__item.search-city__item_city(data-city='Санкт-Петербург')
+                  a(href="#").search-city__link Санкт-Петербург
+                li.search-city__item.search-city__item_city(data-city='Екатеринбург')
+                  a(href="#").search-city__link Екатеринбург
+                li.search-city__item.search-city__item_city(data-city='Нижний Новгород')
+                  a(href="#").search-city__link Нижний Новгород
+                li.search-city__item.search-city__item_city(data-city='Пермь')
+                  a(href="#").search-city__link Пермь
+                li.search-city__item.search-city__item_city(data-city='Новосибирск')
+                  a(href="#").search-city__link Новосибирск
+                li.search-city__item.search-city__item_city(data-city='Омск')
+                  a(href="#").search-city__link Омск
+                li.search-city__item.search-city__item_city(data-city='Петрозаводск')
+                  a(href="#").search-city__link Петрозаводск

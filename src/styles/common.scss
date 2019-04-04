@@ -1,0 +1,63 @@
+@import "./partials/fonts";
+
+body {
+  overflow: hidden;
+  text-rendering: optimizeSpeed;
+  font: 16px "DINPro", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  min-width: 320px;
+  position: relative;
+}
+.body {
+  transition: transform .3s;
+  &_fixed {
+    transform: translateX(270px);
+  }
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 0 15px;
+}
+.input {
+  display: block;
+  height: 30px;
+  outline: none;
+  border: 0;
+  appearance: none;
+  border-radius: 4px;
+  padding: 0 10px;
+  &::placeholder {
+    transition: .3s;
+    font-weight: 300;
+  }
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  &_style1 {
+    background-color: #888a90;
+    color: #fff;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  &_style2 {
+    background-color: #bdbfc5;
+    color: #7e8084;
+    &::placeholder {
+      color: #7e8084;
+    }
+  }
+}
+
+@media all and(max-width: 1200px) {
+  
+}
+
+@import "./partials/header";
+@import "./partials/footer";
