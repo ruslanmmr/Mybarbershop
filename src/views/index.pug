@@ -4,10 +4,16 @@ html(lang="ru")
     include blocks/head
   body.body
     .wrapper
+      include blocks/myplace
       include blocks/header
       .page
         main.main
-          include blocks/home
+          include blocks/banner1
+          include blocks/banner2
+          include blocks/gallery
+          include blocks/recommendations
+          include blocks/banner3
+          include blocks/map
       //footer
       include blocks/footer
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")

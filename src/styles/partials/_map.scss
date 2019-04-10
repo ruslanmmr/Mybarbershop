@@ -1,0 +1,17 @@
+.map {
+  &__container {
+    height: 500px;
+  }
+}
+.map-head {
+  background-color: #181818;
+  position: relative;
+  &__container {
+    padding: 10px 0;
+    position: relative;
+    z-index: 2;
+  }
+  &__background {
+
+  }
+}

@@ -1,0 +1,15 @@
+mixin slide(title, subtitle)
+  .slide.banner-slide.banner-slide_style1
+    .banner-slide__background
+      img(src="img/banner/banner-image1.jpg", alt="").banner-slide__image
+    .banner-slide__container
+      .container
+        h2.banner-slide__title=title
+        h3.banner-slide__sub-title=subtitle
+.banner
+  .banner__container
+    .slider.slider_dots.banner__slider
+      +slide('ЗарЕГИСТРИРУйся', 'и получи больше возможностей...')
+      +slide('Заголовок', 'какой-либо текст...')
+      +slide('Заголовок', 'какой-либо текст...')
+      +slide('Заголовок', 'какой-либо текст...')

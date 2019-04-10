@@ -1,12 +1,15 @@
-.tooltipster-sidetip.tooltipster-light .tooltipster-box {
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #000
+.tooltipster-base {
+  padding: 0 15px;
 }
 
 .tooltipster-sidetip.tooltipster-light .tooltipster-content {
-  color: #b3b3b3;
+  color: #151314;
   font-size: 14px;
+  background: #ff8a00;
+  border-radius: 4px;
+  padding: 10px;
+  font-weight: 400;
+  max-width: 200px;
 }
 
 .tooltipster-sidetip.tooltipster-light .tooltipster-arrow {
@@ -28,22 +31,18 @@
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-bottom .tooltipster-arrow-background {
-  border-bottom-color: #ccc;
   top: 1px
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-left .tooltipster-arrow-background {
-  border-left-color: #ccc;
   left: -1px
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-right .tooltipster-arrow-background {
-  border-right-color: #ccc;
   left: 1px
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-top .tooltipster-arrow-background {
-  border-top-color: #000;
   top: -1px
 }
 
@@ -52,19 +51,19 @@
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-bottom .tooltipster-arrow-border {
-  border-bottom-color: #ccc
+  border-bottom-color: #ff8a00
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-left .tooltipster-arrow-border {
-  border-left-color: #ccc
+  border-left-color: #ff8a00
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-right .tooltipster-arrow-border {
-  border-right-color: #ccc
+  border-right-color: #ff8a00
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-top .tooltipster-arrow-border {
-  border-top-color: #ccc
+  border-top-color: #ff8a00
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-bottom .tooltipster-arrow-uncropped {

@@ -3,9 +3,12 @@ $(document).ready(function () {
   tooltip();
   nav();
   cityBlock();
+  slider();
+  gallery();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
+  gallery();
 });
 
 //global variables
@@ -32,6 +35,7 @@ function cityBlock() {
   inputVal,
   value,
   quantity,
+  state,
   flag;
 
   //события
@@ -82,11 +86,13 @@ function cityBlock() {
       textInput.val("");
       searchCity();
       cityBlock.fadeIn(300);
+      state = true;
       scrollInit();
       list.getNiceScroll().resize();
     } else {
       openbutton.removeClass('mobile-button_active');
       cityBlock.fadeOut(300);
+      state = false;
     }
   };
 
@@ -153,7 +159,6 @@ function nav() {
     }
   })
 }
-
 //lazy
 function lazy() {
   $(".lazy").Lazy({
@@ -182,4 +187,103 @@ function tooltip() {
       mouseleave: true // For mouse
     }
   });
+}
+function slider() {
+  var slider = $('.slider');
+
+  slider.on('init', function () {
+    $(this).addClass('slider_visible')
+  });
+  
+  slider.each(function() {
+    var slideCount = 1,
+        slideCount1200 = 1,
+        slideCount992 = 1,
+        slideCount768 = 1,
+        slideCount576 = 1,
+        slideCount420 = 1,
+        arrows = false,
+        dots = false;
+
+    if($(this).hasClass('slider_dots')) {
+      dots = true;
+    }
+    if($(this).hasClass('slider_arrows')) {
+      arrows = true;
+    }
+    if($(this).hasClass('recommendations-slider')) {
+      slideCount = 6;
+      slideCount1200 = 5;
+      slideCount992 = 4;
+      slideCount768 = 3;
+      slideCount576 = 2;
+      slideCount420 = 1;
+    }
+
+    $(this).slick({
+      infinite: true,
+      dots: dots,
+      arrows: arrows,
+      speed: 600,
+      slidesToShow: slideCount,
+      slidesToScroll: slideCount,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: slideCount1200,
+            slidesToScroll: slideCount1200
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: slideCount992,
+            slidesToScroll: slideCount992
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: slideCount768,
+            slidesToScroll: slideCount768
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: slideCount576,
+            slidesToScroll: slideCount576
+          }
+        },
+        {
+          breakpoint: 420,
+          settings: {
+            slidesToShow: slideCount420,
+            slidesToScroll: slideCount420
+          }
+        }
+      ]
+    });
+  });
+}
+//gallery
+function gallery() {
+  var row = $('.gallery__row:not(:first-child)'),
+      block = $('.gallery-block'),
+      margin;
+
+  if(innerWidth>576) {
+    block.css('margin-top', '0');
+    row.each(function() {
+        margin = -($(this).height() / 2);
+        $(this).css('margin-top', margin);
+    }) 
+  } else {
+    row.css('margin-top', '0');
+    block.each(function() {
+      margin = -($(this).height() / 2);
+      $(this).css('margin-top', margin);
+    }) 
+  }
 }

@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Bernier Distressed';
+    src: local('BERNIER Distressed'), local('BERNIERDistressed-Regular'), url('Bernierdistressed.woff2') format('woff2'), url('Bernierdistressed.woff') format('woff'), url('Bernierdistressed.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
