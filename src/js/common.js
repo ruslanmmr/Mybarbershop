@@ -174,16 +174,15 @@ function tooltip() {
     theme: 'tooltipster-light',
     trigger:'custom',
     animationDuration: 200,
-    trackerInterval: 300,
+    trackerInterval: 100,
     triggerOpen: {
       click: true,  // For mouse
-      tap: true, // For touch device
+      touchstart: true, // For touch device
       mouseenter: true    // For touch device
     },
     triggerClose: {
       click: true,  // For mouse
-      tap: true, // For touch device
-      touchmove: true, // For touch device
+      touchleave: true, // For touch device
       mouseleave: true // For mouse
     }
   });

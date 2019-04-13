@@ -21,6 +21,10 @@ body {
 .wrapper {
   overflow: hidden;
 }
+.main {
+  position: relative;
+  z-index: 1;
+}
 .page {
   transition: transform .3s;
   &_fixed {
