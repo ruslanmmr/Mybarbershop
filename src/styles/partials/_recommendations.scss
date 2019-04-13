@@ -4,7 +4,7 @@
   &__background {
   }
   &__container {
-    padding-top: 0;
+    padding-bottom: 40px;
   }
 }
 .recommendations-slider {
@@ -28,6 +28,7 @@
     text-decoration: none;
     color: #7e8084;
     height: 100%;
+    outline: none;
   }
   &__head {
     position: relative;
@@ -109,5 +110,8 @@
   }
   .recommendations-block__description {
     font-size: 16px;
+  }
+  .recommendations__container {
+    padding-bottom: 30px;
   }
 }

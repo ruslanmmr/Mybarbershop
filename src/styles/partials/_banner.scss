@@ -1,12 +1,8 @@
 .banner {
   position: relative;
+  overflow: hidden;
   &_style2 {
-    padding-bottom: 0;
-    .banner {
-      &__container {
-        background-color: #fff;
-      }
-    }
+    padding: 40px 0;
   }
   &__slider {
     &_style2 {
@@ -30,6 +26,14 @@
         background-color: #fff;
       }
     }
+  }
+  &__container {
+    &_white {
+      background-color: #fff;
+    }
+  }
+  &_top {
+    padding-bottom: 0 !important;
   }
 }
 .banner-slide {
@@ -114,11 +118,6 @@
       padding-top: 26.5%;
     }
   }
-  &_style3 {
-    &:before {
-      padding-top: 26.5%;
-    }
-  }
 }
 @media all and(max-width: 1300px) {
   .banner .container {
@@ -157,8 +156,10 @@
   .banner-slide__sub-title {
     font-size: 24px;
   }
-  .banner-slide_style2,
-  .banner-slide_style3 {
+  .banner_style2 {
+    padding: 30px 0;
+  }
+  .banner-slide_style2 {
     height: 180px;
     &:before {
       display: none;

@@ -11,12 +11,6 @@ body {
   position: relative;
   background-color: #7e8084;
 }
-.body {
-  transition: transform .3s;
-  &_fixed {
-    transform: translateX(270px);
-  }
-}
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -25,7 +19,13 @@ body {
   padding: 0 15px;
 }
 .wrapper {
-  //overflow: hidden;
+  overflow: hidden;
+}
+.page {
+  transition: transform .3s;
+  &_fixed {
+    transform: translateX(270px);
+  }
 }
 .input {
   display: block;
@@ -136,9 +136,6 @@ body {
     }
   }
 }
-.pd-4 {
-  padding: 40px 0;
-}
 .search {
   width: 100%;
   position: relative;
@@ -184,9 +181,6 @@ body {
   .block-head {
     font-size: 20px;
     padding: 20px 0;
-  }
-  .pd-4 {
-    padding: 30px 0;
   }
 }
 @import "./partials/slider";

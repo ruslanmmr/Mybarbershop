@@ -4,9 +4,9 @@ html(lang="ru")
     include blocks/head
   body.body
     .wrapper
-      include blocks/myplace
-      include blocks/header
       .page
+        include blocks/myplace
+        include blocks/header
         main.main
           include blocks/banner1
           include blocks/banner2
@@ -14,8 +14,11 @@ html(lang="ru")
           include blocks/recommendations
           include blocks/banner3
           include blocks/map
-      //footer
-      include blocks/footer
+          include blocks/banner4
+        //footer
+        include blocks/footer
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="js/libs.min.js")                  
     script(src="js/common.min.js")
+    script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full")
+    script(src="js/map.min.js")
