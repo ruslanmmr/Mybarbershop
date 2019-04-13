@@ -1,3 +1,8 @@
+mixin news(title)
+  .news-block
+    a(href="#").news-block__container
+      img(src="img/gallery/image1.jpg", alt="").news-block__image
+      span.news-block__title=title
 .news
   .block-head
     .block-head__background.background.lazy(data-src='img/backgrounds/bg_title.png')
@@ -6,4 +11,12 @@
     span.block-head__decoration.block-head__decoration_right
   .container
     .news__container
+      +news('ОТКРЫЛСЯ Аутентичный салон')
+      +news('Борода как ОБЕРЕГ')
+      +news('ОТКРЫЛСЯ Аутентичный салон и еще какой-либо длинный текст')
+      +news('ОТКРЫЛСЯ Аутентичный салон')
+      +news('Борода как ОБЕРЕГ')
+      +news('ОТКРЫЛСЯ Аутентичный салон и еще какой-либо длинный текст')
+    .news__more
+      a(href="#").news__button Архив Новостей
     

@@ -19,6 +19,7 @@ body {
   padding: 0 15px;
 }
 .wrapper {
+  overflow: hidden;
 }
 .main {
   position: relative;
@@ -26,7 +27,6 @@ body {
 }
 .page {
   transition: transform .3s;
-  overflow: hidden;
   &_fixed {
     transform: translateX(270px);
   }
@@ -198,4 +198,5 @@ body {
 @import "./partials/gallery";
 @import "./partials/recommendations";
 @import "./partials/map";
+@import "./partials/news";
 @import "./partials/footer";
