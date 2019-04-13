@@ -19,7 +19,6 @@ body {
   padding: 0 15px;
 }
 .wrapper {
-  overflow: hidden;
 }
 .main {
   position: relative;
@@ -27,6 +26,7 @@ body {
 }
 .page {
   transition: transform .3s;
+  overflow: hidden;
   &_fixed {
     transform: translateX(270px);
   }
@@ -116,27 +116,31 @@ body {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    &:before,
-    &:after {
-      content: '\f164';
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      -webkit-font-smoothing: antialiased;
-      font-variant: normal;
-      text-rendering: auto;
-      line-height: 1;
-      margin: 0 0.8em;
-      border-radius: 100%;
-      background-color: $main-color;
-      font-size: 0.5em;
-      width: 1.55em;
-      height: 1.55em;
-      padding-top: 0.2em;
-      box-sizing: border-box;
-      text-align: center;
-      color: #181818;
-      transform: translateY(0.1em);
-      flex-shrink: 0;
+    padding: 0 15px;
+    &_icons {
+      padding: 0;
+      &:before,
+      &:after {
+        content: '\f164';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        margin: 0 0.8em;
+        border-radius: 100%;
+        background-color: $main-color;
+        font-size: 0.5em;
+        width: 1.55em;
+        height: 1.55em;
+        padding-top: 0.2em;
+        box-sizing: border-box;
+        text-align: center;
+        color: #181818;
+        transform: translateY(0.1em);
+        flex-shrink: 0;
+      }
     }
   }
 }
