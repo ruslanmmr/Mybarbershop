@@ -37,24 +37,13 @@
   }
 }
 .banner-slide {
-  &__image {
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: auto;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
   &__background {
-    display: block;
     position: absolute;
     z-index: 1;
     height: 100%;
     width: 100%;
     left: 0;
     top: 0;
-    overflow: hidden;
   }
   &__container {
     position: absolute;
@@ -118,11 +107,120 @@
       padding-top: 26.5%;
     }
   }
+  &_style3 {
+    &:before {
+      padding-top: 50%;
+    }
+  }
 }
+.salon-info {
+  display: flex;
+  align-items: flex-end;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.15;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+  &__block {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-section {
+      width: 100%;
+      &:nth-child(2) {
+        padding-top: 10px;
+      }
+    }
+    &_logo {
+      padding-left: 30px;
+    }
+  }
+  &__logo {
+    width: 180px;
+    height: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      bottom: 0;
+      left: 0;
+      display: block;
+    }
+  }
+  &__adress {
+    position: relative;
+    min-height: 37px;
+    i {
+      color: $main-color;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      font-size: 36px;
+    }
+    span {
+      padding-left: 33px;
+      display: block;
+    }
+  }
+  &__time {
+    text-align: center;
+    &-title {
+      white-space: nowrap;
+      display: block;
+      padding-bottom: 4px;
+    }
+    &-value {
+      display: block;
+      color: $main-color;
+      font-size: 24px;
+    }
+  }
+  &__contacts-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+  }
+  &__contacts-item {
+    &:not(:last-child) {
+      padding-bottom: 4px;
+    }
+  }
+  &__contacts-link {
+    text-decoration: none;
+    color: $main-color;
+  }
+  .socials__list {
+    justify-content: flex-end;
+  }
+  .socials__item {
+    &:not(:last-child) {
+      padding-right: 5px;
+    }
+  }
+  .socials__link {
+    background-color: $main-color;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
 @media all and(max-width: 1300px) {
   .banner .container {
     max-width: 100%;
     padding: 0;
+  }
+  .salon-info__container {
+    margin: 0;
+  }
+  .salon-info__block_logo {
+    padding-left: 15px;
   }
 }
 @media all and(max-width: 1200px) {
@@ -134,8 +232,30 @@
   }
 }
 @media all and(max-width: 992px) {
-  .banner-slide_style1 {
+  .salon-info__container {
+    flex-wrap: wrap;
+  }
+  .salon-info__block {
+    flex: 1 1 50%;
+  }
+  .salon-info__block_contacts {
+    order: 2;
+  }
+  .salon-info__block_time {
+    order: 3;
+  }
+  .salon-info__block_adress {
+    order: 4;
+  }
+  .banner-slide_style1,
+  .banner-slide_style3 {
     height: 370px;
+    &:before {
+      display: none;
+    }
+  }
+  .banner-slide_style2 {
+    height: 260px;
     &:before {
       display: none;
     }
@@ -160,9 +280,30 @@
     padding: 30px 0;
   }
   .banner-slide_style2 {
-    height: 180px;
+    height: 170px;
     &:before {
       display: none;
+    }
+  }
+  .salon-info__logo {
+    width: 120px;
+  }
+  .salon-info__logo img {
+    position: relative;
+  }
+  .salon-info__block_logo {
+    flex: 1 1 0;
+    padding-right: 0;
+  }
+}
+@media all and(max-width: 400px) {
+  .salon-info__logo {
+    width: 87px;
+  }
+  .salon-info {
+    .socials__link {
+      width: 33px;
+      height: 33px;
     }
   }
 }

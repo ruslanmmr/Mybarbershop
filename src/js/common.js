@@ -5,10 +5,12 @@ $(document).ready(function () {
   cityBlock();
   slider();
   gallery();
+  cover();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
   gallery();
+  cover();
 });
 
 //global variables
@@ -120,6 +122,22 @@ function cityBlock() {
     list.getNiceScroll().resize();
   };
 }
+//image-cover-box
+function cover() {
+  $('.cover-box').each(function() {
+    //set size
+    var th = $(this).height(),//box height
+        tw = $(this).width(),//box width
+        im = $(this).children('img'),//image
+        ih = im.height(),
+        iw = im.width();
+    if ((tw/th) >= (iw/ih)) {
+        im.addClass('ww').removeClass('wh');
+    } else {
+        im.addClass('wh').removeClass('ww');
+    }
+  });
+}
 
 //nav
 function nav() {
@@ -216,6 +234,14 @@ function slider() {
       slideCount992 = 4;
       slideCount768 = 3;
       slideCount576 = 2;
+      slideCount420 = 1;
+    }
+    if($(this).hasClass('barbers__slider')) {
+      slideCount = 4;
+      slideCount1200 = 4;
+      slideCount992 = 3;
+      slideCount768 = 2;
+      slideCount576 = 1;
       slideCount420 = 1;
     }
 
