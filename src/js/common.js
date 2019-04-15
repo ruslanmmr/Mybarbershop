@@ -191,7 +191,7 @@ function tooltip() {
   $('.tooltip').tooltipster({
     theme: 'tooltipster-light',
     trigger:'custom',
-    animationDuration: 200,
+    animationDuration: 100,
     trackerInterval: 100,
     triggerOpen: {
       click: true,  // For mouse

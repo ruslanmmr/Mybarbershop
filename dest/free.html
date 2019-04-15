@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mybarbershop</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--styles for all pages-->
+    <link rel="stylesheet" href="styles/libs.min.css">
+    <link rel="stylesheet" href="styles/common.min.css">
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <div class="page">
+        <div class="myplace"><a class="myplace__link tooltip" href="#" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
+        <header class="header">
+          <div class="container">
+            <div class="header__container">
+              <div class="overlay"></div>
+              <div class="logo"> <a class="logo__link" href="index.html">
+                  <div class="logo__image"><img src="img/logos/logo.svg" alt="logo"></div></a></div>
+              <nav class="nav">
+                <div class="nav__head">
+                  <form class="nav__form" action="">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                  </form>
+                  <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
+                </div>
+                <ul class="nav__list">
+                  <li class="nav__item"> <a class="nav__link" href="#">Барбершопы</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">новости            </a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">Ищу работу</a></li>
+                </ul>
+              </nav>
+              <div class="sub-nav">
+                <ul class="sub-nav__list">
+                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_city mobile-button" href="#"><i class="fas fa-map-marker-alt"></i>Выбрать город</a></li>
+                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_lc mobile-button" href="#"><i class="fas fa-user"></i>Мой Barbershop</a></li>
+                  <li class="sub-nav__item sub-nav__item_hamburger"><a class="sub-nav__link sub-nav__nav-open mobile-button" href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+                <div class="search-city">
+                  <div class="search-city__container">
+                    <input class="input input_style1 search-city__input" type="text" placeholder="Поиск по городу, индексу">
+                    <div class="search-city__content">
+                      <ul class="search-city__list sl--scrollable">
+                        <li class="search-city__item search-city__item_nothing"><span class="search-city__link search-city__link_nothing">Ничего не найдено!</span></li>
+                        <li class="search-city__item search-city__item_city" data-city="Москва"><a class="search-city__link" href="#">Москва</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Санкт-Петербург"><a class="search-city__link" href="#">Санкт-Петербург</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Екатеринбург"><a class="search-city__link" href="#">Екатеринбург</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Нижний Новгород"><a class="search-city__link" href="#">Нижний Новгород</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Пермь"><a class="search-city__link" href="#">Пермь</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Новосибирск"><a class="search-city__link" href="#">Новосибирск</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Омск"><a class="search-city__link" href="#">Омск</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Петрозаводск"><a class="search-city__link" href="#">Петрозаводск</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="banner">
+            <div class="banner__container">
+              <div class="slider slider_dots banner__slider">
+                          <div class="slide banner-slide banner-slide_style1">
+                            <div class="banner-slide__background cover-box"><img class="banner-slide__image" src="img/banner/banner-image3.jpg" alt=""></div>
+                            <div class="banner-slide__container">
+                              <div class="container"></div>
+                            </div>
+                          </div>
+                          <div class="slide banner-slide banner-slide_style1">
+                            <div class="banner-slide__background cover-box"><img class="banner-slide__image" src="img/banner/banner-image3.jpg" alt=""></div>
+                            <div class="banner-slide__container">
+                              <div class="container"></div>
+                            </div>
+                          </div>
+                          <div class="slide banner-slide banner-slide_style1">
+                            <div class="banner-slide__background cover-box"><img class="banner-slide__image" src="img/banner/banner-image3.jpg" alt=""></div>
+                            <div class="banner-slide__container">
+                              <div class="container"></div>
+                            </div>
+                          </div>
+                          <div class="slide banner-slide banner-slide_style1">
+                            <div class="banner-slide__background cover-box"><img class="banner-slide__image" src="img/banner/banner-image3.jpg" alt=""></div>
+                            <div class="banner-slide__container">
+                              <div class="container"></div>
+                            </div>
+                          </div>
+              </div>
+            </div>
+          </div>
+          <div class="service-selection">
+            <div class="container">
+              <form class="service-selection__container" action="">
+                <div class="service-selection-item">
+                  <input class="service-selection-item__input" type="radio" id="haircut" name="service">
+                  <label class="service-selection-item__container" for="haircut">
+                    <div class="service-selection-item__logo"><img class="lazy" data-src="img/icons/ico-haircut.png" alt=""></div>
+                    <div class="service-selection-item__content">
+                      <div class="service-selection-item__indicator"><i class="fas fa-check"></i></div><img class="service-selection-item__icon" src="img/icons/ico-scissors.png" alt=""><span class="service-selection-item__title">стрижка</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="service-selection-item">
+                  <input class="service-selection-item__input" type="radio" id="shaving" name="service">
+                  <label class="service-selection-item__container" for="shaving">
+                    <div class="service-selection-item__logo"><img class="lazy" data-src="img/icons/ico-shaving.png" alt=""></div>
+                    <div class="service-selection-item__content">
+                      <div class="service-selection-item__indicator"><i class="fas fa-check"></i></div><img class="service-selection-item__icon" src="img/icons/ico-razor.png" alt=""><span class="service-selection-item__title">бритье</span>
+                    </div>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="map">
+            <div class="map-head">
+              <div class="map-head__background background lazy" data-src="img/backgrounds/bg_title.png"></div>
+              <div class="map-head__container">
+                <div class="container">
+                  <form class="map-filter" action="">
+                    <div class="map-filter__section map-filter__section_search">
+                      <div class="search">
+                        <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
+                        <button class="search__button"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                    <div class="map-filter__section map-filter__section_filter">
+                      <div class="map-filter__container">
+                        <div class="map-filter__title">Режим работы:</div>
+                        <div class="map-filter__content">
+                          <div class="map-filter-value">
+                            <input class="map-filter-value__input" id="map-filter-value-1" type="checkbox">
+                            <label class="map-filter-value__container map-filter-value__container_style1 map-filter-value__container_value1" for="map-filter-value-1">
+                              <div class="map-filter-value__title">с утра</div>
+                            </label>
+                          </div>
+                          <div class="map-filter-value">
+                            <input class="map-filter-value__input" id="map-filter-value-2" type="checkbox">
+                            <label class="map-filter-value__container map-filter-value__container_style1 map-filter-value__container_value2" for="map-filter-value-2">
+                              <div class="map-filter-value__title">до поздна</div>
+                            </label>
+                          </div>
+                          <div class="map-filter-value">
+                            <input class="map-filter-value__input" id="map-filter-value-3" type="checkbox">
+                            <label class="map-filter-value__container map-filter-value__container_style1 map-filter-value__container_value3" for="map-filter-value-3">
+                              <div class="map-filter-value__title">круглосуточно</div>
+                            </label>
+                          </div>
+                        </div>
+                      </div><span class="map-filter__decoration"></span>
+                      <div class="map-filter__container">
+                        <div class="map-filter__title">Стоимость услуг:</div>
+                        <div class="map-filter__content">
+                          <div class="map-filter-value">
+                            <input class="map-filter-value__input" id="map-filter-value-4" type="checkbox">
+                            <label class="map-filter-value__container map-filter-value__container_style2 map-filter-value__container_value4 tooltip" for="map-filter-value-4" title="от 100 до 550р">
+                              <div class="map-filter-value__title">Premium</div>
+                            </label>
+                          </div>
+                          <div class="map-filter-value">
+                            <input class="map-filter-value__input" id="map-filter-value-5" type="checkbox">
+                            <label class="map-filter-value__container map-filter-value__container_style2 map-filter-value__container_value5 tooltip" for="map-filter-value-5" title="от 550 до 1000р">
+                              <div class="map-filter-value__title">Standard</div>
+                            </label>
+                          </div>
+                          <div class="map-filter-value">
+                            <input class="map-filter-value__input" id="map-filter-value-6" type="checkbox">
+                            <label class="map-filter-value__container map-filter-value__container_style2 map-filter-value__container_value6 tooltip" for="map-filter-value-6" title="от 1000р">
+                              <div class="map-filter-value__title">Economy</div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="map__container">
+              <div id="map"></div>
+            </div>
+          </div>
+          <div class="banner banner_style2">
+            <div class="banner__container">
+              <div class="container">
+                <div class="slider slider_arrows banner__slider banner__slider_style2">
+                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" src="img/banner/banner-image3.png" alt=""></a></div>
+                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" src="img/banner/banner-image3.png" alt=""></a></div>
+                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" src="img/banner/banner-image3.png" alt=""></a></div>
+                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" src="img/banner/banner-image3.png" alt=""></a></div>
+                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" src="img/banner/banner-image3.png" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news">
+            <div class="block-head">
+              <div class="block-head__background background lazy" data-src="img/backgrounds/bg_title.png"></div><span class="block-head__decoration block-head__decoration_left"></span><span class="block-head__title">Новости</span><span class="block-head__decoration block-head__decoration_right"></span>
+            </div>
+            <div class="container">
+              <div class="news__container">
+                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон</span></a></div>
+                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">Борода как ОБЕРЕГ</span></a></div>
+                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон и еще какой-либо длинный текст</span></a></div>
+                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон</span></a></div>
+                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">Борода как ОБЕРЕГ</span></a></div>
+                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон и еще какой-либо длинный текст</span></a></div>
+              </div>
+              <div class="news__more"><a class="news__button" href="#">Архив Новостей</a></div>
+            </div>
+          </div>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__container">
+              <div class="footer__section footer__section_top">
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить место</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить специалистов</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доступ к организации</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Правила работы с отзывами</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Политика конфиденциальности</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">О проекте “MyBarbershop”</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Вакансии</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__section footer__section_bottom"><span class="footer__message">Увидели ошибку - сообщите нам нажав Ctrl+Enter</span>
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/libs.min.js">                 </script>
+    <script src="js/common.min.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script src="js/map.min.js"></script>
+  </body>
+</html>

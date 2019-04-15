@@ -1,0 +1,23 @@
+.service-selection
+  .container
+    form(action="").service-selection__container
+      .service-selection-item
+        input(type="radio" id="haircut" name='service').service-selection-item__input
+        label(for="haircut").service-selection-item__container
+          .service-selection-item__logo
+            img(data-src="img/icons/ico-haircut.png", alt="").lazy
+          .service-selection-item__content
+            .service-selection-item__indicator
+              i.fas.fa-check
+            img(src="img/icons/ico-scissors.png", alt="").service-selection-item__icon
+            span.service-selection-item__title стрижка
+      .service-selection-item
+        input(type="radio" id="shaving" name='service').service-selection-item__input
+        label(for="shaving").service-selection-item__container
+          .service-selection-item__logo
+            img(data-src="img/icons/ico-shaving.png", alt="").lazy
+          .service-selection-item__content
+            .service-selection-item__indicator
+              i.fas.fa-check
+            img(src="img/icons/ico-razor.png", alt="").service-selection-item__icon
+            span.service-selection-item__title бритье
