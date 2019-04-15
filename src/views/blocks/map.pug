@@ -1,14 +1,15 @@
 .map
   .map-head
-    .map-head__background.background.lazy(data-src='img/backgrounds/bg_title.png')
+    .map-head__background.background.lazy(data-src='img/backgrounds/bg-logos.png')
     .map-head__container
-      .container
-        form(action="").map-filter
+      form(action="").map-filter
+        .container
           .map-filter__section.map-filter__section_search
             .search
               input(type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required).input.input_style1.search__input
               button.search__button
                 i.fas.fa-search
+            span.map-filter__search-count всего найдено: 7 мест
           .map-filter__section.map-filter__section_filter
             .map-filter__container
               .map-filter__title Режим работы:
@@ -41,5 +42,18 @@
                   input(id='map-filter-value-6' type="checkbox").map-filter-value__input
                   label(for='map-filter-value-6' title='от 1000р').map-filter-value__container.map-filter-value__container_style2.map-filter-value__container_value6.tooltip
                     .map-filter-value__title Economy
+      .map-recomendations
+        .map-recomendations__decoration
+          span
+          i.fas.fa-thumbs-up
+          span
+        .container
+          ul.map-recomendations__list
+            li.map-recomendations__item
+              a(href="#").map-recomendations__link <strong>Бритва</strong> /на Новоясеневском проспекте/
+            li.map-recomendations__item
+              a(href="#").map-recomendations__link <strong>TopGun</strong> /в ТЦ МЕГА Химки/
+            li.map-recomendations__item
+              a(href="#").map-recomendations__link <strong>Barbarossa</strong> /на метро Ясенево/
   .map__container
     div(id='map')

@@ -6,6 +6,7 @@ $(document).ready(function () {
   slider();
   gallery();
   cover();
+  modalMagnificBasket();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
@@ -144,7 +145,8 @@ function nav() {
   var navButton = $('.sub-nav__nav-open, .nav__close, .overlay'),
     nav = $('.nav'),
     navLink = $('.nav__link'),
-    overlay = $('.overlay');
+    overlay = $('.overlay'),
+    scrollLink = $('.scroll-link');
 
   navButton.click(function (event) {
     event.preventDefault();
@@ -169,12 +171,32 @@ function nav() {
       navState();
     }
   });
-  
   navLink.on('click', function () {
     if(innerWidth < 993) {
       nav.removeClass('nav_active');
       navState();
     }
+  })
+
+  //якорные ссылки
+  scrollLink.click(function (event) {
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+      event.preventDefault();
+
+    if(innerWidth < 993) {
+      nav.removeClass('nav_active');
+      navState();
+      setTimeout(function () {
+        $('body,html').animate({
+          scrollTop: top
+          }, 400);
+        }, 300)
+      } else {
+        $('body,html').animate({
+          scrollTop: top
+        }, 400);
+      }
   })
 }
 //lazy
@@ -312,4 +334,17 @@ function gallery() {
       $(this).css('margin-top', margin);
     })
   }
+}
+//popup
+function modalMagnificBasket() {
+  $('.popup_link').magnificPopup({
+    closeBtnInside: false,
+    showCloseBtn: false,
+    fixedContentPos: true,
+    removalDelay: 300,
+    mainClass: 'mfp-fade'
+  });
+  $('.popup-close').click(function() {
+    $.magnificPopup.close();
+});
 }

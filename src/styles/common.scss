@@ -11,6 +11,10 @@ body {
   position: relative;
   background-color: #7e8084;
 }
+b,
+strong {
+  font-weight: 500;
+}
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -63,6 +67,48 @@ body {
     }
   }
 }
+.checkbox {
+  &__input {
+    display: none;
+    &:checked ~ label i {
+      background-color: $main-color;
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+  &__label {
+    position: relative;
+    cursor: pointer;
+    i {
+      height: 19px;
+      width: 19px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+      border: 1px solid $main-color;
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+      &:before {
+        opacity: 0;
+      }
+    }
+    a {
+      color: inherit;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    span {
+      display: block;
+      padding-left: 35px;
+      line-height: 19px;
+      font-size: 17px;
+    }
+  }
+}
 .background {
   position: absolute;
   width: 100%;
@@ -73,7 +119,6 @@ body {
   left: 0;
 }
 .block-head {
-  background-color: #181818;
   position: relative;
   font-size: 36px;
   text-transform: uppercase;
@@ -81,6 +126,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  &_background {
+    background-color: #181818;
+  }
   &__decoration {
     border-top: 1px dashed $main-color;
     margin-top: 1px;
@@ -244,7 +292,7 @@ body {
 }
 @import "./partials/slider";
 @import "./partials/header";
-@import "./partials/myplace";
+@import "./partials/fixed";
 @import "./partials/banner";
 @import "./partials/gallery";
 @import "./partials/recommendations";
@@ -253,3 +301,4 @@ body {
 @import "./partials/barbers";
 @import "./partials/choise";
 @import "./partials/footer";
+@import "./partials/popup";

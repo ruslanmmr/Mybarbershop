@@ -1,0 +1,133 @@
+.popup {
+  margin: 0 auto;
+  &_registration {
+    max-width: 440px;
+  }
+}
+.popup-registration {
+  border-radius: 4px;
+  background-color: #181818;
+  margin: 0 auto;
+  padding: 20px 50px 35px 50px;
+  font-size: 17px;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../img/logos/logo.svg') no-repeat left top;
+    background-size: 120% 120%;
+    opacity: 0.4;
+  }
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  &__head {
+    position: relative;
+    padding-bottom: 25px;
+  }
+  &__submit {
+    border: 0;
+    background: $main-color;
+    padding: 15px 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 13px;
+    transition: 0.3s;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    outline: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__title {
+    color: #fff;
+    font-size: 22px;
+    line-height: 40px;
+    margin: 0;
+  }
+  .popup-close {
+    outline: none;
+    background-color: transparent;
+    color: $main-color;
+    font-size: 18px;
+    display: block;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    padding: 0;
+    right: -14px;
+    top: 0;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__form-group {
+    margin-bottom: 25px;
+    &_checkbox {
+      margin: 50px 0;
+    }
+  }
+  &__input {
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid $main-color;
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    outline: none;
+    color: #fff;
+    &::placeholder {
+      color: #65666a;
+    }
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+  &__socials {
+    margin-top: 30px;
+    span {
+      display: block;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .socials__list {
+      justify-content: space-between;
+      margin: -4px;
+      flex-wrap: wrap;
+    }
+    .socials__item {
+      padding: 4px;
+    }
+    .socials__link {
+      border-radius: 4px;
+      background-color: $main-color;
+      color: #181818;
+      i {
+        
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 576px) {
+  .popup-registration {
+    padding: 20px;
+  }
+}

@@ -12,7 +12,51 @@
   <body class="body">
     <div class="wrapper">
       <div class="page">
-        <div class="myplace"><a class="myplace__link tooltip" href="#" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
+        <div class="popup modal_container mfp-with-anim mfp-hide popup_registration" id="registration">
+          <div class="popup__container">
+            <div class="popup-registration">
+              <div class="popup-registration__container">
+                <div class="popup-registration__head">
+                  <h3 class="popup-registration__title">Регистрация</h3>
+                  <button class="popup-close"><i class="fas fa-times"></i></button>
+                </div>
+                <form class="popup-registration__form" action="">
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="text" placeholder="Email/Телефон" required>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="password" placeholder="Пароль" required>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="password" placeholder="Пароль еще раз" required>
+                  </div>
+                  <div class="popup-registration__form-group popup-registration__form-group_checkbox">
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="siterules" required>
+                      <label class="checkbox__label" for="siterules"><i class="fas fa-check"></i><span>Я согласен(на) <a href="#">с правилами сайта</a></span></label>
+                    </div>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <button class="popup-registration__submit" type="submit">Зарегистрироваться</button>
+                  </div>
+                </form>
+                <div class="popup-registration__socials"><span>или войти с помощью</span>
+                  <div class="socials">
+                    <ul class="socials__list">
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-yandex"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><a class="forum-link" href="#">форум</a>
+        <div class="myplace"><a class="myplace__link tooltip popup_link" href="#registration" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
         <header class="header">
           <div class="container">
             <div class="header__container">
@@ -31,7 +75,7 @@
                 </div>
                 <ul class="nav__list">
                   <li class="nav__item"> <a class="nav__link" href="#">Барбершопы</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="#">новости            </a></li>
+                  <li class="nav__item"> <a class="nav__link scroll-link" href="#news">новости            </a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">Ищу работу</a></li>
                 </ul>
@@ -39,7 +83,7 @@
               <div class="sub-nav">
                 <ul class="sub-nav__list">
                   <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_city mobile-button" href="#"><i class="fas fa-map-marker-alt"></i>Выбрать город</a></li>
-                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_lc mobile-button" href="#"><i class="fas fa-user"></i>Мой Barbershop</a></li>
+                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_lc mobile-button popup_link" href="#registration"><i class="fas fa-user"></i>Мой Barbershop</a></li>
                   <li class="sub-nav__item sub-nav__item_hamburger"><a class="sub-nav__link sub-nav__nav-open mobile-button" href="#"><i class="fas fa-bars"></i></a></li>
                 </ul>
                 <div class="search-city">
@@ -132,8 +176,8 @@
             </div>
           </div>
           <div class="map">
-            <div class="block-head">
-              <div class="block-head__background background lazy" data-src="img/backgrounds/bg_title.png"></div><span class="block-head__decoration block-head__decoration_left"></span><span class="block-head__title">местоположение</span><span class="block-head__decoration block-head__decoration_right"></span>
+            <div class="block-head block-head_background">
+              <div class="block-head__background background lazy" data-src="img/backgrounds/bg-logos.png"></div><span class="block-head__decoration block-head__decoration_left"></span><span class="block-head__title">местоположение</span><span class="block-head__decoration block-head__decoration_right"></span>
             </div>
             <div class="map__container">
               <div id="map"></div>
@@ -141,9 +185,7 @@
           </div>
           <div class="barbers">
             <div class="barbers__background background lazy" data-src="img/backgrounds/bg_gallery.png"></div>
-            <div class="block-head">
-              <div class="block-head__background background lazy" data-src="img/backgrounds/bg_title.png"></div><span class="block-head__decoration block-head__decoration_left"></span><span class="block-head__title block-head__title_icons">барберы</span><span class="block-head__decoration block-head__decoration_right"></span>
-            </div>
+            <div class="block-head"><span class="block-head__decoration block-head__decoration_left"></span><span class="block-head__title block-head__title_icons">барберы</span><span class="block-head__decoration block-head__decoration_right"></span></div>
             <div class="container">
               <div class="barbers__container">
                 <div class="slider slider_arrows barbers__slider">
@@ -216,9 +258,9 @@
               </div>
             </div>
           </div>
-          <div class="news">
-            <div class="block-head">
-              <div class="block-head__background background lazy" data-src="img/backgrounds/bg_title.png"></div><span class="block-head__decoration block-head__decoration_left"></span><span class="block-head__title">Новости</span><span class="block-head__decoration block-head__decoration_right"></span>
+          <div class="news" id="news">
+            <div class="block-head block-head_background">
+              <div class="block-head__background background lazy" data-src="img/backgrounds/bg-logos.png"></div><span class="block-head__decoration block-head__decoration_left"></span><span class="block-head__title">Новости</span><span class="block-head__decoration block-head__decoration_right"></span>
             </div>
             <div class="container">
               <div class="news__container">
@@ -242,7 +284,7 @@
                   <ul class="footer-nav__list">
                     <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить место</a></li>
                     <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить специалистов</a></li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доступ к организации</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доступ к салону</a></li>
                   </ul>
                 </div>
                 <div class="footer-nav">

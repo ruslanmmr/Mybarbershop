@@ -19,15 +19,18 @@
 .map-head {
   background-color: #181818;
   position: relative;
-  border-bottom: 3px solid #7e8084;
+  border-top: 2px solid #7e8084;
   &__container {
-    padding: 10px 0 7px 0;
+    padding: 15px 0;
     position: relative;
     z-index: 2;
   }
 }
 .map-filter {
   color: #7e8084;
+  .search {
+    flex: 1 1 50%;
+  }
   &__container {
     display: flex;
     padding: 0 15px;
@@ -35,7 +38,7 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -3px;
+    margin: -3px;
   }
   &__section {
     display: flex;
@@ -43,10 +46,18 @@
     align-items: center;
     &_search {
       padding-bottom: 7px;
+      flex-wrap: wrap;
     }
     &_filter {
       margin: 0 -15px;
     }
+  }
+  &__search-count {
+    font-size: 24px;
+    white-space: nowrap;
+    display: block;
+    padding-left: 20px;
+    flex: 1 1 50%;
   }
   &__decoration {
     height: 1px;
@@ -67,7 +78,7 @@
     }
   }
   &__title {
-    padding: 8px 10px 8px 0;
+    padding: 5px 10px 5px 0;
     white-space: nowrap;
   }
 }
@@ -151,6 +162,77 @@
     }
   }
 }
+.map-recomendations {
+  &__decoration {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      display: block;
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      background-color: $main-color;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin: 0 15px;
+      &:before {
+        margin-top: -0.15em;
+      }
+    }
+    span {
+      display: block;
+      flex: 1 1 100%;
+      border-top: 1px dashed $main-color;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background-color: $main-color;
+        top: -4px;
+        border-radius: 100%;
+      }
+      &:first-child {
+        &:before {
+          right: 0;
+        }
+      }
+      &:last-child {
+        &:before {
+          left: 0;
+        }
+      }
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -7px;
+  }
+  &__item {
+    padding: 7px;
+  }
+  &__link {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    background-color: $main-color;
+    padding: 5px 20px;
+    border-radius: 4px;
+  }
+}
 
 @media all and(max-width: 1200px) {
   .map-filter__decoration {
@@ -161,9 +243,6 @@
   }
   .map-filter-value__container {
     background-color: rgba(136, 138, 144, 0.15);
-  }
-  .map-head__container {
-    padding: 15px 0 12px 0;
   }
 }
 @media all and(max-width: 768px) {
@@ -177,5 +256,14 @@
   }
   .map__container:before {
     padding-top: 100%;
+  }
+  .map-filter__search-count {
+    flex: 1 1 100%;
+  }
+  .map-filter__search-count {
+    padding: 10px 0 0 0;
+  }
+  .map-recomendations__item {
+    width: 100%;
   }
 }

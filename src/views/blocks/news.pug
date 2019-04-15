@@ -3,9 +3,9 @@ mixin news(title)
     a(href="#").news-block__container
       img(src="img/gallery/image1.jpg", alt="").news-block__image
       span.news-block__title=title
-.news
-  .block-head
-    .block-head__background.background.lazy(data-src='img/backgrounds/bg_title.png')
+.news(id='news')
+  .block-head.block-head_background
+    .block-head__background.background.lazy(data-src='img/backgrounds/bg-logos.png')
     span.block-head__decoration.block-head__decoration_left
     span.block-head__title Новости
     span.block-head__decoration.block-head__decoration_right

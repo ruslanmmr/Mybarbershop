@@ -1,0 +1,46 @@
+.popup.modal_container.mfp-with-anim.mfp-hide(id="registration").popup_registration
+  .popup__container
+    .popup-registration
+      .popup-registration__container
+        .popup-registration__head
+          h3.popup-registration__title Регистрация
+          button.popup-close
+            i.fas.fa-times
+        form(action="").popup-registration__form
+          .popup-registration__form-group
+            input(type="text" placeholder="Email/Телефон" required).popup-registration__input
+          .popup-registration__form-group
+            input(type="password" placeholder="Пароль" required).popup-registration__input
+          .popup-registration__form-group
+            input(type="password" placeholder="Пароль еще раз" required).popup-registration__input
+          .popup-registration__form-group.popup-registration__form-group_checkbox
+            .checkbox
+              input(type="checkbox" id='siterules' required).checkbox__input
+              label(for="siterules").checkbox__label
+                i.fas.fa-check
+                span Я согласен(на) 
+                  a(href="#") с правилами сайта
+          .popup-registration__form-group
+            button(type='submit').popup-registration__submit Зарегистрироваться
+        .popup-registration__socials
+          span или войти с помощью
+          .socials
+            ul.socials__list
+              li.socials__item
+                a(href="#").socials__link
+                  i.fab.fa-facebook-f
+              li.socials__item
+                a(href="#").socials__link
+                  i.fab.fa-vk
+              li.socials__item
+                a(href="#").socials__link
+                  i.fab.fa-twitter
+              li.socials__item
+                a(href="#").socials__link
+                  i.fab.fa-odnoklassniki
+              li.socials__item
+                a(href="#").socials__link
+                  i.fab.fa-google-plus-g
+              li.socials__item
+                a(href="#").socials__link
+                  i.fab.fa-yandex
