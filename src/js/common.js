@@ -401,7 +401,7 @@ function share() {
   function getVk() {
     $.getScript('https://vk.com/js/api/openapi.js?160', function() {
       //
-      VK.init({apiId: 6968160, onlyWidgets: true});
+      VK.init({apiId: 6968173, onlyWidgets: true});
       VK.Widgets.Like("vk_like", {type: "mini", height: 30});
     })
   }
