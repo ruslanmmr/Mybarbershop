@@ -1,0 +1,105 @@
+.barber-info {
+  &__container {
+    display: flex;
+    padding: 80px 0 0 0;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+      padding-bottom: 30px;
+    }
+  }
+  &__section {
+    flex: 1 1 100%;
+    &_left {
+      flex: 1 0 420px;
+    }
+  }
+  &__photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid $main-color;
+  }
+  &__name {
+    color: $main-color;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  &__experience {
+    display: flex;
+    &-item {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1;
+      display: block;
+      span {
+        font-size: 24px;
+        display: block;
+      }
+      &:first-child {
+        text-align: right;
+        padding-right: 25px;
+        position: relative;
+        &:after {
+          content: '/';
+          font-size: 38px;
+          line-height: 1;
+          position: absolute;
+          right: 5px;
+          top: 0;
+        }
+      }
+    }
+  }
+  &__salon {
+    display: flex;
+    align-items: flex-end;
+    &-logo {
+      width: 85px;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-info {
+      padding-left: 30px;
+    }
+    &-title {
+      font-size: 24px;
+    }
+    &-adress {
+      font-size: 18px;
+      line-height: 1.2em;
+      transform: translateY(0.2em);
+    }
+  }
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &-trigger {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 4px 8px;
+    margin: 0 8px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+    &:hover {
+      color: #000;
+      background: $main-color;
+    }
+  }
+}

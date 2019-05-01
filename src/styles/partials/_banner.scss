@@ -1,45 +1,38 @@
 .banner {
   position: relative;
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  .slick-list {
+    overflow: visible;
+    padding: 0 !important;
+  }
   &_style2 {
     padding: 40px 0;
-  }
-  &__slider {
-    &_style2 {
+    .slick-slider {
       &:before,
       &:after {
         content: '';
         display: block;
         position: absolute;
-        width: 100vw;
+        width: 100%;
         height: 100%;
         top: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        left: 0;
+        z-index: 3;
       }
       &:before {
-        left: -15px;
-        transform: translateX(-100%);
-        background-color: $main-color;
+        left: -100%;
       }
       &:after {
-        right: -15px;
-        transform: translateX(100%);
-        background-color: #fff;
+        left: 100%;
       }
     }
-  }
-  &__container {
-    &_white {
-      background-color: #fff;
-    }
-  }
-  &_top {
-    padding-bottom: 0 !important;
   }
 }
 .banner-slide {
-  &_mask {
-
-  }
+  max-width: 1920px;
   &__background {
     position: absolute;
     z-index: 1;
@@ -206,12 +199,6 @@
   .socials__item {
     &:not(:last-child) {
       padding-right: 5px;
-    }
-  }
-  .socials__link {
-    background-color: $main-color;
-    &:hover {
-      opacity: 0.8;
     }
   }
 }

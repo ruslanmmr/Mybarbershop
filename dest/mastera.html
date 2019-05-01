@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mybarbershop</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--styles for all pages-->
+    <link rel="stylesheet" href="styles/libs.min.css">
+    <link rel="stylesheet" href="styles/common.min.css">
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <div class="page">
+        <!--share-->
+        <div class="share-area">
+          <div class="share-area__container">
+            <button class="share-area__close"><i class="fas fa-times"></i></button>
+            <div class="share-area__content">
+              <div id="vk_like"></div>
+            </div>
+          </div>
+        </div>
+        <!--regisrtation-->
+        <div class="popup modal_container mfp-with-anim mfp-hide popup_registration" id="registration">
+          <div class="popup__container">
+            <div class="popup-registration">
+              <div class="popup-registration__container">
+                <div class="popup-registration__head">
+                  <h3 class="popup-registration__title">Регистрация</h3>
+                  <button class="popup-close"><i class="fas fa-times"></i></button>
+                </div>
+                <form class="popup-registration__form" action="">
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="text" placeholder="Email/Телефон" required>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="password" placeholder="Пароль" required>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="password" placeholder="Пароль еще раз" required>
+                  </div>
+                  <div class="popup-registration__form-group popup-registration__form-group_checkbox">
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="siterules" required>
+                      <label class="checkbox__label" for="siterules"><i class="fas fa-check"></i><span>Я согласен(на) <a href="#">с правилами сайта</a></span></label>
+                    </div>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <button class="popup-registration__submit" type="submit">Зарегистрироваться</button>
+                  </div>
+                </form>
+                <div class="popup-registration__socials"><span>или войти с помощью</span>
+                  <div class="socials">
+                    <ul class="socials__list">
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-yandex"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><a class="forum-link" href="#">форум</a>
+        <div class="myplace"><a class="myplace__link tooltip popup_link" href="#registration" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
+        <header class="header">
+          <div class="container">
+            <div class="header__container">
+              <div class="overlay"></div>
+              <div class="logo"> <a class="logo__link" href="index.html">
+                  <div class="logo__image"><img src="img/logos/logo.svg" alt="logo"></div></a></div>
+              <nav class="nav">
+                <div class="nav__head">
+                  <form class="nav__form" action="">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                  </form>
+                  <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
+                </div>
+                <ul class="nav__list">
+                  <li class="nav__item"> <a class="nav__link" href="#">Барбершопы</a></li>
+                  <li class="nav__item"> <a class="nav__link scroll-link" href="#news">новости            </a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">Ищу работу</a></li>
+                </ul>
+              </nav>
+              <div class="sub-nav">
+                <ul class="sub-nav__list">
+                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_city mobile-button" href="#"><i class="fas fa-map-marker-alt"></i>Выбрать город</a></li>
+                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_lc mobile-button popup_link" href="#registration"><i class="fas fa-user"></i>Мой Barbershop</a></li>
+                  <li class="sub-nav__item sub-nav__item_hamburger"><a class="sub-nav__link sub-nav__nav-open mobile-button" href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+                <div class="search-city">
+                  <div class="search-city__container">
+                    <input class="input input_style1 search-city__input" type="text" placeholder="Поиск по городу, индексу">
+                    <div class="search-city__content">
+                      <ul class="search-city__list sl--scrollable">
+                        <li class="search-city__item search-city__item_nothing"><span class="search-city__link search-city__link_nothing">Ничего не найдено!</span></li>
+                        <li class="search-city__item search-city__item_city" data-city="Москва"><a class="search-city__link" href="#">Москва</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Санкт-Петербург"><a class="search-city__link" href="#">Санкт-Петербург</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Екатеринбург"><a class="search-city__link" href="#">Екатеринбург</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Нижний Новгород"><a class="search-city__link" href="#">Нижний Новгород</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Пермь"><a class="search-city__link" href="#">Пермь</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Новосибирск"><a class="search-city__link" href="#">Новосибирск</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Омск"><a class="search-city__link" href="#">Омск</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Петрозаводск"><a class="search-city__link" href="#">Петрозаводск</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main main_barber">
+          <div class="background main__background lazy" data-src="img/backgrounds/bg-barber.jpg"></div>
+          <div class="barber-info">
+            <div class="container">
+              <div class="barber-info__container">
+                <div class="barber-info__section barber-info__section_left">
+                  <div class="barber-info__row"><img class="barber-info__photo" src="img/photo.jpg" alt=""></div>
+                  <div class="barber-info__row"><span class="barber-info__name">Александ Иванов</span>
+                    <div class="barber-info__experience"><span class="barber-info__experience-item"><span>32</span> возраст</span><span class="barber-info__experience-item"><span>5</span> стаж</span></div>
+                  </div>
+                  <div class="barber-info__row">
+                    <div class="number-block">
+                      <button class="number-block__show-btn"></button>
+                      <div class="number-block__title">Показать телефон</div><a class="number-block__number" href="tel:79258008080">+7 925 <span>xxx-xx-xx</span></a>
+                    </div>
+                    <div class="socials socials_style2">
+                      <ul class="socials__list">
+                        <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                        <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                        <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-youtube"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="barber-info__row">
+                    <div class="barber-info__salon">
+                      <div class="barber-info__salon-logo"><img src="img/logos/britva.jpg" alt=""></div>
+                      <div class="barber-info__salon-info">
+                        <div class="barber-info__salon-title">BRITVA / Moscow</div>
+                        <div class="barber-info__salon-adress">2-я Рощинская ул., 1А</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="barber-info__row">
+                    <div class="share"><span class="main-decoration main-decoration_left"></span><a class="share-trigger" href="#">поделиться</a><span class="main-decoration main-decoration_right"></span></div>
+                  </div>
+                </div>
+                <div class="barber-info__section"></div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__container">
+              <div class="footer__section footer__section_top">
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить место</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить специалистов</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доступ к салону</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Правила работы с отзывами</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Политика конфиденциальности</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">О проекте “MyBarbershop”</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Вакансии</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__section footer__section_bottom"><span class="footer__message">Увидели ошибку - сообщите нам нажав Ctrl+Enter</span>
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/libs.min.js">                 </script>
+    <script src="js/common.min.js"></script>
+  </body>
+</html>

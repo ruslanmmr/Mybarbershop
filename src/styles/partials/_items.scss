@@ -1,0 +1,176 @@
+.socials {
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    &:not(:last-child) {
+      padding-right: 10px;
+    }
+  }
+  i {
+    position: absolute;
+    font-size: 23px;
+    display: block;
+    transition: 0.15s;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    background-color: #595e69;
+    border-radius: 100%;
+    position: relative;
+    transition: 0.15s;
+    color: #7e8084;
+  }
+  &_style2 {
+    i {
+      color: #0d0e10;
+    }
+    .socials {
+      &__item {
+        &:not(:last-child) {
+          padding-right: 5px;
+        }
+      }
+      &__link {
+        background-color: $main-color;
+        &:hover {
+          background-color: transparent;
+          i {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+.main-decoration {
+  border-top: 1px dashed $main-color;
+  margin-top: 1px;
+  flex: 1 1 100%;
+  position: relative;
+  z-index: 2;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: $main-color;
+  }
+  &:first-child {
+    &:before {
+      right: 0;
+    }
+  }
+  &:last-child {
+    &:before {
+      left: 0;
+    }
+  }
+}
+.block-head {
+  position: relative;
+  font-size: 36px;
+  text-transform: uppercase;
+  padding: 27px 0;
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    //max-width: 1920px;
+  }
+  &_background {
+    background-color: #181818;
+  }
+  &__title {
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    line-height: 1em;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 15px;
+    &_icons {
+      padding: 0;
+      &:before,
+      &:after {
+        content: '\f164';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        margin: 0 0.8em;
+        border-radius: 100%;
+        background-color: $main-color;
+        font-size: 0.5em;
+        width: 1.55em;
+        height: 1.55em;
+        padding-top: 0.2em;
+        box-sizing: border-box;
+        text-align: center;
+        color: #181818;
+        transform: translateY(0.1em);
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+.number-block {
+  background-color: $main-color;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 5px 10px;
+  text-align: center;
+  position: relative;
+  &__title {
+    display: block;
+    color: #0f1012;
+    line-height: 1;
+  }
+  &__show-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+    top: 0;
+    left: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  &__number {
+    text-decoration: none;
+    color: #0f1012;
+    line-height: 1;
+  }
+}
+
+//responsive
+@media all and(max-width: 768px) {
+  .block-head {
+    font-size: 28px;
+    padding: 24px 0;
+  }
+}
+@media all and(max-width: 576px) {
+  .block-head {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+}

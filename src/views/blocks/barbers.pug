@@ -20,9 +20,10 @@ mixin slide(name)
 .barbers
   .barbers__background.background.lazy(data-src='img/backgrounds/bg_gallery.png')
   .block-head
-    span.block-head__decoration.block-head__decoration_left
-    span.block-head__title.block-head__title_icons барберы
-    span.block-head__decoration.block-head__decoration_right
+    .block-head__container
+      span.main-decoration
+      span.block-head__title.block-head__title_icons барберы
+      span.main-decoration
   .container
     .barbers__container
       .slider.slider_arrows.barbers__slider

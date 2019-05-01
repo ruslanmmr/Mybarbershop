@@ -7,6 +7,8 @@ $(document).ready(function () {
   gallery();
   cover();
   modalMagnificBasket();
+  showNum();
+  share();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
@@ -242,7 +244,8 @@ function slider() {
         slideCount576 = 1,
         slideCount420 = 1,
         arrows = false,
-        dots = false;
+        dots = false,
+        centerMode = false;
 
     if($(this).hasClass('slider_dots')) {
       dots = true;
@@ -266,12 +269,17 @@ function slider() {
       slideCount576 = 1;
       slideCount420 = 1;
     }
+    if($(this).hasClass('banner__slider')) {
+      centerMode = true;
+    }
 
     $(this).slick({
       infinite: true,
       dots: dots,
       arrows: arrows,
       speed: 600,
+      lazyLoad: 'progressive',
+      centerMode: centerMode,
       slidesToShow: slideCount,
       slidesToScroll: slideCount,
       responsive: [
@@ -347,4 +355,58 @@ function modalMagnificBasket() {
   $('.popup-close').click(function() {
     $.magnificPopup.close();
 });
+}
+//num
+function showNum() {
+  var num = '999-99-99',
+      $toggleBtn = $('.number-block__show-btn');
+
+      $toggleBtn.on('click', function() {
+        $(this).parents('.number-block').find('span').text(num);
+        $(this).remove();
+      })
+}
+
+//share-trigger
+function share() {
+  var $shareTrigger = $('.share-trigger'),
+      $shareBlock = $('.share-area'),
+      $shareClose = $('.share-area__close');
+
+  $shareTrigger.on('click', function(e) {
+    e.preventDefault();
+    $shareBlock.fadeIn(200);
+    pos();
+    getVk();
+  })
+
+  $shareClose.on('click', function(e) {
+    e.preventDefault();
+    $shareBlock.fadeOut(200);
+  })
+
+  function pos() {
+    var headerHeight = $('.header').height(),
+        scroll = $(window).scrollTop();
+      
+    console.log(scroll, headerHeight)
+
+    if (scroll < headerHeight) {
+      $shareBlock.css({'position': 'absolute', 'top': headerHeight});
+    } else {
+      $shareBlock.css({'position': 'fixed', 'top': '0'});
+    }
+  }
+
+  function getVk() {
+    $.getScript('https://vk.com/js/api/openapi.js?160', function() {
+      //
+      VK.init({apiId: 6968160, onlyWidgets: true});
+      VK.Widgets.Like("vk_like", {type: "mini", height: 30});
+    })
+  }
+
+  $(window).on('scroll resize', function () {
+      pos();
+  });
 }

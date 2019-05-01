@@ -25,9 +25,27 @@ strong {
 .wrapper {
   overflow: hidden;
 }
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  left: 0;
+}
 .main {
   position: relative;
   z-index: 1;
+  &_barber {
+    height: 4000px;
+    background-color: #121417;
+  }
+  &__background {
+    background-size: 100% auto;
+    background-repeat: repeat;
+    background-position: top center;
+  }
 }
 .page {
   transition: transform .3s;
@@ -106,89 +124,6 @@ strong {
       padding-left: 35px;
       line-height: 19px;
       font-size: 17px;
-    }
-  }
-}
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  top: 0;
-  left: 0;
-}
-.block-head {
-  position: relative;
-  font-size: 36px;
-  text-transform: uppercase;
-  padding: 27px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &_background {
-    background-color: #181818;
-  }
-  &__decoration {
-    border-top: 1px dashed $main-color;
-    margin-top: 1px;
-    flex: 1 1 100%;
-    position: relative;
-    z-index: 2;
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -4px;
-      width: 7px;
-      height: 7px;
-      border-radius: 100%;
-      background-color: $main-color;
-    }
-    &_left {
-      &:before {
-        right: 0;
-      }
-    }
-    &_right {
-      &:before {
-        left: 0;
-      }
-    }
-  }
-  &__title {
-    position: relative;
-    z-index: 2;
-    font-weight: 700;
-    line-height: 1em;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    padding: 0 15px;
-    &_icons {
-      padding: 0;
-      &:before,
-      &:after {
-        content: '\f164';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        -webkit-font-smoothing: antialiased;
-        font-variant: normal;
-        text-rendering: auto;
-        line-height: 1;
-        margin: 0 0.8em;
-        border-radius: 100%;
-        background-color: $main-color;
-        font-size: 0.5em;
-        width: 1.55em;
-        height: 1.55em;
-        padding-top: 0.2em;
-        box-sizing: border-box;
-        text-align: center;
-        color: #181818;
-        transform: translateY(0.1em);
-        flex-shrink: 0;
-      }
     }
   }
 }
@@ -279,17 +214,9 @@ strong {
   
 }
 @media all and(max-width: 768px) {
-  .block-head {
-    font-size: 28px;
-    padding: 24px 0;
-  }
+  
 }
-@media all and(max-width: 576px) {
-  .block-head {
-    font-size: 20px;
-    padding: 20px 0;
-  }
-}
+@import "./partials/items";
 @import "./partials/slider";
 @import "./partials/header";
 @import "./partials/fixed";
@@ -302,3 +229,4 @@ strong {
 @import "./partials/choise";
 @import "./partials/footer";
 @import "./partials/popup";
+@import "./partials/barber-info";

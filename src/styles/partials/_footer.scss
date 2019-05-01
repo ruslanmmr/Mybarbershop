@@ -67,36 +67,6 @@
     }
   }
 }
-.socials {
-  &__list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  &__item {
-    &:not(:last-child) {
-      padding-right: 10px;
-    }
-  }
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 37px;
-    height: 37px;
-    background-color: #595e69;
-    border-radius: 100%;
-    position: relative;
-    transition: 0.3s;
-    color: #7e8084;
-    i {
-      position: absolute;
-      font-size: 20px;
-      display: block;
-    }
-  }
-}
 
 @media all and(max-width: 768px) {
   .footer__section {

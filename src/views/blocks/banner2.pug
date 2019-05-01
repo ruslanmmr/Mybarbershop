@@ -1,13 +1,11 @@
 mixin slide()
   .slide.banner-slide.banner-slide_style2
     a(href="#").banner-slide__background.cover-box
-      img(src="img/banner/banner-image2.jpg", alt="").banner-slide__image
-.banner.banner_style2.banner_top
-  .banner__container.banner__container_white
+      img(alt="").banner-slide__image&attributes(attributes)
+.banner.banner_style2
+  .banner__container
     .container
       .slider.slider_arrows.banner__slider
-        +slide()
-        +slide()
-        +slide()
-        +slide()
-        +slide()
+        +slide()(data-lazy="img/banner/banner-image2.jpg")
+        +slide()(data-lazy="img/banner/banner-image3.png")
+        +slide()(data-lazy="img/banner/banner-image4.jpg")

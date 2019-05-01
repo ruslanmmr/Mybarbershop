@@ -10,9 +10,6 @@
       }
     }
   }
-  &_arrows {
-
-  }
   &_visible {
     opacity: 1;
   }
@@ -61,7 +58,7 @@
   }
   .slick-arrow {
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     top: 50%;
     transform: translateY(-50%);
     font-size: 0;
