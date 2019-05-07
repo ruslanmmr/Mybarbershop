@@ -1,0 +1,31 @@
+.awards {
+  &__container {
+    padding: 20px 0;
+  }
+}
+.awards-slide {
+  padding: 0 25px;
+  display: flex !important;
+  justify-content: center;
+  &__container {
+    transition: opacity 0.3s;
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 200px;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media all and(max-width: 576px) {
+  .awards-slide {
+    padding: 0 15px;
+  }
+  .awards__slider .slick-list {
+    margin: 0 -15px;
+  }
+}

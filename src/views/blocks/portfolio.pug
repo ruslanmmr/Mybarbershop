@@ -1,0 +1,24 @@
+mixin block()
+  .portfolio-block.gallery__item
+    a(href="img/gallery/haircut.jpg").portfolio-block__link
+      img(data-lazy="img/gallery/haircut.jpg", alt="")
+.portfolio
+  .block-head
+    .block-head__container
+      span.main-decoration
+      span.block-head__title.block-head__title_stars моё портфолио
+      span.main-decoration
+  .portfolio__container
+    .container
+      .slider.slider_arrows.portfolio__slider.gallery
+        +block()
+        +block()
+        +block()
+        +block()
+        +block()
+        +block()
+        +block()
+        +block()
+        +block()
+        +block()
+        

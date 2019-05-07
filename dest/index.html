@@ -9,26 +9,30 @@
     <link rel="stylesheet" href="styles/libs.min.css">
     <link rel="stylesheet" href="styles/common.min.css">
   </head>
-  <body class="body">
+  <body class="body compensate-for-scrollbar">
     <div class="wrapper">
       <div class="page">
         <!--share-->
         <div class="share-area">
           <div class="share-area__container">
-            <button class="share-area__close"><i class="fas fa-times"></i></button>
             <div class="share-area__content">
-              <div id="vk_like"></div>
+              <div class="share-area__wrap">
+                <div id="fb-root"></div>
+                <div class="fb-like share-area__item" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+                <div class="share-area__item" id="vk_like"></div>
+                <div class="share-area__item" id="ok_shareWidget"></div>
+              </div>
             </div>
+            <button class="share-area__close"><i class="fas fa-times"></i></button>
           </div>
         </div>
         <!--regisrtation-->
-        <div class="popup modal_container mfp-with-anim mfp-hide popup_registration" id="registration">
+        <div class="popup popup_registration" id="registration">
           <div class="popup__container">
             <div class="popup-registration">
               <div class="popup-registration__container">
                 <div class="popup-registration__head">
                   <h3 class="popup-registration__title">Регистрация</h3>
-                  <button class="popup-close"><i class="fas fa-times"></i></button>
                 </div>
                 <form class="popup-registration__form" action="">
                   <div class="popup-registration__form-group">
@@ -66,7 +70,7 @@
             </div>
           </div>
         </div><a class="forum-link" href="#">форум</a>
-        <div class="myplace"><a class="myplace__link tooltip popup_link" href="#registration" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
+        <div class="myplace"><a class="myplace__link tooltip modal modal-link" href="javascript:;" data-src="#registration" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
         <header class="header">
           <div class="container">
             <div class="header__container">
@@ -93,7 +97,7 @@
               <div class="sub-nav">
                 <ul class="sub-nav__list">
                   <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_city mobile-button" href="#"><i class="fas fa-map-marker-alt"></i>Выбрать город</a></li>
-                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_lc mobile-button popup_link" href="#registration"><i class="fas fa-user"></i>Мой Barbershop</a></li>
+                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_lc mobile-button modal-link" href="javascript:;" data-src="#registration"><i class="fas fa-user"></i>Мой Barbershop</a></li>
                   <li class="sub-nav__item sub-nav__item_hamburger"><a class="sub-nav__link sub-nav__nav-open mobile-button" href="#"><i class="fas fa-bars"></i></a></li>
                 </ul>
                 <div class="search-city">

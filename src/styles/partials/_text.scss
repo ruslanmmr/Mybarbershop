@@ -1,0 +1,12 @@
+b,
+strong {
+  font-weight: 500;
+}
+p {
+  margin: 0 0 1em 0;
+  text-align: justify;
+  text-align-last: left;
+  &:last-child {
+    margin: 0;
+  }
+}

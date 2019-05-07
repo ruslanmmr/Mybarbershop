@@ -1,19 +1,21 @@
 //share
 .share-area
   .share-area__container
+    .share-area__content
+      .share-area__wrap
+        #fb-root
+        .fb-like.share-area__item(data-width='', data-layout='button_count', data-action='like', data-size='large', data-show-faces='false', data-share='false')
+        #vk_like.share-area__item
+        #ok_shareWidget.share-area__item
     button.share-area__close
       i.fas.fa-times
-    .share-area__content
-      #vk_like
 //regisrtation
-.popup.modal_container.mfp-with-anim.mfp-hide(id="registration").popup_registration
+.popup.popup_registration(id="registration")
   .popup__container
     .popup-registration
       .popup-registration__container
         .popup-registration__head
           h3.popup-registration__title Регистрация
-          button.popup-close
-            i.fas.fa-times
         form(action="").popup-registration__form
           .popup-registration__form-group
             input(type="text" placeholder="Email/Телефон" required).popup-registration__input

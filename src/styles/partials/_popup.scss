@@ -1,5 +1,26 @@
+//
+.fancybox-content {
+  padding: 0;
+  background-color: transparent;
+}
+.fancybox-slide {
+  padding: 20px 15px;
+}
+.fancybox-button {
+  color: $main-color !important;
+  transition: .3s;
+  opacity: 1;
+  &:hover {
+    background-color: rgba(252, 156, 47, 0.2);
+  }
+}
+.fancybox-thumbs__list a::before {
+  border-color: $main-color;
+}
+//
 .popup {
   margin: 0 auto;
+  display: none;
   &_registration {
     max-width: 440px;
   }

@@ -7,14 +7,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &:not(:last-child) {
-      padding-bottom: 30px;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  &__item {
+    padding: 10px 15px;
+    &_justify {
+      width: 100%;
     }
+  }
+  &__content {
+    margin: -10px 0;
+  }
+  &__top-content {
+  }
+  &__bottom-content {
+    margin: 30px 0 0 0;
   }
   &__section {
     flex: 1 1 100%;
     &_left {
       flex: 1 0 420px;
+    }
+    &_right {
+      flex: 1 1 100%;
+      padding: 0 0 0 30px;
     }
   }
   &__photo {
@@ -22,6 +39,7 @@
     width: 100%;
     height: auto;
     border: 1px solid $main-color;
+    margin-bottom: 25px;
   }
   &__name {
     color: $main-color;
@@ -57,6 +75,7 @@
   &__salon {
     display: flex;
     align-items: flex-end;
+    margin-bottom: 30px;
     &-logo {
       width: 85px;
       img {
@@ -77,29 +96,84 @@
       transform: translateY(0.2em);
     }
   }
+  &__text {
+    b {
+      color: $main-color;
+    }
+  }
+  &__presentation {
+    margin: 35px 0 0 0;
+    &-head {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin: 0 0 25px 0;
+    }
+    &-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 30px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+  &__socials {
+    padding: 20px;
+  }
 }
 
-.share {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  &-trigger {
-    font-size: 24px;
-    font-weight: 700;
-    padding: 4px 8px;
-    margin: 0 8px;
+@media all and(max-width: 1170px) {
+  .barber-info__presentation-title {
+    font-size: 28px;
+  }
+}
+@media all and(max-width: 992px) {
+  .barber-info__container {
+    padding: 50px 0 0 0;
+  }
+  .barber-info__section_left {
+    flex: 1 0 300px;
+  }
+  .barber-info__salon-info {
+    padding-left: 20px;
+  }
+}
+@media all and(max-width: 768px) {
+  .barber-info__container {
     display: block;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 0.3s;
-    &:hover {
-      color: #000;
-      background: $main-color;
-    }
+  }
+  .barber-info__section_right {
+    padding: 30px 0 0 0;
+  }
+  .barber-info__section_left {
+  }
+  .barber-info__top-content {
+    display: flex;
+    margin: 0;
+  }
+  .barber-info__content {
+    padding: 0 0 0 30px;
+  }
+  .barber-info__photo {
+    margin: 0;
+  }
+}
+@media all and(max-width: 576px) {
+  .barber-info__top-content {
+    display: block;
+  }
+  .barber-info__content {
+    padding: 0;
+  }
+  .barber-info__image {
+    margin: 0 0 20px 0;
+  }
+  .barber-info__presentation-title {
+    font-size: 20px;
+    margin: 0 15px;
+  }
+  .share-trigger {
+    font-size: 20px;
   }
 }
