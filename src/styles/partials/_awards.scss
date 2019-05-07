@@ -2,6 +2,10 @@
   &__container {
     padding: 20px 0;
   }
+  .slick-track {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 .awards-slide {
   padding: 0 25px;
