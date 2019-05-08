@@ -1,6 +1,7 @@
 @import "./partials/fonts";
 
 $main-color: #ff8a00;
+$hover-color: #ca6c00;
 
 body {
   text-rendering: optimizeSpeed;
@@ -34,9 +35,9 @@ body {
 .main {
   position: relative;
   z-index: 1;
-  &_barber {
-    height: 4000px;
+  &_style2 {
     background-color: #121417;
+    padding-bottom: 100px;
   }
   &__background {
     background-size: 100% auto;
@@ -210,8 +211,10 @@ body {
 @media all and(max-width: 1200px) {
   
 }
-@media all and(max-width: 768px) {
-  
+@media all and(max-width: 576px) {
+  .main_style2 {
+    padding-bottom: 40px;
+  }
 }
 @import "./partials/items";
 @import "./partials/text";
@@ -229,4 +232,6 @@ body {
 @import "./partials/popup";
 @import "./partials/portfolio";
 @import "./partials/awards";
+@import "./partials/experience";
+@import "./partials/publications";
 @import "./partials/barber-info";

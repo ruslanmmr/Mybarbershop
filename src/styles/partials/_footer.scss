@@ -1,6 +1,7 @@
 .footer {
   color: #595e69;
   font-size: 18px;
+  padding-top: 100px;
   &__container {
     padding: 40px 0;
     position: relative;
@@ -9,7 +10,7 @@
       display: block;
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -30px;
       width: 570px;
       height: 570px;
       background: url('../img/logos/logo.svg') no-repeat;

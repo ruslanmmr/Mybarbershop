@@ -1,0 +1,114 @@
+.publications {
+  padding-bottom: 40px;
+  &__archive {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    &-link {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      padding: 4px 8px;
+      margin: 0 8px;
+      border-radius: 5px;
+      background-color: transparent;
+      border: 0;
+      transition: 0.3s;
+      white-space: nowrap;
+      &:hover {
+        color: #000;
+        background: $main-color;
+      }
+    }
+  }
+}
+.publications__slider {
+  .slick-list {
+    margin: -15px;
+  }
+}
+.publications-slide {
+  padding: 15px;
+  &__container {
+    padding: 15px;
+    background-color: #fff;
+    background: rgba(160, 160, 160, 0.6);
+    display: flex;
+    height: 100%;
+  }
+  &__image {
+    width: 180px;
+    flex-shrink: 0;
+  }
+  &__content {
+    padding: 0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__section {
+    padding-bottom: 15px;
+  }
+  &__title {
+    display: block;
+    font-size: 18px;
+    color: $main-color;
+    padding: 20px 0 15px 0;
+  }
+  &__read {
+    text-decoration: none;
+    color: $main-color;
+    font-size: 12px;
+    i {
+      margin-left: 4px;
+    }
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+@media all and(max-width: 992px) {
+  .publications-slide__image {
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    img {
+      position: absolute;
+      display: block;
+      min-width: 100%;
+      min-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+@media all and(max-width: 576px) {
+  .publications-slide__title {
+    padding-top: 0;
+  }
+}
+@media all and(max-width: 420px) {
+  .publications-slide__title {
+    padding-top: 0;
+  }
+  .publications-slide__container {
+    display: block;
+  }
+  .publications-slide__content {
+    padding: 20px 0 0 0;
+  }
+  .publications-slide__image {
+    width: 100%;
+    &:before {
+      padding-top: 70%;
+    }
+  }
+}

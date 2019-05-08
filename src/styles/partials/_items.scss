@@ -1,3 +1,6 @@
+.tooltipster-base {
+  z-index: 9000 !important;
+}
 .socials {
   &__list {
     display: flex;
@@ -101,16 +104,25 @@
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    padding: 0 15px;
+    margin: 0 0.8em;
+    &:before,
+    &:after {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    &:before {
+      margin: 0 0.8em 0 0;
+    }
+    &:after {
+      margin: 0 0 0 0.8em;
+    }
     &_icons {
       padding: 0;
       &:before,
       &:after {
         content: '\f164';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        line-height: 1;
-        margin: 0 0.8em;
         border-radius: 100%;
         background-color: $main-color;
         font-size: 0.5em;
@@ -121,7 +133,12 @@
         text-align: center;
         color: #181818;
         transform: translateY(0.1em);
-        flex-shrink: 0;
+      }
+      &:before {
+        margin: 0 0.8em 0 0;
+      }
+      &:after {
+        margin: 0 0 0 0.8em;
       }
     }
     &_stars {
@@ -129,19 +146,10 @@
       &:before,
       &:after {
         content: '\f005';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        line-height: 1;
-        margin: 0 0.8em;
         font-size: 0.8em;
-        width: 1.55em;
-        height: 1.55em;
-        padding-top: 0.2em;
         box-sizing: border-box;
         text-align: center;
         color: $main-color;
-        transform: translateY(0.1em);
-        flex-shrink: 0;
       }
     }
   }

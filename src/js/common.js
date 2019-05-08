@@ -9,15 +9,18 @@ $(document).ready(function () {
   showNum();
   share();
   popup();
+  autoHeight();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
   gallery();
   cover();
+  autoHeight();
 });
 
 //global variables
 var innerWidth = $('body').innerWidth(),
+    $slider = $('.slider'),
   //scroll-styling
   cursorcolorVar = "#fff",
   cursorwidthVar = "7px",
@@ -205,10 +208,14 @@ function nav() {
 function lazy() {
   $(".lazy").Lazy({
     visibleOnly: true,
-    threshold: '',
+    threshold: '1000',
     effect: 'fadeIn',
     effectTime: '300',
-    defaultImage: false
+    defaultImage: false,
+    afterLoad: function() {
+      autoHeight();
+      $slider.slick('setPosition');
+    }
   });
 }
 //tooltips
@@ -232,13 +239,14 @@ function tooltip() {
 }
 
 function slider() {
-  var slider = $('.slider');
-
-  slider.on('init', function () {
+  $slider.on('init', function () {
     $(this).addClass('slider_visible')
   });
 
-  slider.each(function () {
+  $slider.each(function () {
+    $(this).on('init reInit afterChange', function(){
+      lazy();
+    });
     var slideCount = 1,
       slidesPerRow = 1,
       slideCount1200 = 1,
@@ -301,6 +309,17 @@ function slider() {
       adaptiveHeight = true;
     }
 
+    if ($(this).hasClass('publications__slider')) {
+      slidesPerRow = 2;
+      rows = 2;
+      slidesPerRow1200 = 2;
+      slidesPerRow992 = 1;
+      slidesPerRow768 = 1;
+      slidesPerRow576 = 1;
+      slidesPerRow420 = 1;
+      adaptiveHeight = true;
+    }
+
     $(this).slick({
       infinite: true,
       dots: dots,
@@ -356,6 +375,8 @@ function slider() {
       ]
     });
   });
+  //fix
+  $('.publications-slide').parent().css('display', 'flex');
 }
 //gallery
 function gallery() {
@@ -525,4 +546,22 @@ function popup() {
 
 
   $('body').removeClass('compensate-for-scrollbar');
+}
+
+//корректировка высоты блоков
+function autoHeight() {
+  var $block = $('.js-auto-height__item');
+
+  $block.css('height', 'auto');
+  //корректировка высоты
+  $block.parent().each(function() {
+    var mh = 0;
+    $(this).find($block).each(function () {
+      var h_block = parseInt($(this).height());
+      if(h_block > mh) {
+         mh = h_block;
+      };
+    });
+    $(this).find($block).height(mh);
+  })
 }

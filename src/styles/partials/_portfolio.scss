@@ -1,11 +1,12 @@
 .portfolio {
+  padding-bottom: 40px;
   &__container {
-    padding: 20px 0;
+    //padding: 20px 0 0 0;
   }
 }
 .portfolio__slider {
   .slick-list {
-    margin: -15px -15px 0 -15px;
+    margin: -15px;
   }
 }
 .portfolio-block {
