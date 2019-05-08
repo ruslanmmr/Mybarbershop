@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   overflow: hidden;
-  max-width: 1920px;
+  max-width: 3000px;
   margin: 0 auto;
   .slick-list {
     overflow: visible;
@@ -33,6 +33,7 @@
 }
 .banner-slide {
   max-width: 1920px;
+  background: rgba(0, 0, 0, 0.4);
   &__background {
     position: absolute;
     z-index: 1;
@@ -40,6 +41,21 @@
     width: 100%;
     left: 0;
     top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &[data-filter] {
+      opacity: 0.4;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #001a4b;
+        opacity: 0.35;
+        z-index: 2;
+      }
+    }
   }
   &__container {
     position: absolute;
@@ -73,39 +89,14 @@
     position: relative;
     z-index: 1;
   }
-  &_mask {
-    .banner-slide {
-      &__background {
-        &:after {
-          content: '';
-          display: block;
-          position: relative;
-          width: 100%;
-          height: 100%;
-          background-color: #001a4b;
-          opacity: 0.35;
-          z-index: 2;
-        }
-      }
-      &__image {
-        filter: grayscale(100%);
-        opacity: 0.6;
-      }
-    }
-  }
   &_style1 {
     &:before {
-      padding-top: 37.5%;
+      padding-top: 60%;
     }
   }
   &_style2 {
     &:before {
       padding-top: 26.5%;
-    }
-  }
-  &_style3 {
-    &:before {
-      padding-top: 50%;
     }
   }
 }

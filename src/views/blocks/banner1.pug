@@ -1,15 +1,12 @@
-mixin slide(title, subtitle)
-  .slide.banner-slide.banner-slide_mask.banner-slide_style3
-    .banner-slide__background.cover-box
-      img(src="img/banner/banner-image1.jpg", alt="").banner-slide__image
-    .banner-slide__container
-      h2.banner-slide__title=title
-      h3.banner-slide__sub-title=subtitle
-.banner
-  .container
-    .banner__container
-      .slider.slider_dots.slider_arrows.banner__slider
-        +slide('ЗарЕГИСТРИРУйся', 'и получи больше возможностей...')
-        +slide('Заголовок', 'какой-либо текст...')
-        +slide('Заголовок', 'какой-либо текст...')
-        +slide('Заголовок', 'какой-либо текст...')
+mixin banner()
+  .banner
+    .container
+      .banner__container
+        .slider.slider_dots.slider_arrows.banner__slider
+          .slide.banner-slide.banner-slide_style1
+            .banner-slide__background.lazy&attributes(attributes)
+            block
+          .slide.banner-slide.banner-slide_style1
+            .banner-slide__background.lazy&attributes(attributes)
+            block
+        

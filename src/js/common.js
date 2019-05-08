@@ -220,6 +220,7 @@ function lazy() {
     afterLoad: function() {
       autoHeight();
       $slider.slick('setPosition');
+      cover();
     }
   });
 }

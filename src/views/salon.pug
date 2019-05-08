@@ -10,7 +10,9 @@ html(lang="ru")
         include blocks/myplace
         include blocks/header
         main.main
-          include blocks/banner-salon
+          include blocks/banner1
+          +banner()(data-src="img/banner/banner-salon.jpg")
+          include blocks/salon-info
           include blocks/place
           include blocks/barbers
           include blocks/banner2
