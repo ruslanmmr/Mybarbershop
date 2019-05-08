@@ -91,6 +91,7 @@
     i {
       font-size: 26px;
       color: #fff;
+      pointer-events: none;
     }
     &:hover {
       background-color: $main-color;

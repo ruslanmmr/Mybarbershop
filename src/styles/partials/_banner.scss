@@ -7,28 +7,28 @@
     overflow: visible;
     padding: 0 !important;
   }
-  &_style2 {
-    padding: 40px 0;
-    .slick-slider {
-      &:before,
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        background-color: rgba(0, 0, 0, 0.4);
-        left: 0;
-        z-index: 3;
-      }
-      &:before {
-        left: -100%;
-      }
-      &:after {
-        left: 100%;
-      }
+  .slick-slider {
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      left: 0;
+      z-index: 3;
     }
+    &:before {
+      left: -100%;
+    }
+    &:after {
+      left: 100%;
+    }
+  }
+  &_with-padding {
+    padding: 40px 0;
   }
 }
 .banner-slide {
@@ -48,8 +48,6 @@
     top: 0;
     left: 0;
     z-index: 3;
-  }
-  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,13 +237,6 @@
   .salon-info__block_adress {
     order: 4;
   }
-  .banner-slide_style1,
-  .banner-slide_style3 {
-    height: 370px;
-    &:before {
-      display: none;
-    }
-  }
   .banner-slide_style2 {
     height: 260px;
     &:before {
@@ -286,6 +277,9 @@
   .salon-info__block_logo {
     flex: 1 1 0;
     padding-right: 0;
+  }
+  .banner-slide__container {
+    padding-bottom: 40px;
   }
 }
 @media all and(max-width: 400px) {

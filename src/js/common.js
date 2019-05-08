@@ -147,20 +147,25 @@ function cover() {
 
 //nav
 function nav() {
-  var navButton = $('.sub-nav__nav-open, .nav__close, .overlay'),
-    nav = $('.nav'),
+  var $navToggle = $('.sub-nav__nav-open, .nav__close'),
+    $overlay = $('.overlay'),
+    $nav = $('.nav'),
     navLink = $('.nav__link'),
     overlay = $('.overlay'),
     scrollLink = $('.scroll-link');
 
-  navButton.click(function (event) {
+    $navToggle.on('click', function (event) {
     event.preventDefault();
-    nav.toggleClass('nav_active');
+    $nav.toggleClass('nav_active');
     navState();
-  })
+    })
+    $overlay.on('click touchstart', function () {
+      $nav.removeClass('nav_active');
+      navState();
+    })
 
   function navState() {
-    if (nav.hasClass('nav_active')) {
+    if ($nav.hasClass('nav_active')) {
       overlay.fadeIn(300);
       scrollLock.hide($("body"));
       $('.page').addClass('page_fixed');
@@ -172,13 +177,13 @@ function nav() {
   }
   $(window).resize(function () {
     if (innerWidth > 992) {
-      nav.removeClass('nav_active');
+      $nav.removeClass('nav_active');
       navState();
     }
   });
   navLink.on('click', function () {
     if (innerWidth < 993) {
-      nav.removeClass('nav_active');
+      $nav.removeClass('nav_active');
       navState();
     }
   })
@@ -190,7 +195,7 @@ function nav() {
     event.preventDefault();
 
     if (innerWidth < 993) {
-      nav.removeClass('nav_active');
+      $nav.removeClass('nav_active');
       navState();
       setTimeout(function () {
         $('body,html').animate({
@@ -425,10 +430,11 @@ function share() {
     e.preventDefault();
     shareOpen();
   })
-  $shareClose.on('click', function (e) {
-    e.preventDefault();
-    shareClose();
-  })
+  $(document).on('click touchstart', function (e) {
+    if ($shareClose.is(e.target) || !$shareTrigger.is(e.target) && !$shareBlock.is(e.target) && $shareBlock.has(e.target).length === 0) {
+      shareClose();
+    }
+  });
 
 
   function shareOpen() {

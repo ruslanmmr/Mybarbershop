@@ -71,23 +71,14 @@
     background-color: transparent;
     cursor: pointer;
     transition: 0.3s;
+    color: #dadada;
     &:after {
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      line-height: 1;
       font-size: 56px;
-      color: #3f3f3f;
-      transition: 0.3s;
     }
     &:hover {
-      &:after {
-        color: #6d6d6d;
-      }
+      color: $main-color;
     }
   }
   .slick-next {
@@ -119,7 +110,8 @@
   .slider .slick-arrow {
     width: 55px;
     height: 55px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(58, 58, 58);
     &:hover {
       background-color: #fff;
     }
@@ -129,4 +121,14 @@
   }
 }
 @media all and(max-width: 576px) {
+  .slider .slick-arrow {
+    width: 40px;
+    height: 40px;
+    &:after {
+      font-size: 24px;
+    }
+  }
+  .slider .slick-dots {
+    bottom: 20px;
+  }
 }

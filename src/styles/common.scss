@@ -156,23 +156,6 @@ body {
     }
   }
 }
-.cover-box {
-  overflow: hidden;
-  display: block;
-  img {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-.wh {
-  height:100%!important
-}
-.ww {
-  width:100%!important
-}
 .button {
   text-decoration: none;
   text-transform: uppercase;

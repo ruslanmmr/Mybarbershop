@@ -134,12 +134,6 @@
         color: #181818;
         transform: translateY(0.1em);
       }
-      &:before {
-        margin: 0 0.8em 0 0;
-      }
-      &:after {
-        margin: 0 0 0 0.8em;
-      }
     }
     &_stars {
       padding: 0;
@@ -268,6 +262,23 @@
       background: $main-color;
     }
   }
+}
+.cover-box {
+  overflow: hidden;
+  display: block;
+  img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.wh {
+  height:100%!important;
+}
+.ww {
+  width:100%!important;
 }
 
 //responsive
