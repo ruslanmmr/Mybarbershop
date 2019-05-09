@@ -46,7 +46,6 @@
 .banner-slide {
   max-width: 1920px;
   position: relative;
-  background: #161616;
   &__background {
     position: absolute;
     z-index: 1;
@@ -103,6 +102,7 @@
     z-index: 1;
   }
   &_style1 {
+    background: #161616;
     &:before {
       padding-top: 60%;
     }
