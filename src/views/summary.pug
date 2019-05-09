@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body.body.compensate-for-scrollbar
+    .wrapper
+      .page
+        include blocks/popup
+        include blocks/fixed
+        include blocks/header
+        main.main.main_style2
+          .background.main__background.lazy(data-src='img/backgrounds/bg-barber.jpg')
+          include blocks/barber-info
+          include blocks/preference
+          include blocks/portfolio
+          include blocks/awards
+          include blocks/banner2
+          include blocks/experience
+          include blocks/publications
+        //footer
+        include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
+    script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full")
+    script(src="js/map.min.js")

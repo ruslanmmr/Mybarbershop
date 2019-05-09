@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mybarbershop</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--styles for all pages-->
+    <link rel="stylesheet" href="styles/libs.min.css">
+    <link rel="stylesheet" href="styles/common.min.css">
+  </head>
+  <body class="body compensate-for-scrollbar">
+    <div class="wrapper">
+      <div class="page">
+        <!--share-->
+        <div class="share-area">
+          <div class="share-area__container">
+            <div class="share-area__content">
+              <div class="share-area__wrap">
+                <div id="fb-root"></div>
+                <div class="fb-like share-area__item" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+                <div class="share-area__item" id="vk_like"></div>
+                <div class="share-area__item" id="ok_shareWidget"></div>
+              </div>
+            </div>
+            <button class="share-area__close"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <!--regisrtation-->
+        <div class="popup popup_registration" id="registration">
+          <div class="popup__container">
+            <div class="popup-registration">
+              <div class="popup-registration__container">
+                <div class="popup-registration__head">
+                  <h3 class="popup-registration__title">Регистрация</h3>
+                </div>
+                <form class="popup-registration__form" action="">
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="text" placeholder="Email/Телефон" required>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="password" placeholder="Пароль" required>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <input class="popup-registration__input" type="password" placeholder="Пароль еще раз" required>
+                  </div>
+                  <div class="popup-registration__form-group popup-registration__form-group_checkbox">
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="siterules" required>
+                      <label class="checkbox__label" for="siterules"><i class="fas fa-check"></i><span>Я согласен(на) <a href="#">с правилами сайта</a></span></label>
+                    </div>
+                  </div>
+                  <div class="popup-registration__form-group">
+                    <button class="popup-registration__submit" type="submit">Зарегистрироваться</button>
+                  </div>
+                </form>
+                <div class="popup-registration__socials"><span>или войти с помощью</span>
+                  <div class="socials">
+                    <ul class="socials__list">
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-yandex"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><a class="forum-link" href="#">форум</a>
+        <!---->
+        <div class="myplace"><a class="myplace__link tooltip modal modal-link" href="javascript:;" data-src="#registration" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
+        <header class="header">
+          <div class="container">
+            <div class="header__container">
+              <div class="overlay"></div>
+              <div class="logo"> <a class="logo__link" href="index.html">
+                  <div class="logo__image"><img src="img/logos/logo.svg" alt="logo"></div></a></div>
+              <nav class="nav">
+                <div class="nav__head">
+                  <form class="nav__form" action="">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                  </form>
+                  <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
+                </div>
+                <ul class="nav__list">
+                  <li class="nav__item"> <a class="nav__link" href="#">Барбершопы</a></li>
+                  <li class="nav__item"> <a class="nav__link scroll-link" href="#news">новости            </a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">Ищу работу</a></li>
+                </ul>
+              </nav>
+              <div class="sub-nav">
+                <ul class="sub-nav__list">
+                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_city mobile-button" href="#"><i class="fas fa-map-marker-alt"></i>Выбрать город</a></li>
+                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_lc mobile-button modal-link" href="javascript:;" data-src="#registration"><i class="fas fa-user"></i>Мой Barbershop</a></li>
+                  <li class="sub-nav__item sub-nav__item_hamburger"><a class="sub-nav__link sub-nav__nav-open mobile-button" href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+                <div class="search-city">
+                  <div class="search-city__container">
+                    <input class="input input_style1 search-city__input" type="text" placeholder="Поиск по городу, индексу">
+                    <div class="search-city__content">
+                      <ul class="search-city__list sl--scrollable">
+                        <li class="search-city__item search-city__item_nothing"><span class="search-city__link search-city__link_nothing">Ничего не найдено!</span></li>
+                        <li class="search-city__item search-city__item_city" data-city="Москва"><a class="search-city__link" href="#">Москва</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Санкт-Петербург"><a class="search-city__link" href="#">Санкт-Петербург</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Екатеринбург"><a class="search-city__link" href="#">Екатеринбург</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Нижний Новгород"><a class="search-city__link" href="#">Нижний Новгород</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Пермь"><a class="search-city__link" href="#">Пермь</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Новосибирск"><a class="search-city__link" href="#">Новосибирск</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Омск"><a class="search-city__link" href="#">Омск</a></li>
+                        <li class="search-city__item search-city__item_city" data-city="Петрозаводск"><a class="search-city__link" href="#">Петрозаводск</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main main_style2">
+          <div class="background main__background lazy" data-src="img/backgrounds/bg-barber.jpg"></div>
+          <div class="barber-info">
+            <div class="container">
+              <div class="barber-info__container">
+                <div class="barber-info__section barber-info__section_left">
+                  <div class="barber-info__top-content">
+                    <div class="barber-info__image"><img class="barber-info__photo" src="img/photo.jpg" alt=""></div>
+                    <div class="barber-info__content">
+                      <div class="barber-info__row">
+                        <div class="barber-info__item"><span class="barber-info__name">Александ Иванов</span></div>
+                        <div class="barber-info__item">
+                          <div class="barber-info__experience"><span class="barber-info__experience-item"><span>32</span> возраст</span><span class="barber-info__experience-item"><span>5</span> стаж</span></div>
+                        </div>
+                      </div>
+                      <div class="barber-info__row">
+                        <div class="barber-info__item">
+                          <div class="number-block">
+                            <button class="number-block__show-btn"></button>
+                            <div class="number-block__title">Показать телефон</div><a class="number-block__number" href="tel:79258008080">+7 925 <span>xxx-xx-xx</span></a>
+                          </div>
+                        </div>
+                        <div class="barber-info__item">
+                          <div class="socials socials_style2">
+                            <ul class="socials__list">
+                              <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                              <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                              <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
+                              <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                              <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="barber-info__bottom-content">
+                    <div class="barber-info__salon">
+                      <div class="barber-info__salon-logo"><img src="img/logos/britva.jpg" alt=""></div>
+                      <div class="barber-info__salon-info">
+                        <div class="barber-info__salon-title">BRITVA / Moscow</div>
+                        <div class="barber-info__salon-adress">2-я Рощинская ул., 1А</div>
+                      </div>
+                    </div>
+                    <div class="share"><span class="main-decoration main-decoration_left"></span><a class="share-trigger" href="#">поделиться</a><span class="main-decoration main-decoration_right"></span></div>
+                  </div>
+                </div>
+                <div class="barber-info__section barber-info__section_right">
+                  <p class="barber-info__text"><b>О СЕБЕ: </b><span>В профессию я пришел неожиданно. Ждал своей очереди в парикмахерской и заметил, как выходящие клиенты тепло благодарили своих мастеров. Это меня и зацепило. До этого я работал в коммерции, но со временем понял, что офисная жизнь занимает много времени и монотонна — вот и сбежал. Кроме того, я активный судья барбер и барбершоп-баттлов. Продвигаю культуру по всей стране. Сегодня я счастлив, свободен и точно на своем месте.</span></p>
+                  <p class="barber-info__text"><b>КЛИЕНТЫ: </b><span>У меня своя сложившаяся аудитория. В основном это преуспевающие мужчины 30–45 лет. Для меня важно устанавливать эмоциональный контакт с людьми, которые ко мне ходят. Просто безучастно стричь людей на автомате я не могу.</span></p>
+                  <p class="barber-info__text"><b>МОЙ ОПЫТ: </b><span>Я работал: брею опасной бритвой, делаю моделирование бороды и усов. Убежден, что без использования опасной бритвы грамотно оформить бороду невозможно.</span></p>
+                  <div class="barber-info__presentation">
+                    <div class="barber-info__presentation-head"><span class="main-decoration main-decoration_left"></span><span class="barber-info__presentation-title">видео презентация</span><span class="main-decoration main-decoration_left"></span></div>
+                    <div class="barber-info__presentation-video">
+                      <div class="video-block"><a class="popup-link" href="https://www.youtube.com/watch?v=BgK_Er7WZVg"><img class="lazy" data-src="img/backgrounds/video-bg.jpg" alt=""></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preference">
+            <div class="block-head">
+              <div class="block-head__container"><span class="main-decoration"></span><span class="block-head__title block-head__title_stars">предпочтения<br> по месту работы</span><span class="main-decoration"></span></div>
+            </div>
+            <div class="map">
+              <div class="map__container">
+                <div id="map"></div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio">
+            <div class="block-head">
+              <div class="block-head__container"><span class="main-decoration"></span><span class="block-head__title block-head__title_stars">моё портфолио</span><span class="main-decoration"></span></div>
+            </div>
+            <div class="portfolio__container">
+              <div class="container">
+                <div class="slider slider_arrows portfolio__slider gallery">
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                            <div class="portfolio-block gallery__item"><a class="portfolio-block__link" href="img/gallery/haircut.jpg"><img class="lazy" data-src="img/gallery/haircut.jpg" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="awards">
+            <div class="block-head">
+              <div class="block-head__container"><span class="main-decoration"></span><span class="block-head__title block-head__title_stars">мои награды</span><span class="main-decoration"></span></div>
+            </div>
+            <div class="awards__container">
+              <div class="container">
+                <div class="slider slider_arrows awards__slider gallery">
+                  <div class="awards-slide gallery__item"><a class="awards-slide__container tooltip" href="img/gallery/award1.jpg" title="описание"><img data-lazy="img/gallery/award1.jpg" alt=""></a></div>
+                  <div class="awards-slide gallery__item"><a class="awards-slide__container tooltip" href="img/gallery/award2.jpg" title="описание"><img data-lazy="img/gallery/award2.jpg" alt=""></a></div>
+                  <div class="awards-slide gallery__item"><a class="awards-slide__container tooltip" href="img/gallery/award3.png" title="описание"><img data-lazy="img/gallery/award3.png" alt=""></a></div>
+                  <div class="awards-slide gallery__item"><a class="awards-slide__container tooltip" href="img/gallery/award4.jpg" title="описание"><img data-lazy="img/gallery/award4.jpg" alt=""></a></div>
+                  <div class="awards-slide gallery__item"><a class="awards-slide__container tooltip" href="img/gallery/award5.jpg" title="описание"><img data-lazy="img/gallery/award5.jpg" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="banner banner_with-padding">
+            <div class="banner__container">
+              <div class="container">
+                <div class="slider slider_arrows banner__slider">
+                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image2.jpg"></a></div>
+                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image3.png"></a></div>
+                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image4.jpg"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="experience">
+            <div class="block-head">
+              <div class="block-head__container"><span class="main-decoration"></span><span class="block-head__title">Мой опыт</span><span class="main-decoration"></span></div>
+            </div>
+            <div class="container">
+              <div class="experience__container">
+                <p>«Я начал свою профессиональную карьеру в салоне «TOPGUN» в славном городе Сыктывкар. Моими наставниками были великие мировые мастера. Убежден, что без использования опасной бритвы ».</p>
+                <ul>
+                  <li>«TOPGUN»<br> Сыктывкар,<br> 2014-2015<br> ул. Мира, 100</li>
+                  <li>«БОРОДА»<br> 2015-2016<br> Санкт-Петербург,<br> Невский пр-т, 37</li>
+                  <li>«БРИТВА»<br> 2016-____<br> Москва,<br> Новоясеневский пр-т, 9</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <div class="publications">
+            <div class="block-head">
+              <div class="block-head__container"><span class="main-decoration"></span><span class="block-head__title block-head__title_stars">мои публикации</span><span class="main-decoration"></span></div>
+            </div>
+            <div class="publications__container">
+              <div class="container">
+                <div class="slider slider_arrows publications__slider js-auto-height">
+                            <div class="publications-slide js-auto-height__item">
+                              <div class="publications-slide__container">
+                                <div class="publications-slide__image"><img class="lazy" data-src="img/gallery/image2.jpg" alt=""></div>
+                                <div class="publications-slide__content">
+                                  <div class="publications-slide__section"><span class="publications-slide__title">Для тех кто любит погорячее.</span>
+                                    <p class="publications-slide__text">«На этой странице в первую очередь мы видим баннер, как на главной, потом карту с поисокм и фильтром (фильтр нужен для того, чтобы включить или отключить сетевые ббш или </p>
+                                  </div><a class="publications-slide__read" href="#">Подробнее<i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="publications-slide js-auto-height__item">
+                              <div class="publications-slide__container">
+                                <div class="publications-slide__image"><img class="lazy" data-src="img/gallery/image2.jpg" alt=""></div>
+                                <div class="publications-slide__content">
+                                  <div class="publications-slide__section"><span class="publications-slide__title">Для тех кто любит погорячее.</span>
+                                    <p class="publications-slide__text">«Ржлмвомвлдомцку лолдшва ошгмуцпт  укекщш дшошг и  гщшиг 1234 щт ш щт7 лор. В профессию я пришел неожиданно. Ждал своей очереди в парикмахерской и заметил, как выходящие клиенты тепло благодарили своих мастеров. Плгнслогвра лолдапо длыопдкцгпш ждпкужшркщушп Это меня и </p>
+                                  </div><a class="publications-slide__read" href="#">Подробнее<i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="publications-slide js-auto-height__item">
+                              <div class="publications-slide__container">
+                                <div class="publications-slide__image"><img class="lazy" data-src="img/gallery/image2.jpg" alt=""></div>
+                                <div class="publications-slide__content">
+                                  <div class="publications-slide__section"><span class="publications-slide__title">Для тех кто любит погорячее.</span>
+                                    <p class="publications-slide__text">«нужен для того, чтобы включить или отключить сетевые ббш или </p>
+                                  </div><a class="publications-slide__read" href="#">Подробнее<i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="publications-slide js-auto-height__item">
+                              <div class="publications-slide__container">
+                                <div class="publications-slide__image"><img class="lazy" data-src="img/gallery/image2.jpg" alt=""></div>
+                                <div class="publications-slide__content">
+                                  <div class="publications-slide__section"><span class="publications-slide__title">Для тех кто любит погорячее.</span>
+                                    <p class="publications-slide__text">«укекщш дшошг и  гщшиг 1234 щт ш щт7 лор. В профессию я пришел неожиданно. Ждал своей очереди в парикмахерской и заметил, как выходящие клиенты тепло благодарили своих мастеров. Плгнслогвра лолдапо длыопдкцгпш ждпкужшркщушп Это меня и </p>
+                                  </div><a class="publications-slide__read" href="#">Подробнее<i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                </div>
+                <div class="publications__archive"><span class="main-decoration main-decoration_left"></span><a class="publications__archive-link" href="#">архив публикаций</a><span class="main-decoration main-decoration_right"></span></div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__container">
+              <div class="footer__section footer__section_top">
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить место</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить специалистов</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доступ к салону</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Правила работы с отзывами</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Политика конфиденциальности</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">О проекте “MyBarbershop”</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Вакансии</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__section footer__section_bottom"><span class="footer__message">Увидели ошибку - сообщите нам нажав Ctrl+Enter</span>
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/libs.min.js">                 </script>
+    <script src="js/common.min.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script src="js/map.min.js"></script>
+  </body>
+</html>

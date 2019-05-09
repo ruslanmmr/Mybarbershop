@@ -34,6 +34,9 @@
 .tooltipster-base {
   z-index: 9000 !important;
 }
+.preference {
+  padding-bottom: 40px;
+}
 .socials {
   &__list {
     display: flex;
@@ -133,11 +136,16 @@
     position: relative;
     z-index: 2;
     font-weight: 700;
-    line-height: 1em;
+    line-height: 1.2;
     display: flex;
     align-items: center;
-    flex-shrink: 0;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
     margin: 0 0.6em;
+    br {
+      display: none;
+    }
     &:before,
     &:after {
       font-family: 'Font Awesome 5 Free';
@@ -420,6 +428,11 @@
   .block-head {
     font-size: 20px;
     padding: 20px 0;
+  }
+  .block-head__title {
+    br {
+      display: block;
+    }
   }
   .video-block a:after {
     font-size: 50px;
