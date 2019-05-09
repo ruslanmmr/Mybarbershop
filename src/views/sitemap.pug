@@ -2,21 +2,24 @@ doctype html
 html(lang="ru")
   head
     include blocks/head
-  body.body.compensate-for-scrollbar
+  body.body
     .wrapper
       .page
         main.main
           ul.sitemap
             li.sitemap__item
-              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/index.html") Главная
+              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/index.html").sitemap__link Главная
             li.sitemap__item
-              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/free.html") free
+              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/free.html").sitemap__link free
             li.sitemap__item
-              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/salon.html") Салон
+              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/salon.html").sitemap__link Салон
             li.sitemap__item
-              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/mastera.html") Мастера
+              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/mastera.html").sitemap__link Мастера
             li.sitemap__item
-              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/yasenevo.html") Ясенево
+              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/yasenevo.html").sitemap__link Ясенево
             li.sitemap__item
-              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/work.html") Ищу работу 
-                span в разработке
+              a(target='_blank' href="https://ruslanmmr.github.io/Mybarbershop/dest/work.html").sitemap__link.in-dev Ищу работу
+            li.sitemap__item
+              span(target='_blank' href="").sitemap__link.in-expectation Ищу сотрудника
+            li.sitemap__item
+              span(target='_blank' href="").sitemap__link.in-expectation Резюме сотрудника
