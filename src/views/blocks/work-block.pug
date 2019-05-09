@@ -1,0 +1,19 @@
+mixin block(title)
+  .work-block
+    .background.lazy(data-src='img/backgrounds/bg-logos.png')
+    .block-head
+      .block-head__container
+        span.main-decoration
+        span.block-head__title.block-head__title_icons=title
+        span.main-decoration
+    .work-block__filter
+      .container
+        form(action="").work-block__form
+          .work-block__items
+            .work-block-item
+              label.work-block-item__container
+                .work-block-item__content
+                  span.work-block-item__title БАРБЕР
+                  i.fas.fa-cut.work-block-item__icon
+                .decotarive-line
+                .work-block-item__content

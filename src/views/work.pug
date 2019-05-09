@@ -6,12 +6,13 @@ html(lang="ru")
     .wrapper
       .page
         include blocks/popup
-        include blocks/forum-link
-        include blocks/myplace
+        include blocks/fixed
         include blocks/header
         main.main
-          include blocks/banner1
+          include blocks/banner3
           +banner()(data-src="img/banner/banner-work.jpg")
+          include blocks/work-block
+          +block('сейчас требуются')
         //footer
         include blocks/footer
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
