@@ -144,4 +144,11 @@
   .work-block__searched {
     font-size: 20px;
   }
+  .work-block-item__count span:last-child {
+    font-size: 12px;
+  }
+  .work-block-item__content {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
 }
