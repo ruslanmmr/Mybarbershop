@@ -9,18 +9,10 @@
 .service-selection-item {
   flex: 1 1 50%;
   padding: 15px;
-  &__input {
+  .input {
     display: none;
-    &:checked ~ label {
-      background: linear-gradient(to bottom, rgba(103,104,108,1) 0%,rgba(126,128,132,1) 73%,rgba(126,128,132,1) 73%);
-      .service-selection-item__indicator {
-        background-color: $main-color;
-      }
-    }
   }
-  &__container {
-    display: block;
-    cursor: pointer;
+  .label {
     padding: 20px 20px 0 20px;
     position: relative;
     display: flex;
@@ -40,6 +32,12 @@
       border-radius: 4px;
       top: 0;
       left: 0;
+    }
+    &.checked {
+      background: linear-gradient(to bottom, rgba(103,104,108,1) 0%,rgba(126,128,132,1) 73%,rgba(126,128,132,1) 73%);
+      .service-selection-item__indicator {
+        background-color: $main-color;
+      }
     }
   }
   &__logo {

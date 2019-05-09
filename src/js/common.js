@@ -10,6 +10,7 @@ $(document).ready(function () {
   share();
   popup();
   autoHeight();
+  check();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
@@ -570,5 +571,18 @@ function autoHeight() {
       };
     });
     $(this).find($block).height(mh);
+  })
+}
+
+//check
+function check() {
+  var $checkbox = $('.label');
+
+  $checkbox.on('click', function() {
+    if($(this).children('input').prop('checked')) {
+      $(this).addClass('checked');
+    } else {
+      $(this).removeClass('checked');
+    }
   })
 }

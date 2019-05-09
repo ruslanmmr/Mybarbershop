@@ -139,8 +139,8 @@
             <div class="container">
               <form class="service-selection__container" action="">
                 <div class="service-selection-item">
-                  <input class="service-selection-item__input" type="checkbox" id="haircut" name="service">
-                  <label class="service-selection-item__container" for="haircut">
+                  <label class="label">
+                    <input class="input" type="checkbox" name="service">
                     <div class="service-selection-item__logo"><img class="lazy" data-src="img/icons/ico-haircut.png" alt=""></div>
                     <div class="service-selection-item__content">
                       <div class="service-selection-item__indicator"><i class="fas fa-check"></i></div><img class="service-selection-item__icon" src="img/icons/ico-scissors.png" alt=""><span class="service-selection-item__title">стрижка</span>
@@ -148,8 +148,8 @@
                   </label>
                 </div>
                 <div class="service-selection-item">
-                  <input class="service-selection-item__input" type="checkbox" id="shaving" name="service">
-                  <label class="service-selection-item__container" for="shaving">
+                  <label class="label">
+                    <input class="input" type="checkbox" name="service">
                     <div class="service-selection-item__logo"><img class="lazy" data-src="img/icons/ico-shaving.png" alt=""></div>
                     <div class="service-selection-item__content">
                       <div class="service-selection-item__indicator"><i class="fas fa-check"></i></div><img class="service-selection-item__icon" src="img/icons/ico-razor.png" alt=""><span class="service-selection-item__title">бритье</span>
@@ -159,82 +159,82 @@
               </form>
             </div>
           </div>
-          <div class="map">
-            <div class="map-head">
-              <div class="map-head__background background lazy" data-src="img/backgrounds/bg-logos.png"></div>
-              <div class="map-head__container">
-                <form class="map-filter" action="">
-                  <div class="container">
-                    <div class="map-filter__section map-filter__section_search">
-                      <div class="search">
-                        <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
-                        <button class="search__button"><i class="fas fa-search"></i></button>
-                      </div><span class="map-filter__search-count">всего найдено: 7 мест</span>
-                    </div>
-                    <div class="map-filter__section map-filter__section_filter">
-                      <div class="map-filter__container">
-                        <div class="map-filter__title">Режим работы:</div>
-                        <div class="map-filter__content">
-                          <div class="map-filter-value">
-                            <input class="map-filter-value__input" id="map-filter-value-1" type="checkbox">
-                            <label class="map-filter-value__container map-filter-value__container_style1 map-filter-value__container_value1" for="map-filter-value-1">
-                              <div class="map-filter-value__title">с утра</div>
-                            </label>
-                          </div>
-                          <div class="map-filter-value">
-                            <input class="map-filter-value__input" id="map-filter-value-2" type="checkbox">
-                            <label class="map-filter-value__container map-filter-value__container_style1 map-filter-value__container_value2" for="map-filter-value-2">
-                              <div class="map-filter-value__title">до поздна</div>
-                            </label>
-                          </div>
-                          <div class="map-filter-value">
-                            <input class="map-filter-value__input" id="map-filter-value-3" type="checkbox">
-                            <label class="map-filter-value__container map-filter-value__container_style1 map-filter-value__container_value3" for="map-filter-value-3">
-                              <div class="map-filter-value__title">круглосуточно</div>
-                            </label>
-                          </div>
+          <div class="service-filter">
+            <div class="service-filter__background background lazy" data-src="img/backgrounds/bg-logos.png"></div>
+            <div class="service-filter__container">
+              <form class="service-filter-form" action="">
+                <div class="container">
+                  <div class="service-filter-form__section service-filter-form__section_search">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
+                    </div><span class="service-filter-form__search-count">всего найдено: 7 мест</span>
+                  </div>
+                  <div class="service-filter-form__section service-filter-form__section_filter">
+                    <div class="service-filter-form__container">
+                      <div class="service-filter-form__title">Режим работы:</div>
+                      <div class="service-filter-form__content">
+                        <div class="service-filter-value">
+                          <label class="label label_style1 label_value1">
+                            <div class="service-filter-value__title">с утра</div>
+                            <input type="checkbox">
+                          </label>
                         </div>
-                      </div><span class="map-filter__decoration"></span>
-                      <div class="map-filter__container">
-                        <div class="map-filter__title">Стоимость услуг:</div>
-                        <div class="map-filter__content">
-                          <div class="map-filter-value">
-                            <input class="map-filter-value__input" id="map-filter-value-4" type="checkbox">
-                            <label class="map-filter-value__container map-filter-value__container_style2 map-filter-value__container_value4 tooltip" for="map-filter-value-4" title="от 100 до 550р">
-                              <div class="map-filter-value__title">Premium</div>
-                            </label>
-                          </div>
-                          <div class="map-filter-value">
-                            <input class="map-filter-value__input" id="map-filter-value-5" type="checkbox">
-                            <label class="map-filter-value__container map-filter-value__container_style2 map-filter-value__container_value5 tooltip" for="map-filter-value-5" title="от 550 до 1000р">
-                              <div class="map-filter-value__title">Standard</div>
-                            </label>
-                          </div>
-                          <div class="map-filter-value">
-                            <input class="map-filter-value__input" id="map-filter-value-6" type="checkbox">
-                            <label class="map-filter-value__container map-filter-value__container_style2 map-filter-value__container_value6 tooltip" for="map-filter-value-6" title="от 1000р">
-                              <div class="map-filter-value__title">Economy</div>
-                            </label>
-                          </div>
+                        <div class="service-filter-value">
+                          <label class="label label_style1 label_value2">
+                            <div class="service-filter-value__title">до поздна</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="label label_style1 label_value3">
+                            <div class="service-filter-value__title">круглосуточно</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                      </div>
+                    </div><span class="service-filter-form__decoration"></span>
+                    <div class="service-filter-form__container">
+                      <div class="service-filter-form__title">Стоимость услуг:</div>
+                      <div class="service-filter-form__content">
+                        <div class="service-filter-value">
+                          <label class="label label_style2 label_value4 tooltip" title="от 100 до 550р">
+                            <div class="service-filter-value__title">Premium</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="label label_style2 label_value5 tooltip" title="от 550 до 1000р">
+                            <div class="service-filter-value__title">Standard</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="label label_style2 label_value6 tooltip" title="от 1000р">
+                            <div class="service-filter-value__title">Economy</div>
+                            <input type="checkbox">
+                          </label>
                         </div>
                       </div>
                     </div>
                   </div>
-                </form>
-                <div class="map-recomendations">
-                  <div class="map-recomendations__decoration"><span></span><i class="fas fa-thumbs-up"></i><span></span></div>
-                  <div class="container">
-                    <ul class="map-recomendations__list">
-                      <li class="map-recomendations__item"><a class="map-recomendations__link" href="#"><strong>Бритва</strong> /на Новоясеневском проспекте/</a></li>
-                      <li class="map-recomendations__item"><a class="map-recomendations__link" href="#"><strong>TopGun</strong> /в ТЦ МЕГА Химки/</a></li>
-                      <li class="map-recomendations__item"><a class="map-recomendations__link" href="#"><strong>Barbarossa</strong> /на метро Ясенево/</a></li>
-                    </ul>
-                  </div>
+                </div>
+              </form>
+              <div class="service-filter-recomendations">
+                <div class="decotarive-line2"><span></span><i class="fas fa-thumbs-up"></i><span></span></div>
+                <div class="container">
+                  <ul class="service-filter-recomendations__list">
+                    <li class="service-filter-recomendations__item"><a class="service-filter-recomendations__link" href="#"><strong>Бритва</strong> /на Новоясеневском проспекте/</a></li>
+                    <li class="service-filter-recomendations__item"><a class="service-filter-recomendations__link" href="#"><strong>TopGun</strong> /в ТЦ МЕГА Химки/</a></li>
+                    <li class="service-filter-recomendations__item"><a class="service-filter-recomendations__link" href="#"><strong>Barbarossa</strong> /на метро Ясенево/</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="map__container">
-              <div id="map"></div>
+            <div class="map">
+              <div class="map__container">
+                <div id="map"></div>
+              </div>
             </div>
           </div>
           <div class="banner banner_with-padding">
