@@ -1,6 +1,7 @@
 .map {
   &__container {
     position: relative;
+    margin: 0 auto;
     &:before {
       content: '';
       display: block;

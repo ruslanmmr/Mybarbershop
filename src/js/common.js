@@ -155,15 +155,16 @@ function nav() {
     overlay = $('.overlay'),
     scrollLink = $('.scroll-link');
 
-    $navToggle.on('click', function (event) {
-    event.preventDefault();
-    $nav.toggleClass('nav_active');
+  $navToggle.on('click', function (event) {
+  event.preventDefault();
+  $nav.toggleClass('nav_active');
+  navState();
+  })
+  
+  $overlay.on('click touchstart', function () {
+    $nav.removeClass('nav_active');
     navState();
-    })
-    $overlay.on('click touchstart', function () {
-      $nav.removeClass('nav_active');
-      navState();
-    })
+  })
 
   function navState() {
     if ($nav.hasClass('nav_active')) {
