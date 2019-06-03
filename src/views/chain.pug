@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body.body.compensate-for-scrollbar
+    .wrapper
+      .page
+        include blocks/popup
+        include blocks/fixed
+        include blocks/header
+        main.main
+          include blocks/banner1
+          +banner()(data-src="img/banner/topgun.jpg")
+          include blocks/salon-info
+          +info('ФРАНШИЗА', 'Вопросы', 'topgun.ru')(data-src="img/logos/topgun.png", alt="")
+          include blocks/news
+        //footer
+        include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
