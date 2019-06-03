@@ -16,7 +16,7 @@
     padding: 0 !important;
   }
   .slick-slider {
-    max-width: 1920px;
+    max-width: 1600px;
     margin: 0 auto;
     &:before,
     &:after {
@@ -45,7 +45,7 @@
   }
 }
 .banner-slide {
-  max-width: 1920px;
+  max-width: 1600px;
   position: relative;
   &__background {
     position: absolute;
@@ -104,6 +104,7 @@
   }
   &_style1 {
     background: #161616;
+    margin: 0 auto;
     &:before {
       padding-top: 50%;
     }
