@@ -8,14 +8,27 @@ html(lang="ru")
         include blocks/popup
         include blocks/fixed
         include blocks/header
-        main.main
+        main.main.main_style2
+          .background.main__background.lazy(data-src='img/backgrounds/bg-barber.jpg')
           include blocks/banner1
           +banner()(data-src="img/banner/topgun.jpg")
           include blocks/salon-info
           +info('ФРАНШИЗА', 'Вопросы', 'topgun.ru')(data-src="img/logos/topgun.png", alt="")
+          include blocks/barbershop-info
+          include blocks/banner2
+          .section
+            .block-head.block-head_background
+              .block-head__background.background.lazy(data-src='img/backgrounds/bg-logos.png')
+              .decorated
+                span.decoration
+                span.block-head__title Вся сеть
+                span.decoration
+            include blocks/map
           include blocks/news
         //footer
         include blocks/footer
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="js/libs.min.js")                  
     script(src="js/common.min.js")
+    script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full")
+    script(src="js/map.min.js")

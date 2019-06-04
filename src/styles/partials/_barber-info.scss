@@ -107,7 +107,8 @@
     &-head {
       display: flex;
       width: 100%;
-      align-items: center;
+      justify-content: center;
+      overflow: hidden;
       margin: 0 0 20px 0;
     }
     &-title {

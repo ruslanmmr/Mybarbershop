@@ -3,6 +3,9 @@ html(lang="ru")
   head
     include blocks/head
   body.body.compensate-for-scrollbar
+    .myplace
+      a.myplace__link.tooltip.modal(href="javascript:;" data-src="#registration" title='для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!').modal-link
+        img(src="img/logos/myplace.png", alt="").myplace__image
     .wrapper
       .page
         include blocks/popup

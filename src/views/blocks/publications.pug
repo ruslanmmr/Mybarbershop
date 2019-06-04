@@ -11,10 +11,10 @@ mixin slide(text)
           i.fas.fa-angle-double-right
 .publications
   .block-head
-    .block-head__container
-      span.main-decoration
+    .decorated
+      span.decoration
       span.block-head__title.block-head__title_stars мои публикации
-      span.main-decoration
+      span.decoration
   .publications__container
     .container
       .slider.slider_arrows.publications__slider.js-auto-height
@@ -23,6 +23,7 @@ mixin slide(text)
         +slide('«нужен для того, чтобы включить или отключить сетевые ббш или ')
         +slide('«укекщш дшошг и  гщшиг 1234 щт ш щт7 лор. В профессию я пришел неожиданно. Ждал своей очереди в парикмахерской и заметил, как выходящие клиенты тепло благодарили своих мастеров. Плгн\слогвр\а лолдапо длыопдкцгпш ждпкужшркщушп Это меня и ')
       .publications__archive
-        span.main-decoration.main-decoration_left
-        a(href="#").publications__archive-link архив публикаций
-        span.main-decoration.main-decoration_right
+        .decorated
+          span.decoration
+          a(href="#").publications__archive-link архив публикаций
+          span.decoration

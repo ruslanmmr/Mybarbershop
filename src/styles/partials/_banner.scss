@@ -116,11 +116,14 @@
   }
 }
 .salon-info {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: flex-end;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.15;
+  background-color: #7e8084;
   &__container {
     display: flex;
     justify-content: space-between;
