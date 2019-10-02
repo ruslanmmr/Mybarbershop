@@ -1,10 +1,24 @@
 .slider {
-  transition: .3s opacity;
+  transition: .5s opacity;
   opacity: 0;
   margin: 0 auto;
   position: relative;
   a, button {
     outline: none;
+  }
+  &_default {
+    padding: 20px;
+    margin: -20px;
+    .slick-track {
+      display: flex;
+    }
+    .slick-list {
+      margin: 0 -10px;
+      overflow: visible;
+    }
+    .slick-slide {
+      padding: 0 10px;
+    }
   }
   &_style3 {
     .slide {
@@ -33,6 +47,7 @@
     }
     button {
       outline: none;
+      display: block;
       height: 14px;
       width: 14px;
       border: 0;
@@ -70,25 +85,25 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.2s;
     color: #dadada;
     &:after {
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
-      font-size: 56px;
+      font-size: 50px;
     }
     &:hover {
       color: $main-color;
     }
   }
   .slick-next {
-    right: -60px;
+    right: 0;
     &:after {
       content: "\f054";
     }
   }
   .slick-prev {
-    left: -60px;
+    left: 0;
     &:after {
       content: "\f053";
     }
@@ -96,27 +111,27 @@
 }
 .slide {
   position: relative;
-  overflow: hidden;
   height: auto;
 }
 
-@media all and(max-width: 1300px) {
+@media all and(max-width: 1210px) {
   .slider .slick-prev {
-    left: 15px;
+    left: 30px;
   }
   .slider .slick-next {
-    right: 15px;
+    right: 30px;
   }
   .slider .slick-arrow {
     width: 55px;
     height: 55px;
     background-color: rgba(255, 255, 255, 0.8);
     color: rgb(58, 58, 58);
+    border-radius: 4px;
     &:hover {
       background-color: #fff;
     }
     &:after {
-      font-size: 36px;
+      font-size: 32px;
     }
   }
 }

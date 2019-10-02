@@ -1,8 +1,5 @@
 .gallery {
   position: relative;
-  &__background {
-    opacity: 0.05;
-  }
   &__row {
     display: flex;
     justify-content: center;
@@ -10,7 +7,6 @@
   }
   &__wrap {
     overflow: hidden;
-    padding: 40px 0;
   }
   &__container {
     margin: -10% -15px;
@@ -46,7 +42,7 @@
   &__image {
     position: absolute;
     width: 141.4%;
-    height: auto;
+    height: 141.4%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -86,7 +82,7 @@
   &__image {
     position: absolute;
     width: 141.4%;
-    height: auto;
+    height: 141.4%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -139,9 +135,6 @@
   .gallery__row {
     margin: 0;
     order: 2;
-  }
-  .gallery__wrap {
-    padding: 30px 0;
   }
   .gallery__container {
     margin: 0 -15px;

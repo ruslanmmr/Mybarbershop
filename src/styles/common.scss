@@ -1,24 +1,36 @@
-@import "./partials/fonts";
+@import "./partials/normalize";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=cyrillic');
 
 $main-color: #ff8a00;
+$border-color: #a7a9ae;
 $hover-color: #ca6c00;
 
 body {
   text-rendering: optimizeSpeed;
-  font: 16px "DINPro", sans-serif;
-  font-weight: 300;
+  font: 16px "Roboto", sans-serif;
   color: #fff;
   min-width: 320px;
   position: relative;
   line-height: 1.35;
-  background-color: #7e8084;
+  background-color: #0c1115;
+  position: relative;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: repeat;
 }
 .container {
-  max-width: 1170px;
+  max-width: 1210px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  padding: 0 15px;
+  padding: 0 20px;
   flex-shrink: 0;
   &_style2 {
     max-width: 880px;
@@ -32,15 +44,6 @@ body {
 }
 .row {
   display: flex;
-}
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  top: 0;
-  left: 0;
 }
 .main {
   position: relative;
@@ -60,149 +63,6 @@ body {
   &_fixed {
     transform: translateX(270px);
   }
-}
-.input {
-  display: block;
-  height: 30px;
-  outline: none;
-  border: 0;
-  appearance: none;
-  border-radius: 4px;
-  padding: 0 10px;
-  &::placeholder {
-    transition: .3s;
-    font-weight: 300;
-  }
-  &:focus {
-    &::placeholder {
-      color: transparent;
-    }
-  }
-  &_style1 {
-    background-color: #888a90;
-    color: #fff;
-    &::placeholder {
-      color: #fff;
-    }
-  }
-  &_style2 {
-    background-color: #bdbfc5;
-    color: #7e8084;
-    &::placeholder {
-      color: #7e8084;
-    }
-  }
-}
-.checkbox {
-  &__input {
-    display: none;
-    &:checked ~ label i {
-      background-color: $main-color;
-      &:before {
-        opacity: 1;
-      }
-    }
-  }
-  &__label {
-    position: relative;
-    cursor: pointer;
-    i {
-      height: 19px;
-      width: 19px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 2px;
-      border: 1px solid $main-color;
-      position: absolute;
-      left: 0;
-      font-size: 12px;
-      &:before {
-        opacity: 0;
-      }
-    }
-    a {
-      color: inherit;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-    span {
-      display: block;
-      padding-left: 35px;
-      line-height: 19px;
-      font-size: 17px;
-    }
-  }
-}
-.search {
-  width: 100%;
-  position: relative;
-  display: block;
-  width: 100%;
-  &__input {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    padding-right: 38px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  &__button {
-    border: 0;
-    outline: none;
-    background-color: transparent;
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 38px;
-    z-index: 2;
-    color: #fff;
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-}
-.button {
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 4px;
-  border: 1px solid #fff;
-  padding: 5px 10px;
-  font-weight: 500;
-  display: block;
-  text-align: center;
-  transition: 0.3s;
-  white-space: nowrap;
-  &_style1 {
-    background-color: $main-color;
-    color: #000;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  &_style2 {
-    background-color: #636468;
-    color: $main-color;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  &_style3 {
-    background-color: transparent;
-    border-color: #fff;
-    color: #68696c;
-    &:hover {
-      color: $main-color;
-    }
-  }
-}
-
-@media all and(max-width: 1200px) {
-  
 }
 @media all and(max-width: 576px) {
   .main_style2 {

@@ -2,22 +2,15 @@ doctype html
 html(lang="ru")
   head
     include blocks/head
-  body.body.compensate-for-scrollbar
-    .myplace
-      a.myplace__link.tooltip.modal(href="javascript:;" data-src="#registration" title='для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!').modal-link
-        img(src="img/logos/myplace.png", alt="").myplace__image
+  body
+    span.background.lazy(data-src='img/backgrounds/background.jpg')
     .wrapper
       .page
         include blocks/popup
         include blocks/fixed
         include blocks/header
         main.main
-          include blocks/banner1
-          +banner()(data-src="img/banner/banner-image1.jpg" data-filter)
-            .banner-slide__container
-              .container
-                h2.banner-slide__title ЗарЕГИСТРИРУйся
-                h3.banner-slide__sub-title и получи больше возможностей...
+          include blocks/banner-main
           include blocks/banner2
           include blocks/gallery
           include blocks/recommendations

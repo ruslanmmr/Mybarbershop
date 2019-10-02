@@ -1,22 +1,46 @@
 .myplace {
-  position: fixed;
+  position: absolute;
   width: 130px;
-  left: 15px;
-  bottom: 15px;
-  z-index: 10;
+  left: 20px;
+  bottom: 20px;
+  z-index: 50;
+  perspective: 1000px;
+
+  @keyframes myplaceAnim {
+    0% {
+      transform: rotateY(0);
+    }
+    10% {
+      transform: rotateY(30deg);
+    }
+    30% {
+      transform: rotateY(-30deg);
+    }
+    50% {
+      transform: rotateY(0);
+    }
+  }
+
   &__link {
     display: block;
     width: 100%;
+    animation-name: myplaceAnim;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 0.8;
+    }
   }
   &__image {
     display: block;
     width: 100%;
   }
 }
-
 .forum-link {
   position: fixed;
-  z-index: 10;
+  z-index: 50;
   background-color: $main-color;
   border-radius: 4px 4px 0 0;
   width: 110px;
@@ -37,7 +61,6 @@
     opacity: 0.8;
   }
 }
-
 .share-area {
   z-index: 10;
   position: fixed;
@@ -98,7 +121,111 @@
     }
   }
 }
+.popup-window {
+  position: absolute;
+  z-index: 101;
+  display: none;
+  background-color: #65666a;
+  border: 1px solid $border-color;
+  font-size: 14px;
+  border-radius: 4px 0 4px 4px;
+  min-width: 220px;
+  padding-top: 10px;
+  &__triangle {
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    transform: translate(0, -100%);
+    display: block;
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent #65666a transparent;
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      background-color: $border-color;
+      position: absolute;
+    }
+    &:after {
+      height: 10px;
+      width: 1px;
+      right: 0;
+      top: 0;
+    }
+    &:before {
+      top: -2px;
+      left: -6px;
+      height: 14px;
+      width: 1px;
+      transform: rotate(45deg);
+    }
+  }
+  .input {
+    width: 100%;
+  }
+  &__head {
+    padding: 0 10px 10px 10px;
+  }
+  &__container {
+    margin-bottom: -1px;
+  }
+  &__content {
+    overflow: hidden;
+    padding: 0 10px;
+    max-height: 245px;
+  }
+  &__list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    display: block;
+    border-bottom: 1px solid $border-color;
+    color: #fff;
+    span {
+      padding: 10px;
+      display: block;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    padding: 10px;
+    line-height: 1;
+    transition: 0.2s;
+    &:hover {
+      color: $main-color;
+    }
+    &_type2 {
+      color: $main-color;
+      text-transform: uppercase;
+      font-weight: 700;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
 
+@media all and(max-width: 1024px) {
+  .popup-window {
+    border: 0;
+    border-radius: 0;
+    background-color: #888a90;
+    overflow: hidden;
+    padding: 0;
+    &__triangle {
+      display: none;
+    }
+    &__head {
+      padding: 10px;
+    }
+  }
+}
 @media all and(max-width: 576px) {
   .myplace {
     width: 100px;

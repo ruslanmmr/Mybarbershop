@@ -1,14 +1,14 @@
 header.header
   .container
     .header__container
-      .overlay
+      span.overlay
       .logo 
         a(href="index.html").logo__link
           .logo__image
             img(src="img/logos/logo.svg", alt="logo")
       nav.nav
         .nav__head
-          form(action="").nav__form
+          form.nav__search
             .search
               input(type="text" placeholder="Поиск" required).input.input_style1.search__input
               button.search__button
@@ -17,46 +17,27 @@ header.header
             i.fas.fa-times
         ul.nav__list
           li.nav__item  
-            a(href="#").nav__link Барбершопы
+            a(href="#").nav__link барбершопы
           li.nav__item  
-            a(href="#news").nav__link.scroll-link новости            
+            a(href="#").nav__link новости
+          li.nav__item  
+            a(href="#").nav__link free
+          li.nav__item  
+            a(href="#").nav__link Ищу работу
           li.nav__item  
             a(href="#").nav__link ищу сотрудника
           li.nav__item  
-            a(href="#").nav__link Ищу работу
+            a(href="#").nav__link барахолка
       .sub-nav
         ul.sub-nav__list
           li.sub-nav__item
-            a(href="#").sub-nav__link.sub-nav__link_city.mobile-button
+            a(href="#windowCity").sub-nav__link.mobile-button.windowOpenButton
               i.fas.fa-map-marker-alt
-              | Выбрать город
+              span Москва
           li.sub-nav__item
-            a(href="javascript:;" data-src="#registration").sub-nav__link.sub-nav__link_lc.mobile-button.modal-link
+            a(href="#windowProfile").sub-nav__link.mobile-button.windowOpenButton
               i.fas.fa-user
-              | Мой Barbershop
+              span Иванов И.И.
           li.sub-nav__item.sub-nav__item_hamburger
             a(href="#").sub-nav__link.sub-nav__nav-open.mobile-button
               i.fas.fa-bars
-        .search-city
-          .search-city__container
-            input(type="text" placeholder='Поиск по городу, индексу').input.input_style1.search-city__input
-            .search-city__content
-              ul.search-city__list.sl--scrollable
-                li.search-city__item.search-city__item_nothing
-                  span.search-city__link.search-city__link_nothing Ничего не найдено!
-                li.search-city__item.search-city__item_city(data-city='Москва')
-                  a(href="#").search-city__link Москва
-                li.search-city__item.search-city__item_city(data-city='Санкт-Петербург')
-                  a(href="#").search-city__link Санкт-Петербург
-                li.search-city__item.search-city__item_city(data-city='Екатеринбург')
-                  a(href="#").search-city__link Екатеринбург
-                li.search-city__item.search-city__item_city(data-city='Нижний Новгород')
-                  a(href="#").search-city__link Нижний Новгород
-                li.search-city__item.search-city__item_city(data-city='Пермь')
-                  a(href="#").search-city__link Пермь
-                li.search-city__item.search-city__item_city(data-city='Новосибирск')
-                  a(href="#").search-city__link Новосибирск
-                li.search-city__item.search-city__item_city(data-city='Омск')
-                  a(href="#").search-city__link Омск
-                li.search-city__item.search-city__item_city(data-city='Петрозаводск')
-                  a(href="#").search-city__link Петрозаводск

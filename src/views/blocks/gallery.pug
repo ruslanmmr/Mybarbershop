@@ -1,14 +1,8 @@
-mixin photo()
-  .gallery-item
-    a(href="#").gallery-item__link
-      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
-.gallery
-  .gallery__background.background.lazy(data-src='img/backgrounds/bg-logos.png')
-  .block-head.block-head_background
-    .block-head__background.background.lazy(data-src='img/backgrounds/bg-logos.png')
-    .block-head__container.decorated
+section.gallery.section
+  .section__head
+    .section__head-container.decorated
       span.decoration
-      span.block-head__title.block-head__title_icons мы рекомендуем
+      h5.section__head-title.section__head-title_icons мы рекомендуем
       span.decoration
   .gallery__wrap
     .container
@@ -20,28 +14,34 @@ mixin photo()
                 .gallery-block__row
                   .gallery-item.gallery-item_1
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
                   .gallery-item.gallery-item_stub
                   .gallery-item.gallery-item_2
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
                   .gallery-item.gallery-item_3
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
           .gallery-block.gallery-block_2
             .gallery-block__container
               .gallery-block__content
                 .gallery-block__row
                   .gallery-item.gallery-item_1
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
                   .gallery-item.gallery-item_stub
                   .gallery-item.gallery-item_2
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
                   .gallery-item.gallery-item_3
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
         .gallery__row.gallery__row_center
           .gallery-block.gallery-block_big
             .gallery-block__container
@@ -49,18 +49,21 @@ mixin photo()
                 .gallery-block__row
                   .gallery-item
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber-top.jpg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber2.jpg", alt="").lazy
           .gallery-block.gallery-block_title
             .gallery-block__container
               .gallery-block__content.gallery-block__content_title
-                img(src="img/gallery/top.jpg", alt="").gallery-block__image
+                .gallery-block__image.cover-box
+                  img(data-src="img/gallery/top.jpg", alt="").lazy
           .gallery-block.gallery-block_big
             .gallery-block__container
               .gallery-block__content
                 .gallery-block__row
                   .gallery-item
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber-top.jpg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber2.jpg", alt="").lazy
         .gallery__row
           .gallery-block.gallery-block_3
             .gallery-block__container
@@ -68,25 +71,31 @@ mixin photo()
                 .gallery-block__row
                   .gallery-item.gallery-item_1
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
                   .gallery-item.gallery-item_2
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
                   .gallery-item.gallery-item_stub
                   .gallery-item.gallery-item_3
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
           .gallery-block.gallery-block_4
             .gallery-block__container
               .gallery-block__content
                 .gallery-block__row
                   .gallery-item.gallery-item_1
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
                   .gallery-item.gallery-item_2
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
                   .gallery-item.gallery-item_stub
                   .gallery-item.gallery-item_3
                     a(href="#").gallery-item__link
-                      img(src="img/gallery/barber.jpeg", alt="").gallery-item__image
+                      .gallery-item__image.cover-box
+                        img(data-src="img/gallery/barber1.jpg", alt="").lazy

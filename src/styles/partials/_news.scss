@@ -1,10 +1,8 @@
 .news {
-  padding-bottom: 40px;
   &__container {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    padding: 40px 0;
   }
   &__more {
     position: relative;
@@ -92,14 +90,7 @@
     z-index: 4;
   }
 }
-@media all and(max-width: 1170px) {
-  .news .container {
-    padding: 0;
-  }
-  .news__container {
-    padding: 0;
-  }
-}
+
 @media all and(max-width: 768px) {
   .news-block,
   .news__button {

@@ -2,15 +2,13 @@ doctype html
 html(lang="ru")
   head
     include blocks/head
-  body.body.compensate-for-scrollbar
+  body
     .wrapper
       .page
         include blocks/popup
         include blocks/fixed
         include blocks/header
         main.main
-          include blocks/banner3
-          +banner()(data-src="img/banner/banner-incumbent.jpg")
           include blocks/work-block
           +block('активные резюме', 'кандидатов')
           include blocks/banner2

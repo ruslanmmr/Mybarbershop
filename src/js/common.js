@@ -2,195 +2,200 @@ $(document).ready(function () {
   lazy();
   tooltip();
   nav();
-  cityBlock();
   slider();
   gallery();
-  cover();
   showNum();
   share();
   popup();
   autoHeight();
   check();
+  fadeInWindows();
+  scrollbar();
+  searchCity()
 });
+
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
   gallery();
-  cover();
   autoHeight();
+  $('img').each(function() {
+    //imagesResize($(this))
+  });
 });
 
 //global variables
-var innerWidth = $('body').innerWidth(),
+let innerWidth = $('.wrapper').width(),
     $slider = $('.slider'),
-  //scroll-styling
-  cursorcolorVar = "#fff",
-  cursorwidthVar = "7px",
-  cursorborderVar = "0",
-  cursorborderradiusVar = "0",
-  zindexVar = [100],
-  bouncescrollVar = false;
-//
+    $scroll = $('.scroll-area');
 
-//city-block
-function cityBlock() {
-  var openbutton = $(".sub-nav__link_city"),
-    textInput = $('.search-city__input'),
-    list = $('.search-city__list'),
-    cityBlock = $(".search-city"),
-    scrollStart = $("html, body").scrollTop(),
-    scrollEnd = $("html, body").scrollTop(),
-    item = $(".search-city__item_city"),
-    falseText = $(".search-city__item_nothing"),
-    inputVal,
-    value,
-    quantity,
-    state,
-    flag;
+function scrollbar() {
+  $('.scroll-area').niceScroll({
+    cursorcolor: "#fff",
+    cursorwidth: "5px",
+    cursorborder: "0",
+    cursorborderradius: "0",
+    zindex: [100],
+    bouncescroll: false,
+    autohidemode: false
+  });
+}
+
+//поиск
+function searchCity() {
+  let $input = $('#windowCity').find('.input'),
+      $resaultItem = $('#windowCity').find('.popup-window__item'),
+      $container = $('#windowCity').find('.popup-window__list'),
+      $message = document.createElement('li');
+
+  $message.className = 'popup-window__item';
+  $message.innerHTML = '<span>Совпадений не найдено!</span>';
 
   //события
-  textInput.keyup(function () {
-    searchCity();
-  });
+  $input.on('input', function() {
+    let inputVal = $input.val().toLowerCase();
 
-  $(document).on('click touchstart', function (e) {
-    if (!flag) {
-      flag = true;
-      setTimeout(function () {
-        flag = false;
-      }, 300);
-      if (!cityBlock.is(e.target) && cityBlock.has(e.target).length === 0 && cityBlock.hasClass("search-city_visible")) {
-        toggleModal();
-      } else if (openbutton.is(e.target) || openbutton.children().is(e.target)) {
-        toggleModal();
-      }
-    }
-  });
-
-  $(window).scroll(function () {
-    scrollEnd = $("html, body").scrollTop();
-    if (((scrollEnd > (scrollStart + 100)) || ((scrollEnd < (scrollStart - 100)))) && state == true) {
-      toggleModal();
-    }
-  });
-
-  //функции
-  function scrollInit() {
-    list.niceScroll({
-      cursorcolor: cursorcolorVar,
-      cursorwidth: cursorwidthVar,
-      cursorborder: cursorborderVar,
-      cursorborderradius: cursorborderradiusVar,
-      zindex: zindexVar,
-      bouncescroll: bouncescrollVar,
-      autohidemode: false
-    });
-  };
-
-  //открытие или закрытие модалки
-  function toggleModal() {
-    scrollStart = $("html, body").scrollTop();
-    cityBlock.toggleClass("search-city_visible");
-    if (cityBlock.hasClass("search-city_visible")) {
-      openbutton.addClass('mobile-button_active');
-      textInput.val("");
-      searchCity();
-      cityBlock.fadeIn(300);
-      state = true;
-      scrollInit();
-      list.getNiceScroll().resize();
-    } else {
-      openbutton.removeClass('mobile-button_active');
-      cityBlock.fadeOut(300);
-      state = false;
-    }
-  };
-
-  //поиск
-  function searchCity() {
-    inputVal = textInput.val().toLowerCase();
-    if (inputVal.length >= 1) {
-      item.removeClass("search-city__item_active");
-      item.each(function () {
-        value = $(this).attr('data-city').toLowerCase();
-        if (value.search(inputVal) != -1) {
-          $(this).addClass('search-city__item_active');
+    if(inputVal.length >= 1) {
+      $resaultItem.hide();
+      let count = 0;
+      $resaultItem.each(function() {
+        let itemVal = $(this).find('a').text().toLowerCase();
+        if(itemVal.search(inputVal) !== -1) {
+          count++;
+          $(this).show();
         }
       })
-      quantity = $(".search-city__item_city.search-city__item_active").length;
-      if (quantity < 1) {
-        falseText.addClass("search-city__item_active");
+      if(count==0) {
+        $container.append($message);
       } else {
-        falseText.removeClass("search-city__item_active");
+        $message.remove();
       }
-    } else {
-      item.addClass("search-city__item_active");
-      falseText.removeClass("search-city__item_active");
+    } 
+    else {
+      $message.remove();
+      $resaultItem.show();
     }
-    list.getNiceScroll().resize();
-  };
-}
-//image-cover-box
-function cover() {
-  $('.cover-box').each(function () {
-    //set size
-    var th = $(this).height(), //box height
-      tw = $(this).width(), //box width
-      im = $(this).children('img'), //image
-      ih = im.height(),
-      iw = im.width();
-    if ((tw / th) >= (iw / ih)) {
-      im.addClass('ww').removeClass('wh');
-    } else {
-      im.addClass('wh').removeClass('ww');
-    }
+    $scroll.getNiceScroll().resize();
   });
 }
+
+//всплывающие окна
+function fadeInWindows() {
+  let posY,
+      posX;
+  
+  let $window = {
+    old: {
+      el: undefined,
+      hide: function(){
+        $(this.el).fadeOut(200);
+        $(this.el).removeClass('active');
+        $btn.el.removeClass('active');
+      }
+    },
+    current: {
+      el: undefined,
+      hide: function() {
+        $(this.el).fadeOut(200);
+        $(this.el).removeClass('active');
+        $btn.el.removeClass('active');
+      },
+      show: function() {
+        $(this.el).fadeIn(200);
+        $(this.el).addClass('active');
+        $btn.current.el.addClass('active');
+        $scroll.getNiceScroll().resize();
+        $window.old.el = $window.current.el;
+      }
+    }
+  };
+  let $btn = {
+    className: 'windowOpenButton',
+    el: $('.windowOpenButton'),
+    current: {
+      el: undefined
+    }
+  }
+
+  $(document).on('click touchstart mousedown touchend', function(event) {
+
+    //function
+    if($(event.target).closest($btn.el).length > 0) {
+      if(event.type=='click') {
+        event.preventDefault();
+        $btn.current.el = $(event.target).closest($btn.el);
+        $window.current.el = $($btn.current.el.attr('href'));
+
+        if(innerWidth>1024) { 
+          posY = $btn.current.el.offset().top + $btn.current.el.height() + 2;
+          posX = innerWidth - ($btn.current.el.offset().left + $btn.current.el.width()) + 4;
+        } else {
+          posY = $('.header').height();
+          posX = 0;
+        }
+
+        $window.current.el.css({'top':posY, 'right':posX});
+
+        if($window.current.el.hasClass('active')) {
+          $window.current.hide();
+        } else {
+          if($window.old.el!==undefined && $window.old.el.hasClass('active')) {
+            $window.old.hide();
+          }
+          $window.current.show();
+        }
+      } 
+    } 
+    else if($window.current.el!==undefined && $window.current.el.hasClass('active') && $(event.target).closest($window.current.el).length == 0) {
+      $window.current.hide();
+    }
+  })
+}
+
 
 //nav
 function nav() {
   var $navToggle = $('.sub-nav__nav-open, .nav__close'),
     $overlay = $('.overlay'),
-    $nav = $('.nav'),
-    navLink = $('.nav__link'),
-    overlay = $('.overlay'),
-    scrollLink = $('.scroll-link');
+    $nav = $('.nav');
 
   $navToggle.on('click', function (event) {
-  event.preventDefault();
-  $nav.toggleClass('nav_active');
-  navState();
+    event.preventDefault();
+    $nav.toggleClass('active');
+    navState();
   })
   
   $overlay.on('click touchstart', function () {
-    $nav.removeClass('nav_active');
+    $nav.removeClass('active');
     navState();
   })
 
   function navState() {
-    if ($nav.hasClass('nav_active')) {
-      overlay.fadeIn(300);
+    if ($nav.hasClass('active')) {
+      $overlay.fadeIn(300);
       scrollLock.hide($("body"));
       $('.page').addClass('page_fixed');
     } else {
-      overlay.fadeOut(300);
+      $overlay.fadeOut(300);
       scrollLock.show($("body"));
       $('.page').removeClass('page_fixed');
     }
   }
+
   $(window).resize(function () {
-    if (innerWidth > 992) {
-      $nav.removeClass('nav_active');
+    if (innerWidth > 1024) {
+      $nav.removeClass('active');
       navState();
     }
   });
-  navLink.on('click', function () {
+
+  /* navLink.on('click', function () {
     if (innerWidth < 993) {
       $nav.removeClass('nav_active');
       navState();
     }
-  })
+  }) */
 
-  //якорные ссылки
+  /* //якорные ссылки
   scrollLink.click(function (event) {
     var id = $(this).attr('href'),
       top = $(id).offset().top;
@@ -209,23 +214,43 @@ function nav() {
         scrollTop: top
       }, 400);
     }
-  })
+  }) */
 }
-//lazy
+
 function lazy() {
   $(".lazy").Lazy({
-    visibleOnly: true,
-    threshold: '1000',
-    effect: 'fadeIn',
-    effectTime: '300',
+    effectTime: 0,
+    threshold: 500,
+    imageBase: false,
     defaultImage: false,
-    afterLoad: function() {
-      autoHeight();
-      $slider.slick('setPosition');
-      cover();
+    afterLoad: function(element) {
+      imagesResize(element);
     }
   });
 }
+function imagesResize(element) {
+  let box = element.parent();
+
+  if(!box.hasClass('cover-box_size-auto')) {
+    let boxH = box.height(),
+        boxW = box.width();
+
+    setTimeout(function() {
+      let imgH = element.height(),
+          imgW = element.width();
+
+      if ((boxW / boxH) >= (imgW / imgH)) {
+        element.addClass('ww').removeClass('wh');
+      } else {
+        element.addClass('wh').removeClass('ww');
+      }
+      element.addClass('visible');
+    }, 100)
+  } else {
+    element.addClass('visible');
+  }
+}
+
 //tooltips
 function tooltip() {
   $('.tooltip').tooltipster({
@@ -252,7 +277,7 @@ function slider() {
   });
 
   $slider.each(function () {
-    $(this).on('init reInit afterChange', function(){
+    $(this).on('init beforeChange afterChange', function(){
       lazy();
     });
     var slideCount = 1,
@@ -458,8 +483,6 @@ function share() {
     var headerHeight = $('.header').height(),
       scroll = $(window).scrollTop();
 
-    console.log(scroll, headerHeight)
-
     if (scroll < headerHeight) {
       $shareBlock.css({
         'position': 'absolute',
@@ -551,10 +574,6 @@ function popup() {
 
     return false;
   });
-  
-
-
-  $('body').removeClass('compensate-for-scrollbar');
 }
 
 //корректировка высоты блоков

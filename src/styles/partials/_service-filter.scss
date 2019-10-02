@@ -1,12 +1,7 @@
 .service-filter {
-  background-color: #181818;
-  position: relative;
   &__container {
-    padding: 15px 0;
+    margin: 0 0 20px 0;
     position: relative;
-    z-index: 2;
-    border-top: 3px solid #7e8084;
-    border-bottom: 3px solid #7e8084;
   }
 }
 .service-filter-form {
@@ -168,7 +163,7 @@
   }
 }
 
-@media all and(max-width: 1200px) {
+@media all and(max-width: 1210px) {
   .service-filter-form__decoration {
     display: none;
   }
@@ -186,9 +181,16 @@
   .service-filter-form__section_filter {
     display: block;
   }
-  .service-filter-form__container {
-    display: block;
-    padding-top: 5px;
+  .service-filter-form {
+    &__container {
+      display: block;
+    }
+    &__title {
+      padding: 10px 0 5px 0;
+    }
+    &__section_search {
+      padding-bottom: 0;
+    }
   }
   .service-filter-form__search-count {
     flex: 1 1 100%;

@@ -6,16 +6,16 @@ mixin slide()
           img(alt="")&attributes(attributes)
       .recommendations-block__content
         block
-.recommendations
-  .recommendations__background.background.lazy(data-src='img/backgrounds/bg-logos.png')
-  .block-head
-    .decorated
+
+section.section.recommendations
+  .section__head
+    .section__head-container.decorated
       span.decoration
-      span.block-head__title.block-head__title_icons мы рекомендуем
+      h5.section__head-title.section__head-title_icons мы рекомендуем
       span.decoration
   .recommendations__container
     .container
-      .slider.slider_arrows.slider_arrows.recommendations-slider
+      .slider.slider_arrows.slider_arrows.slider_default.recommendations-slider
         +slide()(src="img/logos/barbarossa.png")
           span.recommendations-block__description Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
         +slide()(src="img/logos/topgun.png")
@@ -28,4 +28,5 @@ mixin slide()
           span.recommendations-block__description Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
         +slide()(src="img/logos/topgun.png")
           span.recommendations-block__description Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
+
         

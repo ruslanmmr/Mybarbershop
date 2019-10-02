@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/libs.min.css">
     <link rel="stylesheet" href="styles/common.min.css">
   </head>
-  <body class="body compensate-for-scrollbar">
+  <body>
     <div class="wrapper">
       <div class="page">
         <!--share-->
@@ -70,15 +70,53 @@
             </div>
           </div>
         </div><a class="forum-link" href="#">форум</a>
+        <div class="popup-window" id="windowCity"><span class="popup-window__triangle"></span>
+          <div class="popup-window__head">
+            <input class="input input_style1" type="text" placeholder="Поиск по городу">
+          </div>
+          <div class="popup-window__container">
+            <div class="popup-window__content scroll-area">
+              <ul class="popup-window__list">
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Москва</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Санкт-Петербург</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Екатеринбург</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Нижний Новгород</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Перьм</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Новосибирск</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Уфа</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Петрозаводск</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Омск</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="popup-window" id="windowProfile"><span class="popup-window__triangle"></span>
+          <div class="popup-window__container">
+            <div class="popup-window__content scroll-area">
+              <ul class="popup-window__list">
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Мои данные</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Мой Барбершоп</a></li>
+                <li class="popup-window__item"> <a class="popup-window__link" href="#">Мои сотрудники</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Поиск моделей</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Помощники</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Ассистент</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Реклама</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Соц. Сети</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Магазин</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="#">Бухгалтерия</a></li>
+                <li class="popup-window__item"><a class="popup-window__link popup-window__link_type2" href="#">Выход</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <header class="header">
           <div class="container">
-            <div class="header__container">
-              <div class="overlay"></div>
+            <div class="header__container"><span class="overlay"></span>
               <div class="logo"> <a class="logo__link" href="index.html">
                   <div class="logo__image"><img src="img/logos/logo.svg" alt="logo"></div></a></div>
               <nav class="nav">
                 <div class="nav__head">
-                  <form class="nav__form" action="">
+                  <form class="nav__search">
                     <div class="search">
                       <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
                       <button class="search__button"><i class="fas fa-search"></i></button>
@@ -87,48 +125,32 @@
                   <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
                 </div>
                 <ul class="nav__list">
-                  <li class="nav__item"> <a class="nav__link" href="#">Барбершопы</a></li>
-                  <li class="nav__item"> <a class="nav__link scroll-link" href="#news">новости            </a></li>
-                  <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">барбершопы</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">новости</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">free</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">Ищу работу</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">барахолка</a></li>
                 </ul>
               </nav>
               <div class="sub-nav">
                 <ul class="sub-nav__list">
-                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_city mobile-button" href="#"><i class="fas fa-map-marker-alt"></i>Выбрать город</a></li>
-                  <li class="sub-nav__item"><a class="sub-nav__link sub-nav__link_lc mobile-button modal-link" href="javascript:;" data-src="#registration"><i class="fas fa-user"></i>Мой Barbershop</a></li>
+                  <li class="sub-nav__item"><a class="sub-nav__link mobile-button windowOpenButton" href="#windowCity"><i class="fas fa-map-marker-alt"></i><span>Москва</span></a></li>
+                  <li class="sub-nav__item"><a class="sub-nav__link mobile-button windowOpenButton" href="#windowProfile"><i class="fas fa-user"></i><span>Иванов И.И.</span></a></li>
                   <li class="sub-nav__item sub-nav__item_hamburger"><a class="sub-nav__link sub-nav__nav-open mobile-button" href="#"><i class="fas fa-bars"></i></a></li>
                 </ul>
-                <div class="search-city">
-                  <div class="search-city__container">
-                    <input class="input input_style1 search-city__input" type="text" placeholder="Поиск по городу, индексу">
-                    <div class="search-city__content">
-                      <ul class="search-city__list sl--scrollable">
-                        <li class="search-city__item search-city__item_nothing"><span class="search-city__link search-city__link_nothing">Ничего не найдено!</span></li>
-                        <li class="search-city__item search-city__item_city" data-city="Москва"><a class="search-city__link" href="#">Москва</a></li>
-                        <li class="search-city__item search-city__item_city" data-city="Санкт-Петербург"><a class="search-city__link" href="#">Санкт-Петербург</a></li>
-                        <li class="search-city__item search-city__item_city" data-city="Екатеринбург"><a class="search-city__link" href="#">Екатеринбург</a></li>
-                        <li class="search-city__item search-city__item_city" data-city="Нижний Новгород"><a class="search-city__link" href="#">Нижний Новгород</a></li>
-                        <li class="search-city__item search-city__item_city" data-city="Пермь"><a class="search-city__link" href="#">Пермь</a></li>
-                        <li class="search-city__item search-city__item_city" data-city="Новосибирск"><a class="search-city__link" href="#">Новосибирск</a></li>
-                        <li class="search-city__item search-city__item_city" data-city="Омск"><a class="search-city__link" href="#">Омск</a></li>
-                        <li class="search-city__item search-city__item_city" data-city="Петрозаводск"><a class="search-city__link" href="#">Петрозаводск</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </header>
         <main class="main">
-          <div class="banner banner_with-padding">
+          <div class="banner banner_type2">
             <div class="banner__container">
               <div class="container">
                 <div class="slider slider_dots banner__slider">
-                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image2.jpg"></a></div>
-                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image3.png"></a></div>
-                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image4.jpg"></a></div>
+                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image2.jpg"></a></div>
+                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image3.png"></a></div>
+                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image4.jpg"></a></div>
                 </div>
               </div>
             </div>
@@ -158,7 +180,6 @@
             </div>
           </div>
           <div class="service-filter">
-            <div class="service-filter__background background lazy" data-src="img/backgrounds/bg-logos.png"></div>
             <div class="service-filter__container">
               <form class="service-filter-form" action="">
                 <div class="container">
@@ -168,8 +189,6 @@
                       <button class="search__button"><i class="fas fa-search"></i></button>
                     </div>
                   </div>
-                  <!--span.service-filter-form__search-count всего найдено: 7 мест
-                  -->
                   <div class="service-filter-form__section service-filter-form__section_filter">
                     <div class="service-filter-form__container">
                       <div class="service-filter-form__title">Режим работы:</div>
@@ -242,21 +261,22 @@
               </div>
             </div>
           </div>
-          <div class="banner banner_with-padding">
+          <div class="banner banner_type2">
             <div class="banner__container">
               <div class="container">
                 <div class="slider slider_dots banner__slider">
-                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image2.jpg"></a></div>
-                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image3.png"></a></div>
-                            <div class="slide banner-slide banner-slide_style2"><a class="banner-slide__background cover-box" href="#"><img class="banner-slide__image" alt="" data-lazy="img/banner/banner-image4.jpg"></a></div>
+                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image2.jpg"></a></div>
+                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image3.png"></a></div>
+                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image4.jpg"></a></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="news" id="news">
-            <div class="block-head block-head_background">
-              <div class="block-head__background background lazy" data-src="img/backgrounds/bg-logos.png"></div>
-              <div class="decorated"><span class="decoration"></span><span class="block-head__title">Новости</span><span class="decoration"></span></div>
+          <section class="section news">
+            <div class="section__head">
+              <div class="section__head-container decorated"><span class="decoration"></span>
+                <h5 class="section__head-title">Новости</h5><span class="decoration"></span>
+              </div>
             </div>
             <div class="container">
               <div class="news__container">
@@ -269,7 +289,7 @@
               </div>
               <div class="news__more"><a class="news__button" href="#">Архив Новостей</a></div>
             </div>
-          </div>
+          </section>
         </main>
         <!--footer-->
         <footer class="footer">
@@ -305,7 +325,7 @@
                     <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
                     <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
                     <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
-                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-twitter"></i></a></li>
                   </ul>
                 </div>
               </div>

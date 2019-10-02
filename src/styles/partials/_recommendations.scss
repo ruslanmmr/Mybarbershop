@@ -1,37 +1,18 @@
-.recommendations {
-  position: relative;
-  background-color: #181818;
-  &__background {
-  }
-  &__container {
-    padding-bottom: 40px;
-  }
-}
-.recommendations-slider {
-  max-width: 1330px;
-  .slick-list {
-    margin: 0 -9px;
-  }
-  .slick-track {
-    display: flex;
-  }
-  .slick-arrow:after {
-    color: #e6e6e6;
-  }
-}
 .recommendations-block {
-  padding: 0 9px;
-  overflow: hidden;
   &__container {
     padding: 10px 15px 15px 15px;
     border: 1px solid $main-color;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #151314;
     display: block;
     text-decoration: none;
     color: #7e8084;
     height: 100%;
     outline: none;
+    transition: 0.2s;
+    &:hover {
+      background-color: #202020;
+    }
   }
   &__head {
     position: relative;
@@ -100,21 +81,8 @@
   }
 }
 
-@media all and(max-width: 1300px) {
-  .recommendations-slider {
-    .slick-arrow:after {
-      color: #3f3f3f;
-    }
-  }
-}
 @media all and(max-width: 576px) {
-  .recommendations-slider {
-    overflow: hidden;
-  }
   .recommendations-block__description {
     font-size: 16px;
-  }
-  .recommendations__container {
-    padding-bottom: 30px;
   }
 }
