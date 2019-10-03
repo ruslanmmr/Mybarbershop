@@ -7,6 +7,9 @@
   border-radius: 4px;
   box-shadow: 0;
   transition: 0.2s;
+  &_fluid {
+    width: 100%;
+  }
 }
 a {
   color: inherit;
@@ -84,9 +87,30 @@ a {
     color: #181818;
     text-transform: uppercase;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 10px;
     &:hover {
       background-color: $hover-color;
+    }
+  }
+  &_style5 {
+    background-color: transparent;
+    color: $text-color;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px 0;
+    white-space: nowrap;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &_style6 {
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: transparent;
+    &:hover {
+      color: $text-color;
     }
   }
 }
@@ -202,7 +226,7 @@ a {
   &-slide--html {
     .fancybox-content {
       cursor: default;
-      padding: 20px 50px 50px 50px;
+      padding: 30px 50px 40px 50px;
       border-radius: 4px;
     }
   }
@@ -716,6 +740,6 @@ a {
     }
   }
   .fancybox-slide--html .fancybox-content {
-    padding: 20px;
+    padding: 25px 20px 30px 20px;
   }
 }

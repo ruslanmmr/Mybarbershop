@@ -46,19 +46,19 @@
         .popup1-form__section
           .row
             .popup1-form__item.col-xl-12
-              input(type="text" placeholder="Email/Телефон" required).input.input_style3
+              input(type="text" placeholder="Email/Телефон/Логин" required).input.input_fluid.input_style3
             .popup1-form__item.col-xl-12
-              input(type="password" placeholder="Пароль" required).input.input_style3
+              input(type="password" placeholder="Пароль" required).input.input_fluid.input_style3
             .popup1-form__item.col-xl-12
-              input(type="password" placeholder="Пароль еще раз" required).input.input_style3
+              input(type="password" placeholder="Пароль еще раз" required).input.input_fluid.input_style3
         .popup1-form__section
           label.checkbox.popup1-form__item
             input(type="checkbox" name='#')
             i.fas.fa-check
             span Я согласен(на) 
               a(href="#") с правилами сайта
-        .popup1-form__section.popup1-form__section_btn
-          button(type='submit').button.button_style4 Зарегистрироваться
+        .popup1-form__section
+          button(type='submit').button.button_fluid.button_style4 Зарегистрироваться
         .popup1-form__section
           .row
             .popup1-form__item.col-xl-12
@@ -83,3 +83,48 @@
                 li.popup1-form__auth-item.col-xl-2
                   a(href="#").popup1-form__auth-link
                     i.fab.fa-yandex
+//auth
+.popup.popup1(id="auth")
+  .popup__container
+    .popup1__head
+      span.popup1__title Вход в личный кабинет:
+    .popup1__content
+       form(action="").popup1-form
+        .popup1-form__section
+          .row
+            .popup1-form__item.col-xl-12
+              input(type="text" placeholder="Email/Телефон/Логин" required).input.input_fluid.input_style3
+            .popup1-form__item.col-xl-12
+              input(type="password" placeholder="Пароль" required).input.input_fluid.input_style3
+        .popup1-form__section
+          .row
+            .popup1-form__item.col-xl-auto
+              button(type='submit').button.button_style5 Забыли пароль?
+            .popup1-form__item.col-xl
+              button(type='submit').button.button_fluid.button_style4 Войти
+        .popup1-form__section
+          .row
+            .popup1-form__item.col-xl-12
+              span.popup1-form__title или войти с помощью
+            .popup1-form__auth-list.col-xl-12
+              .row
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-facebook-f
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-vk
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-twitter
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-odnoklassniki
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-google-plus-g
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-yandex
+        .popup1-form__section
+          a(href="#").button.button_fluid.button_style6 зарегистрироваться
