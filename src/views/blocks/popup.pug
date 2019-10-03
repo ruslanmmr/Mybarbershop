@@ -10,47 +10,76 @@
     button.share-area__close
       i.fas.fa-times
 //regisrtation
-.popup.popup_registration(id="registration")
+.popup.popup1(id="registration")
   .popup__container
-    .popup-registration
-      .popup-registration__container
-        .popup-registration__head
-          h3.popup-registration__title Регистрация
-        form(action="").popup-registration__form
-          .popup-registration__form-group
-            input(type="text" placeholder="Email/Телефон" required).popup-registration__input
-          .popup-registration__form-group
-            input(type="password" placeholder="Пароль" required).popup-registration__input
-          .popup-registration__form-group
-            input(type="password" placeholder="Пароль еще раз" required).popup-registration__input
-          .popup-registration__form-group.popup-registration__form-group_checkbox
-            .checkbox
-              input(type="checkbox" id='siterules' required).checkbox__input
-              label(for="siterules").checkbox__label
+    .popup1__head
+      span.popup1__title Зарегистрироваться как:
+    .popup1__content
+      form(action="").popup1-form
+        .popup1-form__section
+          .row
+            .popup1-form__item.col-xl-6
+              label.checkbox.checkbox_dark
+                input(type="radio" name='val1')
                 i.fas.fa-check
-                span Я согласен(на) 
-                  a(href="#") с правилами сайта
-          .popup-registration__form-group
-            button(type='submit').popup-registration__submit Зарегистрироваться
-        .popup-registration__socials
-          span или войти с помощью
-          .socials
-            ul.socials__list
-              li.socials__item
-                a(href="#").socials__link
-                  i.fab.fa-facebook-f
-              li.socials__item
-                a(href="#").socials__link
-                  i.fab.fa-vk
-              li.socials__item
-                a(href="#").socials__link
-                  i.fab.fa-twitter
-              li.socials__item
-                a(href="#").socials__link
-                  i.fab.fa-odnoklassniki
-              li.socials__item
-                a(href="#").socials__link
-                  i.fab.fa-google-plus-g
-              li.socials__item
-                a(href="#").socials__link
-                  i.fab.fa-yandex
+                span клиент
+            .popup1-form__item.col-xl-6
+              label.checkbox.checkbox_dark
+                input(type="radio" name='val1')
+                i.fas.fa-check
+                span барбер 
+            .popup1-form__item.col-xl-6
+              label.checkbox.checkbox_dark
+                input(type="radio" name='val1')
+                i.fas.fa-check
+                span управляющий
+            .popup1-form__item.col-xl-6
+              label.checkbox.checkbox_dark
+                input(type="radio" name='val1')
+                i.fas.fa-check
+                span администратор
+            .popup1-form__item.col-xl-12
+              label.checkbox.checkbox_dark
+                input(type="radio" name='val1')
+                i.fas.fa-check
+                span владелец барбершопа
+        .popup1-form__section
+          .row
+            .popup1-form__item.col-xl-12
+              input(type="text" placeholder="Email/Телефон" required).input.input_style3
+            .popup1-form__item.col-xl-12
+              input(type="password" placeholder="Пароль" required).input.input_style3
+            .popup1-form__item.col-xl-12
+              input(type="password" placeholder="Пароль еще раз" required).input.input_style3
+        .popup1-form__section
+          label.checkbox.popup1-form__item
+            input(type="checkbox" name='#')
+            i.fas.fa-check
+            span Я согласен(на) 
+              a(href="#") с правилами сайта
+        .popup1-form__section.popup1-form__section_btn
+          button(type='submit').button.button_style4 Зарегистрироваться
+        .popup1-form__section
+          .row
+            .popup1-form__item.col-xl-12
+              span.popup1-form__title или войти с помощью
+            .popup1-form__auth-list.col-xl-12
+              .row
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-facebook-f
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-vk
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-twitter
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-odnoklassniki
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-google-plus-g
+                li.popup1-form__auth-item.col-xl-2
+                  a(href="#").popup1-form__auth-link
+                    i.fab.fa-yandex

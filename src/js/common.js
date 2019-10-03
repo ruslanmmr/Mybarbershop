@@ -8,10 +8,11 @@ $(document).ready(function () {
   share();
   popup();
   autoHeight();
-  check();
+  checkbox();
   fadeInWindows();
   scrollbar();
-  searchCity()
+  searchCity();
+  funcybox();
 });
 
 $(window).resize(function () {
@@ -25,6 +26,7 @@ $(window).resize(function () {
 
 //global variables
 let innerWidth = $('.wrapper').width(),
+    $checkbox = $('.checkbox'),
     $slider = $('.slider'),
     $scroll = $('.scroll-area');
 
@@ -548,6 +550,50 @@ function share() {
   });
 }
 
+function funcybox() {
+  $.fancybox.defaults.btnTpl.close = '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.6 13.6"><path d="M6.8 5.4L1.4 0 0 1.4l5.4 5.4L0 12.2l1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4L12.2 0z"></path></svg>' +
+  "</button>";
+  $.fancybox.defaults.btnTpl.arrowLeft = '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+  '<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 10.14"><path d="M6.28 8.77l-1.34 1.37L0 5.07 4.94 0l1.34 1.38L3.6 4.1H14v1.94H3.6z"></path></svg></div>' +
+  "</button>";
+  $.fancybox.defaults.btnTpl.arrowRight = '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_right" title="{{PREV}}">' +
+  '<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 10.14"><path d="M10.4 6.04L7.72 8.76l1.34 1.38L14 5.07 9.06 0 7.72 1.38 10.4 4.1H0v1.94z"></path></svg></div>' +
+  "</button>";
+  $.fancybox.defaults.btnTpl.zoom = '<button data-fancybox-zoom class="fancybox-button fancybox-button--zoom" title="{{ZOOM}}">' +
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.056 14.096"> <path d="M13.756 12.356l-3-3a5.9 5.9 0 0 0-.6-7.6 5.9 5.9 0 0 0-8.4 0 5.9 5.9 0 0 0 0 8.4 5.9 5.9 0 0 0 7.7.7l3 3a1 1 0 0 0 1.3 0c.4-.5.4-1 0-1.5zm-10.6-3.5a4 4 0 0 1 0-5.7 4 4 0 0 1 5.7 0 4 4 0 0 1 0 5.7 4 4 0 0 1-5.7 0z"></path> </svg>' +
+  "</button>";
+  $.fancybox.defaults.btnTpl.download = '<a download data-fancybox-download class="fancybox-button fancybox-button--download" title="{{DOWNLOAD}}" href="javascript:;">' +
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.24 14"> <path d="M13.24 12.09V14H0v-1.91zm-2.97-6.96l1.35 1.32-5 4.87-5-4.87 1.36-1.32 2.68 2.64V0h1.92v7.77z"></path> </svg>' +
+  "</a>";
+  $.fancybox.defaults.btnTpl.slideShow = '<button data-fancybox-play class="fancybox-button fancybox-button--play" title="{{PLAY_START}}">' +
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13.2"> <path d="M0 0v13.2l11-6.6z"></path></svg>' +
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.35 12.5" id="slideshow"><path d="M0 0h2.2v12.5H0zm5.15 0h2.2v12.5h-2.2z"></path></svg>' +
+  "</button>";
+  $.fancybox.defaults.btnTpl.smallBtn = '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.6 13.6"><path d="M6.8 5.4L1.4 0 0 1.4l5.4 5.4L0 12.2l1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4L12.2 0z"></path></svg>' +
+  "</button>";
+  $.fancybox.defaults.btnTpl.thumbs = '<button data-fancybox-thumbs class="fancybox-button fancybox-button--thumbs" title="{{THUMBS}}">' +
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 12.7" id="slideshow"><path d="M8.94 8.94h3.76v3.76H8.94zm-4.47 0h3.76v3.76H4.47zM0 8.94h3.76v3.76H0zm8.94-4.47h3.76v3.76H8.94zm-4.47 0h3.76v3.76H4.47zM0 4.47h3.76v3.76H0zM8.94 0h3.76v3.76H8.94zM4.47 0h3.76v3.76H4.47zM0 0h3.76v3.76H0z"></path></svg>' +
+  "</button>";
+  $.fancybox.defaults.i18n.ru = {
+    CLOSE       : 'Закрыть',
+    NEXT        : 'Следующий слайд',
+    PREV        : 'Предидущий слайд',
+    ERROR       : 'Ошибка загрузки, попробуйте позже.',
+    PLAY_START  : 'Запустить слайд-шоу',
+    PLAY_STOP   : 'Остановить слайд-шоу',
+    FULL_SCREEN : 'Полноэкранный режим',
+    THUMBS      : 'Миниатюры',
+    DOWNLOAD    : 'Загрузить',
+    SHARE       : 'Поделиться',
+    ZOOM        : 'Увеличить'
+  };
+  $.fancybox.defaults.lang = 'ru';
+  $.fancybox.defaults.loop = true;
+  $.fancybox.defaults.autoFocus = false;
+}
+
 //popup
 function popup() {
 
@@ -594,15 +640,21 @@ function autoHeight() {
   })
 }
 
-//check
-function check() {
-  var $checkbox = $('.label');
-
+//обрабокта кликов
+function checkbox() {
   $checkbox.on('click', function() {
-    if($(this).children('input').prop('checked')) {
+    checkboxCheck();
+  })
+}
+//в остальных ситуация для изменения вида чекбоксов выполняется эта функция
+function checkboxCheck() {
+  $checkbox.each(function() {
+    if($(this).find('input').prop('checked') || $('#' + $(this).attr('for')).prop('checked')) {
       $(this).addClass('checked');
+      console.log('1')
     } else {
       $(this).removeClass('checked');
+      console.log('2')
     }
   })
 }

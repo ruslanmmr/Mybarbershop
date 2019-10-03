@@ -1,159 +1,67 @@
 //
-.fancybox-content {
-  padding: 0;
-  background-color: transparent;
-}
-.fancybox-progress {
-  background-color: $main-color;
-}
 .fancybox-slide {
   padding: 20px 15px;
 }
-.fancybox-button {
-  color: $main-color !important;
-  transition: .3s;
-  opacity: 1;
-  &:hover {
-    background-color: rgba(252, 156, 47, 0.2);
-  }
-}
-.fancybox-thumbs__list a::before {
-  border-color: $main-color;
-}
 //
 .popup {
-  margin: 0 auto;
   display: none;
-  &_registration {
-    max-width: 440px;
-  }
 }
-.popup-registration {
-  border-radius: 4px;
+.popup1 {
   background-color: #181818;
-  margin: 0 auto;
-  padding: 20px 50px 35px 50px;
-  font-size: 17px;
-  position: relative;
-  &:before {
-    content: '';
+  width: 100%;
+  max-width: 400px;
+  &__title {
+    font-size: 18px;
     display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url('../img/logos/logo.svg') no-repeat left top;
-    background-size: 120% 120%;
-    opacity: 0.4;
-  }
-  &__container {
-    position: relative;
-    z-index: 2;
+    padding-bottom: 15px;
+    color: #fff;
   }
   &__head {
-    position: relative;
-    padding-bottom: 25px;
-  }
-  &__submit {
-    border: 0;
-    background: $main-color;
-    padding: 15px 25px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 13px;
-    transition: 0.3s;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    outline: none;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  &__title {
-    color: #fff;
-    font-size: 22px;
-    line-height: 40px;
-    margin: 0;
-  }
-  .popup-close {
-    outline: none;
-    background-color: transparent;
-    color: $main-color;
-    font-size: 18px;
-    display: block;
-    border: 0;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    padding: 0;
-    right: -14px;
-    top: 0;
-    cursor: pointer;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  &__form-group {
-    margin-bottom: 25px;
-    &_checkbox {
-      margin: 50px 0;
-    }
-  }
-  &__input {
-    border: 0;
-    border-radius: 0;
-    appearance: none;
-    background-color: transparent;
     border-bottom: 1px solid $main-color;
-    font-size: 17px;
-    display: block;
-    width: 100%;
-    padding: 5px 0;
-    outline: none;
-    color: #fff;
-    &::placeholder {
-      color: #65666a;
-    }
-    &:focus {
-      &::placeholder {
-        color: transparent;
+    margin-bottom: 30px;
+  }
+  &-form {
+    &__section {
+      &:not(:last-child) {
+        margin-bottom: 30px;
       }
     }
-  }
-  &__socials {
-    margin-top: 30px;
-    span {
+    .input, .checkbox, .button {
+      display: block;
+      width: 100%;
+    }
+    &__title {
       display: block;
       text-align: center;
-      padding-bottom: 10px;
     }
-    .socials__list {
-      justify-content: space-between;
-      margin: -4px;
-      flex-wrap: wrap;
+    &__auth-list {
+      list-style: none;
     }
-    .socials__item {
-      padding: 4px;
-    }
-    .socials__link {
-      border-radius: 4px;
+    &__auth-link {
+      display: block;
+      position: relative;
       background-color: $main-color;
-      color: #181818;
+      color: #221d18;
+      border-radius: 4px;
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
       i {
-        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
       }
       &:hover {
-        opacity: 0.8;
+        background-color: $hover-color;
       }
     }
   }
 }
 
 @media all and(max-width: 576px) {
-  .popup-registration {
-    padding: 20px;
-  }
+  
 }

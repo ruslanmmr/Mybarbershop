@@ -3,17 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=cyrillic');
 
 $main-color: #ff8a00;
+$text-color: #65666a;
 $border-color: #a7a9ae;
 $hover-color: #ca6c00;
 
 body {
   text-rendering: optimizeSpeed;
-  font: 16px "Roboto", sans-serif;
+  font: 14px "Roboto", sans-serif;
   color: #fff;
   min-width: 320px;
   position: relative;
   line-height: 1.35;
   background-color: #0c1115;
+  font-weight: 300;
   position: relative;
 }
 .background {
@@ -41,9 +43,6 @@ body {
 }
 .wrapper {
   overflow: hidden;
-}
-.row {
-  display: flex;
 }
 .main {
   position: relative;
