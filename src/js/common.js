@@ -175,11 +175,11 @@ function nav() {
     if ($nav.hasClass('active')) {
       $overlay.fadeIn(300);
       scrollLock.hide($("body"));
-      $('.page').addClass('page_fixed');
+      $('.page').addClass('active');
     } else {
       $overlay.fadeOut(300);
       scrollLock.show($("body"));
-      $('.page').removeClass('page_fixed');
+      $('.page').removeClass('active');
     }
   }
 

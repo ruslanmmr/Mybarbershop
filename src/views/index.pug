@@ -3,23 +3,25 @@ html(lang="ru")
   head
     include blocks/head
   body
-    span.background.lazy(data-src='img/backgrounds/background.jpg')
+    .background.lazy(data-src='img/backgrounds/background.jpg')
     .wrapper
       .page
-        include blocks/popup
-        include blocks/fixed
         include blocks/header
-        main.main
-          include blocks/banner-main
-          include blocks/banner2
-          include blocks/gallery
-          include blocks/recommendations
-          include blocks/banner2
-          include blocks/filter_state1
-          include blocks/banner2
-          include blocks/news
+        .page__container
+          main.main
+            include blocks/banner-main
+            include blocks/banner2
+            include blocks/gallery
+            include blocks/recommendations
+            include blocks/banner2
+            include blocks/filter_state1
+            include blocks/banner2
+            include blocks/news
         //footer
         include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="js/libs.min.js")                  
     script(src="js/common.min.js")

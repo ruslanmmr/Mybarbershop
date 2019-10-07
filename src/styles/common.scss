@@ -18,49 +18,62 @@ body {
   font-weight: 300;
   position: relative;
 }
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-position: center;
-  background-repeat: repeat;
-}
-.container {
-  max-width: 1210px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-  padding: 0 20px;
-  flex-shrink: 0;
-  &_style2 {
-    max-width: 880px;
-  }
-  &_style3 {
-    max-width: 645px;
-  }
-}
 .wrapper {
   overflow: hidden;
 }
-.main {
-  position: relative;
-  z-index: 1;
-  &_style2 {
-    background-color: #121417;
-    padding-bottom: 100px;
-  }
-  &__background {
-    background-size: 100% auto;
-    background-repeat: repeat;
-    background-position: top center;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  .container {
+    padding: 0;
   }
 }
 .page {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   transition: transform .3s;
-  &_fixed {
+  &.active {
     transform: translateX(270px);
+  }
+  &__container {
+    display: flex;
+    flex: 1 1 100%;
+    padding-bottom: 100px;
+  }
+}
+.aside {
+  flex: 0 0 214px;
+  padding: 114px 40px 0 0;
+}
+.main {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+@media all and(max-width: 1200px) {
+  .aside {
+    flex: 0 0 170px;
+    padding: 90px 20px 0 0;
+  }
+}
+@media all and(max-width: 1024px) {
+  .page {
+    &__container {
+      padding: 0 0 80px 0;
+    }
+  }
+  .container {
+    .container {
+      padding: 0 20px;
+    }
+  }
+  .aside {
+    display: none;
   }
 }
 @media all and(max-width: 576px) {
@@ -68,6 +81,7 @@ body {
     padding-bottom: 40px;
   }
 }
+
 @import "./partials/items";
 @import "./partials/text";
 @import "./partials/slider";
@@ -78,6 +92,7 @@ body {
 @import "./partials/recommendations";
 @import "./partials/map";
 @import "./partials/news";
+@import "./partials/lc-nav";
 @import "./partials/barbers";
 @import "./partials/choise";
 @import "./partials/footer";

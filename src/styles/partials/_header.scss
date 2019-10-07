@@ -4,6 +4,7 @@
   position: relative;
   z-index: 100;
   height: 105px;
+  flex-shrink: 0;
   &:after {
     content: '';
     display: block;
@@ -18,7 +19,7 @@
     height: 100%;
   }
   &__container {
-    padding: 20px 0 20px 184px;
+    padding: 20px 0 20px 174px;
     display: flex;
     height: 100%;
     justify-content: space-between;
@@ -234,7 +235,7 @@
   display: none;
 }
 
-@media all and(max-width: 1210px) {
+@media all and(max-width: 1200px) {
   .logo {
     width: 150px;
     &__link:after {

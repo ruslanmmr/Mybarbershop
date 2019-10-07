@@ -8,7 +8,7 @@
     }
   }
   &_type2 {
-    margin: 35px 0;
+    margin: 40px 0;
     .banner-slide {
       height: 300px;
     }
@@ -252,6 +252,11 @@
     }
     &__sub-title {
       font-size: 24px;
+    }
+  }
+  .banner {
+    &_type2 {
+      margin: 30px 0;
     }
   }
 }

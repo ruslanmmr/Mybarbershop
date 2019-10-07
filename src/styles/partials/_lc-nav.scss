@@ -1,0 +1,24 @@
+.account-nav {
+  font-size: 16px;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    border-bottom: 1px solid $main-color;
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    padding: 6px 0;
+    transition: 0.2s;
+    &:hover {
+      color: $main-color;
+    }
+    &.active {
+      color: $main-color;
+    }
+  }
+}
+

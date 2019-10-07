@@ -1,9 +1,8 @@
 .footer {
   background-color: #7e8084;
   font-size: 14px;
-  margin-top: 100px;
-  position: relative;
-  z-index: 10;
+  overflow: hidden;
+  flex-shrink: 0;
   &__container {
     padding: 50px 0 40px 0;
     position: relative;

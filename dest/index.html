@@ -4,14 +4,407 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mybarbershop</title>
+    <!--base(href='http://localhost:9000/')-->
+    <base href="https://ruslanmmr.github.io/Mybarbershop/dest/">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!--styles for all pages-->
     <link rel="stylesheet" href="styles/libs.min.css">
     <link rel="stylesheet" href="styles/common.min.css">
   </head>
-  <body><span class="background lazy" data-src="img/backgrounds/background.jpg"></span>
+  <body>
+    <div class="background lazy" data-src="img/backgrounds/background.jpg"></div>
     <div class="wrapper">
       <div class="page">
+        <header class="header">
+          <div class="container">
+            <div class="header__container"><span class="overlay"></span>
+              <div class="logo"> <a class="logo__link" href="index.html">
+                  <div class="logo__image"><img src="img/logos/logo.svg" alt="logo"></div></a></div>
+              <nav class="nav">
+                <div class="nav__head">
+                  <form class="nav__search">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                  </form>
+                  <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
+                </div>
+                <ul class="nav__list">
+                  <li class="nav__item"> <a class="nav__link" href="#">барбершопы</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">новости</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">free</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">Ищу работу</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">барахолка</a></li>
+                </ul>
+              </nav>
+              <div class="sub-nav">
+                <ul class="sub-nav__list">
+                  <li class="sub-nav__item"><a class="sub-nav__link mobile-button windowOpenButton" href="#windowCity"><i class="fas fa-map-marker-alt"></i><span>Москва</span></a></li>
+                  <li class="sub-nav__item"><a class="sub-nav__link mobile-button windowOpenButton" href="#windowProfile"><i class="fas fa-user"></i><span>Иванов И.И.</span></a></li>
+                  <li class="sub-nav__item sub-nav__item_hamburger"><a class="sub-nav__link sub-nav__nav-open mobile-button" href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page__container">
+          <main class="main">
+            <div class="banner banner_type1">
+              <div class="myplace"><a class="myplace__link tooltip modal modal-link" href="javascript:;" data-src="#auth" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
+              <div class="banner__container">
+                <div class="slider slider_dots banner__slider"><a class="slide banner-slide modal-link" href="javascript:;" data-src="#registration">
+                    <div class="banner-slide__background cover-box" data-filter><img class="lazy" data-src="img/banner/banner-image1.jpg" alt="#"></div>
+                    <div class="banner-slide__container">
+                      <div class="container">
+                        <div class="banner-slide__title">ЗарЕГИСТРИРУйся</div>
+                        <div class="banner-slide__sub-title">и получи больше возможностей...</div>
+                      </div>
+                    </div></a>
+                  <div class="slide banner-slide">
+                    <div class="banner-slide__background cover-box" data-filter><img class="lazy" data-src="img/banner/banner-salon.jpg" alt="#"></div>
+                    <div class="banner-slide__container">
+                      <div class="container">
+                        <div class="banner-slide__title">заголовок</div>
+                        <div class="banner-slide__sub-title">описание к заголовку, или текст</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="banner banner_type2">
+              <div class="banner__container">
+                <div class="container">
+                  <div class="slider slider_dots banner__slider">
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image2.jpg"></a></div>
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image3.png"></a></div>
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image4.jpg"></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="gallery section">
+              <div class="section__head">
+                <div class="section__head-container decorated"><span class="decoration"></span>
+                  <h5 class="section__head-title section__head-title_icons">мы рекомендуем</h5><span class="decoration"></span>
+                </div>
+              </div>
+              <div class="gallery__wrap">
+                <div class="container">
+                  <div class="gallery__container">
+                    <div class="gallery__row">
+                      <div class="gallery-block gallery-block_1">
+                        <div class="gallery-block__container">
+                          <div class="gallery-block__content">
+                            <div class="gallery-block__row">
+                              <div class="gallery-item gallery-item_1"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                              <div class="gallery-item gallery-item_stub"></div>
+                              <div class="gallery-item gallery-item_2"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                              <div class="gallery-item gallery-item_3"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="gallery-block gallery-block_2">
+                        <div class="gallery-block__container">
+                          <div class="gallery-block__content">
+                            <div class="gallery-block__row">
+                              <div class="gallery-item gallery-item_1"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                              <div class="gallery-item gallery-item_stub"></div>
+                              <div class="gallery-item gallery-item_2"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                              <div class="gallery-item gallery-item_3"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gallery__row gallery__row_center">
+                      <div class="gallery-block gallery-block_big">
+                        <div class="gallery-block__container">
+                          <div class="gallery-block__content">
+                            <div class="gallery-block__row">
+                              <div class="gallery-item"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber2.jpg" alt=""></div></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="gallery-block gallery-block_title">
+                        <div class="gallery-block__container">
+                          <div class="gallery-block__content gallery-block__content_title">
+                            <div class="gallery-block__image cover-box"><img class="lazy" data-src="img/gallery/top.jpg" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="gallery-block gallery-block_big">
+                        <div class="gallery-block__container">
+                          <div class="gallery-block__content">
+                            <div class="gallery-block__row">
+                              <div class="gallery-item"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber2.jpg" alt=""></div></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gallery__row">
+                      <div class="gallery-block gallery-block_3">
+                        <div class="gallery-block__container">
+                          <div class="gallery-block__content">
+                            <div class="gallery-block__row">
+                              <div class="gallery-item gallery-item_1"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                              <div class="gallery-item gallery-item_2"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                              <div class="gallery-item gallery-item_stub"></div>
+                              <div class="gallery-item gallery-item_3"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="gallery-block gallery-block_4">
+                        <div class="gallery-block__container">
+                          <div class="gallery-block__content">
+                            <div class="gallery-block__row">
+                              <div class="gallery-item gallery-item_1"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                              <div class="gallery-item gallery-item_2"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                              <div class="gallery-item gallery-item_stub"></div>
+                              <div class="gallery-item gallery-item_3"><a class="gallery-item__link" href="#">
+                                  <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section recommendations">
+              <div class="section__head">
+                <div class="section__head-container decorated"><span class="decoration"></span>
+                  <h5 class="section__head-title section__head-title_icons">мы рекомендуем</h5><span class="decoration"></span>
+                </div>
+              </div>
+              <div class="recommendations__container">
+                <div class="container">
+                  <div class="slider slider_arrows slider_arrows slider_default recommendations-slider">
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head">
+                                      <div class="recommendations-block__image"><img alt="" src="img/logos/barbarossa.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head">
+                                      <div class="recommendations-block__image"><img alt="" src="img/logos/topgun.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head">
+                                      <div class="recommendations-block__image"><img alt="" src="img/logos/barbarossa.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head">
+                                      <div class="recommendations-block__image"><img alt="" src="img/logos/topgun.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head">
+                                      <div class="recommendations-block__image"><img alt="" src="img/logos/barbarossa.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head">
+                                      <div class="recommendations-block__image"><img alt="" src="img/logos/topgun.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="banner banner_type2">
+              <div class="banner__container">
+                <div class="container">
+                  <div class="slider slider_dots banner__slider">
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image2.jpg"></a></div>
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image3.png"></a></div>
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image4.jpg"></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="service-filter">
+              <div class="service-filter__container">
+                <form class="service-filter-form" action="">
+                  <div class="container">
+                    <div class="service-filter-form__section service-filter-form__section_search">
+                      <div class="search">
+                        <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
+                        <button class="search__button"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                    <div class="service-filter-form__section service-filter-form__section_filter">
+                      <div class="service-filter-form__container">
+                        <div class="service-filter-form__title">Режим работы:</div>
+                        <div class="service-filter-form__content">
+                          <div class="service-filter-value">
+                            <label class="label label_style1 label_value1">
+                              <div class="service-filter-value__title">с утра</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="label label_style1 label_value2">
+                              <div class="service-filter-value__title">до поздна</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="label label_style1 label_value3">
+                              <div class="service-filter-value__title">круглосуточно</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                        </div>
+                      </div><span class="service-filter-form__decoration"></span>
+                      <div class="service-filter-form__container">
+                        <div class="service-filter-form__title">Стоимость услуг:</div>
+                        <div class="service-filter-form__content">
+                          <div class="service-filter-value">
+                            <label class="label label_style2 label_value4 tooltip" title="от 100 до 550р">
+                              <div class="service-filter-value__title">Premium</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="label label_style2 label_value5 tooltip" title="от 550 до 1000р">
+                              <div class="service-filter-value__title">Standard</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="label label_style2 label_value6 tooltip" title="от 1000р">
+                              <div class="service-filter-value__title">Economy</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!--
+              .service-filter-recomendations
+                .decotarive-line2
+                  span
+                  i.fas.fa-thumbs-up
+                  span
+                .container
+                  ul.service-filter-recomendations__list
+                    li.service-filter-recomendations__item
+                      a(href="#").service-filter-recomendations__link <strong>Бритва</strong> /на Новоясеневском проспекте/
+                    li.service-filter-recomendations__item
+                      a(href="#").service-filter-recomendations__link <strong>TopGun</strong> /в ТЦ МЕГА Химки/
+                    li.service-filter-recomendations__item
+                      a(href="#").service-filter-recomendations__link <strong>Barbarossa</strong> /на метро Ясенево/
+              -->
+              <div class="map">
+                <div class="map__container">
+                  <div id="map"></div>
+                </div>
+              </div>
+            </div>
+            <div class="banner banner_type2">
+              <div class="banner__container">
+                <div class="container">
+                  <div class="slider slider_dots banner__slider">
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image2.jpg"></a></div>
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image3.png"></a></div>
+                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image4.jpg"></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="section news">
+              <div class="section__head">
+                <div class="section__head-container decorated"><span class="decoration"></span>
+                  <h5 class="section__head-title">Новости</h5><span class="decoration"></span>
+                </div>
+              </div>
+              <div class="container">
+                <div class="news__container">
+                              <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон</span></a></div>
+                              <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">Борода как ОБЕРЕГ</span></a></div>
+                              <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон и еще какой-либо длинный текст</span></a></div>
+                              <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон</span></a></div>
+                              <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">Борода как ОБЕРЕГ</span></a></div>
+                              <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон и еще какой-либо длинный текст</span></a></div>
+                </div>
+                <div class="news__more"><a class="news__button" href="#">Архив Новостей</a></div>
+              </div>
+            </section>
+          </main>
+        </div>
+        <!--footer-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__container">
+              <div class="footer__section footer__section_top">
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить место</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить специалистов</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доступ к салону</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Правила работы с отзывами</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Политика конфиденциальности</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav">
+                  <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">О проекте “MyBarbershop”</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Вакансии</a></li>
+                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__section footer__section_bottom"><span class="footer__message">Увидели ошибку - сообщите нам нажав Ctrl+Enter</span>
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!--other-->
         <!--share-->
         <div class="share-area">
           <div class="share-area__container">
@@ -171,7 +564,7 @@
           <div class="popup-window__container">
             <div class="popup-window__content scroll-area">
               <ul class="popup-window__list">
-                <li class="popup-window__item"><a class="popup-window__link" href="#">Мои данные</a></li>
+                <li class="popup-window__item"><a class="popup-window__link" href="lcv/lcv_dannie.html">Мои данные</a></li>
                 <li class="popup-window__item"><a class="popup-window__link" href="#">Мой Барбершоп</a></li>
                 <li class="popup-window__item"> <a class="popup-window__link" href="#">Мои сотрудники</a></li>
                 <li class="popup-window__item"><a class="popup-window__link" href="#">Поиск моделей</a></li>
@@ -186,394 +579,6 @@
             </div>
           </div>
         </div>
-        <header class="header">
-          <div class="container">
-            <div class="header__container"><span class="overlay"></span>
-              <div class="logo"> <a class="logo__link" href="index.html">
-                  <div class="logo__image"><img src="img/logos/logo.svg" alt="logo"></div></a></div>
-              <nav class="nav">
-                <div class="nav__head">
-                  <form class="nav__search">
-                    <div class="search">
-                      <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
-                      <button class="search__button"><i class="fas fa-search"></i></button>
-                    </div>
-                  </form>
-                  <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
-                </div>
-                <ul class="nav__list">
-                  <li class="nav__item"> <a class="nav__link" href="#">барбершопы</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="#">новости</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="#">free</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="#">Ищу работу</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="#">барахолка</a></li>
-                </ul>
-              </nav>
-              <div class="sub-nav">
-                <ul class="sub-nav__list">
-                  <li class="sub-nav__item"><a class="sub-nav__link mobile-button windowOpenButton" href="#windowCity"><i class="fas fa-map-marker-alt"></i><span>Москва</span></a></li>
-                  <li class="sub-nav__item"><a class="sub-nav__link mobile-button windowOpenButton" href="#windowProfile"><i class="fas fa-user"></i><span>Иванов И.И.</span></a></li>
-                  <li class="sub-nav__item sub-nav__item_hamburger"><a class="sub-nav__link sub-nav__nav-open mobile-button" href="#"><i class="fas fa-bars"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </header>
-        <main class="main">
-          <div class="banner banner_type1">
-            <div class="myplace"><a class="myplace__link tooltip modal modal-link" href="javascript:;" data-src="#auth" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.png" alt=""></a></div>
-            <div class="banner__container">
-              <div class="slider slider_dots banner__slider"><a class="slide banner-slide modal-link" href="javascript:;" data-src="#registration">
-                  <div class="banner-slide__background cover-box" data-filter><img class="lazy" data-src="img/banner/banner-image1.jpg" alt="#"></div>
-                  <div class="banner-slide__container">
-                    <div class="container">
-                      <div class="banner-slide__title">ЗарЕГИСТРИРУйся</div>
-                      <div class="banner-slide__sub-title">и получи больше возможностей...</div>
-                    </div>
-                  </div></a>
-                <div class="slide banner-slide">
-                  <div class="banner-slide__background cover-box" data-filter><img class="lazy" data-src="img/banner/banner-salon.jpg" alt="#"></div>
-                  <div class="banner-slide__container">
-                    <div class="container">
-                      <div class="banner-slide__title">заголовок</div>
-                      <div class="banner-slide__sub-title">описание к заголовку, или текст</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="banner banner_type2">
-            <div class="banner__container">
-              <div class="container">
-                <div class="slider slider_dots banner__slider">
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image2.jpg"></a></div>
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image3.png"></a></div>
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image4.jpg"></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <section class="gallery section">
-            <div class="section__head">
-              <div class="section__head-container decorated"><span class="decoration"></span>
-                <h5 class="section__head-title section__head-title_icons">мы рекомендуем</h5><span class="decoration"></span>
-              </div>
-            </div>
-            <div class="gallery__wrap">
-              <div class="container">
-                <div class="gallery__container">
-                  <div class="gallery__row">
-                    <div class="gallery-block gallery-block_1">
-                      <div class="gallery-block__container">
-                        <div class="gallery-block__content">
-                          <div class="gallery-block__row">
-                            <div class="gallery-item gallery-item_1"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                            <div class="gallery-item gallery-item_stub"></div>
-                            <div class="gallery-item gallery-item_2"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                            <div class="gallery-item gallery-item_3"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="gallery-block gallery-block_2">
-                      <div class="gallery-block__container">
-                        <div class="gallery-block__content">
-                          <div class="gallery-block__row">
-                            <div class="gallery-item gallery-item_1"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                            <div class="gallery-item gallery-item_stub"></div>
-                            <div class="gallery-item gallery-item_2"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                            <div class="gallery-item gallery-item_3"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="gallery__row gallery__row_center">
-                    <div class="gallery-block gallery-block_big">
-                      <div class="gallery-block__container">
-                        <div class="gallery-block__content">
-                          <div class="gallery-block__row">
-                            <div class="gallery-item"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber2.jpg" alt=""></div></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="gallery-block gallery-block_title">
-                      <div class="gallery-block__container">
-                        <div class="gallery-block__content gallery-block__content_title">
-                          <div class="gallery-block__image cover-box"><img class="lazy" data-src="img/gallery/top.jpg" alt=""></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="gallery-block gallery-block_big">
-                      <div class="gallery-block__container">
-                        <div class="gallery-block__content">
-                          <div class="gallery-block__row">
-                            <div class="gallery-item"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber2.jpg" alt=""></div></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="gallery__row">
-                    <div class="gallery-block gallery-block_3">
-                      <div class="gallery-block__container">
-                        <div class="gallery-block__content">
-                          <div class="gallery-block__row">
-                            <div class="gallery-item gallery-item_1"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                            <div class="gallery-item gallery-item_2"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                            <div class="gallery-item gallery-item_stub"></div>
-                            <div class="gallery-item gallery-item_3"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="gallery-block gallery-block_4">
-                      <div class="gallery-block__container">
-                        <div class="gallery-block__content">
-                          <div class="gallery-block__row">
-                            <div class="gallery-item gallery-item_1"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                            <div class="gallery-item gallery-item_2"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                            <div class="gallery-item gallery-item_stub"></div>
-                            <div class="gallery-item gallery-item_3"><a class="gallery-item__link" href="#">
-                                <div class="gallery-item__image cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="section recommendations">
-            <div class="section__head">
-              <div class="section__head-container decorated"><span class="decoration"></span>
-                <h5 class="section__head-title section__head-title_icons">мы рекомендуем</h5><span class="decoration"></span>
-              </div>
-            </div>
-            <div class="recommendations__container">
-              <div class="container">
-                <div class="slider slider_arrows slider_arrows slider_default recommendations-slider">
-                            <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                <div class="recommendations-block__head">
-                                  <div class="recommendations-block__image"><img alt="" src="img/logos/barbarossa.png"></div>
-                                </div>
-                                <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                </div></a></div>
-                            <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                <div class="recommendations-block__head">
-                                  <div class="recommendations-block__image"><img alt="" src="img/logos/topgun.png"></div>
-                                </div>
-                                <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                </div></a></div>
-                            <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                <div class="recommendations-block__head">
-                                  <div class="recommendations-block__image"><img alt="" src="img/logos/barbarossa.png"></div>
-                                </div>
-                                <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                </div></a></div>
-                            <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                <div class="recommendations-block__head">
-                                  <div class="recommendations-block__image"><img alt="" src="img/logos/topgun.png"></div>
-                                </div>
-                                <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                </div></a></div>
-                            <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                <div class="recommendations-block__head">
-                                  <div class="recommendations-block__image"><img alt="" src="img/logos/barbarossa.png"></div>
-                                </div>
-                                <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                </div></a></div>
-                            <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                <div class="recommendations-block__head">
-                                  <div class="recommendations-block__image"><img alt="" src="img/logos/topgun.png"></div>
-                                </div>
-                                <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                </div></a></div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div class="banner banner_type2">
-            <div class="banner__container">
-              <div class="container">
-                <div class="slider slider_dots banner__slider">
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image2.jpg"></a></div>
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image3.png"></a></div>
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image4.jpg"></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="service-filter">
-            <div class="service-filter__container">
-              <form class="service-filter-form" action="">
-                <div class="container">
-                  <div class="service-filter-form__section service-filter-form__section_search">
-                    <div class="search">
-                      <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
-                      <button class="search__button"><i class="fas fa-search"></i></button>
-                    </div>
-                  </div>
-                  <div class="service-filter-form__section service-filter-form__section_filter">
-                    <div class="service-filter-form__container">
-                      <div class="service-filter-form__title">Режим работы:</div>
-                      <div class="service-filter-form__content">
-                        <div class="service-filter-value">
-                          <label class="label label_style1 label_value1">
-                            <div class="service-filter-value__title">с утра</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="label label_style1 label_value2">
-                            <div class="service-filter-value__title">до поздна</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="label label_style1 label_value3">
-                            <div class="service-filter-value__title">круглосуточно</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                      </div>
-                    </div><span class="service-filter-form__decoration"></span>
-                    <div class="service-filter-form__container">
-                      <div class="service-filter-form__title">Стоимость услуг:</div>
-                      <div class="service-filter-form__content">
-                        <div class="service-filter-value">
-                          <label class="label label_style2 label_value4 tooltip" title="от 100 до 550р">
-                            <div class="service-filter-value__title">Premium</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="label label_style2 label_value5 tooltip" title="от 550 до 1000р">
-                            <div class="service-filter-value__title">Standard</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="label label_style2 label_value6 tooltip" title="от 1000р">
-                            <div class="service-filter-value__title">Economy</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <!--
-            .service-filter-recomendations
-              .decotarive-line2
-                span
-                i.fas.fa-thumbs-up
-                span
-              .container
-                ul.service-filter-recomendations__list
-                  li.service-filter-recomendations__item
-                    a(href="#").service-filter-recomendations__link <strong>Бритва</strong> /на Новоясеневском проспекте/
-                  li.service-filter-recomendations__item
-                    a(href="#").service-filter-recomendations__link <strong>TopGun</strong> /в ТЦ МЕГА Химки/
-                  li.service-filter-recomendations__item
-                    a(href="#").service-filter-recomendations__link <strong>Barbarossa</strong> /на метро Ясенево/
-            -->
-            <div class="map">
-              <div class="map__container">
-                <div id="map"></div>
-              </div>
-            </div>
-          </div>
-          <div class="banner banner_type2">
-            <div class="banner__container">
-              <div class="container">
-                <div class="slider slider_dots banner__slider">
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image2.jpg"></a></div>
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image3.png"></a></div>
-                            <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/banner/banner-image4.jpg"></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <section class="section news">
-            <div class="section__head">
-              <div class="section__head-container decorated"><span class="decoration"></span>
-                <h5 class="section__head-title">Новости</h5><span class="decoration"></span>
-              </div>
-            </div>
-            <div class="container">
-              <div class="news__container">
-                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон</span></a></div>
-                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">Борода как ОБЕРЕГ</span></a></div>
-                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон и еще какой-либо длинный текст</span></a></div>
-                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон</span></a></div>
-                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">Борода как ОБЕРЕГ</span></a></div>
-                          <div class="news-block"><a class="news-block__container" href="#"><img class="news-block__image" src="img/gallery/image1.jpg" alt=""><span class="news-block__title">ОТКРЫЛСЯ Аутентичный салон и еще какой-либо длинный текст</span></a></div>
-              </div>
-              <div class="news__more"><a class="news__button" href="#">Архив Новостей</a></div>
-            </div>
-          </section>
-        </main>
-        <!--footer-->
-        <footer class="footer">
-          <div class="container">
-            <div class="footer__container">
-              <div class="footer__section footer__section_top">
-                <div class="footer-nav">
-                  <ul class="footer-nav__list">
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить место</a></li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Добавить специалистов</a></li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доступ к салону</a></li>
-                  </ul>
-                </div>
-                <div class="footer-nav">
-                  <ul class="footer-nav__list">
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Правила работы с отзывами</a></li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Политика конфиденциальности</a></li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Обратная связь</a></li>
-                  </ul>
-                </div>
-                <div class="footer-nav">
-                  <ul class="footer-nav__list">
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">О проекте “MyBarbershop”</a></li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Вакансии</a></li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="footer__section footer__section_bottom"><span class="footer__message">Увидели ошибку - сообщите нам нажав Ctrl+Enter</span>
-                <div class="socials">
-                  <ul class="socials__list">
-                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
-                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
-                    <li class="socials__item"><a class="socials__link" href="#"><i class="fab fa-twitter"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
