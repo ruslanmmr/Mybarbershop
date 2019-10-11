@@ -50,14 +50,14 @@
       border-radius: 100%;
       width: 7px;
       height: 7px;
-      background-color: $main-color;
+      background-color: $orange-color1;
       right: 0;
       top: 50%;
       transform: translate(50%, -50%);
     }
   }
   &__container {
-    border: 1px solid $main-color;
+    border: 1px solid $orange-color1;
     border-radius: 5px;
     background-color: #151314;
     padding: 15px;

@@ -13,6 +13,8 @@ $(document).ready(function () {
   scrollbar();
   searchCity();
   funcybox();
+  toggleblocks();
+  tabs()
 });
 
 $(window).resize(function () {
@@ -252,7 +254,6 @@ function imagesResize(element) {
     element.addClass('visible');
   }
 }
-
 //tooltips
 function tooltip() {
   $('.tooltip').tooltipster({
@@ -656,5 +657,41 @@ function checkboxCheck() {
       $(this).removeClass('checked');
       console.log('2')
     }
+  })
+}
+//toggle
+function toggleblocks() {
+  let $container = $('.toggle-group'),
+      $btn,
+      $content;
+
+  $(document).on('click', '.toggle-button', function(event) {
+    event.preventDefault();
+
+    $btn = $(this);
+    $container = $btn.parents('.toggle-group');
+    $content = $container.find('.toggle-content');
+
+    $btn.toggleClass('active');
+    $content.toggleClass('active');
+  })
+}
+//tabs
+function tabs() {
+  $('.tab-block__item a').eq(0).addClass('active');
+  $('.tab-block__tab').not(':first').hide();
+
+  $(document).on('click', '.tab-block__item a', function(event) {
+    event.preventDefault();
+
+    let order = $(this).parent().index(),
+        $tabBlock = $(this).parents('.tab-block'),
+        $btn = $tabBlock.find('.tab-block__item a')
+
+    $btn.removeClass('active');
+    $(this).addClass('active');
+    $tabBlock.find('.tab-block__tab').hide()
+    $tabBlock.find('.tab-block__tab').eq(order).fadeIn(200);
+    console.log(order)
   })
 }

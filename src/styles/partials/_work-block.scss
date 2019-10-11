@@ -22,7 +22,7 @@
   &__searched {
     padding: 10px 20px;
     text-align: center;
-    border: 1px dashed $main-color;
+    border: 1px dashed $orange-color1;
     border-radius: 4px;
     margin-top: 15px;
     font-size: 24px;
@@ -40,7 +40,7 @@
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     line-height: 1;
-    color: $main-color;
+    color: $orange-color1;
     font-size: 28px;
     position: absolute;
     top: 50%;
@@ -87,7 +87,7 @@
     display: block;
     background-color: #151314;
     border-radius: 4px;
-    border: 1px solid $main-color;
+    border: 1px solid $orange-color1;
     color: #7e8084;
     transition: 0.3s;
     &.checked {

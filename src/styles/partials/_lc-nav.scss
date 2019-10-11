@@ -6,7 +6,7 @@
     list-style: none;
   }
   &__item {
-    border-bottom: 1px solid $main-color;
+    border-bottom: 1px solid $orange-color1;
   }
   &__link {
     display: block;
@@ -14,10 +14,10 @@
     padding: 6px 0;
     transition: 0.2s;
     &:hover {
-      color: $main-color;
+      color: $orange-color1;
     }
     &.active {
-      color: $main-color;
+      color: $orange-color1;
     }
   }
 }

@@ -2,10 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=cyrillic');
 
-$main-color: #ff8a00;
-$text-color: #65666a;
-$border-color: #a7a9ae;
-$hover-color: #ca6c00;
+$line-height-main: 1.35;
+
+$orange-color1: #ff8a00;
+$orange-color2: #ca6c00;
+
+$gray-color1: #a7a9ae;
+$gray-color2: #888a90;
+$gray-color3: #65666a;
 
 body {
   text-rendering: optimizeSpeed;
@@ -13,7 +17,7 @@ body {
   color: #fff;
   min-width: 320px;
   position: relative;
-  line-height: 1.35;
+  line-height: $line-height-main;
   background-color: #0c1115;
   font-weight: 300;
   position: relative;

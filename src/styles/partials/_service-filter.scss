@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px dashed $main-color;
+    border-top: 1px dashed $orange-color1;
     width: 130px;
     &:before,
     &:after {
@@ -53,7 +53,7 @@
       display: block;
       width: 7px;
       height: 7px;
-      background-color: $main-color;
+      background-color: $orange-color1;
       border-radius: 100%;
     }
   }
@@ -125,7 +125,7 @@
     }
     &_value4 {
       &:before {
-        background-color: $main-color;
+        background-color: $orange-color1;
       }
     }
     &_value5 {
@@ -157,7 +157,7 @@
     text-decoration: none;
     display: block;
     color: #000;
-    background-color: $main-color;
+    background-color: $orange-color1;
     padding: 5px 20px;
     border-radius: 4px;
   }

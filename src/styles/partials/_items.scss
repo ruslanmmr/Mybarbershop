@@ -1,17 +1,5 @@
-.button,
-.input {
-  display: inline-block;
-  outline: none;
-  border: 0;
-  appearance: none;
-  border-radius: 4px;
-  box-shadow: 0;
-  transition: 0.2s;
-  padding: 0;
-  background-color: transparent;
-  &_fluid {
-    width: 100%;
-  }
+textarea { 
+  resize: vertical;
 }
 a {
   color: inherit;
@@ -19,9 +7,25 @@ a {
     text-decoration: none;
   }
 }
+
+.button,
 .input {
-  padding: 0 10px;
+  display: block;
+  outline: none;
+  border: 0;
+  appearance: none;
+  border-radius: 4px;
+  box-shadow: 0;
+  transition: 0.2s;
+  background-color: transparent;
+  text-decoration: none;
+  width: 100%;
+}
+
+.input {
   height: 30px;
+  padding: 7px 10px;
+  font-size: 14px;
   &::placeholder {
     transition: inherit;
   }
@@ -31,57 +35,71 @@ a {
     }
   }
   &_style1 {
-    background-color: #888a90;
+    background-color: $gray-color2;
     color: #fff;
-    border: 1px solid $border-color;
+    border: 1px solid $gray-color1;
     &::placeholder {
       color: inherit;
     }
   }
   &_style2 {
     background-color: #bdbfc5;
-    color: #7e8084;
+    color: $gray-color2;
     &::placeholder {
-      color: #7e8084;
+      color: $gray-color2;
     }
   }
   &_style3 {
     background-color: transparent;
     border-radius: 0;
-    border-bottom: 1px solid $main-color;
+    border-bottom: 1px solid $orange-color1;
     padding: 0 0 5px 0;
     color: #fff;
     &::placeholder {
-      color: $text-color;
+      color: $gray-color3;
     }
   }
   &_style4 {
     background-color: #fff;
+    color: #000;
     &::placeholder {
-      color: $text-color;
-    }
-    &[disabled] {
-      background-color: #888a90;
-      color: #fff;
+      color: $gray-color2;
     }
   }
+  &_size1 {
+    min-height: 250px;
+  }
+  &_size2 {
+    min-height: 105px;
+  }
+  &_size3 {
+    min-height: 150px;
+  }
 }
+
 .button {
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  padding: 0;
   font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 40px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 10px;
   &_style1 {
-    background-color: $main-color;
-    color: #000;
+    color: $orange-color1;
+    border: 1px solid $orange-color1;
+    line-height: 38px;
     &:hover {
-      opacity: 0.8;
+      background-color: $orange-color1;
+      color: #000;
     }
   }
   &_style2 {
     background-color: #636468;
-    color: $main-color;
+    color: $orange-color1;
     &:hover {
       opacity: 0.8;
     }
@@ -91,64 +109,194 @@ a {
     border-color: #fff;
     color: #68696c;
     &:hover {
-      color: $main-color;
+      color: $orange-color1;
     }
   }
   &_style4 {
-    background-color: $main-color;
+    background-color: $orange-color1;
     color: #181818;
     text-transform: uppercase;
     font-size: 16px;
-    padding: 10px;
+    height: 40px;
+    padding: 0 10px;
     &:hover {
-      background-color: $hover-color;
+      background-color: $orange-color2;
     }
   }
   &_style5 {
     background-color: transparent;
-    color: $text-color;
+    color: $gray-color3;
     text-transform: uppercase;
-    font-size: 16px;
-    padding: 10px 0;
-    white-space: nowrap;
+    padding: 0;
     &:hover {
       color: #fff;
     }
   }
   &_style6 {
     color: #fff;
-    font-size: 16px;
     text-transform: uppercase;
     background-color: transparent;
+    padding: 0;
+    line-height: 1;
+    width: auto;
+    display: inline-block;
     &:hover {
-      color: $text-color;
+      color: $gray-color3;
+    }
+  }
+  &_type-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    color: $gray-color1;
+    &:hover {
+      color: $gray-color2;
+    }
+  }
+  &_type-img-load {
+    height: 105px;
+    background-color: #fff;
+    color: $gray-color2;
+    padding: 15px;
+    line-height: $line-height-main;
+    position: relative;
+    &:hover {
+      color: $gray-color3;
+    }
+  }
+  &_type-img-add {
+    height: 105px;
+    color: $gray-color2;
+    padding: 15px;
+    line-height: $line-height-main;
+    border: 1px solid $gray-color2;
+    i {
+      margin-top: 10px;
+    }
+    &:hover {
+      color: $gray-color3;
+      border-color: $gray-color3;
     }
   }
   &_style7 {
-    color: #000;
-    background-color: #b9b9b9;
-    height: 30px;
+    line-height: 38px;
+    color: $gray-color2;
+    border: 1px solid $gray-color2;
+    i {
+      margin-right: 10px;
+    }
     &:hover {
-      background-color: #888a90;
+      color: $gray-color3;
+      border-color: $gray-color3;
     }
   }
   &_style8 {
-    color: $main-color;
-    height: 30px;
-    border: 1px solid $main-color;
+    padding: 0;
+    line-height: 30px;
+    color: $gray-color2;
+    i {
+      margin-left: 10px;
+      transition: inherit;
+      color: $gray-color2;
+      font-size: 14px;
+    }
     &:hover {
-      background-color: $main-color;
-      color: #000;
+      color: $gray-color3;
+      i {
+        color: $gray-color3;
+      }
+    }
+    &.active {
+      color: #fff;
+      i {
+        transform: rotate(180deg);
+        color: #fff;
+      }
     }
   }
+  &_style9 {
+    background-color: $gray-color2;
+    &:hover {
+      background-color: $gray-color3
+    }
+    &.small {
+      line-height: 30px;
+    }
+  }
+  &_style10 {
+    background-color: $gray-color2;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 20px;
+    font-weight: 400;
+    &:hover {
+      color: $orange-color1;
+    }
+    &.small {
+      line-height: 30px;
+    }
+    &.active {
+      color: $orange-color1;
+      background-color: $gray-color3;
+    }
+  }
+}
+
+.toggle-content {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.item-label {
+  color: #fff;
+  display: block;
+  margin-bottom: 11px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
 }
 .form {
-  &__group {
-    .input, .button {
-      width: 100%;
+  &__section {
+    &:not(:last-child) {
+      padding-bottom: 30px;
+    }
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+    img {
+      flex-shrink: 0;
+      height: 100%;
+      width: auto;
+      margin-right: 8px;
     }
   }
 }
+.image-load-area {
+  position: relative;
+  .button_type-close {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+  &.loaded {
+    .button_type-close {
+      visibility: visible;
+    }
+  }
+}
+
+
 //checkboxes
 .checkbox {
   position: relative;
@@ -157,7 +305,7 @@ a {
   cursor: pointer;
   transition: 0.2s;
   &_dark {
-    color: $text-color;
+    color: $gray-color3;
   }
   i {
     box-sizing: border-box;
@@ -168,7 +316,7 @@ a {
     height: 16px;
     border-radius: 2px;
     color: transparent;
-    border: 1px solid $main-color;
+    border: 1px solid $orange-color1;
     background-color: transparent;
     position: absolute;
     left: 0;
@@ -188,7 +336,7 @@ a {
   &.checked {
     color: #fff;
     i {
-      background-color: $main-color;
+      background-color: $orange-color1;
       color: #fff;
     }
   }
@@ -237,14 +385,14 @@ a {
     align-items: center;
     transition: 0.2s !important;
     appearance: none;
-    color: $main-color;
+    color: $orange-color1;
     svg {
       display: block;
       width: 16px;
       height: 16px;
     }
     &:hover {
-      color: $hover-color;
+      color: $orange-color2;
       background-color: rgba(252, 156, 47, 0.2);
     }
   }
@@ -274,7 +422,7 @@ a {
     line-height: 40px;
   }
   &-progress {
-    background-color: $main-color;
+    background-color: $orange-color1;
   }
   &-error {
     margin: auto;
@@ -289,39 +437,39 @@ a {
     top: calc(50% - 22px);
   }
   &-thumbs__list a::before {
-    border-color: $main-color;
+    border-color: $orange-color1;
   }
 }
 .sitemap {
   margin: 0;
   padding: 0;
   list-style: none;
-  &__link {
-    text-decoration: none;
-    padding: 13px 20px;
+  &__item {
+    position: relative;
+    text-transform: uppercase;
     display: block;
     color: #fff;
-    text-transform: uppercase;
-    font-size: 20px;
-    border-bottom: 1px solid rgb(107, 107, 107);
-    transition: 0.3s;
-    &.in-dev {
-      &:after {
-        color: $main-color;
-        text-transform: lowercase;
-        content: ' ( в разработке )';
-      }
-    }
-    &.in-expectation {
-      color: rgb(173, 173, 173);
-      &:after {
-        color: rgb(173, 173, 173);
-        text-transform: lowercase;
-        content: ' ( в очереди )';
-      }
-    }
+    background-color:  $gray-color2;
+    border-bottom: 1px solid $gray-color2;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 40px;
+    height: 40px;
+    cursor: default;
+  }
+  &__link {
+    background-color: #0c1115;
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+    transition: 0.2s;
     &:hover {
-      background: rgb(107, 107, 107);
+      color: $orange-color1;
     }
   }
 }
@@ -334,14 +482,9 @@ a {
 .socials {
   &__list {
     display: flex;
+    justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 0;
-  }
-  &__item {
-    &:not(:last-child) {
-      padding-right: 10px;
-    }
   }
   i {
     position: absolute;
@@ -366,17 +509,12 @@ a {
       color: #0d0e10;
     }
     .socials {
-      &__item {
-        &:not(:last-child) {
-          padding-right: 5px;
-        }
-      }
       &__link {
-        background-color: $main-color;
+        background-color: $orange-color1;
         &:hover {
           background-color: transparent;
           i {
-            color: $main-color;
+            color: $orange-color1;
           }
         }
       }
@@ -387,7 +525,7 @@ a {
   position: relative;
 }
 .decoration {
-  border-top: 1px dashed $main-color;
+  border-top: 1px dashed $orange-color1;
   width: 50vw;
   position: absolute;
   z-index: 2;
@@ -400,7 +538,7 @@ a {
     width: 7px;
     height: 7px;
     border-radius: 100%;
-    background-color: $main-color;
+    background-color: $orange-color1;
   }
   &:first-child {
     left: 0;
@@ -455,7 +593,7 @@ a {
         &:after {
           content: '\f164';
           border-radius: 100%;
-          background-color: $main-color;
+          background-color: $orange-color1;
           font-size: 0.5em;
           width: 1.55em;
           height: 1.55em;
@@ -480,7 +618,7 @@ a {
           font-size: 0.8em;
           box-sizing: border-box;
           text-align: center;
-          color: $main-color;
+          color: $orange-color1;
         }
         &:before {
           margin: 0 0.6em 0 0;
@@ -499,7 +637,7 @@ a {
   }
 }
 .number-block {
-  background-color: $main-color;
+  background-color: $orange-color1;
   border-radius: 5px;
   font-weight: 500;
   font-size: 18px;
@@ -610,7 +748,7 @@ a {
     transition: 0.3s;
     &:hover {
       color: #000;
-      background: $main-color;
+      background: $orange-color1;
     }
   }
 }
@@ -668,7 +806,6 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background-position: center;
   background-repeat: repeat;
   opacity: 0;
   transition: opacity 0.5s;
@@ -689,7 +826,7 @@ a {
     width: 28px;
     height: 28px;
     border-radius: 100%;
-    background-color: $main-color;
+    background-color: $orange-color1;
     display: block;
     font-size: 18px;
     box-sizing: border-box;
@@ -702,7 +839,7 @@ a {
     content: '';
     display: block;
     position: absolute;
-    border-top: 1px dashed $main-color;
+    border-top: 1px dashed $orange-color1;
     width: 100%;
     top: 50%;
     left: 0;
@@ -723,7 +860,7 @@ a {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    background-color: $main-color;
+    background-color: $orange-color1;
     color: #000;
     display: flex;
     align-items: center;
@@ -737,7 +874,7 @@ a {
   span {
     display: block;
     flex: 1 1 100%;
-    border-top: 1px dashed $main-color;
+    border-top: 1px dashed $orange-color1;
     position: relative;
     &:before {
       content: '';
@@ -745,7 +882,7 @@ a {
       position: absolute;
       width: 7px;
       height: 7px;
-      background-color: $main-color;
+      background-color: $orange-color1;
       top: -4px;
       border-radius: 100%;
     }
@@ -759,6 +896,12 @@ a {
         left: 0;
       }
     }
+  }
+}
+.tab-block {
+  &__list {
+    list-style: none;
+    padding: 0;
   }
 }
 
@@ -788,6 +931,11 @@ a {
           display: block;
         }
       }
+    }
+  }
+  .input {
+    &_size1 {
+      height: 200px;
     }
   }
   .video-block a:after {

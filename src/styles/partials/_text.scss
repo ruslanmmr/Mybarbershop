@@ -3,7 +3,7 @@ b {
 }
 strong {
   font-weight: inherit;
-  color: $main-color;
+  color: $orange-color1;
 }
 p {
   margin: 0 0 1em 0;
@@ -12,4 +12,7 @@ p {
   &:last-child {
     margin: 0;
   }
+}
+.t-a-center {
+  text-align: center;
 }

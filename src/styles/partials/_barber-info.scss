@@ -39,11 +39,11 @@
     display: block;
     width: 100%;
     height: auto;
-    border: 1px solid $main-color;
+    border: 1px solid $orange-color1;
     margin-bottom: 25px;
   }
   &__name {
-    color: $main-color;
+    color: $orange-color1;
     font-weight: 700;
     font-size: 30px;
   }
@@ -99,7 +99,7 @@
   }
   &__text {
     b {
-      color: $main-color;
+      color: $orange-color1;
     }
   }
   &__presentation {

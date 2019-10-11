@@ -1,7 +1,7 @@
 .recommendations-block {
   &__container {
     padding: 10px 15px 15px 15px;
-    border: 1px solid $main-color;
+    border: 1px solid $orange-color1;
     border-radius: 4px;
     background-color: #151314;
     display: block;
@@ -44,7 +44,7 @@
       content: '';
       display: block;
       position: absolute;
-      border-top: 1px dashed $main-color;
+      border-top: 1px dashed $orange-color1;
       width: calc(100% + 30px);
       left: -15px;
       top: 23px;
@@ -58,7 +58,7 @@
       width: 28px;
       height: 28px;
       border-radius: 100%;
-      background-color: $main-color;
+      background-color: $orange-color1;
       display: block;
       font-size: 18px;
       box-sizing: border-box;

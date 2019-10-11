@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px -20px -10px;
-  &_inner {
-    height: calc(100% + 20px);
+  &_center {
+    justify-content: center;
   }
 }
 
@@ -240,7 +240,7 @@
     max-width: 100%;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .col-md {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -870,7 +870,8 @@
     margin-left: 91.666667%;
   }
 }
-@media all and(max-width: 576px) {
+
+/* @media all and(max-width: 576px) {
   .row_inner {
     height: calc(100% + 16px);
   }
@@ -880,4 +881,4 @@
   .row {
     margin: 0 -8px -16px -8px;
   }
-}
+} */

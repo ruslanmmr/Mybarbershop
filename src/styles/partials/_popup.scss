@@ -9,7 +9,7 @@
 .popup1 {
   background-color: #181818;
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   &__title {
     font-size: 18px;
     display: block;
@@ -17,7 +17,7 @@
     color: #fff;
   }
   &__head {
-    border-bottom: 1px solid $main-color;
+    border-bottom: 1px solid $orange-color1;
     margin-bottom: 40px;
   }
   &-form {
@@ -36,14 +36,11 @@
     &__auth-link {
       display: block;
       position: relative;
-      background-color: $main-color;
+      background-color: $orange-color1;
       color: #221d18;
       border-radius: 4px;
-      &:before {
-        content: '';
-        display: block;
-        padding-top: 100%;
-      }
+      width: 40px;
+      height: 40px;
       i {
         position: absolute;
         top: 50%;
@@ -52,7 +49,7 @@
         font-size: 16px;
       }
       &:hover {
-        background-color: $hover-color;
+        background-color: $orange-color2;
       }
     }
   }

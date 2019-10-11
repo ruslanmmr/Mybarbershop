@@ -18,18 +18,20 @@ html(lang="ru")
                   h5.section__head-title Мои данные
                   span.decoration
               .container
-                form(action="").form.row
-                  .form__group.col-xl-4.col-sm-6.col-12
-                    input(type="text" placeholder="Фамилия / Имя").input.input_style4
-                  .form__group.col-xl-4.col-sm-6.col-12
-                    //если заполнено
-                    input(type="email" placeholder="e-mail:" value="example@gmail.com" disabled).input.input_style4
-                  .form__group.col-xl-4.col-sm-6.col-12
-                    input(type="text" placeholder="тел.: +7(***)***-**-**").input.input_style4
-                  .form__group.col-xl-4.col-sm-6.col-12
-                    button.button.button_style7 Редактировать
-                  .form__group.col-xl-4.col-sm-6.col-12
-                    button.button.button_style8 Сохранить
+                form(action="").form
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      span.item-label Фамилия/Имя:
+                      input(type="text").input.input_style4
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      span.item-label e-mail:
+                      input(type="email" value="example@gmail.com").input.input_style4
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      span.item-label Телефон:
+                      input(type="text" placeholder="+7(***)***-**-**").input.input_style4
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Сохранить
         //footer
         include ../blocks/footer
         //other

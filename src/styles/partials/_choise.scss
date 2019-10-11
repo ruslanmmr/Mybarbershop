@@ -28,7 +28,7 @@
     }
     &:before {
       width: 100%;
-      border: 1px dashed $main-color;
+      border: 1px dashed $orange-color1;
       border-radius: 4px;
       top: 0;
       left: 0;
@@ -36,7 +36,7 @@
     &.checked {
       background: linear-gradient(to bottom, rgba(103,104,108,1) 0%,rgba(126,128,132,1) 73%,rgba(126,128,132,1) 73%);
       .service-selection-item__indicator {
-        background-color: $main-color;
+        background-color: $orange-color1;
       }
     }
   }
@@ -67,7 +67,7 @@
       height: 8px;
       top: 50%;
       transform: translateY(-50%);
-      background-color: $main-color;
+      background-color: $orange-color1;
       border-radius: 100%;
     }
     &:after {
@@ -80,7 +80,7 @@
   &__indicator {
     width: 27px;
     height: 27px;
-    border: 1px solid $main-color;
+    border: 1px solid $orange-color1;
     border-radius: 2px;
     background-color: #fff;
     display: flex;
