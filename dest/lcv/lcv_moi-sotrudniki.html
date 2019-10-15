@@ -70,28 +70,246 @@
             <section class="section">
               <div class="section__head">
                 <div class="decorated"><span class="decoration"></span>
-                  <h5 class="section__head-title">Мои данные</h5><span class="decoration"></span>
+                  <h5 class="section__head-title">Добавление барберов</h5><span class="decoration"></span>
                 </div>
               </div>
               <div class="container">
                 <form class="form" action="">
                   <div class="form__section row">
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">Фамилия/Имя:</span>
-                      <input class="input input_style4" type="text">
+                    <div class="form__item col-xl-3 col-6"><span class="item-label">Фото:</span>
+                      <div class="image-load-area"><a class="button button_type-img-load" href="#">Загрузить<br> изображение</a><a class="button button_type-close" href="#"><i class="fas fa-times"></i></a></div>
                     </div>
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">e-mail:</span>
-                      <input class="input input_style4" type="email" value="example@gmail.com">
+                    <div class="form__group col-xl-9 col-12">
+                      <div class="row">
+                        <div class="form__item col-xl-6 col-12"><span class="item-label">Фамилия/Имя/Отчество/Ник</span>
+                          <input class="input input_style4" type="text" placeholder="Фамилия/Имя/Отчество/Ник">
+                        </div>
+                        <div class="form__item col-xl-6 col-12"><span class="item-label">e-mail:</span>
+                          <input class="input input_style4" type="email" placeholder="e-mail:">
+                        </div>
+                        <div class="form__item col-xl-6 col-12"><span class="item-label">Район проживания:</span>
+                          <input class="input input_style4" type="text" placeholder="Район проживания:">
+                        </div>
+                        <div class="form__item col-xl-6 col-12"><span class="item-label">Номер телефона:</span>
+                          <input class="input input_style4" type="text" placeholder="+7(***)***-**-**">
+                        </div>
+                      </div>
                     </div>
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">Телефон:</span>
-                      <input class="input input_style4" type="text" placeholder="+7(***)***-**-**">
+                    <div class="form__item col-xl-6 col-12"><span class="item-label">Дата рождения:</span>
+                      <div class="row">
+                        <div class="form__input col-xl-4">
+                          <div class="select">
+                            <select>
+                              <option value="" data-display="День">День</option>
+                              <option value="">1</option>
+                              <option value="">2</option>
+                              <option value="">3</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form__input col-xl-4">
+                          <div class="select">
+                            <select>
+                              <option value="" data-display="Месяц">Месяц</option>
+                              <option value="">Февраль</option>
+                              <option value="">Март</option>
+                              <option value="">Май</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form__input col-xl-4">
+                          <div class="select">
+                            <select>
+                              <option value="" data-display="Год">Год</option>
+                              <option value="">1990</option>
+                              <option value="">1991</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item col-xl-6 col-12"><span class="item-label">Пол:</span>
+                      <div class="row">
+                        <div class="col-xl-auto">
+                          <label class="checkbox col">
+                            <input type="radio" name="val1"><i class="fas fa-check"></i><span>Мужчина</span>
+                          </label>
+                        </div>
+                        <div class="col-xl-auto">
+                          <label class="checkbox col">
+                            <input type="radio" name="val1"><i class="fas fa-check"></i><span>Женщина</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item col-xl-6 col-12"> <span class="item-label">Знание языка:</span>
+                      <div class="row">
+                        <div class="col-xl-auto">
+                          <label class="checkbox col">
+                            <input type="checkbox"><i class="fas fa-check"></i><span>Русский</span>
+                          </label>
+                        </div>
+                        <div class="col-xl-auto">
+                          <label class="checkbox col">
+                            <input type="checkbox"><i class="fas fa-check"></i><span>Английский</span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="form__section row">
                     <div class="form__item col-xl-4 col-sm-6 col-12">
-                      <button class="button button_style1">Сохранить</button>
+                      <button class="button button_style1">Добавить барбера</button>
                     </div>
                   </div>
                 </form>
+              </div>
+            </section>
+            <section class="section">
+              <div class="section__head">
+                <div class="decorated"><span class="decoration"></span>
+                  <h5 class="section__head-title">Мои барберы</h5><span class="decoration"></span>
+                </div>
+              </div>
+              <div class="container">
+                <div class="my-brbr-block"><span class="my-brbr-block__label">auto</span>
+                  <div class="my-brbr-block__content row">
+                    <div class="my-brbr-block__image col-xl-3 col-sm-4 col-12">
+                      <div class="cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div>
+                    </div>
+                    <div class="my-brbr-block__content col-xl-9 col-sm-8 col-12">
+                      <div class="row">
+                        <div class="my-brbr-block__info col-xl-12">
+                          <div class="row">
+                            <div class="col-xl col-sm-12">
+                              <div class="row">
+                                <div class="my-brbr-block__lvl col-xl-auto"><img src="img/icons/ico-topbarber.png" alt=""></div>
+                                <div class="col-xl"><span class="my-brbr-block__title">Макс, 32 года</span><span class="my-brbr-block__adress">ул. 26 Бакинских коммисаров, 23, 107</span></div>
+                              </div>
+                            </div>
+                            <div class="col-xl-auto col-sm-12"><span class="item-label">Знание языка:</span>
+                              <div class="row">
+                                <div class="col-xl-auto">
+                                  <label class="checkbox view-only"><i class="fas fa-check"></i><span>Русский</span></label>
+                                </div>
+                                <div class="col-xl-auto">
+                                  <label class="checkbox view-only"><i class="fas fa-check"></i><span>Английский</span></label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-12"><span class="item-label">Ссылка на онлайн запись:</span>
+                              <input class="input input_style4" type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-brbr-block__buttons col-xl-12">
+                          <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                              <button class="button button_style7 small"><i class="far fa-eye-slash"></i>Скрыть</button>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                              <button class="button button_style9 small"><i class="far fa-trash-alt"></i>Удалить</button>
+                            </div>
+                            <div class="col-xl-4 col-sm-12">
+                              <button class="button button_style1 small">Сохранить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-brbr-block hidden">
+                  <div class="my-brbr-block__container row">
+                    <div class="my-brbr-block__image col-xl-3 col-sm-4 col-12">
+                      <div class="cover-box"><img class="lazy" data-src="img/gallery/barber2.jpg" alt=""></div>
+                    </div>
+                    <div class="my-brbr-block__content col-xl-9 col-sm-8 col-12">
+                      <div class="row">
+                        <div class="my-brbr-block__info col-xl-12">
+                          <div class="row">
+                            <div class="col-xl col-sm-12">
+                              <div class="row">
+                                <div class="my-brbr-block__lvl col-xl-auto"><img src="img/icons/ico-barber.png" alt=""></div>
+                                <div class="col-xl"><span class="my-brbr-block__title">Руслан, 100 лет</span><span class="my-brbr-block__adress">ул. 26 Бакинских коммисаров, 23, 107</span></div>
+                              </div>
+                            </div>
+                            <div class="col-xl-auto col-sm-12"><span class="item-label">Знание языка:</span>
+                              <div class="row">
+                                <div class="col-xl-auto">
+                                  <label class="checkbox view-only"><i class="fas fa-check"></i><span>Английский</span></label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-12"><span class="item-label">Ссылка на онлайн запись:</span>
+                              <input class="input input_style4" type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-brbr-block__buttons col-xl-12">
+                          <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                              <button class="button button_style7 small"><i class="far fa-eye"></i>Показать</button>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                              <button class="button button_style9 small"><i class="far fa-trash-alt"></i>Удалить</button>
+                            </div>
+                            <div class="col-xl-4 col-sm-12">
+                              <button class="button button_style1 small">Сохранить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-brbr-block"><span class="my-brbr-block__label">auto</span>
+                  <div class="my-brbr-block__content row">
+                    <div class="my-brbr-block__image col-xl-3 col-sm-4 col-12">
+                      <div class="cover-box"><img class="lazy" data-src="img/gallery/barber1.jpg" alt=""></div>
+                    </div>
+                    <div class="my-brbr-block__content col-xl-9 col-sm-8 col-12">
+                      <div class="row">
+                        <div class="my-brbr-block__info col-xl-12">
+                          <div class="row">
+                            <div class="col-xl col-sm-12">
+                              <div class="row">
+                                <div class="my-brbr-block__lvl col-xl-auto"><img src="img/icons/ico-beginner.png" alt=""></div>
+                                <div class="col-xl"><span class="my-brbr-block__title">Макс, 32 года</span><span class="my-brbr-block__adress">ул. 263333 Бакинских каких-то коммисаров, 233, 3107</span></div>
+                              </div>
+                            </div>
+                            <div class="col-xl-auto col-sm-12"><span class="item-label">Знание языка:</span>
+                              <div class="row">
+                                <div class="col-xl-auto">
+                                  <label class="checkbox view-only"><i class="fas fa-check"></i><span>Русский</span></label>
+                                </div>
+                                <div class="col-xl-auto">
+                                  <label class="checkbox view-only"><i class="fas fa-check"></i><span>Русский</span></label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-12"><span class="item-label">Ссылка на онлайн запись:</span>
+                              <input class="input input_style4" type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-brbr-block__buttons col-xl-12">
+                          <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                              <button class="button button_style7 small"><i class="far fa-eye-slash"></i>Скрыть</button>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                              <button class="button button_style9 small"><i class="far fa-trash-alt"></i>Удалить</button>
+                            </div>
+                            <div class="col-xl-4 col-sm-12">
+                              <button class="button button_style1 small">Сохранить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </main>

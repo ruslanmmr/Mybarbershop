@@ -14,7 +14,8 @@ $(document).ready(function () {
   searchCity();
   funcybox();
   toggleblocks();
-  tabs()
+  tabs();
+  select();
 });
 
 $(window).resize(function () {
@@ -694,4 +695,12 @@ function tabs() {
     $tabBlock.find('.tab-block__tab').eq(order).fadeIn(200);
     console.log(order)
   })
+}
+//select
+function select() {
+  if ($('html').hasClass('android') || $('html').hasClass('ios')) {
+    return;
+  } else {
+    $('.select').niceSelect();
+  }
 }
