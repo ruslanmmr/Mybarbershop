@@ -3,6 +3,7 @@ textarea {
 }
 a {
   color: inherit;
+  transition: 0.2s;
   &:hover {
     text-decoration: none;
   }
@@ -71,7 +72,7 @@ a {
     min-height: 250px;
   }
   &_size2 {
-    min-height: 105px;
+    min-height: 100px;
   }
   &_size3 {
     min-height: 150px;
@@ -262,7 +263,7 @@ a {
 
 .item-label {
   display: block;
-  margin-bottom: 11px;
+  margin-bottom: 8px;
   font-size: 12px;
   line-height: 1;
   white-space: nowrap;
@@ -276,9 +277,16 @@ a {
   &__input {
     display: flex;
     align-items: center;
+    .input {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
     span {
-      margin-right: 8px;
       flex-shrink: 0;
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
     }
     img {
       flex-shrink: 0;
@@ -305,138 +313,132 @@ a {
 }
 
 //select
-.nice-select,
 .select {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #fff;
   border-radius: 4px;
-  border: 0;
-  color: #000;
-  cursor: pointer;
-  height: 30px;
-  outline: none;
-  padding: 7px 10px;
-  font-size: 14px;
   position: relative;
-  text-align: left;
-  transition: 0.2s;
-  user-select: none;
-  white-space: nowrap;
+  z-index: 5;
   width: 100%;
-  font-weight: 400;
-  select {
+  select,
+  .nice-select {
     display: block;
-    appearance: none;
-    border: 0;
-    box-shadow: 0;
-    padding: inherit;
-    position: absolute;
-    background-color: transparent;
-    position: absolute;
     width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+    height: 30px;
+    line-height: 30px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
+    box-shadow: none;
+    appearance: none;
     outline: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  span {
-    max-width: 100%;
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  &:active {
-    border-color: $gray-color1;
-  }
-  // Arrow
-  &:after {
-    content: "\f0dd";
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    right: 10px;
-    display: block;
-    line-height: 1;
-    padding-bottom: 5px;
-    top: 6px;
-    transition: 0.2s;
-  }
-  &:hover {
-    border-color: #808080;
-  }
-  
-  &.open {
-    @extend :active;
-    &:after {
-      transform: rotate(180deg);
-    }
-    .list {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translate(0);
-    }
-  }
-  &.disabled {
-    color: $gray-color1;
-    cursor: default;
-    pointer-events: none;
-    &:after {
-      opacity: 0.15;
-    }
-  }
-  // List and options
-  .list {
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: $shadow;
-    box-sizing: border-box;
-    margin-top: 4px;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 100%; left: 0;
-    transform-origin: 50% 0;
-    transform: translateY(5px);
-    transition: 0.2s;
-    list-style: none;
-    z-index: 9;
-    min-width: 100%;
-  }
-  .option {
+    border: 0;
+    color: #000;
     cursor: pointer;
-    font-weight: 400;
-    padding: 7px 10px;
-    outline: none;
+    padding: 0 10px;
+    font-size: 14px;
+    position: relative;
+    text-align: left;
     transition: 0.2s;
-    &:not(:last-child) {
-      border-bottom: 1px solid $gray-color1;
+    user-select: none;
+    white-space: nowrap;
+    font-weight: 400;
+    z-index: 1;
+    border-radius: inherit;
+  }
+  .nice-select {
+    span {
+      max-width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
     }
-    &:hover, &.focus, &.selected.focus {
-      color: $orange-color1;
-      background-color: #f0f0f0;
-    }
-    &.selected { 
-      font-weight: bold;
-      color: $orange-color2;
-      background-color: #f0f0f0;
+    &.open {
+      &:after {
+        transform: rotate(180deg);
+      }
+      .list {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(0);
+      }
     }
     &.disabled {
-      background-color: transparent;
       color: $gray-color1;
       cursor: default;
+      pointer-events: none;
+      &:after {
+        opacity: 0.15;
+      }
+    }
+    // List and options
+    .list {
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: $shadow;
+      box-sizing: border-box;
+      margin-top: 4px;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 100%; left: 0;
+      transform-origin: 50% 0;
+      transform: translateY(5px);
+      transition: 0.2s;
+      list-style: none;
+      z-index: 9;
+      min-width: 100%;
+    }
+    .option {
+      cursor: pointer;
+      font-weight: 400;
+      padding: 7px 10px;
+      outline: none;
+      transition: 0.2s;
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray-color1;
+      }
+      &:hover, &.focus, &.selected.focus {
+        color: $orange-color1;
+        background-color: #f0f0f0;
+      }
+      &.selected { 
+        font-weight: bold;
+        color: $orange-color2;
+        background-color: #f0f0f0;
+      }
+      &.disabled {
+        background-color: transparent;
+        color: $gray-color1;
+        cursor: default;
+      }
+    }
+  }
+  
+  &.mobile-select,
+  .nice-select {
+    // Arrow
+    &:after {
+      content: "\f0dd";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 10px;
+      display: block;
+      line-height: 1;
+      padding-bottom: 5px;
+      top: 6px;
+      transition: 0.2s;
+      z-index: 2;
+      color: #000;
     }
   }
 }
-
 //checkboxes
 .checkbox {
   position: relative;
-  padding: 0 0 0 27px;
+  padding: 0 0 0 24px;
   display: inline-block;
   cursor: pointer;
   transition: 0.2s;
@@ -482,7 +484,27 @@ a {
   &.view-only {
     cursor: default;
   }
+  &_type2 {
+    line-height: 28px;
+    color: $gray-color2;
+    border: 1px solid $gray-color2;
+    border-radius: 4px;
+    width: 100%;
+    font-weight: 400;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 16px;
+    &:hover {
+      color: $gray-color3;
+      border-color: $gray-color3;
+    }
+    &.checked {
+      border-color: $orange-color1;
+      color: $orange-color1;
+    }
+  }
 }
+
 .search {
   width: 100%;
   position: relative;
@@ -670,7 +692,6 @@ a {
   border-top: 1px dashed $orange-color1;
   width: 50vw;
   position: absolute;
-  z-index: 2;
   top: 50%;
   &:before {
     content: '';
@@ -1047,16 +1068,20 @@ a {
   }
 }
 .my-brbr-block {
-  padding: 20px;
-  border-radius: 4px;
-  border: 1px solid $orange-color1;
-  position: relative;
+  &__container {  
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid $orange-color1;
+    position: relative;
+  }
   &.hidden {
-    color: $gray-color1;
-    filter: grayscale(100%);
-
+    .my-brbr-block__conainer {
+      border-color: $gray-color2;
+    }
     .my-brbr-block__image,
     .my-brbr-block__info {
+      color: $gray-color1;
+      filter: grayscale(100%);
       opacity: 0.5;
     }
   }
@@ -1081,8 +1106,72 @@ a {
       height: 42px;
     }
   }
-  &:not(:last-child) {
-    margin-bottom: 30px;
+}
+.my-vacancy-block {
+  &__container {
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid $orange-color1;
+    position: relative;
+  }
+  &.hidden {
+    .my-vacancy-block__container {
+      border-color: $gray-color2;
+    }
+    .my-vacancy-block__section {
+      color: $gray-color1;
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+  }
+  &__title,
+  &__section-title {
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+  }
+  &__title {
+    margin-bottom: 5px;
+  }
+  &__section-title {
+    margin-bottom: 15px;
+  }
+  &__lvl {
+    img {
+      height: 42px;
+    }
+  }
+}
+.job-offer-block {
+  &__container {  
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid $orange-color1;
+    position: relative;
+  }
+  &__lvl {
+    img {
+      height: 42px;
+    }
+  }
+  &__title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    a {
+      text-decoration: none;
+      &:hover {
+        color: $gray-color1;
+      }
+    }
+  }
+  &__image {
+    min-height: 100px;
+    a {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }
 
@@ -1134,7 +1223,8 @@ a {
   .fancybox-slide--html .fancybox-content {
     padding: 25px 20px 30px 20px;
   }
-  .my-brbr-block {
+  .my-brbr-block,
+  .job-offer-block {
     &__image {
       height: 220px;
     }

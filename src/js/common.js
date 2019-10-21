@@ -9,6 +9,7 @@ $(document).ready(function () {
   popup();
   autoHeight();
   checkbox();
+  checkboxCheck();
   fadeInWindows();
   scrollbar();
   searchCity();
@@ -698,9 +699,10 @@ function tabs() {
 }
 //select
 function select() {
-  if ($('html').hasClass('android') || $('html').hasClass('ios')) {
-    return;
+  if ($('html').hasClass('desktop')) {
+    $('.select select').niceSelect();
   } else {
-    $('.select').niceSelect();
+    $('.select').addClass('mobile-select');
   }
+  
 }

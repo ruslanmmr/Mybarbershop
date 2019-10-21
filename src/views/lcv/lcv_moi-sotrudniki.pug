@@ -65,27 +65,27 @@ html(lang="ru")
                               option(value="") 1991
                     .form__item.col-xl-6.col-12
                       span.item-label Пол:
-                      .row
+                      .row.row_compact
                         .col-xl-auto
-                          label.checkbox.col
+                          label.checkbox
                             input(type="radio" name="val1")
                             i.fas.fa-check
                             span Мужчина
                         .col-xl-auto
-                          label.checkbox.col
+                          label.checkbox
                             input(type="radio" name="val1")
                             i.fas.fa-check
                             span Женщина
                     .form__item.col-xl-6.col-12 
                       span.item-label Знание языка:
-                      .row
+                      .row.row_compact
                         .col-xl-auto
-                          label.checkbox.col
+                          label.checkbox
                             input(type="checkbox")
                             i.fas.fa-check
                             span Русский
                         .col-xl-auto
-                          label.checkbox.col
+                          label.checkbox
                             input(type="checkbox")
                             i.fas.fa-check
                             span Английский
@@ -99,133 +99,137 @@ html(lang="ru")
                   h5.section__head-title Мои барберы
                   span.decoration
               .container
-                .my-brbr-block
-                  span.my-brbr-block__label auto
-                  .my-brbr-block__content.row
-                    .my-brbr-block__image.col-xl-3.col-sm-4.col-12
-                      .cover-box
-                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
-                    .my-brbr-block__content.col-xl-9.col-sm-8.col-12
+                .row
+                  .my-brbr-block.col-xl-12
+                    .my-brbr-block__container
+                      span.my-brbr-block__label auto
                       .row
-                        .my-brbr-block__info.col-xl-12
+                        .my-brbr-block__image.col-xl-3.col-sm-4.col-12
+                          .cover-box
+                            img(data-src="img/gallery/barber1.jpg", alt="").lazy
+                        .my-brbr-block__content.col-xl-9.col-sm-8.col-12
                           .row
-                            .col-xl.col-sm-12
+                            .my-brbr-block__info.col-xl-12
                               .row
-                                .my-brbr-block__lvl.col-xl-auto
-                                  img(src="img/icons/ico-topbarber.png", alt="")
-                                .col-xl
-                                  span.my-brbr-block__title Макс, 32 года
-                                  span.my-brbr-block__adress ул. 26 Бакинских коммисаров, 23, 107
-                            .col-xl-auto.col-sm-12
-                              span.item-label Знание языка:
+                                .col-xl.col-sm-12
+                                  .row
+                                    .my-brbr-block__lvl.col-xl-auto
+                                      img(src="img/icons/ico-topbarber.png", alt="")
+                                    .col-xl
+                                      span.my-brbr-block__title Макс, 32 года
+                                      span.my-brbr-block__adress ул. 26 Бакинских коммисаров, 23, 107
+                                .col-xl-auto.col-sm-12
+                                  span.item-label Знание языка:
+                                  .row.row_compact
+                                    .col-xl-auto
+                                      label.checkbox.view-only
+                                        i.fas.fa-check
+                                        span Русский
+                                    .col-xl-auto
+                                      label.checkbox.view-only
+                                        i.fas.fa-check
+                                        span Английский
+                                .col-xl-12
+                                  span.item-label Ссылка на онлайн запись:
+                                  input(type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4").input.input_style4
+                            .my-brbr-block__buttons.col-xl-12
                               .row
-                                .col-xl-auto
-                                  label.checkbox.view-only
-                                    i.fas.fa-check
-                                    span Русский
-                                .col-xl-auto
-                                  label.checkbox.view-only
-                                    i.fas.fa-check
-                                    span Английский
-                            .col-xl-12
-                              span.item-label Ссылка на онлайн запись:
-                              input(type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4").input.input_style4
-                        .my-brbr-block__buttons.col-xl-12
-                          .row
-                            .col-xl-4.col-sm-6
-                              button.button.button_style7.small
-                                i.far.fa-eye-slash
-                                | Скрыть
-                            .col-xl-4.col-sm-6
-                              button.button.button_style9.small
-                                i.far.fa-trash-alt
-                                | Удалить
-                            .col-xl-4.col-sm-12
-                              button.button.button_style1.small
-                                | Сохранить
-                .my-brbr-block.hidden
-                  .my-brbr-block__container.row
-                    .my-brbr-block__image.col-xl-3.col-sm-4.col-12
-                      .cover-box
-                        img(data-src="img/gallery/barber2.jpg", alt="").lazy
-                    .my-brbr-block__content.col-xl-9.col-sm-8.col-12
+                                .col-xl-4.col-sm-6
+                                  button.button.button_style7.small
+                                    i.far.fa-eye-slash
+                                    | Скрыть
+                                .col-xl-4.col-sm-6
+                                  button.button.button_style9.small
+                                    i.far.fa-trash-alt
+                                    | Удалить
+                                .col-xl-4.col-sm-12
+                                  button.button.button_style1.small
+                                    | Сохранить
+                  .my-brbr-block.col-xl-12.hidden
+                    .my-brbr-block__container
                       .row
-                        .my-brbr-block__info.col-xl-12
+                        .my-brbr-block__image.col-xl-3.col-sm-4.col-12
+                          .cover-box
+                            img(data-src="img/gallery/barber2.jpg", alt="").lazy
+                        .my-brbr-block__content.col-xl-9.col-sm-8.col-12
                           .row
-                            .col-xl.col-sm-12
+                            .my-brbr-block__info.col-xl-12
                               .row
-                                .my-brbr-block__lvl.col-xl-auto
-                                  img(src="img/icons/ico-barber.png", alt="")
-                                .col-xl
-                                  span.my-brbr-block__title Руслан, 100 лет
-                                  span.my-brbr-block__adress ул. 26 Бакинских коммисаров, 23, 107
-                            .col-xl-auto.col-sm-12
-                              span.item-label Знание языка:
+                                .col-xl.col-sm-12
+                                  .row
+                                    .my-brbr-block__lvl.col-xl-auto
+                                      img(src="img/icons/ico-barber.png", alt="")
+                                    .col-xl
+                                      span.my-brbr-block__title Руслан, 100 лет
+                                      span.my-brbr-block__adress ул. 26 Бакинских коммисаров, 23, 107
+                                .col-xl-auto.col-sm-12
+                                  span.item-label Знание языка:
+                                  .row.row_compact
+                                    .col-xl-auto
+                                      label.checkbox.view-only
+                                        i.fas.fa-check
+                                        span Английский
+                                .col-xl-12
+                                  span.item-label Ссылка на онлайн запись:
+                                  input(type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4").input.input_style4
+                            .my-brbr-block__buttons.col-xl-12
                               .row
-                                .col-xl-auto
-                                  label.checkbox.view-only
-                                    i.fas.fa-check
-                                    span Английский
-                            .col-xl-12
-                              span.item-label Ссылка на онлайн запись:
-                              input(type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4").input.input_style4
-                        .my-brbr-block__buttons.col-xl-12
-                          .row
-                            .col-xl-4.col-sm-6
-                              button.button.button_style7.small
-                                i.far.fa-eye
-                                | Показать
-                            .col-xl-4.col-sm-6
-                              button.button.button_style9.small
-                                i.far.fa-trash-alt
-                                | Удалить
-                            .col-xl-4.col-sm-12
-                              button.button.button_style1.small
-                                | Сохранить
-                .my-brbr-block
-                  span.my-brbr-block__label auto
-                  .my-brbr-block__content.row
-                    .my-brbr-block__image.col-xl-3.col-sm-4.col-12
-                      .cover-box
-                        img(data-src="img/gallery/barber1.jpg", alt="").lazy
-                    .my-brbr-block__content.col-xl-9.col-sm-8.col-12
+                                .col-xl-4.col-sm-6
+                                  button.button.button_style7.small
+                                    i.far.fa-eye
+                                    | Показать
+                                .col-xl-4.col-sm-6
+                                  button.button.button_style9.small
+                                    i.far.fa-trash-alt
+                                    | Удалить
+                                .col-xl-4.col-sm-12
+                                  button.button.button_style1.small
+                                    | Сохранить
+                  .my-brbr-block.col-xl-12
+                    .my-brbr-block__container
+                      span.my-brbr-block__label auto
                       .row
-                        .my-brbr-block__info.col-xl-12
+                        .my-brbr-block__image.col-xl-3.col-sm-4.col-12
+                          .cover-box
+                            img(data-src="img/gallery/barber1.jpg", alt="").lazy
+                        .my-brbr-block__content.col-xl-9.col-sm-8.col-12
                           .row
-                            .col-xl.col-sm-12
+                            .my-brbr-block__info.col-xl-12
                               .row
-                                .my-brbr-block__lvl.col-xl-auto
-                                  img(src="img/icons/ico-beginner.png", alt="")
-                                .col-xl
-                                  span.my-brbr-block__title Макс, 32 года
-                                  span.my-brbr-block__adress ул. 263333 Бакинских каких-то коммисаров, 233, 3107
-                            .col-xl-auto.col-sm-12
-                              span.item-label Знание языка:
+                                .col-xl.col-sm-12
+                                  .row
+                                    .my-brbr-block__lvl.col-xl-auto
+                                      img(src="img/icons/ico-beginner.png", alt="")
+                                    .col-xl
+                                      span.my-brbr-block__title Макс, 32 года
+                                      span.my-brbr-block__adress ул. 263333 Бакинских каких-то коммисаров, 233, 3107
+                                .col-xl-auto.col-sm-12
+                                  span.item-label Знание языка:
+                                  .row.row_compact
+                                    .col-xl-auto
+                                      label.checkbox.view-only
+                                        i.fas.fa-check
+                                        span Русский
+                                    .col-xl-auto
+                                      label.checkbox.view-only
+                                        i.fas.fa-check
+                                        span Русский
+                                .col-xl-12
+                                  span.item-label Ссылка на онлайн запись:
+                                  input(type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4").input.input_style4
+                            .my-brbr-block__buttons.col-xl-12
                               .row
-                                .col-xl-auto
-                                  label.checkbox.view-only
-                                    i.fas.fa-check
-                                    span Русский
-                                .col-xl-auto
-                                  label.checkbox.view-only
-                                    i.fas.fa-check
-                                    span Русский
-                            .col-xl-12
-                              span.item-label Ссылка на онлайн запись:
-                              input(type="text" value="www.mybarbershop.ruwatch?v=DVNiB8dSjA4").input.input_style4
-                        .my-brbr-block__buttons.col-xl-12
-                          .row
-                            .col-xl-4.col-sm-6
-                              button.button.button_style7.small
-                                i.far.fa-eye-slash
-                                | Скрыть
-                            .col-xl-4.col-sm-6
-                              button.button.button_style9.small
-                                i.far.fa-trash-alt
-                                | Удалить
-                            .col-xl-4.col-sm-12
-                              button.button.button_style1.small
-                                | Сохранить
+                                .col-xl-4.col-sm-6
+                                  button.button.button_style7.small
+                                    i.far.fa-eye-slash
+                                    | Скрыть
+                                .col-xl-4.col-sm-6
+                                  button.button.button_style9.small
+                                    i.far.fa-trash-alt
+                                    | Удалить
+                                .col-xl-4.col-sm-12
+                                  button.button.button_style1.small
+                                    | Сохранить
         //footer
         include ../blocks/footer
         //other
