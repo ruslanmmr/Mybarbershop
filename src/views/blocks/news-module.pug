@@ -1,0 +1,52 @@
+mixin news(title)
+  .news-block
+    a(href="#").news-block__container
+      img(src="img/gallery/image1.jpg", alt="").news-block__image
+      span.news-block__title=title
+
+section.section.news-module
+  .section__head
+    .decorated
+      span.decoration
+      h5.section__head-title Новости
+      span.decoration
+  .container
+    .mb-30
+      .row
+        .col-xl-7.col-md-6.col-sm-12
+          .row
+            section.big-news-block.col-xl-12.col-sm-6.col-12
+              .big-news-block__container
+                a(href="#").big-news-block__image
+                  .cover-box
+                    img(data-src="img/gallery/news.jpg", alt="").lazy
+                .big-news-block__text
+                  .row.row_flex-end.row_h100.row_ac-sb
+                    .col-xl-12
+                      h6.big-news-block__title Выбор хипстеров и конформистов:<br> мода и математика!
+                      span.big-news-block__date 23/10/2019
+                    .col-xl-4.col-md-6.col-sm-12
+                      a(href="#").button.button_style4 Подробнее
+            section.big-news-block.col-xl-12.col-sm-6.col-12
+              .big-news-block__container
+                a(href="#").big-news-block__image
+                  .cover-box
+                    img(data-src="img/gallery/news.jpg", alt="").lazy
+                .big-news-block__text
+                  .row.row_flex-end.row_h100.row_ac-sb
+                    .col-xl-12
+                      h6.big-news-block__title Борода как ОБЕРЕГ
+                      span.big-news-block__date 23/10/2019
+                    .col-xl-4.col-md-6.col-sm-12
+                      a(href="#").button.button_style4 Подробнее
+        .col-xl-5.col-md-6.col-sm-12
+          .row.row_h100
+            include small-news-block
+            +block()
+            +block()
+            +block()
+            +block()
+            +block()
+    .row
+      .col-xl-3.col-sm-6.col-12
+        a(href="#").button.button_style4 Архив новостей
