@@ -13,6 +13,14 @@
       height: 300px;
     }
   }
+  &_type3 {
+    margin-bottom: 40px;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 28%;
+    }
+  }
   &__background {
     position: absolute;
     width: 100%;

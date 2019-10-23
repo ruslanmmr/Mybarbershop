@@ -11,6 +11,7 @@ $orange-color2: #ca6c00;
 $gray-color1: #a7a9ae;
 $gray-color2: #888a90;
 $gray-color3: #65666a;
+$gray-color4: #0c1115;
 
 body {
   text-rendering: optimizeSpeed;
@@ -19,7 +20,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: $line-height-main;
-  background-color: #0c1115;
+  background-color: $gray-color4;
   font-weight: 300;
   position: relative;
 }

@@ -93,7 +93,6 @@ a {
   i {
     margin: 0 10px 0 0;
   }
-
   &_style1 {
     color: $orange-color1;
     border: 1px solid $orange-color1;
@@ -501,6 +500,31 @@ a {
     &.checked {
       border-color: $orange-color1;
       color: $orange-color1;
+    }
+  }
+  &_type-model {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    &.checked {
+      border-color: #fff;
+      background-color: $gray-color4;
+    }
+    span {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    img {
+      height: 180px;
+      margin: 0 auto;
     }
   }
 }
@@ -1176,7 +1200,16 @@ a {
 }
 
 
+
+
 //responsive
+@media all and(max-width: 1024px) {
+  .section {
+    &_with-banner {
+      margin-top: 0 !important;
+    }
+  }
+}
 @media all and(max-width: 768px) {
   .section {
     margin: 30px 0 50px 0;
@@ -1227,6 +1260,13 @@ a {
   .job-offer-block {
     &__image {
       height: 220px;
+    }
+  }
+  .checkbox {
+    &_type-model {
+      img {
+        height: 120px;
+      }
     }
   }
 }
