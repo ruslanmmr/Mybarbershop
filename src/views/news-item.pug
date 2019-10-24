@@ -1,0 +1,54 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            section.section.section_with-banner.news-section
+              .news-section__image.cover-box.mb-30
+                img(data-src="img/gallery/news.jpg", alt="").lazy
+              .container
+                .news-section__head.mb-30
+                  .row  
+                    .col-xl.col-12
+                      h6.t-size-36.news-section__title Выбор хипстеров и конформистов: мода и математика!
+                    .col-xl-auto
+                      .rating-module
+                        ul
+                          li
+                            a(href="#").button.button_type-rating-mark.active
+                              i.fas.fa-thumbs-up
+                              span 20
+                          li
+                            a(href="#").button.button_type-rating-mark
+                              i.fas.fa-smile
+                              span 200
+                          li
+                            a(href="#").button.button_type-rating-mark
+                              i.fas.fa-frown
+                              span 1000
+                          li
+                            a(href="#").button.button_type-rating-mark
+                              i.fas.fa-thumbs-down
+                              span 10
+                .news-section__text
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta enim eget tellus pellentesque tristique. Sed nec malesuada dolor, sit amet bibendum nisl. Nulla odio magna, dictum id vulputate vel, pulvinar aliquet risus. Aliquam tempor lectus non mauris mattis molestie. Cras cursus pulvinar augue. Nunc lobortis ipsum a molestie ultricies. Vivamus enim odio, faucibus in metus sollicitudin, tincidunt congue nisi. Quisque sit amet aliquam sapien, non efficitur ante. Aenean diam diam, finibus ut tincidunt ac, mattis vel risus. Nam ligula elit, cursus non dapibus sed, vestibulum ac diam. Etiam quis lacinia justo. Mauris pharetra convallis nisi, et iaculis nunc elementum et.
+                  p Mauris urna nisi, pretium eu cursus a, gravida eget justo. Praesent aliquet suscipit ligula sed mattis. Ut egestas imperdiet rutrum. Curabitur accumsan posuere nunc, a blandit orci tincidunt non. Curabitur nec leo condimentum, pulvinar diam quis, efficitur nunc. Quisque varius faucibus nulla sit amet posuere. Pellentesque varius nisi nunc. Fusce ullamcorper risus lacus, aliquam pellentesque eros bibendum a.
+                  p Fusce sed mauris sit amet eros euismod congue ut eget risus. Phasellus posuere quam nec felis varius suscipit. Aenean sodales, sapien eleifend aliquam sollicitudin, justo elit pellentesque urna, quis vulputate ex magna vitae lectus. Proin ligula dui, condimentum id tellus id, fringilla dictum nulla. Pellentesque diam odio, rutrum quis est eget, rutrum sodales neque. In nec magna lobortis, cursus sapien a, dapibus ipsum. Integer augue magna, ultrices ut velit et, ornare condimentum ante. Integer et nisi nunc.
+                  p Quisque sit amet lacus dui. Sed bibendum convallis dapibus. Etiam ullamcorper pellentesque ultricies. Curabitur sit amet bibendum felis. Nulla volutpat ex nunc, in pulvinar turpis viverra eget. Nulla luctus scelerisque mauris, non hendrerit ante semper eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                  p Pellentesque a sapien quis lacus tempor ultrices. Pellentesque commodo non nunc a facilisis. Mauris eget nulla rhoncus, fermentum urna at, faucibus arcu. Maecenas porttitor, dolor porttitor rutrum sagittis, elit nisl hendrerit turpis, molestie ornare enim lacus non tortor. Nullam sit amet lacinia odio. Sed in purus elementum, dignissim elit sed, pharetra magna. Cras ultrices facilisis sem, nec imperdiet turpis faucibus at. Donec feugiat mauris vitae justo vestibulum, ac lacinia ex sodales. Proin at est sit amet felis gravida fermentum.
+
+
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

@@ -205,7 +205,7 @@
     padding-left: 15px;
   }
 }
-@media all and(max-width: 1210px) {
+@media all and(max-width: 1200px) {
   .banner-slide {
     &__title {
       font-size: 60px;
@@ -263,6 +263,11 @@
     }
   }
   .banner {
+    &_type4 {
+      &:before {
+        padding-top: 56.25%;
+      }
+    }
     &_type2 {
       margin: 30px 0;
     }

@@ -167,7 +167,7 @@ a {
     }
   }
   &_type-img-load {
-    height: 103px;
+    height: 100px;
     background-color: #fff;
     color: $gray-color2;
     padding: 15px;
@@ -251,6 +251,26 @@ a {
     &.active {
       color: $orange-color1;
       background-color: $gray-color3;
+    }
+  }
+  &_type-rating-mark {
+    text-align: center;
+    padding: 10px;
+    line-height: 1;
+    min-width: 55px;
+    i {
+      font-size: 20px;
+      display: block;
+      text-align: center;
+      margin: 0 0 10px 0;
+    }
+    &:hover,
+    &.active {
+      color: $orange-color1;
+      background: rgba(0,0,0,.5);
+    }
+    &.active {
+      pointer-events: none;
     }
   }
 }
@@ -440,7 +460,7 @@ a {
 .checkbox {
   position: relative;
   padding: 0 0 0 24px;
-  display: inline-block;
+  display: block;
   cursor: pointer;
   transition: 0.2s;
   min-height: 19px;
@@ -1128,7 +1148,7 @@ a {
   }
   &__lvl {
     img {
-      height: 42px;
+      height: 47px;
     }
   }
 }
@@ -1329,20 +1349,56 @@ a {
   }
 
 }
+.news-section {
+  &__image {
+    margin: 0 auto;
+    max-width: 1160px;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 35%;
+    }
+  }
+  &__title {
+    color: $orange-color1;
+    margin-top: -0.2em;
+  }
+}
+.rating-module {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  li {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
 
 
 
 
 //responsive
+
+@media all and(max-width: 1200px) {
+  .section {
+    &_with-banner {
+      margin-top: 0 !important;
+    }
+  }
+  .news-section {
+    &__image {
+      max-width: 1200px;
+    }
+  }
+}
 @media all and(max-width: 1024px) {
   .big-news-block {
     &__text {
       padding: 20px;
-    }
-  }
-  .section {
-    &_with-banner {
-      margin-top: 0 !important;
     }
   }
 }
@@ -1438,6 +1494,16 @@ a {
   .small-news-block {
     &__image {
       height: 100%;
+    }
+  }
+  .news-section {
+    &__head {
+      margin-bottom: 20px !important;
+    }
+    &__image {
+      &:before {
+        padding-top: 56.25%;
+      }
     }
   }
 }
