@@ -20,7 +20,7 @@
       display: block;
       padding-top: 28%;
     }
-  }
+  }/* 
   &__background {
     position: absolute;
     width: 100%;
@@ -28,7 +28,7 @@
     top: 0;
     left: 0;
     background-size: cover;
-  }
+  } */
   .slick-list {
     overflow: visible;
     padding: 0 !important;
@@ -63,6 +63,7 @@
   position: relative;
   &__background {
     z-index: 1;
+    background-size: cover;
     &[data-filter] {
       filter: blur(5px);
       &:after {

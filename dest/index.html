@@ -32,7 +32,7 @@
                 <ul class="nav__list">
                   <li class="nav__item"> <a class="nav__link" href="#">барбершопы</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">новости</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="#">free</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="free.html">free</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">Ищу работу</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">ищу сотрудника</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">барахолка</a></li>
@@ -253,83 +253,61 @@
             <div class="service-filter">
               <div class="service-filter__container">
                 <form class="service-filter-form" action="">
-                  <div class="container">
-                    <div class="service-filter-form__section service-filter-form__section_search">
-                      <div class="search">
-                        <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
-                        <button class="search__button"><i class="fas fa-search"></i></button>
-                      </div>
+                  <div class="service-filter-form__section service-filter-form__section_search">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
                     </div>
-                    <div class="service-filter-form__section service-filter-form__section_filter">
-                      <div class="service-filter-form__container">
-                        <div class="service-filter-form__title">Режим работы:</div>
-                        <div class="service-filter-form__content">
-                          <div class="service-filter-value">
-                            <label class="label label_style1 label_value1">
-                              <div class="service-filter-value__title">с утра</div>
-                              <input type="checkbox">
-                            </label>
-                          </div>
-                          <div class="service-filter-value">
-                            <label class="label label_style1 label_value2">
-                              <div class="service-filter-value__title">до поздна</div>
-                              <input type="checkbox">
-                            </label>
-                          </div>
-                          <div class="service-filter-value">
-                            <label class="label label_style1 label_value3">
-                              <div class="service-filter-value__title">круглосуточно</div>
-                              <input type="checkbox">
-                            </label>
-                          </div>
+                  </div>
+                  <div class="service-filter-form__section service-filter-form__section_filter">
+                    <div class="service-filter-form__container">
+                      <div class="service-filter-form__title">Режим работы:</div>
+                      <div class="service-filter-form__content">
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style1 label_value1">
+                            <div class="service-filter-value__title">с утра</div>
+                            <input type="checkbox">
+                          </label>
                         </div>
-                      </div><span class="service-filter-form__decoration"></span>
-                      <div class="service-filter-form__container">
-                        <div class="service-filter-form__title">Стоимость услуг:</div>
-                        <div class="service-filter-form__content">
-                          <div class="service-filter-value">
-                            <label class="label label_style2 label_value4 tooltip" title="от 100 до 550р">
-                              <div class="service-filter-value__title">Premium</div>
-                              <input type="checkbox">
-                            </label>
-                          </div>
-                          <div class="service-filter-value">
-                            <label class="label label_style2 label_value5 tooltip" title="от 550 до 1000р">
-                              <div class="service-filter-value__title">Standard</div>
-                              <input type="checkbox">
-                            </label>
-                          </div>
-                          <div class="service-filter-value">
-                            <label class="label label_style2 label_value6 tooltip" title="от 1000р">
-                              <div class="service-filter-value__title">Economy</div>
-                              <input type="checkbox">
-                            </label>
-                          </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style1 label_value2">
+                            <div class="service-filter-value__title">до поздна</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style1 label_value3">
+                            <div class="service-filter-value__title">круглосуточно</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                      </div>
+                    </div><span class="service-filter-form__decoration"></span>
+                    <div class="service-filter-form__container">
+                      <div class="service-filter-form__title">Стоимость услуг:</div>
+                      <div class="service-filter-form__content">
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style2 label_value4 tooltip" title="от 100 до 550р">
+                            <div class="service-filter-value__title">Premium</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style2 label_value5 tooltip" title="от 550 до 1000р">
+                            <div class="service-filter-value__title">Standard</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style2 label_value6 tooltip" title="от 1000р">
+                            <div class="service-filter-value__title">Economy</div>
+                            <input type="checkbox">
+                          </label>
                         </div>
                       </div>
                     </div>
                   </div>
                 </form>
-              </div>
-              <!--
-              .service-filter-recomendations
-                .decotarive-line2
-                  span
-                  i.fas.fa-thumbs-up
-                  span
-                .container
-                  ul.service-filter-recomendations__list
-                    li.service-filter-recomendations__item
-                      a(href="#").service-filter-recomendations__link <strong>Бритва</strong> /на Новоясеневском проспекте/
-                    li.service-filter-recomendations__item
-                      a(href="#").service-filter-recomendations__link <strong>TopGun</strong> /в ТЦ МЕГА Химки/
-                    li.service-filter-recomendations__item
-                      a(href="#").service-filter-recomendations__link <strong>Barbarossa</strong> /на метро Ясенево/
-              -->
-              <div class="map">
-                <div class="map__container">
-                  <div id="map"></div>
-                </div>
               </div>
             </div>
             <div class="banner banner_type2">
@@ -392,8 +370,7 @@
                                                       <div class="small-news-block__content col-xl-8 col-sm-12 col-7">
                                                         <div class="row row_h100 row_ac-sb row_flex-end">
                                                           <div class="col-xl-12">
-                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6>
-                                                            <p class="small-news-block__text">Фоторепортаж с концерта</p><span class="small-news-block__date">23/10/2019</span>
+                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6><span class="small-news-block__text">Фоторепортаж с концерта</span><span class="small-news-block__date">23/10/2019</span>
                                                           </div>
                                                           <div class="small-news-block__button col-xl-8 col-md-12"><a class="button button_style4 small" href="news-item.html">Подробнее</a></div>
                                                         </div>
@@ -409,8 +386,7 @@
                                                       <div class="small-news-block__content col-xl-8 col-sm-12 col-7">
                                                         <div class="row row_h100 row_ac-sb row_flex-end">
                                                           <div class="col-xl-12">
-                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6>
-                                                            <p class="small-news-block__text">Фоторепортаж с концерта</p><span class="small-news-block__date">23/10/2019</span>
+                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6><span class="small-news-block__text">Фоторепортаж с концерта</span><span class="small-news-block__date">23/10/2019</span>
                                                           </div>
                                                           <div class="small-news-block__button col-xl-8 col-md-12"><a class="button button_style4 small" href="news-item.html">Подробнее</a></div>
                                                         </div>
@@ -426,8 +402,7 @@
                                                       <div class="small-news-block__content col-xl-8 col-sm-12 col-7">
                                                         <div class="row row_h100 row_ac-sb row_flex-end">
                                                           <div class="col-xl-12">
-                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6>
-                                                            <p class="small-news-block__text">Фоторепортаж с концерта</p><span class="small-news-block__date">23/10/2019</span>
+                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6><span class="small-news-block__text">Фоторепортаж с концерта</span><span class="small-news-block__date">23/10/2019</span>
                                                           </div>
                                                           <div class="small-news-block__button col-xl-8 col-md-12"><a class="button button_style4 small" href="news-item.html">Подробнее</a></div>
                                                         </div>
@@ -443,8 +418,7 @@
                                                       <div class="small-news-block__content col-xl-8 col-sm-12 col-7">
                                                         <div class="row row_h100 row_ac-sb row_flex-end">
                                                           <div class="col-xl-12">
-                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6>
-                                                            <p class="small-news-block__text">Фоторепортаж с концерта</p><span class="small-news-block__date">23/10/2019</span>
+                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6><span class="small-news-block__text">Фоторепортаж с концерта</span><span class="small-news-block__date">23/10/2019</span>
                                                           </div>
                                                           <div class="small-news-block__button col-xl-8 col-md-12"><a class="button button_style4 small" href="news-item.html">Подробнее</a></div>
                                                         </div>
@@ -460,8 +434,7 @@
                                                       <div class="small-news-block__content col-xl-8 col-sm-12 col-7">
                                                         <div class="row row_h100 row_ac-sb row_flex-end">
                                                           <div class="col-xl-12">
-                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6>
-                                                            <p class="small-news-block__text">Фоторепортаж с концерта</p><span class="small-news-block__date">23/10/2019</span>
+                                                            <h6 class="small-news-block__title">Концерт «ZZ TOP»</h6><span class="small-news-block__text">Фоторепортаж с концерта</span><span class="small-news-block__date">23/10/2019</span>
                                                           </div>
                                                           <div class="small-news-block__button col-xl-8 col-md-12"><a class="button button_style4 small" href="news-item.html">Подробнее</a></div>
                                                         </div>
@@ -706,7 +679,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/libs.min.js">                 </script>
     <script src="js/common.min.js"></script>
-    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-    <script src="js/map.min.js"></script>
   </body>
 </html>

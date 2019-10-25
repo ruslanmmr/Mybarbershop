@@ -1,0 +1,48 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            include blocks/banner1
+            +banner()(data-src="img/banner/banner-image3.jpg")
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h1.section__head-title Я хочу ... бесплатно
+                  span.decoration
+              form(action="").form
+                .form__section
+                  .container
+                    .row.row_center
+                      .form__item.col-xl-3.col-sm-4.col-6
+                        label.checkbox.checkbox_type-model
+                          input(type="radio" name='val' checked)
+                          span Бритье
+                          img(src="img/icons/ico-shaving.png", alt="")
+                      .form__item.col-xl-3.col-sm-4.col-6
+                        label.checkbox.checkbox_type-model
+                          input(type="radio" name='val')
+                          span Стрижка
+                          img(src="img/icons/ico-haircut.png", alt="")
+                .form__section
+                  .container
+                    include blocks/filter_state1
+                .form__section  
+                  include blocks/map
+            include blocks/banner2
+            include blocks/news-module
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

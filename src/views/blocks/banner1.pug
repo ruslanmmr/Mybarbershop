@@ -3,9 +3,9 @@ mixin banner()
     .banner__container
       .slider.slider_dots.banner__slider
         .slide.banner-slide
-          .banner-slide__background.lazy&attributes(attributes)
-          block
+          .banner-slide__background.cover-box
+            img(alt="banner").lazy&attributes(attributes)
         .slide.banner-slide
-          .banner-slide__background.lazy&attributes(attributes)
-          block
+          .banner-slide__background.cover-box
+            img(alt="banner").lazy&attributes(attributes)
         

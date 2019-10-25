@@ -780,6 +780,7 @@ a {
     overflow: hidden;
     &-title {
       position: relative;
+      font-size: inherit;
       z-index: 2;
       font-weight: 900;
       line-height: 1.2;
@@ -1018,8 +1019,8 @@ a {
   background-repeat: repeat;
   opacity: 0;
   transition: opacity 1s;
-  &.visible {
-    opacity: 1;
+  &_cover {
+    background-size: cover;
   }
 }
 .lazy {
@@ -1242,7 +1243,7 @@ a {
     padding: 20px;
   }
   &__text {
-    margin: 0;
+    display: block;
   }
   &__date {
     color: $gray-color3;
