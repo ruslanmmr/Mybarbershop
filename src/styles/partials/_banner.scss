@@ -286,6 +286,11 @@
         height: 170px;
       }
     }
+    &_type3 {
+      &:before {
+        padding-top: 56.25%;
+      }
+    }
   }
   .banner-slide {
     &__title {

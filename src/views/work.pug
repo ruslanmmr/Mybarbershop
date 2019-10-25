@@ -1,0 +1,89 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            include blocks/banner1
+            +banner()(data-src="img/banner/moe-mesto.jpg")
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h1.section__head-title Сейчас требуются
+                  span.decoration
+              form(action="").form
+                .form__section
+                  .container
+                    .row.row_center
+                      .form__item.col-xl-3.col-sm-4.col-6
+                        label.checkbox.work-block-item
+                          input(type="checkbox").input
+                          .work-block-item__content
+                            span.work-block-item__title Барбер
+                            img(src="img/icons/ico-barber.png", alt="")
+                          .decorative-line
+                          .work-block-item__content
+                            .work-block-item__count(style='background-image:url("../img/backgrounds/brand-background.png")')
+                              span 234
+                              span вакансий
+                      .form__item.col-xl-3.col-sm-4.col-6
+                        label.checkbox.work-block-item
+                          input(type="checkbox").input
+                          .work-block-item__content
+                            span.work-block-item__title Админитратор
+                            img(src="img/icons/ico-list.png", alt="")
+                          .decorative-line
+                          .work-block-item__content
+                            .work-block-item__count(style='background-image:url("../img/backgrounds/brand-background.png")')
+                              span 234
+                              span вакансий
+                      .form__item.col-xl-3.col-sm-4.col-6
+                        label.checkbox.work-block-item
+                          input(type="checkbox").input
+                          .work-block-item__content
+                            span.work-block-item__title Управляющий
+                            img(src="img/icons/ico-graphic.png", alt="")
+                          .decorative-line
+                          .work-block-item__content
+                            .work-block-item__count(style='background-image:url("../img/backgrounds/brand-background.png")')
+                              span 234
+                              span вакансий
+                      .form__item.col-xl-3.col-sm-4.col-6
+                        label.checkbox.work-block-item
+                          input(type="checkbox").input
+                          .work-block-item__content
+                            span.work-block-item__title Прочий персонал
+                            img(src="img/icons/ico-woman.png", alt="")
+                          .decorative-line
+                          .work-block-item__content
+                            .work-block-item__count(style='background-image:url("../img/backgrounds/brand-background.png")')
+                              span 234
+                              span вакансий
+                .form__section
+                  .container
+                    .row
+                      .form__item.col-xl-12
+                        .search
+                          input(type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required).input.input_style1.search__input
+                          button.search__button
+                            i.fas.fa-search
+                      .form__item.col-xl-12
+                        span.searched-label.t-size-24 всего найдено: <strong>30</strong> мест
+                .form__section
+                  include blocks/map
+            include blocks/banner2
+            include blocks/news-module
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
