@@ -1,0 +1,32 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            include blocks/banner-main
+            include blocks/recommendations
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h1.section__head-title барбершопы
+                  span.decoration
+              .container.mb-30
+                include blocks/service-filter
+              include blocks/map
+            include blocks/banner2
+            include blocks/news-module
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

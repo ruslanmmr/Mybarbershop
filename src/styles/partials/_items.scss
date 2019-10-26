@@ -130,7 +130,9 @@ a {
       background-color: $orange-color2;
     }
     &.small {
-      line-height: 30px;
+      white-space: normal;
+      line-height: 20px;
+      padding: 5px 15px;
     }
   }
   &_style5 {
@@ -1064,7 +1066,6 @@ a {
   }
 }
 .decorative-line2 {
-  padding: 15px 0;
   display: flex;
   align-items: center;
   justify-content: center;
