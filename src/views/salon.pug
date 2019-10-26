@@ -1,0 +1,149 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            include blocks/banner1
+            +banner()(data-src="img/banner/banner-salon.jpg")
+            include blocks/salon-info
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h1.section__head-title Немного о нас
+                  span.decoration
+              .container
+                .row
+                  .col-xl-12
+                    p
+                      strong.c-main.t-t-u О САЛОНЕ: 
+                      | «В профессию я пришел неожиданно. Ждал своей очереди в парикмахерской и заметил, как выходящие клиенты тепло благодарили своих мастеров. Это меня и зацепило. До этого я работал в коммерции, но со временем понял, что офисная жизнь занимает много времени и монотонна — вот и сбежал. Кроме того, я активный судья барбер и барбершоп-баттлов. Продвигаю культуру по всей стране. Сегодня я счастлив, свободен и точно на своем месте.»
+                  .col-xl-12
+                    p
+                      strong.c-main.t-t-u О КЛИЕНТАХ: 
+                      | «У меня своя сложившаяся аудитория. В основном это преуспевающие мужчины 30–45 лет. Для меня важно устанавливать эмоциональный контакт с людьми, которые ко мне ходят. Просто безучастно стричь людей на автомате я не могу». «У меня своя сложившаяся аудитория. В основном это преуспевающие мужчины 30–45 лет. Для меня важно устанавливать эмоциональный контакт с людьми, которые ко мне ходят.»
+                  .col-xl-12
+                    p
+                      strong.c-main.t-t-u О САЛОНЕ: 
+                      | Я работал: брею опасной бритвой, делаю моделирование бороды и усов. Убежден, что без использования опасной бритвы грамотно оформить бороду невозможно». «Я работал: брею опасной бритвой, делаю моделирование бороды и усов. Убежден, что без использования опасной бритвы грамотно оформить бороду невозможно». «Я работал: брею опасной бритвой, делаю моделирование бороды и усов. Убежден, что без использования опасной бритвы».
+            include blocks/banner2
+            include blocks/barbers
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h1.section__head-title Улуги и цены
+                  span.decoration
+              .container
+                .service-table
+                  .service-table__row
+                    .service-table__text
+                      span.service-table__title Перечень:
+                    .service-table__price
+                      .row
+                        span.col-xl-4
+                          img(src="img/icons/ico-topbarber.png" alt="" title='Топ-барбер').tooltip
+                        span.col-xl-4
+                          img(src="img/icons/ico-barber.png" alt="" title='Барбер').tooltip
+                        span.col-xl-4
+                          img(src="img/icons/ico-beginner.png" alt="" title='Начинающий').tooltip
+                  .service-table__row.toggle-group
+                    .service-table__text
+                      a(href="").service-table__title.toggle-button <strong>Премиум</strong> моделирование бороды
+                        i.fas.fa-angle-double-down
+                      .service-table__description.toggle-content
+                        p Премиум моделирование бороды это вершина профессионального мастерства барбера и происходит на высочайшем уровне. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                    .service-table__price
+                      .row
+                        span.col-xl-4
+                          strong 9000 р.
+                        span.col-xl-4
+                          strong 5000 р.
+                        span.col-xl-4
+                          strong ---- р.
+                  .service-table__row.toggle-group
+                    .service-table__text
+                      a(href="").service-table__title.toggle-button <strong>Премиум</strong> cnрижка
+                        i.fas.fa-angle-double-down
+                      .service-table__description.toggle-content
+                        p Премиум моделирование бороды это вершина профессионального мастерства барбера и происходит на высочайшем уровне. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                    .service-table__price
+                      .row
+                        span.col-xl-4
+                          strong 8000 р.
+                        span.col-xl-4
+                          strong 500 р.
+                        span.col-xl-4
+                          strong 9000 р.
+                  .service-table__row.toggle-group
+                    .service-table__text
+                      a(href="").service-table__title.toggle-button Мужская стрижка
+                        i.fas.fa-angle-double-down
+                      .service-table__description.toggle-content
+                        p Премиум моделирование бороды это вершина профессионального мастерства барбера и происходит на высочайшем уровне. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                    .service-table__price
+                      .row
+                        span.col-xl-4
+                          strong 8000 р.
+                        span.col-xl-4
+                          strong 500 р.
+                        span.col-xl-4
+                          strong 9000 р.
+                  .service-table__row.toggle-group
+                    .service-table__text
+                      a(href="").service-table__title.toggle-button Коррекция бороды
+                        i.fas.fa-angle-double-down
+                      .service-table__description.toggle-content
+                        p Премиум моделирование бороды это вершина профессионального мастерства барбера и происходит на высочайшем уровне. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                    .service-table__price
+                      .row
+                        span.col-xl-4
+                          strong 9000 р.
+                        span.col-xl-4
+                          strong 5000 р.
+                        span.col-xl-4
+                          strong ---- р.
+                  .service-table__row.toggle-group
+                    .service-table__text
+                      a(href="").service-table__title.toggle-button Моделирование бороды
+                        i.fas.fa-angle-double-down
+                      .service-table__description.toggle-content
+                        p Премиум моделирование бороды это вершина профессионального мастерства барбера и происходит на высочайшем уровне. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                    .service-table__price
+                      .row
+                        span.col-xl-4
+                          strong 8000 р.
+                        span.col-xl-4
+                          strong 500 р.
+                        span.col-xl-4
+                          strong 9000 р.
+                  .service-table__row.toggle-group
+                    .service-table__text
+                      a(href="").service-table__title.toggle-button Мужская стрижка
+                        i.fas.fa-angle-double-down
+                      .service-table__description.toggle-content
+                        p Премиум моделирование бороды это вершина профессионального мастерства барбера и происходит на высочайшем уровне. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                    .service-table__price
+                      .row
+                        span.col-xl-4
+                          strong 8000 р.
+                        span.col-xl-4
+                          strong 500 р.
+                        span.col-xl-4
+                          strong 9000 р.
+            include blocks/place
+            include blocks/news-module
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

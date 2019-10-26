@@ -2,32 +2,23 @@ mixin slide(name)
   .slide.barbers-slide
     .barbers-slide__container
       .barbers-slide__photo.cover-box
-        img(src="img/gallery/barber2.jpg", alt="")
-      .barbers-slide__info
-        span.barbers-slide__name=name
-        ul.barbers-slide__rating-list
-          li.barbers-slide__rating-item
-            i.fas.fa-star
-          li.barbers-slide__rating-item
-            i.fas.fa-star
-          li.barbers-slide__rating-item
-            i.fas.fa-star
-          li.barbers-slide__rating-item
-            i.fas.fa-star
-          li.barbers-slide__rating-item
-            i.fas.fa-star
-        a(href="#").button.button_style3.barbers-slide__button записаться онлайн
-.barbers
-  .barbers__background.background.lazy(data-src='img/backgrounds/bg_gallery.png')
-  .block-head
+        img(data-src="img/gallery/barber2.jpg", alt="").lazy
+      .barbers-slide__content
+        .barbers-slide__title.t-size-24
+          span.barbers-slide__name=name
+          img(src="img/icons/ico-topbarber.png", alt="")
+        a(href="#").button.button_style1 Записаться онлайн
+
+section.section
+  .section__head
     .decorated
       span.decoration
-      span.block-head__title.block-head__title_icons барберы
+      h1.section__head-title.section__head-title_icons Барберы
       span.decoration
   .container
     .barbers__container
-      .slider.slider_arrows.barbers__slider
+      .slider.slider_arrows.slider_default.barbers-slider
         +slide('Эдуард')
-        +slide('Макс')
-        +slide('Маккейн')
-        +slide('Лина')
+        +slide('Эдуард')
+        +slide('Эдуард')
+        +slide('Эдуард')

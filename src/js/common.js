@@ -317,7 +317,7 @@ function slider() {
       slideCount576 = 2;
       slideCount420 = 1;
     }
-    if ($(this).hasClass('barbers__slider')) {
+    if ($(this).hasClass('barbers-slider')) {
       slideCount = 4;
       slideCount1200 = 4;
       slideCount992 = 3;
@@ -675,6 +675,7 @@ function toggleblocks() {
     $content = $container.find('.toggle-content');
 
     $btn.toggleClass('active');
+    $container.toggleClass('active');
     $content.toggleClass('active');
   })
 }

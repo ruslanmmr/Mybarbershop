@@ -250,66 +250,86 @@
                 </div>
               </div>
             </div>
-            <div class="service-filter">
-              <div class="service-filter__container">
-                <form class="service-filter-form" action="">
-                  <div class="service-filter-form__section service-filter-form__section_search">
-                    <div class="search">
-                      <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
-                      <button class="search__button"><i class="fas fa-search"></i></button>
-                    </div>
-                  </div>
-                  <div class="service-filter-form__section service-filter-form__section_filter">
-                    <div class="service-filter-form__container">
-                      <div class="service-filter-form__title">Режим работы:</div>
-                      <div class="service-filter-form__content">
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style1 label_value1">
-                            <div class="service-filter-value__title">с утра</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style1 label_value2">
-                            <div class="service-filter-value__title">до поздна</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style1 label_value3">
-                            <div class="service-filter-value__title">круглосуточно</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                      </div>
-                    </div><span class="service-filter-form__decoration"></span>
-                    <div class="service-filter-form__container">
-                      <div class="service-filter-form__title">Стоимость услуг:</div>
-                      <div class="service-filter-form__content">
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style2 label_value4 tooltip" title="от 100 до 550р">
-                            <div class="service-filter-value__title">Premium</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style2 label_value5 tooltip" title="от 550 до 1000р">
-                            <div class="service-filter-value__title">Standard</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style2 label_value6 tooltip" title="от 1000р">
-                            <div class="service-filter-value__title">Economy</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+            <section class="section">
+              <div class="section__head">
+                <div class="decorated"><span class="decoration"></span>
+                  <h1 class="section__head-title">Подберите барбершоп</h1><span class="decoration"></span>
+                </div>
               </div>
-            </div>
+              <form class="form" action="">
+                <div class="form__section">
+                  <div class="container">
+                    <div class="service-filter">
+                      <div class="service-filter__container">
+                        <div class="service-filter-form">
+                          <div class="service-filter-form__section service-filter-form__section_search">
+                            <div class="search">
+                              <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
+                              <button class="search__button"><i class="fas fa-search"></i></button>
+                            </div>
+                          </div>
+                          <div class="service-filter-form__section service-filter-form__section_filter">
+                            <div class="service-filter-form__container">
+                              <div class="service-filter-form__title">Режим работы:</div>
+                              <div class="service-filter-form__content">
+                                <div class="service-filter-value">
+                                  <label class="checkbox label label_style1 label_value1">
+                                    <div class="service-filter-value__title">с утра</div>
+                                    <input type="checkbox">
+                                  </label>
+                                </div>
+                                <div class="service-filter-value">
+                                  <label class="checkbox label label_style1 label_value2">
+                                    <div class="service-filter-value__title">до поздна</div>
+                                    <input type="checkbox">
+                                  </label>
+                                </div>
+                                <div class="service-filter-value">
+                                  <label class="checkbox label label_style1 label_value3">
+                                    <div class="service-filter-value__title">круглосуточно</div>
+                                    <input type="checkbox">
+                                  </label>
+                                </div>
+                              </div>
+                            </div><span class="service-filter-form__decoration"></span>
+                            <div class="service-filter-form__container">
+                              <div class="service-filter-form__title">Стоимость услуг:</div>
+                              <div class="service-filter-form__content">
+                                <div class="service-filter-value">
+                                  <label class="checkbox label label_style2 label_value4 tooltip" title="от 100 до 550р">
+                                    <div class="service-filter-value__title">Premium</div>
+                                    <input type="checkbox">
+                                  </label>
+                                </div>
+                                <div class="service-filter-value">
+                                  <label class="checkbox label label_style2 label_value5 tooltip" title="от 550 до 1000р">
+                                    <div class="service-filter-value__title">Standard</div>
+                                    <input type="checkbox">
+                                  </label>
+                                </div>
+                                <div class="service-filter-value">
+                                  <label class="checkbox label label_style2 label_value6 tooltip" title="от 1000р">
+                                    <div class="service-filter-value__title">Economy</div>
+                                    <input type="checkbox">
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__section"> 
+                  <div class="map">
+                    <div class="map__container">
+                      <div id="map"></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
             <div class="banner banner_type2">
               <div class="banner__container">
                 <div class="container">
@@ -482,7 +502,7 @@
               </div>
               <div class="footer__section footer__section_bottom"><span class="footer__message">Увидели ошибку - сообщите нам нажав Ctrl+Enter</span>
                 <div class="socials">
-                  <ul class="socials__list row">
+                  <ul class="socials__list row row_compact">
                     <li class="socials__item col-xl-auto"><a class="socials__link" href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="socials__item col-xl-auto"><a class="socials__link" href="#"><i class="fab fa-vk"></i></a></li>
                     <li class="socials__item col-xl-auto"><a class="socials__link" href="#"><i class="fab fa-instagram"></i></a></li>

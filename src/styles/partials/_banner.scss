@@ -106,105 +106,9 @@
     font-weight: 300;
   }
 }
-.salon-info {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: flex-end;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.15;
-  background-color: #7e8084;
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 -15px;
-  }
-  &__block {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    &-section {
-      width: 100%;
-      &:nth-child(2) {
-        padding-top: 10px;
-      }
-    }
-    &_logo {
-      padding-left: 30px;
-    }
-  }
-  &__logo {
-    width: 180px;
-    height: 100%;
-    position: relative;
-    img {
-      position: absolute;
-      width: 100%;
-      height: auto;
-      bottom: 0;
-      left: 0;
-      display: block;
-    }
-  }
-  &__adress {
-    position: relative;
-    min-height: 37px;
-    i {
-      color: $orange-color1;
-      position: absolute;
-      left: 0;
-      top: 3px;
-      font-size: 36px;
-    }
-    span {
-      padding-left: 38px;
-      display: block;
-    }
-  }
-  &__time {
-    text-align: center;
-    &-title {
-      white-space: nowrap;
-      display: block;
-      padding-bottom: 4px;
-    }
-    &-value {
-      display: block;
-      color: $orange-color1;
-      font-size: 24px;
-    }
-  }
-  &__contacts-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: right;
-  }
-  &__contacts-item {
-    &:not(:last-child) {
-      padding-bottom: 4px;
-    }
-  }
-  &__contacts-link {
-    text-decoration: none;
-    color: $orange-color1;
-  }
-  .socials__list {
-    justify-content: flex-end;
-  }
-  .socials__item {
-    &:not(:last-child) {
-      padding-right: 5px;
-    }
-  }
-}
 
 @media all and(max-width: 1300px) {
-  .salon-info__block_logo {
-    padding-left: 15px;
-  }
+  
 }
 @media all and(max-width: 1200px) {
   .banner-slide {
@@ -224,23 +128,6 @@
   }
 }
 @media all and(max-width: 1024px) {
-  .salon-info {
-    &__container {
-      flex-wrap: wrap;
-    }
-    &__block {
-      flex: 1 1 50%;
-    }
-    &__block_contacts {
-      order: 2;
-    }
-    &__block_time {
-      order: 3;
-    }
-    &__block_adress {
-      order: 4;
-    }
-  }
   .banner {
     &_type1 {
       .banner-slide {
@@ -300,18 +187,6 @@
       font-size: 20px;
     }
   }
-  .salon-info {
-    &__block_logo {
-      flex: 1 1 0;
-      padding-right: 0;
-    }
-    &__logo {
-      width: 120px;
-      img {
-        position: relative;
-      }
-    }
-  }
   .banner-slide {
     &__container {
       padding-bottom: 40px;
@@ -319,13 +194,5 @@
   }
 }
 @media all and(max-width: 400px) {
-  .salon-info__logo {
-    width: 87px;
-  }
-  .salon-info {
-    .socials__link {
-      width: 33px;
-      height: 33px;
-    }
-  }
+  
 }

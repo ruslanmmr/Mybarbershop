@@ -16,7 +16,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-
+.c-main {
+  color: $orange-color1;
+}
+.t-t-u {
+  text-transform: uppercase;
+}
 .t-a-center {
   display: block;
   text-align: center;
@@ -107,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 22px;
   }
   .t-size-24 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .t-size-64 {
     font-size: 24px;

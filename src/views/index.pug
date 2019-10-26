@@ -14,7 +14,18 @@ html(lang="ru")
             include blocks/gallery
             include blocks/recommendations
             include blocks/banner2
-            include blocks/filter_state1
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h1.section__head-title Подберите барбершоп
+                  span.decoration
+              form(action="").form
+                .form__section
+                  .container
+                    include blocks/filter_state1
+                .form__section  
+                  include blocks/map
             include blocks/banner2
             include blocks/news-module
         //footer

@@ -208,7 +208,7 @@ a {
     line-height: 30px;
     color: $gray-color2;
     i {
-      margin-left: 10px;
+      margin: 0 0 0 10px;
       transition: inherit;
       color: $gray-color2;
       font-size: 14px;
@@ -704,7 +704,7 @@ a {
     position: absolute;
     font-size: 23px;
     display: block;
-    transition: 0.15s;
+    transition: 0.2s;
   }
   &__link {
     display: flex;
@@ -715,12 +715,12 @@ a {
     background-color: #595e69;
     border-radius: 100%;
     position: relative;
-    transition: 0.15s;
+    transition: 0.2s;
     color: #7e8084;
   }
   &_style2 {
     i {
-      color: #0d0e10;
+      color: $gray-color3;
     }
     .socials {
       &__link {
@@ -1159,6 +1159,7 @@ a {
   }
 }
 .my-vacancy-block {
+  font-size: 14px;
   &__container {
     padding: 20px;
     border-radius: 4px;
@@ -1187,6 +1188,7 @@ a {
   &__section-title {
     margin-bottom: 15px;
   }
+
   &__lvl {
     img {
       height: 42px;
@@ -1272,6 +1274,7 @@ a {
   }
 }
 .job-offer-block {
+  font-size: 14px;
   &__container {  
     padding: 20px;
     border-radius: 4px;
@@ -1442,6 +1445,182 @@ a {
     text-overflow: ellipsis;
   }
 }
+.salon-info {
+  background-color: $gray-color3;
+  padding: 15px 0;
+  border-bottom: 1px solid $gray-color1;
+  &__container {
+    justify-content: space-between;
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__image {
+    height: 180px;
+    width: auto;
+    display: block;
+    margin: -120px auto 0 auto;
+    box-shadow: 3px 3px 10px -6px rgba(0,0,0,1);
+  }
+  &__link {
+    text-align: center;
+    margin-top: 5px;
+    a {
+      font-weight: 400;
+      color: $orange-color1;
+    }
+  }
+  &__adress {
+    display: block;
+    padding-left: 25px;
+    position: relative;
+    i {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $orange-color1;
+      font-size: 18px;
+      margin-top: 2px;
+    }
+  }
+  .button,
+  .socials {
+    margin-top: 10px;
+  }
+  &__numbers {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      &:hover {
+        color: $orange-color2;
+      }
+    }
+  }
+}
+.barbers-slide {
+  padding: 0 10px;
+  &__photo {
+    border: 1px solid $gray-color1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    filter: grayscale(100%);
+    transition: 0.2s;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__container {
+    &:hover {
+      .barbers-slide__photo {
+        filter: grayscale(0);
+      }
+    }
+  }
+  &__content {
+    border-radius: 4px;
+    border: 1px solid $orange-color1;
+    padding: 15px;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    img {
+      height: 40px;
+    }
+  }
+}
+.service-table {
+  &__row {
+    border-style: dashed;
+    border-color: $orange-color1;
+    border-width: 0 0 1px 0;
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      background-color: $orange-color1;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+    &:first-child {
+      padding: 0 0 15px 0;
+      .service-table__price {
+        top: 0;
+      }
+      .service-table__title {
+        cursor: default;
+        opacity: 1;
+        font-weight: 700;
+        padding: 0;
+        line-height: 40px;
+      }
+    }
+  }
+  &__price {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 400px;
+    text-align: right;
+    span {
+      white-space: nowrap;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    img {
+      height: 40px;
+      width: auto;
+      display: block;
+      margin: 0 0 0 auto;
+      padding: 0 20px;
+    }
+  }
+  &__description {
+    padding-bottom: 15px;
+  }
+  &__title {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 0;
+    cursor: pointer;
+    strong {
+      color: $orange-color1;
+    }
+    i {
+      margin-left: 10px;
+      transition: transform 0.1s;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+    &.active {
+      opacity: 1;
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
 
 
 
@@ -1466,8 +1645,39 @@ a {
       padding: 20px;
     }
   }
+  .salon-info {
+    &__image {
+      height: 100px;
+      margin-top: 0;
+    }
+  }
 }
 @media all and(max-width: 768px) {
+  .service-table {
+    &__price {
+      width: 250px;
+    }
+  }
+  .salon-info {
+    &__numbers {
+      text-align: center;
+    }
+    &__section {
+      &:nth-child(2) {
+        order: 3;
+      }
+      &:nth-child(3) {
+        order: 4;
+      }
+      &:first-child {
+        display: block;
+      }
+      &:last-child {
+        order: 2;
+        display: block;
+      }
+    }
+  }
   .section {
     margin: 30px 0 50px 0;
     &__head {
@@ -1513,6 +1723,49 @@ a {
   }
 }
 @media all and(max-width: 576px) {
+  .service-table {
+    &__title {
+      display: block;
+      position: relative;
+      padding: 5px 0;
+      margin: 10px 0 ;
+      i {
+        position: absolute;
+        top: 8px;
+        right: 0;
+      }
+    }
+    &__row {
+      &:first-child {
+        .service-table__price {
+          padding: 0 0 5px 0;
+        }
+        .service-table__title {
+          line-height: 1;
+          margin: 0 0 20px 0;
+        }
+      }
+    }
+    &__price {
+      position: static;
+      width: 280px;
+      padding-bottom: 15px;
+      text-align: left;
+      padding: 0 0 17px 0;
+      span {
+        line-height: 1;
+      }
+      img {
+        margin: 0 0 0 10px;
+        padding: 0;
+      }
+    }
+  }
+  .barbers-slide {
+    &__photo:before {
+      padding-top: 70%;
+    }
+  }
   .section {
     &__head {
       font-size: 26px;
@@ -1569,6 +1822,19 @@ a {
       &:before {
         padding-top: 56.25%;
       }
+    }
+  }
+  .salon-info {
+    &__adress {
+      text-align: center;
+      padding: 23px 0 0 0;
+      i {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &__link {
+      margin: 0;
     }
   }
 }

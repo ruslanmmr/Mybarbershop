@@ -1,48 +1,43 @@
-mixin info(btn1, btn2, mail)
-  .salon-info
-    .container
-      .salon-info__container
-        .salon-info__block.salon-info__block_logo
-          .salon-info__logo
-            img.lazy&attributes(attributes)
-        .salon-info__block.salon-info__block_adress
-          .salon-info__block-section
-            .salon-info__adress
-              i.fas.fa-map-marker-alt
-              span Москва, Округ ЮЗАО, Район Ясенево, Новоясеневский проспект, 9
-          .salon-info__block-section
-            a(href="#").button.button_style1=btn1
-        .salon-info__block.salon-info__block_time
-          .salon-info__block-section
-            .salon-info__time
-              span.salon-info__time-title Время работы: ежедневно:
-              span.salon-info__time-value 11:00 - 22:00
-          .salon-info__block-section
-            a(href="#").button.button_style2=btn2
-        .salon-info__block.salon-info__block_contacts
-          .salon-info__block-section
-            ul.salon-info__contacts-list
-              li.salon-info__contacts-item
-                a(href="tel:74994505744").salon-info__contacts-link +7 (499) 450-57-44
-              li.salon-info__contacts-item
-                a(href="#").salon-info__contacts-link=mail
-          .salon-info__block-section
-            .socials.socials_style2
-              ul.socials__list
-                li.socials__item
-                  a(href="#").socials__link
-                    i.fab.fa-facebook-f
-                li.socials__item
-                  a(href="#").socials__link
-                    i.fab.fa-vk
-                li.socials__item
-                  a(href="#").socials__link
-                    i.fab.fa-instagram
-                li.socials__item
-                  a(href="#").socials__link
-                    i.fab.fa-odnoklassniki
-                li.socials__item
-                  a(href="#").socials__link
-                    i.fab.fa-youtube
-            
-          
+.salon-info
+  .container
+    .salon-info__container.row
+      .salon-info__section.col-xl-auto.col-sm-6.col-12
+        img(src="img/logos/britva.jpg", alt="logo").salon-info__image
+        .salon-info__link
+          a(href="britvabarber.ru") britvabarber.ru
+      .salon-info__section.col-xl.col-sm-6.col-12
+        span.salon-info__adress
+          i.fas.fa-map-marker-alt
+          | Москва, Округ ЮЗАО, Район Ясенево, Новоясеневский проспект, 9
+        a(href="#").button.button_style4.small Вся сеть
+      .salon-info__section.col-xl.col-sm-6.col-12
+        span.salon-info__time.t-a-center
+          | Время работы: ежедневно:<br> 
+          strong.t-size-24.c-main 11:00 - 22:00
+        a(href="#").button.button_style1.small Записаться онлайн
+      .salon-info__section.col-xl-auto.col-sm-6.col-12
+        ul.salon-info__numbers.c-main
+          li
+            a(href="tel:+7 (499) 450-57-44")
+              strong +7 (499) 450-57-44
+          li
+            a(href="tel:+7 (499) 450-57-44")
+              strong +7 (000) 000-00-00
+        .socials.socials_style2
+          ul.socials__list.row.row_compact
+            li.socials__item.col-xl-auto
+              a(href="#").socials__link
+                i.fab.fa-facebook-f
+            li.socials__item.col-xl-auto
+              a(href="#").socials__link
+                i.fab.fa-vk
+            li.socials__item.col-xl-auto
+              a(href="#").socials__link
+                i.fab.fa-instagram
+            li.socials__item.col-xl-auto
+              a(href="#").socials__link
+                i.fab.fa-odnoklassniki
+            li.socials__item.col-xl-auto
+              a(href="#").socials__link
+                i.fab.fa-twitter
+      
