@@ -31,7 +31,7 @@
     }
   }
   &__search-count {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 30px;
     white-space: nowrap;
     display: block;
@@ -138,28 +138,6 @@
     }
   }
 }
-.service-filter-recomendations {
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: -7px;
-  }
-  &__item {
-    padding: 7px;
-  }
-  &__link {
-    text-decoration: none;
-    display: block;
-    color: #000;
-    background-color: $orange-color1;
-    padding: 5px 20px;
-    border-radius: 4px;
-  }
-}
 
 @media all and(max-width: 1210px) {
   .service-filter-form__decoration {
@@ -195,8 +173,5 @@
   }
   .service-filter-form__search-count {
     padding: 10px 0 0 0;
-  }
-  .service-filter-recomendations__item {
-    width: 100%;
   }
 }

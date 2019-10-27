@@ -1,0 +1,136 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            include blocks/banner1
+            +banner()(data-src="img/banner/topgun.jpg")
+            include blocks/chain-info
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title О сети
+                  span.decoration
+              .container
+                .mb-30
+                  .row
+                    .col-xl-12
+                      p
+                        strong.c-main.t-t-u topgun 
+                        | самая крупная сеть российских барбешопов с множеством филиалов. Это не просто ссеть, а сообщество представителей сильного пола, неравнодушных к своему внешнему виду, а также ценящих хороший сервис и серьезное отношение. Здесь вас ждет концептуальный интерьер, в меру расслабленная и спокойная атмосфера, персональный, творческий подход со стороны команды.
+                    .col-xl-12
+                      p
+                        strong.c-main.t-t-u о сети:  
+                        |  TOPGUN самая крупная сеть российских барбешопов с множеством филиалов. Это не просто ссеть, а сообщество представителей сильного пола, неравнодушных к своему внешнему виду, а также ценящих хороший сервис и серьезное отношение. Здесь вас ждет концептуальный интерьер, в меру расслабленная и спокойная атмосфера, персональный, творческий подход со стороны команды высококлассных мастеров.
+                    .col-xl-12
+                      p
+                        strong.c-main.t-t-u франшиза: 
+                        | Каждый из барберов регулярно повышает свой уровень на различных мастер-классах от ведущих мировых специалистов, применяет исключительно лучшие средства и инструменты премиальных брендов, а также обладает не только необходимой квалификацией и богатым опытом, но и тонким вкусом, что в сочетании с чуткостью к запросам клиентов позволяет им удовлетворять пожелания гостей всех возрастов, подчеркивая их индивидуальность и характер. 
+                .mb-30
+                  .row.row_center
+                    .col-xl-4.col-sm-6
+                      .barbershop-info-block
+                        .barbershop-info-block__container
+                          .barbershop-info-block__content(style='background-image:url("../img/backgrounds/brand-background.png")')
+                            span 33
+                            span города
+                    .col-xl-4.col-sm-6
+                      .barbershop-info-block
+                        .barbershop-info-block__container
+                          .barbershop-info-block__content(style='background-image:url("../img/backgrounds/brand-background.png")')
+                            span 3275
+                            span салонов
+                    .col-xl-4.col-sm-6
+                      .barbershop-info-block
+                        .barbershop-info-block__container
+                          .barbershop-info-block__content(style='background-image:url("../img/backgrounds/brand-background.png")')
+                            span 2100<strong>7</strong>
+                            span барберов
+                .row.row_center
+                  .col-xl-7.col-12
+                    .video
+                      <iframe src="https://www.youtube.com/embed/Kvm-BoVdWV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            include blocks/banner2
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Вся сеть
+                  span.decoration
+              include blocks/map
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Галерея
+                  span.decoration
+              .container
+                .mb-30
+                  .row
+                    .image-block.col-xl-3.col-sm-4.col-6
+                      a(href="img/gallery/image1.jpg" data-fancybox="gallery").cover-box
+                        img(data-src="img/gallery/image1.jpg", alt="image").lazy
+                    .image-block.col-xl-3.col-sm-4.col-6
+                      a(href="img/gallery/image1.jpg" data-fancybox="gallery").cover-box
+                        img(data-src="img/gallery/image1.jpg", alt="image").lazy
+                    .image-block.col-xl-3.col-sm-4.col-6
+                      a(href="img/gallery/image1.jpg" data-fancybox="gallery").cover-box
+                        img(data-src="img/gallery/image1.jpg", alt="image").lazy
+                    .image-block.col-xl-3.col-sm-4.col-6
+                      a(href="img/gallery/image1.jpg" data-fancybox="gallery").cover-box
+                        img(data-src="img/gallery/image1.jpg", alt="image").lazy
+                    .image-block.col-xl-3.col-sm-4.col-6
+                      a(href="img/gallery/image1.jpg" data-fancybox="gallery").cover-box
+                        img(data-src="img/gallery/image1.jpg", alt="image").lazy
+                    .image-block.col-xl-3.col-sm-4.col-6
+                      a(href="img/gallery/image1.jpg" data-fancybox="gallery").cover-box
+                        img(data-src="img/gallery/image1.jpg", alt="image").lazy
+                .row
+                  .col-xl-3.col-sm-4.col-12
+                    button.button.button_style7
+                      i.fas.fa-plus
+                      | Показать еще
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title.section__head-title_icons Крупнейшие сети
+                  span.decoration
+              .container
+                .slider.slider_arrows.slider_default.barbershops-slider
+                  mixin slide(title, count)
+                    .slide.barbershops-slide
+                      .barbershops-slide__container
+                        a(href="#").barbershops-slide__image
+                          .cover-box.cover-box_contain
+                            img(alt="")&attributes(attributes).lazy
+                        .barbershops-slide__content
+                          h6.barbershops-slide__title.t-size-24=title
+                          a(href="#").button.button_style1.small Записаться
+                          .barbershops-slide__count
+                            strong=count
+                            | бербершопов
+                          block
+                  +slide('TOPGUN', '3000')(data-src='img/logos/topgun.png')
+                    span.title-icon.title-icon_1(style="background-image:url('img/icons/ico-head.png')")
+                  +slide('Бритва', '2000')(data-src='img/logos/britva.jpg')
+                    span.title-icon.title-icon_2(style="background-image:url('img/icons/ico-head.png')")
+                  +slide('CHOP-CHOP', '1000')(data-src='img/logos/chop-chop.jpg')
+                    span.title-icon.title-icon_3(style="background-image:url('img/icons/ico-head.png')")
+            include blocks/news-module
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

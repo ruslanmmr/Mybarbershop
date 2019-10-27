@@ -722,7 +722,7 @@ a {
   }
   &_style2 {
     i {
-      color: $gray-color3;
+      color: #000;
     }
     .socials {
       &__link {
@@ -941,6 +941,25 @@ a {
         background: rgba(0, 0, 0, 0.5);
       }
     }
+  }
+}
+.video {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+    position: relative;
+    z-index: 1;
+  }
+  iframe {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 }
 .share {
@@ -1196,7 +1215,88 @@ a {
     }
   }
 }
-
+.image-block {
+  overflow: hidden;
+  .cover-box {
+    transition: 0.2s;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 56.25%;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.barbershops-slide {
+  padding: 0 10px;
+  text-align: center;
+  &__image {
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px dashed $orange-color1;
+    margin-bottom: 10px;
+    display: block;
+    &:hover {
+      img {
+        opacity: 0.8;
+      }
+    }
+    .cover-box {
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+      img {
+        transition: 0.2s;
+      }
+    }
+  }
+  &__content {
+    border: 1px solid $orange-color1;
+    border-radius: 4px;
+    padding: 15px;
+    position: relative;
+    .title-icon {
+      display: block;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      position: absolute;
+      top: -21px;
+      left: 50%;
+      transform: translateX(-50%);
+      &_1 {
+        background-color: $orange-color1;
+      }
+      &_2 {
+        background-color: $gray-color1;
+      }
+      &_3 {
+        background-color: #cb995e;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    display: block;
+  }
+  &__count {
+    margin-top: 5px;
+    font-size: 14px;
+    strong {
+      color: $orange-color1;
+      display: block;
+      font-size: 28px;
+    }
+  }
+}
 .big-news-block {
   &__container {
     border: 5px solid $orange-color1;
@@ -1446,10 +1546,38 @@ a {
     text-overflow: ellipsis;
   }
 }
+.barbershop-info-block {
+  position: relative;
+  &__container {
+    border: 1px solid $orange-color1;
+    border-radius: 5px;
+    background-color: #151314;
+    padding: 15px;
+  }
+  &__content {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 10px;
+  }
+  span {
+    display: block;
+    text-align: center;
+    &:first-child {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    &:last-child {
+      color: #7e8084;
+      font-size: 14px;
+    }
+  }
+}
 .salon-info {
-  background-color: $gray-color3;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 15px 0;
-  border-bottom: 1px solid $gray-color1;
+  //border-bottom: 1px solid $gray-color3;
   &__container {
     justify-content: space-between;
   }
@@ -1457,13 +1585,21 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:first-child {
+      justify-content: flex-end;
+    }
   }
   &__image {
-    height: 180px;
-    width: auto;
+    width: 174px;
+    margin: 0 auto;
     display: block;
-    margin: -120px auto 0 auto;
-    box-shadow: 3px 3px 10px -6px rgba(0,0,0,1);
+    position: relative;
+    img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
   }
   &__link {
     text-align: center;
@@ -1648,7 +1784,7 @@ a {
   }
   .salon-info {
     &__image {
-      height: 100px;
+      width: 140px;
       margin-top: 0;
     }
   }
@@ -1662,6 +1798,9 @@ a {
   .salon-info {
     &__numbers {
       text-align: center;
+    }
+    &__image {
+      height: 140px;
     }
     &__section {
       &:nth-child(2) {
@@ -1762,6 +1901,14 @@ a {
       }
     }
   }
+  .barbershops-slide {
+    &__image  {
+      padding: 20px;
+      .cover-box:before {
+        padding-top: 50%;
+      }
+    }
+  }
   .barbers-slide {
     &__photo:before {
       padding-top: 70%;
@@ -1826,6 +1973,7 @@ a {
     }
   }
   .salon-info {
+    padding: 15px 0 20px 0;
     &__adress {
       text-align: center;
       padding: 23px 0 0 0;
@@ -1834,8 +1982,10 @@ a {
         transform: translateX(-50%);
       }
     }
-    &__link {
-      margin: 0;
+  }
+  .barbershop-info-block  {
+    span:first-child {
+      font-size: 24px;
     }
   }
 }

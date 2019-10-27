@@ -20,16 +20,21 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
-  innerWidth = $('body').innerWidth();
+  windowW = Math.max(window.innerWidth, document.documentElement.clientWidth);
+  pageW = Math.min(window.innerWidth, document.documentElement.clientWidth);
+
   gallery();
   autoHeight();
+
   $('img').each(function() {
     //imagesResize($(this))
   });
 });
 
 //global variables
-let innerWidth = $('.wrapper').width(),
+let windowW = Math.max(window.innerWidth, document.documentElement.clientWidth),
+    pageW = Math.min(window.innerWidth, document.documentElement.clientWidth),
+    scrollbarW = windowW - pageW,
     $checkbox = $('.checkbox'),
     $slider = $('.slider'),
     $scroll = $('.scroll-area');
@@ -131,9 +136,9 @@ function fadeInWindows() {
         $btn.current.el = $(event.target).closest($btn.el);
         $window.current.el = $($btn.current.el.attr('href'));
 
-        if(innerWidth>1024) { 
+        if(windowW>1024) { 
           posY = $btn.current.el.offset().top + $btn.current.el.height() + 2;
-          posX = innerWidth - ($btn.current.el.offset().left + $btn.current.el.width()) + 4;
+          posX = pageW - ($btn.current.el.offset().left + $btn.current.el.width()) + 4;
         } else {
           posY = $('.header').height();
           posX = 0;
@@ -156,7 +161,6 @@ function fadeInWindows() {
     }
   })
 }
-
 
 //nav
 function nav() {
@@ -188,39 +192,11 @@ function nav() {
   }
 
   $(window).resize(function () {
-    if (innerWidth > 1024) {
+    if (windowW > 1024) {
       $nav.removeClass('active');
       navState();
     }
   });
-
-  /* navLink.on('click', function () {
-    if (innerWidth < 993) {
-      $nav.removeClass('nav_active');
-      navState();
-    }
-  }) */
-
-  /* //якорные ссылки
-  scrollLink.click(function (event) {
-    var id = $(this).attr('href'),
-      top = $(id).offset().top;
-    event.preventDefault();
-
-    if (innerWidth < 993) {
-      $nav.removeClass('nav_active');
-      navState();
-      setTimeout(function () {
-        $('body,html').animate({
-          scrollTop: top
-        }, 400);
-      }, 300)
-    } else {
-      $('body,html').animate({
-        scrollTop: top
-      }, 400);
-    }
-  }) */
 }
 
 function lazy() {
@@ -317,7 +293,7 @@ function slider() {
       slideCount576 = 2;
       slideCount420 = 1;
     }
-    if ($(this).hasClass('barbers-slider')) {
+    if ($(this).hasClass('barbers-slider') || $(this).hasClass('barbershops-slider')) {
       slideCount = 4;
       slideCount1200 = 4;
       slideCount992 = 3;
@@ -416,6 +392,7 @@ function slider() {
   //fix
   $('.publications-slide').parent().css('display', 'flex');
 }
+
 //gallery
 function gallery() {
   var row = $('.gallery__row:not(:first-child)'),
@@ -423,7 +400,7 @@ function gallery() {
     title = $('.gallery-block_title'),
     margin;
 
-  if (innerWidth > 576) {
+  if (windowW > 576) {
     block.css('margin-top', '0');
     row.each(function () {
       margin = -($(this).height() / 2);
@@ -437,6 +414,7 @@ function gallery() {
     })
   }
 }
+
 //num
 function showNum() {
   var num = '999-99-99',
@@ -595,6 +573,7 @@ function funcybox() {
   $.fancybox.defaults.lang = 'ru';
   $.fancybox.defaults.loop = true;
   $.fancybox.defaults.autoFocus = false;
+  $.fancybox.defaults.animationEffect = 'fade'
 }
 
 //popup

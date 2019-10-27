@@ -16,8 +16,9 @@
   }
   &__head {
     position: relative;
-    background: url('../img/backgrounds/brand-background.png') no-repeat center center;
     background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   &__image {
     width: 50%;
