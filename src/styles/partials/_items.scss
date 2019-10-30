@@ -475,6 +475,7 @@ a {
   transition: 0.2s;
   min-height: 19px;
   font-size: 14px;
+  user-select: none;
   &_dark {
     color: $gray-color3;
   }
