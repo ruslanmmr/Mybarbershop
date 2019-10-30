@@ -175,6 +175,23 @@ html(lang="ru")
                   h5.section__head-title Мой опыт работы
                   span.decoration
               .container
+                form(action="").form
+                  .form__section
+                    .row.row_center
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type-experience.tooltip(title='Барбер-профессионал')
+                          input(type="radio" name='val' checked)
+                          img(src="img/icons/ico-topbarber.png", alt="")
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type-experience.tooltip(title='Барбер')
+                          input(type="radio" name='val' checked)
+                          img(src="img/icons/ico-barber.png", alt="")
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type-experience.tooltip(title='Барбер-новичок')
+                          input(type="radio" name='val' checked)
+                          img(src="img/icons/ico-beginner.png", alt="")
+                    .col-xl-12
+                      | Общий стаж работы в профессии : <strong class='t-size-24'>1.6</strong> года
         //footer
         include ../blocks/footer
         //other
