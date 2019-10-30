@@ -296,6 +296,9 @@ a {
   line-height: 1;
   white-space: nowrap;
 }
+.w-out-label {
+  padding-top: 20px;
+}
 .form {
   &__section {
     &:not(:last-child) {
@@ -570,6 +573,17 @@ a {
     &.checked {
       border-color: #fff;
       background-color: $gray-color4;
+    }
+  }
+}
+.group {
+  &_style1 {
+    padding: 20px 0;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: $gray-color2;
+    &:first-child {
+      border-width: 1px 0 1px 0;
     }
   }
 }
@@ -1916,6 +1930,9 @@ a {
         padding: 0;
       }
     }
+  }
+  .w-out-label {
+    padding-top: 0;
   }
   .barbershops-slide {
     &__image  {

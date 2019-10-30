@@ -190,8 +190,172 @@ html(lang="ru")
                         label.checkbox.checkbox_type-experience.tooltip(title='Барбер-новичок')
                           input(type="radio" name='val' checked)
                           img(src="img/icons/ico-beginner.png", alt="")
-                    .col-xl-12
-                      | Общий стаж работы в профессии : <strong class='t-size-24'>1.6</strong> года
+                      span.t-a-center.col-xl-12 Общий стаж работы в профессии : <strong class='t-size-24'>1.6</strong> года
+                  .form__section
+                    .form__group.group.group_style1
+                      .row
+                        .form__item.col-xl-3.col-md-6.col-12
+                          span.item-label Место работы:
+                          input(type="text" placeholder='топган, Ясенево').input.input_style4
+                        .form__item.col-xl.col-md-6.col-12
+                          span.item-label Начало работы:
+                          .row
+                            .col-xl-6
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .col-xl-6
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                        .form__item.col-xl.col-md-6.col-12
+                          span.item-label Окончание:
+                          .row
+                            .col-xl
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .col-xl
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                        .form__item.w-out-label.col-xl-auto
+                          label.checkbox
+                            input(type="checkbox" name="")
+                            i.fas.fa-check
+                            span По настоящее время
+                        .col-xl-12
+                          .row.row_flex-end
+                            .form__item.col-xl-3.col-sm-4.col-12
+                              button.button.button_style9.small
+                                i.far.fa-trash-alt
+                                | Удалить
+                    .form__group.group.group_style1
+                      .row
+                        .form__item.col-xl-3.col-md-6.col-12
+                          span.item-label Место работы:
+                          input(type="text" placeholder='топган, Ясенево').input.input_style4
+                        .form__item.col-xl.col-md-6.col-12
+                          span.item-label Начало работы:
+                          .row
+                            .col-xl-6
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .col-xl-6
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                        .form__item.col-xl.col-md-6.col-12
+                          span.item-label Окончание:
+                          .row
+                            .col-xl
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .col-xl
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                        .form__item.w-out-label.col-xl-auto
+                          label.checkbox
+                            input(type="checkbox" name="")
+                            i.fas.fa-check
+                            span По настоящее время
+                        .col-xl-12
+                          .row.row_flex-end
+                            .form__item.col-xl-3.col-sm-4.col-12
+                              button.button.button_style9.small
+                                i.far.fa-trash-alt
+                                | Удалить
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style7
+                        i.fas.fa-plus
+                        | Добавить место работы
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Сохранить
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Мои награды
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section.row
+                    .form__item.col-xl-3.col-6
+                      span.item-label Фото:
+                      .image-load-area.loaded
+                        a(href="#").button.button_type-img-load Загрузить<br> изображение
+                        a(href="#").button.button_type-close
+                          i.fas.fa-times
+                    .form__item.col-xl-9.col-6
+                      span.item-label Описание:
+                      textarea.input.input_style4.input_size2
+                    .form__item.col-xl-3.col-sm-4.col-12
+                      button.button.button_style9.small Удалить
+                  .form__section.row
+                    .form__item.col-xl-3.col-6
+                      span.item-label Фото:
+                      .image-load-area
+                        a(href="#").button.button_type-img-load Загрузить<br> изображение
+                        a(href="#").button.button_type-close
+                          i.fas.fa-times
+                    .form__item.col-xl-9.col-6
+                      span.item-label Описание:
+                      textarea.input.input_style4.input_size2
+                    .form__item.col-xl-3.col-sm-4.col-12
+                      button.button.button_style9.small Удалить
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style7
+                        i.fas.fa-plus
+                        | Добавить eщё
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Сохранить
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Мои публицации
+                  span.decoration
+              .container
+                .mb-30
+                  .row
+                    include ../blocks/small-news-block
+                    +block3()
+                    +block3()
+                .row.row_center
+                  .col-xl-4.col-sm-6.col-12
+                      button.button.button_style1
+                        i.fas.fa-plus
+                        | Показать eщё
+            include ../blocks/addCode
         //footer
         include ../blocks/footer
         //other
