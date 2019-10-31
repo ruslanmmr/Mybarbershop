@@ -33,11 +33,14 @@ header.header
           li.sub-nav__item
             a(href="#windowCity").sub-nav__link.mobile-button.windowOpenButton
               i.fas.fa-map-marker-alt
-              span Москва
+              span 
+                label.wrapGeoIpReaspekt__
+                  label.cityLinkPopupReaspekt_linkReaspekt(data-href='/bitrix/templates/bbs_main/components/reaspekt/reaspekt.geoip/city_select/ajax_popup_city.php')
+                    | Нижний Новгород, Нижегородская область
           li.sub-nav__item
             a(href="#windowProfile").sub-nav__link.mobile-button.windowOpenButton
               i.fas.fa-user
-              span Иванов И.И.
+              span Иванов И. И.
           li.sub-nav__item.sub-nav__item_hamburger
             a(href="#").sub-nav__link.sub-nav__nav-open.mobile-button
               i.fas.fa-bars

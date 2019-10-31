@@ -1378,6 +1378,9 @@ a {
   }
   &__text {
     display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__date {
     color: $gray-color3;

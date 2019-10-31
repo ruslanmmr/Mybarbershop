@@ -118,7 +118,7 @@
 }
 .nav {
   flex: 1 1 100%;
-  padding: 0 40px;
+  padding: 0 20px;
   position: relative;
   z-index: 3;
   height: 100%;
@@ -163,7 +163,7 @@
   }
 }
 .sub-nav {
-  flex: 1 0 140px;
+  width: 200px;
   position: relative;
   font-size: 14px;
   font-weight: 300;
@@ -194,7 +194,21 @@
     position: relative;
     line-height: 30px;
     span {
-      padding-left: 25px;
+      padding: 0 10px 0 25px;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .wrapGeoIpReaspekt__ {
+      display: block;
+      height: 30px;
+    }
+    .cityLinkPopupReaspekt_linkReaspekt {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
     }
     i {
       display: flex;
@@ -242,9 +256,6 @@
       display: none;
     }
   }
-  .nav {
-    padding: 0 20px;
-  }
   .header {
     &:after {
       display: none;
@@ -252,6 +263,11 @@
     &__container {
       padding-left: 150px;
     }
+  }
+}
+@media all and(max-width: 1140px) {
+  .sub-nav {
+    width: 150px;
   }
 }
 @media all and(max-width: 1024px) {

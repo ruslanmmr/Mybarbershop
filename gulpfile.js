@@ -16,13 +16,14 @@ var gulp = require("gulp"),
     favicons = require("gulp-favicons"),
     iconfont = require("gulp-iconfont"),
     iconfontcss = require("gulp-iconfont-css"),
-	svgSprite = require("gulp-svg-sprites"),
+	  svgSprite = require("gulp-svg-sprites"),
     replace = require("gulp-replace"),
     newer = require("gulp-newer"),
     plumber = require("gulp-plumber"),
     debug = require("gulp-debug"),
     watch = require("gulp-watch"),
-    clean = require("gulp-clean");
+    clean = require("gulp-clean"),
+    rsync = require('gulp-rsync');
 
 gulp.task("pug", function () {
   return gulp.src(["./src/views/**/*.pug", "!./src/views/blocks/*.pug"])
@@ -137,7 +138,7 @@ gulp.task("serve", function () {
 
 gulp.task("libs", function () {
     return gulp.src("./src/libs/**/*.js")
-        .pipe(babel({presets: ["@babel/preset-env"]}))
+        //.pipe(babel({presets: ["@babel/preset-env"]}))
         .pipe(concat("libs.js"))
         .pipe(uglify())
         .pipe(rename({suffix: ".min"}))
@@ -151,6 +152,7 @@ gulp.task("watch", function () {
     watch("./src/views/**/*.pug", gulp.series("pug"));
     watch("./src/styles/**/*.scss", gulp.series("styles"));
     watch("./src/js/**/*.js", gulp.series("scripts"));
+    watch("./src/libs/**/*.js", gulp.series("libs"));
     watch(["./src/img/**/*.{jpg,jpeg,png,gif,svg}", "!./src/img/favicons/*.{jpg,jpeg,png,gif}"], gulp.series("images"));
     watch("./src/img/favicons/*.{jpg,jpeg,png,gif}", gulp.series("favicons"));
     watch("./src/fonts/**/*", gulp.series("destFonts"));
@@ -166,3 +168,20 @@ gulp.task("default", gulp.series("clean",
   gulp.parallel("pug", "styles", "libs", "scripts", "destFonts", "destVideos", "destPHP", "images", "favicons"),
   gulp.parallel("watch", "serve")
 ));
+
+//gulp deploy
+gulp.task("deploy", function () {
+    return gulp.src('./dest/**')
+      .pipe(rsync({
+        root: './dest/',
+        hostname: 'vh210.timeweb.ru',
+        destination: '/home/c/cq98725/bitrix/public_html/dest',
+        username: 'cq98725',
+        archive: true,
+        silent: false,
+        compress: true
+    }));
+});
+
+
+//данные vh210 YiOiwshbjOS2

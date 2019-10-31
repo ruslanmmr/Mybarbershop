@@ -137,7 +137,7 @@ function fadeInWindows() {
         $window.current.el = $($btn.current.el.attr('href'));
 
         if(windowW>1024) { 
-          posY = $btn.current.el.offset().top + $btn.current.el.height() + 2;
+          posY = ($btn.current.el.offset().top + $btn.current.el.height() + 2) - $('.header').offset().top;
           posX = pageW - ($btn.current.el.offset().left + $btn.current.el.width()) + 4;
         } else {
           posY = $('.header').height();
