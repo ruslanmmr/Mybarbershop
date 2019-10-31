@@ -1,61 +1,25 @@
 .barber-info {
-  padding-bottom: 20px;
-  &__container {
-    display: flex;
-    padding: 80px 0 0 0;
-  }
-  &__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-  }
-  &__item {
-    padding: 10px 15px;
-    &_justify {
-      width: 100%;
-    }
-  }
-  &__content {
-    margin: -10px 0;
-  }
-  &__top-content {
-  }
-  &__bottom-content {
-    margin: 30px 0 0 0;
-  }
-  &__section {
-    flex: 1 1 100%;
-    &_left {
-      flex: 1 0 420px;
-    }
-    &_right {
-      flex: 1 1 100%;
-      padding: 0 0 0 30px;
-    }
-  }
-  &__photo {
-    display: block;
-    width: 100%;
-    height: auto;
+  &__image {
     border: 1px solid $orange-color1;
-    margin-bottom: 25px;
+    .cover-box {
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+    }
   }
-  &__name {
+  &__title {
     color: $orange-color1;
     font-weight: 700;
-    font-size: 30px;
   }
   &__experience {
     display: flex;
     &-item {
       font-size: 14px;
-      font-weight: 300;
       line-height: 1;
       display: block;
       span {
-        font-size: 24px;
         display: block;
       }
       &:first-child {
@@ -73,109 +37,11 @@
       }
     }
   }
-  &__salon {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 30px;
-    &-logo {
-      width: 85px;
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    }
-    &-info {
-      padding-left: 30px;
-    }
-    &-title {
-      font-size: 24px;
-    }
-    &-adress {
-      font-size: 18px;
-      line-height: 1.2em;
-      transform: translateY(0.2em);
-    }
-  }
-  &__text {
-    b {
-      color: $orange-color1;
-    }
-  }
-  &__presentation {
-    margin: 35px 0 0 0;
-    &-head {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      overflow: hidden;
-      margin: 0 0 20px 0;
-    }
-    &-title {
-      font-size: 36px;
-      font-weight: 700;
-      margin: 0 30px;
-      text-transform: uppercase;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-  }
-  &__socials {
-    padding: 20px;
-  }
-}
-
-@media all and(max-width: 1170px) {
-  .barber-info__presentation-title {
-    font-size: 28px;
-  }
-}
-@media all and(max-width: 992px) {
-  .barber-info__container {
-    padding: 50px 0 0 0;
-  }
-  .barber-info__section_left {
-    flex: 1 0 300px;
-  }
-  .barber-info__salon-info {
-    padding-left: 20px;
-  }
-}
-@media all and(max-width: 768px) {
-  .barber-info__container {
+  &__barbershop-image {
     display: block;
+    width: 100%;
   }
-  .barber-info__section_right {
-    padding: 30px 0 0 0;
-  }
-  .barber-info__section_left {
-  }
-  .barber-info__top-content {
-    display: flex;
-    margin: 0;
-  }
-  .barber-info__content {
-    padding: 0 0 0 30px;
-  }
-  .barber-info__photo {
-    margin: 0;
-  }
-}
-@media all and(max-width: 576px) {
-  .barber-info__top-content {
+  &__barbershop-title {
     display: block;
-  }
-  .barber-info__content {
-    padding: 0;
-  }
-  .barber-info__image {
-    margin: 0 0 20px 0;
-  }
-  .barber-info__presentation-title {
-    font-size: 20px;
-    margin: 0 15px;
-  }
-  .share-trigger {
-    font-size: 20px;
   }
 }

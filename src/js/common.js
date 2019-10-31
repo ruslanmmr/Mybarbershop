@@ -4,9 +4,8 @@ $(document).ready(function () {
   nav();
   slider();
   gallery();
-  showNum();
+  //showNum();
   share();
-  popup();
   autoHeight();
   checkbox();
   checkboxCheck();
@@ -261,19 +260,13 @@ function slider() {
     $(this).on('init beforeChange afterChange', function(){
       lazy();
     });
+
     var slideCount = 1,
-      slidesPerRow = 1,
       slideCount1200 = 1,
-      slidesPerRow1200 = 1,
-      slideCount992 = 1,
-      slidesPerRow992 = 1,
+      slideCount1024 = 1,
       slideCount768 = 1,
-      slidesPerRow768 = 1,
       slideCount576 = 1,
-      slidesPerRow576 = 1,
       slideCount420 = 1,
-      slidesPerRow420 = 1,
-      rows = 1,
       arrows = false,
       dots = false,
       centerMode = false,
@@ -288,15 +281,15 @@ function slider() {
     if ($(this).hasClass('recommendations-slider')) {
       slideCount = 6;
       slideCount1200 = 5;
-      slideCount992 = 4;
+      slideCount1024 = 4;
       slideCount768 = 3;
       slideCount576 = 2;
       slideCount420 = 1;
     }
-    if ($(this).hasClass('barbers-slider') || $(this).hasClass('barbershops-slider')) {
+    if ($(this).hasClass('barbers-slider') || $(this).hasClass('portfolio-slider') || $(this).hasClass('barbershops-slider') ) {
       slideCount = 4;
       slideCount1200 = 4;
-      slideCount992 = 3;
+      slideCount1024 = 3;
       slideCount768 = 2;
       slideCount576 = 1;
       slideCount420 = 1;
@@ -304,33 +297,13 @@ function slider() {
     if ($(this).hasClass('banner__slider')) {
       centerMode = true;
     }
-    if ($(this).hasClass('portfolio__slider')) {
-      slidesPerRow = 4;
-      rows = 2;
-      slidesPerRow1200 = 4;
-      slidesPerRow992 = 3;
-      slidesPerRow768 = 3;
-      slidesPerRow576 = 2;
-      slidesPerRow420 = 2;
-    }
-    if ($(this).hasClass('awards__slider')) {
+    if ($(this).hasClass('awards-slider')) {
       slideCount = 5;
       slideCount1200 = 5;
-      slideCount992 = 4;
+      slideCount1024 = 4;
       slideCount768 = 3;
       slideCount576 = 2;
       slideCount420 = 2;
-      adaptiveHeight = true;
-    }
-
-    if ($(this).hasClass('publications__slider')) {
-      slidesPerRow = 2;
-      rows = 2;
-      slidesPerRow1200 = 2;
-      slidesPerRow992 = 1;
-      slidesPerRow768 = 1;
-      slidesPerRow576 = 1;
-      slidesPerRow420 = 1;
       adaptiveHeight = true;
     }
 
@@ -344,46 +317,39 @@ function slider() {
       centerMode: centerMode,
       slidesToShow: slideCount,
       slidesToScroll: slideCount,
-      slidesPerRow: slidesPerRow,
-      rows: rows,
       responsive: [{
           breakpoint: 1200,
           settings: {
             slidesToShow: slideCount1200,
-            slidesToScroll: slideCount1200,
-            slidesPerRow: slidesPerRow1200
+            slidesToScroll: slideCount1200
           }
         },
         {
-          breakpoint: 992,
+          breakpoint: 1024,
           settings: {
-            slidesToShow: slideCount992,
-            slidesToScroll: slideCount992,
-            slidesPerRow: slidesPerRow992
+            slidesToShow: slideCount1024,
+            slidesToScroll: slideCount1024
           }
         },
         {
           breakpoint: 768,
           settings: {
             slidesToShow: slideCount768,
-            slidesToScroll: slideCount768,
-            slidesPerRow: slidesPerRow768
+            slidesToScroll: slideCount768
           }
         },
         {
           breakpoint: 576,
           settings: {
             slidesToShow: slideCount576,
-            slidesToScroll: slideCount576,
-            slidesPerRow: slidesPerRow576
+            slidesToScroll: slideCount576
           }
         },
         {
           breakpoint: 420,
           settings: {
             slidesToShow: slideCount420,
-            slidesToScroll: slideCount420,
-            slidesPerRow: slidesPerRow420
+            slidesToScroll: slideCount420
           }
         }
       ]
@@ -415,7 +381,7 @@ function gallery() {
   }
 }
 
-//num
+/* //num
 function showNum() {
   var num = '999-99-99',
     $toggleBtn = $('.number-block__show-btn');
@@ -424,7 +390,7 @@ function showNum() {
     $(this).parents('.number-block').find('span').text(num);
     $(this).remove();
   })
-}
+} */
 
 //share-trigger
 function share() {
@@ -574,10 +540,7 @@ function funcybox() {
   $.fancybox.defaults.loop = true;
   $.fancybox.defaults.autoFocus = false;
   $.fancybox.defaults.animationEffect = 'fade'
-}
-
-//popup
-function popup() {
+  $.fancybox.defaults.backFocus = 'false'
 
   $(".popup-link").fancybox({
     autoFocus: false,
@@ -590,19 +553,18 @@ function popup() {
     touch: false
   });
 
-  $('.gallery__item a').on('click', function() {
-    var $selector = $(this).parents('.gallery').find('.slick-slide:not(.slick-cloned) a');
+  $('.slide a').on('click', function() {
+    let $selector = $(this).parents('.slider').find('.slick-slide:not(.slick-cloned) a');
 
     $.fancybox.open( $selector, {
         selector : $selector,
-        backFocus : false,
-        loop: true,
-        animationEffect: "fade"
+        backFocus : false
     }, $selector.index( this ) );
 
     return false;
   });
 }
+
 
 //корректировка высоты блоков
 function autoHeight() {

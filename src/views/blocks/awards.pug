@@ -1,24 +1,23 @@
-.awards
-  .block-head
+section.section.awards
+  .section__head
     .decorated
       span.decoration
-      span.block-head__title.block-head__title_stars мои награды
+      h5.section__head-title мои награды
       span.decoration
-  .awards__container
-    .container
-      .slider.slider_arrows.awards__slider.gallery
-        .awards-slide.gallery__item
-          a(href="img/gallery/award1.jpg" title='описание').awards-slide__container.tooltip
-            img(data-lazy="img/gallery/award1.jpg", alt="")
-        .awards-slide.gallery__item
-          a(href="img/gallery/award2.jpg" title='описание').awards-slide__container.tooltip
-            img(data-lazy="img/gallery/award2.jpg", alt="")
-        .awards-slide.gallery__item
-          a(href="img/gallery/award3.png" title='описание').awards-slide__container.tooltip
-            img(data-lazy="img/gallery/award3.png", alt="")
-        .awards-slide.gallery__item
-          a(href="img/gallery/award4.jpg" title='описание').awards-slide__container.tooltip
-            img(data-lazy="img/gallery/award4.jpg", alt="")
-        .awards-slide.gallery__item
-          a(href="img/gallery/award5.jpg" title='описание').awards-slide__container.tooltip
-            img(data-lazy="img/gallery/award5.jpg", alt="")
+  .container
+    .slider.slider_arrows.awards-slider.slider_default
+      .slide
+        a(href="img/gallery/award1.jpg" data-fancybox='gallery2' data-caption="Описание фотографии которое беретя из админки, какой-либо текст").cover-box.cover-box_size-auto
+          img(data-src="img/gallery/award1.jpg", alt="").lazy
+      .slide
+        a(href="img/gallery/award2.jpg" data-fancybox='gallery2' data-caption="Описание фотографии которое беретя из админки, какой-либо текст").cover-box.cover-box_size-auto
+          img(data-src="img/gallery/award2.jpg", alt="").lazy
+      .slide
+        a(href="img/gallery/award3.png" data-fancybox='gallery2' data-caption="Описание фотографии которое беретя из админки, какой-либо текст").cover-box.cover-box_size-auto
+          img(data-src="img/gallery/award3.png", alt="").lazy
+      .slide
+        a(href="img/gallery/award4.jpg" data-fancybox='gallery2' data-caption="Описание фотографии которое беретя из админки, какой-либо текст").cover-box.cover-box_size-auto
+          img(data-src="img/gallery/award4.jpg", alt="").lazy
+      .slide
+        a(href="img/gallery/award5.jpg" data-fancybox='gallery2' data-caption="Описание фотографии которое беретя из админки, какой-либо текст").cover-box.cover-box_size-auto
+          img(data-src="img/gallery/award5.jpg", alt="").lazy

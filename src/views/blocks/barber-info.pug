@@ -1,72 +1,98 @@
-.barber-info
+section.section.barber-info
+  .section__head
+    .decorated
+      span.decoration
+      h5.section__head-title Обо мне
+      span.decoration
   .container
-    .barber-info__container
-      .barber-info__section.barber-info__section_left
-        .barber-info__top-content
-          .barber-info__image
-            img(src="img/photo.jpg", alt="").barber-info__photo
-          .barber-info__content
-            .barber-info__row
-              .barber-info__item
-                span.barber-info__name Александ Иванов
-              .barber-info__item
-                .barber-info__experience
-                  span.barber-info__experience-item <span>32</span> возраст
-                  span.barber-info__experience-item <span>5</span> стаж
-            .barber-info__row
-              .barber-info__item
-                .number-block
-                  button.number-block__show-btn
-                  .number-block__title Показать телефон
-                  a(href="tel:79258008080").number-block__number +7 925 
-                    span xxx-xx-xx
-              .barber-info__item
-                .socials.socials_style2
-                  ul.socials__list
-                    li.socials__item
-                      a(href="#").socials__link
-                        i.fab.fa-facebook-f
-                    li.socials__item
-                      a(href="#").socials__link
-                        i.fab.fa-vk
-                    li.socials__item
-                      a(href="#").socials__link
-                        i.fab.fa-instagram
-                    li.socials__item
-                      a(href="#").socials__link
-                        i.fab.fa-odnoklassniki
-                    li.socials__item
-                      a(href="#").socials__link
-                        i.fab.fa-youtube
-        .barber-info__bottom-content
-          .barber-info__salon
-            .barber-info__salon-logo
-              img(src="img/logos/britva.jpg", alt="")
-            .barber-info__salon-info
-              .barber-info__salon-title BRITVA / Moscow
-              .barber-info__salon-adress 2-я Рощинская ул., 1А
-          .share
+    .row
+      .col-xl-5.col-md-6.col-sm-12
+        .row
+          .col-xl-12.col-sm-4.col-12
+            .barber-info__image
+              .cover-box
+                img(data-src="img/photo.jpg", alt="").lazy
+          .barber-info__group.col-xl-12.col-sm-8.col-12
+            .row
+              .col-xl-12
+                .row.row_jc-sb
+                  h1.barber-info__title.t-size-28.col-xl-auto Александр Иванов
+                  .barber-info__experience.col-xl-auto
+                    span.barber-info__experience-item 
+                      span.t-size-24 32
+                      | возраст
+                    span.barber-info__experience-item 
+                      span.t-size-24 5
+                      | стаж
+                  .col-xl-auto
+                    .number-block
+                      //кликнуть можно сюда, логику не знаю какая будет, ничего не делал
+                      .number-block__show-btn
+                      //
+                      .number-block__title Показать телефон
+                      a(href="tel:79258008080").number-block__number +7 925 
+                        span xxx-xx-xx
+                  .socials.socials_style2.col-xl-auto
+                    ul.socials__list.row.row_compact
+                      li.socials__item.col-xl-auto
+                        a(href="#").socials__link
+                          i.fab.fa-facebook-f
+                      li.socials__item.col-xl-auto
+                        a(href="#").socials__link
+                          i.fab.fa-vk
+                      li.socials__item.col-xl-auto
+                        a(href="#").socials__link
+                          i.fab.fa-instagram
+                      li.socials__item.col-xl-auto
+                        a(href="#").socials__link
+                          i.fab.fa-odnoklassniki
+                      li.socials__item.col-xl-auto
+                        a(href="#").socials__link
+                          i.fab.fa-twitter
+                  .col-xl-auto  
+                    span.item-label Знание языка:
+                    .row.row_compact
+                      .col-xl-auto
+                        label.checkbox.view-only
+                          i.fas.fa-check
+                          span Русский
+                      .col-xl-auto
+                        label.checkbox.view-only
+                          i.fas.fa-check
+                          span Английский
+                  .barber-info__barbershop.col-xl-12
+                    .row
+                      .col-xl-3
+                        img(src="img/logos/britva.jpg", alt="").barber-info__barbershop-image
+                      .col-xl-9
+                        h6.t-size-24.f-w-n BRITVA / Moscow
+                        span 2-я Рощинская ул., 1А,
+                  .barber-info__buttons.col-xl-12
+                    .row
+                      .col-xl-5.col-12
+                        a(href="#").button.button_style1.share-trigger Поделиться
+                      .col-xl-7.col-12
+                        a(href="#").button.button_style4 Записаться
+      .col-xl-7.col-md-6.col-sm-12
+        .mb-30
+          .row
+            .col-xl-12
+              p
+                strong.c-main.t-t-u О СЕБЕ: 
+                | «В профессию я пришел неожиданно. Ждал своей очереди в парикмахерской и заметил, как выходящие клиенты тепло благодарили своих мастеров. Это меня и зацепило. До этого я работал в коммерции, но со временем понял, что офисная жизнь занимает много времени и монотонна — вот и сбежал. Кроме того, я активный судья барбер и барбершоп-баттлов. Продвигаю культуру по всей стране. Сегодня я счастлив, свободен и точно на своем месте.»
+            .col-xl-12
+              p
+                strong.c-main.t-t-u КЛИЕНТЫ:  
+                | «У меня своя сложившаяся аудитория. В основном это преуспевающие мужчины 30–45 лет. Для меня важно устанавливать эмоциональный контакт с людьми, которые ко мне ходят. Просто безучастно стричь людей на автомате я не могу».
+            .col-xl-12
+              p
+                strong.c-main.t-t-u МОЙ ОПЫТ:  
+                | «Я работал: брею опасной бритвой, делаю моделирование бороды и усов. Убежден, что без использования опасной бритвы грамотно оформить бороду невозможно».
+        .mb-30
+          .title-head
             .decorated
               span.decoration
-              a(href="#").share-trigger поделиться
+              strong.title-head__title.t-size-28.t-t-u видео презентация
               span.decoration
-      .barber-info__section.barber-info__section_right
-        p.barber-info__text
-          b О СЕБЕ: 
-          span В профессию я пришел неожиданно. Ждал своей очереди в парикмахерской и заметил, как выходящие клиенты тепло благодарили своих мастеров. Это меня и зацепило. До этого я работал в коммерции, но со временем понял, что офисная жизнь занимает много времени и монотонна — вот и сбежал. Кроме того, я активный судья барбер и барбершоп-баттлов. Продвигаю культуру по всей стране. Сегодня я счастлив, свободен и точно на своем месте.
-        p.barber-info__text
-          b КЛИЕНТЫ: 
-          span У меня своя сложившаяся аудитория. В основном это преуспевающие мужчины 30–45 лет. Для меня важно устанавливать эмоциональный контакт с людьми, которые ко мне ходят. Просто безучастно стричь людей на автомате я не могу.
-        p.barber-info__text
-          b МОЙ ОПЫТ: 
-          span Я работал: брею опасной бритвой, делаю моделирование бороды и усов. Убежден, что без использования опасной бритвы грамотно оформить бороду невозможно.
-        .barber-info__presentation
-          .barber-info__presentation-head
-            .decorated
-              span.decoration
-              span.barber-info__presentation-title видео презентация
-              span.decoration
-          .barber-info__presentation-video
-            .video-block
-              a(href="https://www.youtube.com/watch?v=BgK_Er7WZVg").popup-link
-                img(data-src="img/backgrounds/video-bg.jpg", alt="").lazy
+          .video
+            <iframe src="https://www.youtube.com/embed/Kvm-BoVdWV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

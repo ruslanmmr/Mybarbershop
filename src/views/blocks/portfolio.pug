@@ -1,24 +1,20 @@
 mixin block()
-  .portfolio-block.gallery__item
-    a(href="img/gallery/haircut.jpg").portfolio-block__link
+  .slide.portfolio-block
+    a(href="img/gallery/haircut.jpg" data-fancybox='gallery1').cover-box&attributes(attributes)
       img(data-src="img/gallery/haircut.jpg", alt="").lazy
-.portfolio
-  .block-head
+
+section.section.portfolio
+  .section__head
     .decorated
       span.decoration
-      span.block-head__title.block-head__title_stars моё портфолио
+      h5.section__head-title моё портфолио
       span.decoration
-  .portfolio__container
-    .container
-      .slider.slider_arrows.portfolio__slider.gallery
-        +block()
-        +block()
-        +block()
-        +block()
-        +block()
-        +block()
-        +block()
-        +block()
-        +block()
-        +block()
+  .container
+    .slider.slider_arrows.portfolio-slider.slider_default
+      +block()(data-caption="Описание фотографии которое беретя из админки, какой-либо текст")
+      +block()(data-caption="Что-либо другое")
+      +block()(data-caption="Описание фотографии которое беретя из админки, какой-либо текст")
+      +block()(data-caption="Что-либо другое")
+      +block()(data-caption="Описание фотографии которое беретя из админки, какой-либо текст")
+      +block()(data-caption="Что-либо другое")
         

@@ -15,8 +15,39 @@ html(lang="ru")
             include blocks/portfolio
             include blocks/awards
             include blocks/banner2
-            include blocks/experience
-            include blocks/publications
+            section.section.portfolio
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title мой опыт
+                  span.decoration
+              .container
+                .row.row_center
+                  .col-xl-12
+                    p «Я начал свою профессиональную карьеру в салоне «TOPGUN» в славном городе Сыктывкар. Моими наставниками были великие мировые мастера. Убежден, что без использования опасной бритвы ».
+                  .col-xl-3.col-6
+                    p.t-a-center «TOPGUN»<br> 2014-2015<br> Сыктывкар,<br> ул. Мира, 100
+                  .col-xl-3.col-6
+                    p.t-a-center «БОРОДА»<br> 2015-2016<br> Санкт-Петербург,<br> Невский пр-т, 37
+                  .col-xl-3.col-6
+                    p.t-a-center  «БРИТВА»<br> 2016-____<br> Москва,<br> Новоясеневский пр-т, 9
+            //include blocks/publications
+            section.section.portfolio
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title мои публикации
+                  span.decoration
+              .container
+                .mb-30
+                  .row
+                    include blocks/small-news-block
+                    +block2()
+                    +block2()
+                    +block2()
+                .row.row_center
+                  .col-xl-4.col-md-6.col-12
+                    a(href="news.html").button.button_style4 Архив публикаций
         //footer
         include blocks/footer
         //other
