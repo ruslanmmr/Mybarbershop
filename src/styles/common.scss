@@ -35,6 +35,9 @@ body {
   .container {
     padding: 0;
   }
+  &_w2 {
+    max-width: 768px;
+  }
 }
 .page {
   position: relative;
