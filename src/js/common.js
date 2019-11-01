@@ -553,7 +553,7 @@ function funcybox() {
     touch: false
   });
 
-  $('.slide a').on('click', function() {
+  $('.slide [data-fancybox]').on('click', function() {
     let $selector = $(this).parents('.slider').find('.slick-slide:not(.slick-cloned) a');
 
     $.fancybox.open( $selector, {
