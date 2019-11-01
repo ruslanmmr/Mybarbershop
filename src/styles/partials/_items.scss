@@ -1045,7 +1045,6 @@ a {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
   }
   .wh {
     height:100%!important;
@@ -1093,12 +1092,14 @@ a {
 }
 .lazy {
   visibility: hidden;
-  transition: opacity 1s;
+  opacity: 0;
+  transition: 1s;
   &.visible {
     opacity: 1;
     visibility: visible;
   }
 }
+
 .decorative-line {
   position: relative;
   font-family: 'Font Awesome 5 Free';
