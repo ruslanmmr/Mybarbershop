@@ -34,7 +34,7 @@ $(window).resize(function () {
 let windowW = Math.max(window.innerWidth, document.documentElement.clientWidth),
     pageW = Math.min(window.innerWidth, document.documentElement.clientWidth),
     scrollbarW = windowW - pageW,
-    $checkbox = $('.checkbox'),
+    $checkbox,
     $slider = $('.slider'),
     $scroll = $('.scroll-area');
 
@@ -586,22 +586,23 @@ function autoHeight() {
 
 //обрабокта кликов
 function checkbox() {
-  $checkbox.on('click', function() {
+  $(document).on('click', '.checkbox', function() {
     checkboxCheck();
   })
 }
+
 //в остальных ситуация для изменения вида чекбоксов выполняется эта функция
 function checkboxCheck() {
+  $checkbox = $('.checkbox');
   $checkbox.each(function() {
     if($(this).find('input').prop('checked') || $('#' + $(this).attr('for')).prop('checked')) {
       $(this).addClass('checked');
-      console.log('1')
     } else {
       $(this).removeClass('checked');
-      console.log('2')
     }
   })
 }
+
 //toggle
 function toggleblocks() {
   let $container = $('.toggle-group'),

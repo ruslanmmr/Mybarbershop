@@ -11,17 +11,20 @@ mixin usluga()
         .form__item.col-xl-2.col-sm-4.col-6
           span.item-label ТОП Барбер:
           .form__input
-            img(src="img/icons/ico-topbarber.png", alt="")
+            svg.icon
+              use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
             input(type="text").input.input_style4
         .form__item.col-xl-2.col-sm-4.col-6
           span.item-label Барбер:
           .form__input
-            img(src="img/icons/ico-barber.png", alt="")
+            svg.icon
+              use(xlink:href="img/icons/barbers-sprite.svg#barber")
             input(type="text").input.input_style4
         .form__item.col-xl-2.col-sm-4.col-6
           span.item-label Стажер:
           .form__input
-            img(src="img/icons/ico-beginner.png", alt="")
+            svg.icon
+              use(xlink:href="img/icons/barbers-sprite.svg#beginner")
             input(type="text").input.input_style4
     .form__group.col-xl-12
       .row

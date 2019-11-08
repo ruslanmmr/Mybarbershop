@@ -319,11 +319,12 @@ a {
         margin-right: 5px;
       }
     }
-    img {
+    .icon {
       flex-shrink: 0;
       height: 30px;
-      width: auto;
+      width: 18px;
       margin-right: 8px;
+      fill: #fff;
     }
   }
 }
@@ -343,12 +344,18 @@ a {
   }
 }
 
+.icon {
+  width: 40px;
+  height: 40px;
+  fill: #000;
+  transition: 0.2s;
+}
+
 //select
 .select {
   background-color: #fff;
   border-radius: 4px;
   position: relative;
-  z-index: 5;
   width: 100%;
   select,
   .nice-select {
@@ -372,7 +379,6 @@ a {
     user-select: none;
     white-space: nowrap;
     font-weight: 400;
-    z-index: 1;
     border-radius: inherit;
   }
   .nice-select {
@@ -409,7 +415,6 @@ a {
       box-sizing: border-box;
       margin-top: 4px;
       opacity: 0;
-      overflow: hidden;
       padding: 0;
       pointer-events: none;
       position: absolute;
@@ -420,6 +425,8 @@ a {
       list-style: none;
       z-index: 9;
       min-width: 100%;
+      max-height: 220px;
+      overflow-y: auto;
     }
     .option {
       cursor: pointer;
@@ -567,13 +574,16 @@ a {
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
-    img {
+    .icon {
       height: 60px;
-      width: auto;
+      fill: $gray-color3;
     }
     &.checked {
       border-color: #fff;
       background-color: $gray-color4;
+      .icon {
+        fill: #fff;
+      }
     }
   }
 }
@@ -1243,8 +1253,10 @@ a {
     font-size: 16px;
   }
   &__lvl {
-    img {
+    .icon {
       height: 47px;
+      width: 31px;
+      fill: #fff;
     }
   }
 }
@@ -1280,8 +1292,8 @@ a {
   }
 
   &__lvl {
-    img {
-      height: 42px;
+    .icon {
+      fill: #fff;
     }
   }
 }
@@ -1456,8 +1468,8 @@ a {
     position: relative;
   }
   &__lvl {
-    img {
-      height: 42px;
+    .icon {
+      fill: #fff;
     }
   }
   &__title {

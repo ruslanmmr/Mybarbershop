@@ -1,0 +1,191 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            include blocks/banner1
+            +banner()(data-src="img/banner/banner-incumbent.jpg")
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h1.section__head-title Найти сотрудника
+                  span.decoration
+              .container
+                form(action="").form.mb-30
+                  .form__section.row
+                    .form__group.col-xl-12
+                      .row
+                        .form__item.col-xl-auto
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val' checked)
+                            span Барбер
+                        .form__item.col-xl-auto
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Администратор
+                        .form__item.col-xl-auto
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Управляющий
+                        .form__item.col-xl-auto
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Другое
+                    .form__group.col-xl-12
+                      .row
+                        .form__item.col-xl-4.col-sm-6.col-12
+                          span.item-label Опыт работы:
+                          .form__input
+                            .select
+                              select
+                                option(value="" data-display="без опыта") без опыта
+                                option(value="") до года
+                                option(value="") от 1 до 3-х лет
+                                option(value="") более 3-х лет
+                        .form__item.col-xl-4.col-sm-6.col-12
+                          span.item-label Тип занятости:
+                          .form__input
+                            .select
+                              select
+                                option(value="" data-display="Полная") Полная
+                                option(value="") Неолная
+                                option(value="") Подмена
+                        .form__item.col-xl-4.col-sm-6.col-12
+                          span.item-label Заработная плата:
+                          .row
+                            .form__input.col-xl-12
+                              span от
+                              input(type="text").input.input_style4
+                              span до
+                              input(type="text").input.input_style4
+                              span руб
+                    .form__group.col-xl-12
+                      .row  
+                        .form__item.col-xl-auto
+                          span.item-label Знание языка:
+                          .row.row_compact
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Русский
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Английский
+                        .form__item.col-xl-auto
+                          span.item-label Пол:
+                          .row.row_compact
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Мужчина
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Женщина
+                .mb-30
+                  .row
+                    .job-offer-block.col-xl-12
+                      .job-offer-block__container
+                        .row
+                          .job-offer-block__image.col-xl-3.col-sm-4.col-12
+                            a(href="#" title='Перейти в профиль').cover-box
+                              img(data-src="img/gallery/barber2.jpg", alt="").lazy
+                          .job-offer-block__content.col-xl-9.col-sm-8.col-12
+                            .row
+                              .job-offer-block__info.col-xl-12
+                                .row
+                                  .col-xl-12
+                                    .row
+                                      .job-offer-block__lvl.col-xl-auto
+                                        svg.icon
+                                          use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                                      .col-xl
+                                        .job-offer-block__title
+                                          a(href="#") Руслан, 25 лет, Барбер »
+                                        span Желаемая зарплата 100 000 р
+                                  .col-xl-auto
+                                    span.item-label Опыт работы:
+                                    span 2 года
+                                  .col-xl-auto
+                                    span.item-label Тип занятости:
+                                    span Полная
+                                  .col-xl-auto
+                                    span.item-label Последнее место работы:
+                                    span «TOPGUN», ул. Акад. Анохина, 7
+                                  .col-xl-auto
+                                    span.item-label Знание языка:
+                                    .row.row_compact
+                                      .col-xl-auto
+                                        label.checkbox.view-only
+                                          i.fas.fa-check
+                                          span Английский
+                                      .col-xl-auto
+                                        label.checkbox.view-only
+                                          i.fas.fa-check
+                                          span Русский
+                              .job-offer-block__buttons.col-xl-12
+                                .row
+                                  .col-xl-4.col-sm-12
+                                    button.button.button_style1.small
+                                      | Пригласить
+                    .job-offer-block.col-xl-12
+                      .job-offer-block__container
+                        .row
+                          .job-offer-block__image.col-xl-3.col-sm-4.col-12
+                            a(href="#" title='Перейти в профиль').cover-box
+                              img(data-src="img/gallery/uborshchica-photo.jpg", alt="").lazy
+                          .job-offer-block__content.col-xl-9.col-sm-8.col-12
+                            .row
+                              .job-offer-block__info.col-xl-12
+                                .row
+                                  .col-xl-12
+                                    .row
+                                      .job-offer-block__lvl.col-xl-auto
+                                        img(src="img/icons/ico-woman.png", alt="").icon
+                                      .col-xl
+                                        .job-offer-block__title
+                                          a(href="#") Оля, 18 лет, Уборщица »
+                                        span Желаемая зарплата 20 000 р
+                                  .col-xl-auto
+                                    span.item-label Опыт работы:
+                                    span 5 лет
+                                  .col-xl-auto
+                                    span.item-label Тип занятости:
+                                    span Полная
+                                  .col-xl-auto
+                                    span.item-label Знание языка:
+                                    .row.row_compact
+                                      .col-xl-auto
+                                        label.checkbox.view-only
+                                          i.fas.fa-check
+                                          span Русский
+                              .job-offer-block__buttons.col-xl-12
+                                .row
+                                  .col-xl-4.col-sm-12
+                                    button.button.button_style1.small
+                                      | Пригласить
+                .row
+                  .col-xl-4.col-sm-6.col-12
+                    button.button.button_style7 Показать еще
+            include blocks/banner2
+            include blocks/news-module
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
