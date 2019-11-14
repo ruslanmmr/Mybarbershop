@@ -9,6 +9,15 @@ a {
   }
 }
 
+.b-nav {
+  margin: 0;
+  &__list {
+    margin: 0;
+    list-style: none;
+    position: 0;
+  }
+}
+
 .button,
 .input {
   display: block;
@@ -345,6 +354,7 @@ a {
 }
 
 .icon {
+  display: block;
   width: 40px;
   height: 40px;
   fill: #000;
@@ -583,6 +593,24 @@ a {
       background-color: $gray-color4;
       .icon {
         fill: #fff;
+      }
+    }
+  }
+  &_type-category {
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid $gray-color2;
+    .icon {
+      fill: $gray-color2;
+      display: block;
+      width: 40px;
+      height: 40px;
+      transition: inherit;
+    }
+    &.checked {
+      border-color: $orange-color1;
+      .icon {
+        fill: $orange-color1;
       }
     }
   }
@@ -2056,6 +2084,13 @@ a {
     &_type-model {
       img {
         height: 120px;
+      }
+    }
+    &_type-category {
+      padding: 10px;
+      .icon {
+        width: 30px;
+        height: 30px;
       }
     }
   }
