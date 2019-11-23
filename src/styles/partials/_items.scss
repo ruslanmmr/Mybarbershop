@@ -1246,6 +1246,50 @@ a {
     padding: 0;
   }
 }
+.baraholka-item {
+  &__container {  
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid $orange-color1;
+    position: relative;
+  }
+  &__image {
+    .cover-box {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &.hidden {
+    .baraholka-item__conainer {
+      border-color: $gray-color2;
+    }
+    .baraholka-item__image,
+    .baraholka-item__info {
+      color: $gray-color1;
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+  }
+  &__text {
+    display: block;
+  }
+  &__title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    transition: .2s;
+    display: inline-block;
+    color: $orange-color1;
+    &:hover {
+      color: $orange-color2;
+    }
+  }
+}
+
+
 .my-brbr-block {
   &__container {  
     padding: 20px;
@@ -1254,7 +1298,7 @@ a {
     position: relative;
   }
   &.hidden {
-    .my-brbr-block__conainer {
+    .my-brbr-block__container {
       border-color: $gray-color2;
     }
     .my-brbr-block__image,
@@ -2078,6 +2122,11 @@ a {
   .job-offer-block {
     &__image {
       height: 220px;
+    }
+  }
+  .baraholka-item {
+    &__image {
+      height: 180px;
     }
   }
   .checkbox {

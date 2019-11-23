@@ -4,7 +4,7 @@ $(document).ready(function () {
   nav();
   slider();
   gallery();
-  //showNum();
+  showNum();
   share();
   autoHeight();
   checkbox();
@@ -381,16 +381,16 @@ function gallery() {
   }
 }
 
-/* //num
+//num
 function showNum() {
-  var num = '999-99-99',
-    $toggleBtn = $('.number-block__show-btn');
-
-  $toggleBtn.on('click', function () {
-    $(this).parents('.number-block').find('span').text(num);
-    $(this).remove();
+  $(document).on('click', '.number-btn', function(event) {
+    if(!$(this).hasClass('visible')) {
+      event.preventDefault();
+      let num = $(this).data('number');
+      $(this).text(`Телефон: ${num}`).addClass('visible');
+    }
   })
-} */
+}
 
 //share-trigger
 function share() {
