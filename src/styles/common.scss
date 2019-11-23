@@ -51,22 +51,21 @@ body {
   }
   &__container {
     display: flex;
-    flex: 1 1 100%;
     padding-bottom: 100px;
+    width: 100%;
   }
 }
 .aside {
-  flex: 0 0 214px;
   padding: 114px 40px 0 0;
+  flex: 1 0 214px;
 }
 .main {
-  flex: 1 1 100%;
-  max-width: 100%;
+  flex: 0 1 100%;
 }
 
 @media all and(max-width: 1200px) {
   .aside {
-    flex: 0 0 170px;
+    flex: 1 0 170px;
     padding: 90px 20px 0 0;
   }
 }
@@ -83,6 +82,9 @@ body {
   }
   .aside {
     display: none;
+  }
+  .main {
+    width: 100%;
   }
 }
 @media all and(max-width: 576px) {

@@ -1,0 +1,54 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            .banner.banner_size2.lazy(data-src='img/banner/contacts-banner.jpg')
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title наши контакты
+                  span.decoration
+              .container
+                .row.row_center
+                  .col-xl-6.t-a-center.col-12
+                    span.item-label.t-size-16 Номер телефона:
+                    a(href="tel:22").link.c-main.f-w-b.t-size-24 +7 (495) 000-00-00
+                  .col-xl-6.t-a-center.col-12
+                    span.item-label.t-size-16 E-mail:
+                    a(href="mailto:info@mybarbershop.com").link.c-main.f-w-b.t-size-24 info@mybarbershop.com
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title наши реквизиты
+                  span.decoration
+              .container
+                .row.row_center
+                  .col-xl-6.col-12
+                    p.c-main.t-a-center.f-w-b ИП Иванов ИИ
+                    p.t-a-center ОГРН ИП 1234567891234567 от 01.02.2018 г.
+                    p.t-a-center ИНН 123456789123
+                    p.t-a-center 123456, г. Москва, пр-т Ленинский, д.123, кв 321
+                    p.t-a-center р/с: 00000000000000000000
+                    p.t-a-center БИК 123456789
+                  .col-xl-6.col-12
+                    p.c-main.t-a-center.f-w-b Фактический адрес:
+                    p.t-a-center 123456, г. Москва, промзона «51», бункер 00-789
+                    p.t-a-center тел.: +7 (926) 123-45-67
+                    p.t-a-center (спросить полковника Скворцова)
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

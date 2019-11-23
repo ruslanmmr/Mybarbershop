@@ -35,7 +35,7 @@ let windowW = Math.max(window.innerWidth, document.documentElement.clientWidth),
     pageW = Math.min(window.innerWidth, document.documentElement.clientWidth),
     scrollbarW = windowW - pageW,
     $checkbox,
-    $slider = $('.slider'),
+    $slider = $('.slider:visible'),
     $scroll = $('.scroll-area');
 
 function scrollbar() {
@@ -312,7 +312,6 @@ function slider() {
       dots: dots,
       arrows: arrows,
       speed: 600,
-      lazyLoad: 'ondemand',
       adaptiveHeight: adaptiveHeight,
       centerMode: centerMode,
       slidesToShow: slideCount,
@@ -606,20 +605,93 @@ function checkboxCheck() {
 //toggle
 function toggleblocks() {
   let $container = $('.toggle-group'),
-      $btn,
+      $btns,
       $content;
 
   $(document).on('click', '.toggle-button', function(event) {
     event.preventDefault();
 
-    $btn = $(this);
-    $container = $btn.parents('.toggle-group');
-    $content = $container.find('.toggle-content');
+    $container = $(this).closest('.toggle-group');
+    $content = $container.find('.toggle-content').eq(0);
+    $btns = $container.find('.toggle-button').not($content.find('.toggle-button'));
 
-    $btn.toggleClass('active');
-    $container.toggleClass('active');
-    $content.toggleClass('active');
+    console.log($content)
+
+
+    //sliders
+    if($container.hasClass('baraholka-item')) {
+      let slider = $container.find('.slider');
+
+      if(!slider.hasClass('slick-initialized')) {
+        let navitem = $container.find('.baraholka-slider-nav__item a'),
+            slideIndex;
+
+        slider.on('init', function () {
+          setTimeout(function() {
+            slider.addClass('slider_visible');
+          }, 100)
+        });
+
+        slider.on('init beforeChange afterChange', function(){
+          lazy();
+        });
+
+        slider.slick({
+          infinite: true,
+          dots: false,
+          arrows: false,
+          speed: 200,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true
+        })
+
+        slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+          slideIndex = currentSlide;
+          pag();
+        });
+    
+        navitem.on('click', function(event) {
+          event.preventDefault();
+          slideIndex = $(this).parent().index();
+          console.log(slideIndex)
+          slider.slick('slickGoTo', slideIndex);
+          pag();
+        });
+    
+        //custom pagination
+        function pag() {
+          navitem.removeClass('active');
+          navitem.parent().eq(slideIndex).find(navitem).addClass('active');
+        }
+
+      }
+    }
+
+    if($container.hasClass('active')) {
+      $container.removeClass('active');
+      $content.removeClass('active');
+      $btns.each(function() {
+        $(this).removeClass('active');
+        if($(this).data('hide-text')!==undefined) {
+          $(this).text($(this).data('show-text'))
+        }
+      })
+    } else {
+      $container.addClass('active');
+      $content.addClass('active');
+      $btns.each(function() {
+        $(this).addClass('active');
+        if($(this).data('hide-text')!==undefined) {
+          $(this).text($(this).data('hide-text'))
+        }
+      })
+    }
+
+
   })
+
+
 }
 //tabs
 function tabs() {
@@ -640,6 +712,7 @@ function tabs() {
     console.log(order)
   })
 }
+
 //select
 function select() {
   if ($('html').hasClass('desktop')) {

@@ -5,7 +5,7 @@ strong {
   font-weight: 700;
 }
 p {
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
   line-height: 1.5;
   text-align: justify;
   &:last-child {
@@ -18,6 +18,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .c-main {
   color: $orange-color1;
+}
+.c-gray {
+  color: $gray-color1;
 }
 .t-t-u {
   text-transform: uppercase;
@@ -101,9 +104,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .t-size-24 {
     font-size: 20px;
-  }
-  .t-size-18 {
-    font-size: 16px;
   }
   .t-size-64 {
     font-size: 40px;
