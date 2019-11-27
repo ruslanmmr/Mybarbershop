@@ -618,8 +618,13 @@ a {
       height: 40px;
       transition: inherit;
     }
-    &.checked {
+    &:hover {
+      opacity: 0.8;
+    }
+    &.checked,
+    &.active {
       border-color: $orange-color1;
+      pointer-events: none;
       .icon {
         fill: $orange-color1;
       }
@@ -1357,6 +1362,8 @@ a {
     transition: .2s;
     display: inline-block;
     color: $orange-color1;
+  }
+  a.baraholka-item__title {
     &:hover {
       color: $orange-color2;
     }
@@ -1808,7 +1815,11 @@ a {
 .salon-info {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 15px 0;
-  //border-bottom: 1px solid $gray-color3;
+  .socials {
+    &__list {
+      justify-content: flex-end;
+    }
+  }
   &__container {
     justify-content: space-between;
   }
@@ -2030,6 +2041,11 @@ a {
     &__numbers {
       text-align: center;
     }
+    .socials {
+      &__list {
+        justify-content: center
+      }
+    }
     &__image {
       height: 140px;
     }
@@ -2056,7 +2072,7 @@ a {
       margin: 0 0 30px 0;
     }
     &:first-child {
-      margin-top: 50px;
+      margin-top: 65px;
     }
   }
   .video-block a:after {

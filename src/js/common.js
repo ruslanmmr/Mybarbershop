@@ -306,6 +306,35 @@ function slider() {
       slideCount420 = 2;
       adaptiveHeight = true;
     }
+    //sliders
+    if($(this).hasClass('baraholka-slider')) {
+      let slider = $(this);
+
+      if(!slider.hasClass('slick-initialized')) {
+        let navitem = slider.parents('.baraholka-item').find('.baraholka-slider-nav__item a'),
+            slideIndex;
+
+        slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+          slideIndex = currentSlide;
+          pag();
+        });
+    
+        navitem.on('click', function(event) {
+          event.preventDefault();
+          slideIndex = $(this).parent().index();
+          console.log(slideIndex)
+          slider.slick('slickGoTo', slideIndex);
+          pag();
+        });
+    
+        //custom pagination
+        function pag() {
+          navitem.removeClass('active');
+          navitem.parent().eq(slideIndex).find(navitem).addClass('active');
+        }
+
+      }
+    }
 
     $(this).slick({
       infinite: true,
@@ -615,58 +644,6 @@ function toggleblocks() {
     $content = $container.find('.toggle-content').eq(0);
     $btns = $container.find('.toggle-button').not($content.find('.toggle-button'));
 
-    console.log($content)
-
-
-    //sliders
-    if($container.hasClass('baraholka-item')) {
-      let slider = $container.find('.slider');
-
-      if(!slider.hasClass('slick-initialized')) {
-        let navitem = $container.find('.baraholka-slider-nav__item a'),
-            slideIndex;
-
-        slider.on('init', function () {
-          setTimeout(function() {
-            slider.addClass('slider_visible');
-          }, 100)
-        });
-
-        slider.on('init beforeChange afterChange', function(){
-          lazy();
-        });
-
-        slider.slick({
-          infinite: true,
-          dots: false,
-          arrows: false,
-          speed: 200,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          fade: true
-        })
-
-        slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
-          slideIndex = currentSlide;
-          pag();
-        });
-    
-        navitem.on('click', function(event) {
-          event.preventDefault();
-          slideIndex = $(this).parent().index();
-          console.log(slideIndex)
-          slider.slick('slickGoTo', slideIndex);
-          pag();
-        });
-    
-        //custom pagination
-        function pag() {
-          navitem.removeClass('active');
-          navitem.parent().eq(slideIndex).find(navitem).addClass('active');
-        }
-
-      }
-    }
 
     if($container.hasClass('active')) {
       $container.removeClass('active');

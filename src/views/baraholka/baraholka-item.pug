@@ -1,0 +1,68 @@
+doctype html
+html(lang="ru")
+  head
+    include ../blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include ../blocks/header
+        .page__container.container
+          aside.aside
+            .account-nav
+              ul.account-nav__list
+                li.account-nav__item
+                  a(href="baraholka/baraholka-all.html").account-nav__link Все обьявления
+                li.account-nav__item
+                  a(href="baraholka/baraholka.html").account-nav__link Дать объявление
+                li.account-nav__item
+                  a(href="baraholka/baraholka-my.html").account-nav__link Мои объявления
+          main.main
+            section.section
+              .container
+                .mb-30
+                  .row
+                    .col-xl-auto
+                      a(href="#").checkbox.checkbox_type-category.tooltip
+                        svg.icon
+                          use(xlink:href="img/icons/baraholka-sprite.svg#ico1")
+                    .col-xl-auto
+                      a(href="#").checkbox.checkbox_type-category.tooltip
+                        svg.icon
+                          use(xlink:href="img/icons/baraholka-sprite.svg#ico2")
+                    .col-xl-auto
+                      a(href="#").checkbox.checkbox_type-category.tooltip
+                        svg.icon
+                          use(xlink:href="img/icons/baraholka-sprite.svg#ico3")
+                    .col-xl-auto
+                      a(href="#").checkbox.checkbox_type-category.tooltip
+                        svg.icon
+                          use(xlink:href="img/icons/baraholka-sprite.svg#ico4")
+                    .col-xl-auto
+                      a(href="#").checkbox.checkbox_type-category.tooltip
+                        svg.icon
+                          use(xlink:href="img/icons/baraholka-sprite.svg#ico5")
+                    .col-xl-auto
+                      a(href="#").checkbox.checkbox_type-category.tooltip
+                        input(type="radio" name='val')
+                        svg.icon
+                          use(xlink:href="img/icons/baraholka-sprite.svg#ico6")
+                    .col-xl-auto
+                      a(href="#").checkbox.checkbox_type-category.tooltip
+                        input(type="radio" name='val')
+                        svg.icon
+                          use(xlink:href="img/icons/baraholka-sprite.svg#ico7")      
+                .mb-30
+                  .row
+                    include ../blocks/baraholka-item
+                    +item()
+                  
+        //footer
+        include ../blocks/footer
+        //other
+        include ../blocks/popup
+        include ../blocks/fixed
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
