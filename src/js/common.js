@@ -625,8 +625,14 @@ function checkboxCheck() {
   $checkbox.each(function() {
     if($(this).find('input').prop('checked') || $('#' + $(this).attr('for')).prop('checked')) {
       $(this).addClass('checked');
+      if($(this).hasClass('toggle-checkbox')) {
+        $(this).parents('form').find('.toggle-item').addClass('active');
+      }
     } else {
       $(this).removeClass('checked');
+      if($(this).hasClass('toggle-checkbox')) {
+        $(this).parents('form').find('.toggle-item').removeClass('active');
+      }
     }
   })
 }

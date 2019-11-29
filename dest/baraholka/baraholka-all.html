@@ -83,62 +83,34 @@
                     </div>
                     <div class="form__group col-xl-12"><span class="item-label">Категория:</span>
                       <div class="row">
-                        <div class="form__item col-xl-auto">
-                          <label class="checkbox checkbox_type-category tooltip" title="text">
-                            <input type="radio" name="val">
+                        <div class="col-xl-auto"><a class="checkbox checkbox_type-category tooltip" href="#">
                             <svg class="icon">
                               <use xlink:href="img/icons/baraholka-sprite.svg#ico1"></use>
-                            </svg>
-                          </label>
-                        </div>
-                        <div class="form__item col-xl-auto">
-                          <label class="checkbox checkbox_type-category tooltip" title="text">
-                            <input type="radio" name="val">
+                            </svg></a></div>
+                        <div class="col-xl-auto"><a class="checkbox checkbox_type-category tooltip active" href="#">
                             <svg class="icon">
                               <use xlink:href="img/icons/baraholka-sprite.svg#ico2"></use>
-                            </svg>
-                          </label>
-                        </div>
-                        <div class="form__item col-xl-auto">
-                          <label class="checkbox checkbox_type-category tooltip" title="text">
-                            <input type="radio" name="val">
+                            </svg></a></div>
+                        <div class="col-xl-auto"><a class="checkbox checkbox_type-category tooltip" href="#">
                             <svg class="icon">
                               <use xlink:href="img/icons/baraholka-sprite.svg#ico3"></use>
-                            </svg>
-                          </label>
-                        </div>
-                        <div class="form__item col-xl-auto">
-                          <label class="checkbox checkbox_type-category tooltip" title="text">
-                            <input type="radio" name="val">
+                            </svg></a></div>
+                        <div class="col-xl-auto"><a class="checkbox checkbox_type-category tooltip" href="#">
                             <svg class="icon">
                               <use xlink:href="img/icons/baraholka-sprite.svg#ico4"></use>
-                            </svg>
-                          </label>
-                        </div>
-                        <div class="form__item col-xl-auto">
-                          <label class="checkbox checkbox_type-category tooltip" title="text">
-                            <input type="radio" name="val">
+                            </svg></a></div>
+                        <div class="col-xl-auto"><a class="checkbox checkbox_type-category tooltip" href="#">
                             <svg class="icon">
                               <use xlink:href="img/icons/baraholka-sprite.svg#ico5"></use>
-                            </svg>
-                          </label>
-                        </div>
-                        <div class="form__item col-xl-auto">
-                          <label class="checkbox checkbox_type-category tooltip" title="text">
-                            <input type="radio" name="val">
+                            </svg></a></div>
+                        <div class="col-xl-auto"><a class="checkbox checkbox_type-category tooltip" href="#">
                             <svg class="icon">
                               <use xlink:href="img/icons/baraholka-sprite.svg#ico6"></use>
-                            </svg>
-                          </label>
-                        </div>
-                        <div class="form__item col-xl-auto">
-                          <label class="checkbox checkbox_type-category tooltip" title="text">
-                            <input type="radio" name="val">
+                            </svg></a></div>
+                        <div class="col-xl-auto"><a class="checkbox checkbox_type-category tooltip" href="#">
                             <svg class="icon">
-                              <use xlink:href="img/icons/baraholka-sprite.svg#ico7">      </use>
-                            </svg>
-                          </label>
-                        </div>
+                              <use xlink:href="img/icons/baraholka-sprite.svg#ico7">   </use>
+                            </svg></a></div>
                       </div>
                     </div>
                     <div class="form__item col-xl-4 col-sm-6 col-12">
@@ -148,7 +120,7 @@
                 </form>
                 <div class="mb-30">
                   <div class="row">
-                    <div class="baraholka-item col-xl-12 toggle-group">
+                    <div class="baraholka-item col-xl-12">
                       <div class="baraholka-item__container">
                         <div class="row">
                           <div class="col-xl-12">
@@ -169,9 +141,7 @@
                                           <div class="col-xl-auto col-12"><a class="button button_style9 small number-btn" href="tel:79258008080" data-number="+7 925 000-00-00">Показать тел.: +7 925 xxx-xx-xx</a></div>
                                         </div>
                                       </div>
-                                      <div class="col-xl-6 col-sm-12">
-                                        <button class="button button_style1 small">Сообщить о снижении цены</button>
-                                      </div>
+                                      <div class="col-xl-6 col-sm-12"><a class="button button_style1 small modal-link" href="javascript:;" data-src="#email">Сообщить о снижении цены</a></div>
                                       <div class="col-xl-6 col-sm-12"><a class="button button_style4 small" href="#">Подробнее </a></div>
                                     </div>
                                   </div>
@@ -242,6 +212,55 @@
               </div>
             </div>
             <button class="share-area__close"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <!--email-->
+        <div class="popup popup1" id="email">
+          <div class="popup__container">
+            <div class="popup1__head"><span class="popup1__title">Укажите ваш e-mail:</span></div>
+            <div class="popup1__content">
+              <form class="form" action="">
+                <div class="form__section">
+                  <input class="input input_style4" type="email" placeholder="e-mail:" required>
+                </div>
+                <div class="form__section">
+                  <button class="button button_style4" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--жалоба-->
+        <div class="popup popup1" id="complaint">
+          <div class="popup__container">
+            <div class="popup1__head"><span class="popup1__title">Укажите причину жалобы:</span></div>
+            <div class="popup1__content">
+              <form class="form" action="">
+                <div class="form__section row">
+                  <div class="form__input col-xl-auto">
+                    <label class="checkbox">
+                      <input type="radio" name="val"><i class="fas fa-check"></i><span>Нет в наличии</span>
+                    </label>
+                  </div>
+                  <div class="form__input col-xl-auto">
+                    <label class="checkbox">
+                      <input type="radio" name="val"><i class="fas fa-check"></i><span>Не верная цена</span>
+                    </label>
+                  </div>
+                  <div class="form__input col-12">
+                    <label class="checkbox toggle-checkbox">
+                      <input type="radio" name="val"><i class="fas fa-check"></i><span>Другое</span>
+                    </label>
+                  </div>
+                  <div class="form__input col-12 toggle-item">
+                    <textarea class="input input_style4 input_size2" placeholder="Опишите причину:"></textarea>
+                  </div>
+                </div>
+                <div class="form__section">
+                  <button class="button button_style4" type="submit">Отправить жалобу</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         <!--regisrtation-->

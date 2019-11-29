@@ -9,6 +9,45 @@
         #ok_shareWidget.share-area__item
     button.share-area__close
       i.fas.fa-times
+//email
+.popup.popup1(id="email")
+  .popup__container
+    .popup1__head
+      span.popup1__title Укажите ваш e-mail:
+    .popup1__content
+      form(action="").form
+        .form__section
+          input(type="email" placeholder="e-mail:" required).input.input_style4
+        .form__section
+          button(type='submit').button.button_style4 Отправить
+//жалоба
+.popup.popup1(id="complaint")
+  .popup__container
+    .popup1__head
+      span.popup1__title Укажите причину жалобы:
+    .popup1__content
+      form(action="").form
+        .form__section.row
+          .form__input.col-xl-auto
+            label.checkbox
+              input(type="radio" name="val")
+              i.fas.fa-check
+              span Нет в наличии
+          .form__input.col-xl-auto
+            label.checkbox
+              input(type="radio" name="val")
+              i.fas.fa-check
+              span Не верная цена
+          .form__input.col-12
+            label.checkbox.toggle-checkbox
+              input(type="radio" name="val")
+              i.fas.fa-check
+              span Другое
+          .form__input.col-12.toggle-item
+            textarea.input.input_style4.input_size2(placeholder="Опишите причину:")
+        .form__section
+          button(type='submit').button.button_style4 Отправить жалобу
+
 //regisrtation
 .popup.popup1(id="registration")
   .popup__container

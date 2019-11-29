@@ -1,5 +1,5 @@
 mixin item()
-  .baraholka-item.col-xl-12
+  .baraholka-item.col-xl-12.toggle-group
     .baraholka-item__container
       .row
         .col-xl-12
@@ -68,10 +68,10 @@ mixin item()
                 span.c-gray Частное лицо на БАРАХОЛКЕ с 03. 2010
               .row
                 .col-xl-12
-                  a(href="#").button.button_style1.small
+                  a(href="javascript:;" data-src="#email").button.button_style1.small.modal-link
                     | Сообщить о снижении цены
                 .col-xl-6.col-12
-                  a(href="#").button.button_style9.small Пожаловаться
+                  a(href="javascript:;" data-src="#complaint").button.button_style9.small.modal-link Пожаловаться
                 .col-xl-6.col-12
                   a(href="#").button.button_style1.small.toggle-button(data-hide-text='Свернуть карту' data-show-text='Показать на карте') Показать на карте
             .col-xl-12.toggle-content

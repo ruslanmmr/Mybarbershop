@@ -38,46 +38,39 @@ html(lang="ru")
                     .form__group.col-xl-12
                       span.item-label Категория:
                       .row
-                        .form__item.col-xl-auto
-                          label(title='text').checkbox.checkbox_type-category.tooltip
-                            input(type="radio" name='val')
+                        .col-xl-auto
+                          a(href="#").checkbox.checkbox_type-category.tooltip
                             svg.icon
                               use(xlink:href="img/icons/baraholka-sprite.svg#ico1")
-                        .form__item.col-xl-auto
-                          label(title='text').checkbox.checkbox_type-category.tooltip
-                            input(type="radio" name='val')
+                        .col-xl-auto
+                          a(href="#").checkbox.checkbox_type-category.tooltip.active
                             svg.icon
                               use(xlink:href="img/icons/baraholka-sprite.svg#ico2")
-                        .form__item.col-xl-auto
-                          label(title='text').checkbox.checkbox_type-category.tooltip
-                            input(type="radio" name='val')
+                        .col-xl-auto
+                          a(href="#").checkbox.checkbox_type-category.tooltip
                             svg.icon
                               use(xlink:href="img/icons/baraholka-sprite.svg#ico3")
-                        .form__item.col-xl-auto
-                          label(title='text').checkbox.checkbox_type-category.tooltip
-                            input(type="radio" name='val')
+                        .col-xl-auto
+                          a(href="#").checkbox.checkbox_type-category.tooltip
                             svg.icon
                               use(xlink:href="img/icons/baraholka-sprite.svg#ico4")
-                        .form__item.col-xl-auto
-                          label(title='text').checkbox.checkbox_type-category.tooltip
-                            input(type="radio" name='val')
+                        .col-xl-auto
+                          a(href="#").checkbox.checkbox_type-category.tooltip
                             svg.icon
                               use(xlink:href="img/icons/baraholka-sprite.svg#ico5")
-                        .form__item.col-xl-auto
-                          label(title='text').checkbox.checkbox_type-category.tooltip
-                            input(type="radio" name='val')
+                        .col-xl-auto
+                          a(href="#").checkbox.checkbox_type-category.tooltip
                             svg.icon
                               use(xlink:href="img/icons/baraholka-sprite.svg#ico6")
-                        .form__item.col-xl-auto
-                          label(title='text').checkbox.checkbox_type-category.tooltip
-                            input(type="radio" name='val')
+                        .col-xl-auto
+                          a(href="#").checkbox.checkbox_type-category.tooltip
                             svg.icon
-                              use(xlink:href="img/icons/baraholka-sprite.svg#ico7")       
+                              use(xlink:href="img/icons/baraholka-sprite.svg#ico7")    
                     .form__item.col-xl-4.col-sm-6.col-12
                       button.button.button_style4 Найти  
                 .mb-30
                   .row
-                    .baraholka-item.col-xl-12.toggle-group
+                    .baraholka-item.col-xl-12
                       .baraholka-item__container
                         .row
                           .col-xl-12
@@ -101,7 +94,7 @@ html(lang="ru")
                                           .col-xl-auto.col-12
                                             a(href="tel:79258008080" data-number='+7 925 000-00-00').button.button_style9.small.number-btn Показать тел.: +7 925 xxx-xx-xx
                                       .col-xl-6.col-sm-12
-                                        button.button.button_style1.small
+                                        a(href="javascript:;" data-src="#email").button.button_style1.small.modal-link
                                           | Сообщить о снижении цены
                                       .col-xl-6.col-sm-12
                                         a(href="#").button.button_style4.small
