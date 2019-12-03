@@ -16,6 +16,9 @@ $(document).ready(function () {
   toggleblocks();
   tabs();
   select();
+  if($dateSlider.elem.length>0) {
+    $dateSlider.init();
+  }
 });
 
 $(window).resize(function () {
@@ -705,3 +708,134 @@ function select() {
   }
   
 }
+
+
+let $dateSlider = {
+  elem: $('.date-slider__slider'),
+  slide: $('.date-slider-item'),
+  loader: $('.date-slider-loader'),
+  nextSlideControl: $('.date-slider__content .date-slider__next-m'),
+  prevSlideControl: $('.date-slider__content .date-slider__prev-m'),
+  nextMControl: $('.date-slider__head .date-slider__next-m'),
+  prevMControl: $('.date-slider__head .date-slider__prev-m'),
+  firstInit: true,
+  inload: true,
+  changeMonth: function(direction) {
+    this.inload = true;
+    $dateSlider.loader.addClass('visible');
+    $dateSlider.elem.removeClass('visible');
+    setTimeout(() => {
+      this.elem.slick('unslick');
+      this.elem.remove();
+      if(direction=='next') {
+        $dateSlider.elem.trigger('next');
+      } else {
+        $dateSlider.elem.trigger('prev');
+      }
+    }, 500)
+  },
+  init: function() {
+    if(this.firstInit==true) {
+      this.nextMControl.on('click', function() {
+        if($dateSlider.inload==false) {
+          $dateSlider.changeMonth('next');
+        }
+      })
+      this.prevMControl.on('click', function() {
+        if($dateSlider.inload==false) {
+          $dateSlider.changeMonth('prev');
+        }
+      })
+      this.prevSlideControl.on('click', function() {
+        if($('.slick-slide:first-child').hasClass('slick-active') && $dateSlider.inload == false) {
+          $dateSlider.changeMonth('prev');
+        } else {
+          $dateSlider.elem.slick('slickPrev')
+        }
+      })
+      this.nextSlideControl.on('click', function(event) {
+        event.preventDefault()
+        console.log($('.slick-slide:last-child'))
+        if($('.slick-slide:last-child').hasClass('slick-active') && $dateSlider.inload == false) {
+          $dateSlider.changeMonth('next');
+        } else {
+          $dateSlider.elem.slick('slickNext')
+        }
+      })
+    }
+
+    this.elem.on('edge', function(event, slick, direction){
+      if($dateSlider.inload == false) {
+        if(direction=='right') {
+          $dateSlider.changeMonth('prev');
+        } else if(direction=='left' && $('.slick-slide:last-child').hasClass('slick-active')) {
+          $dateSlider.changeMonth('next');
+        }
+      }
+    });
+    this.elem.on('init', function(){
+      if($dateSlider.inload == true) {
+        $dateSlider.loader.removeClass('visible');
+        $dateSlider.inload = false;
+      }
+      $dateSlider.elem.addClass('visible');
+    }); 
+    this.elem.slick({
+      infinite: false,
+      dots: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 12,
+      slidesToScroll: 5,
+      touchThreshold: 10,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 10,
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 8,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 6,
+            slidesToScroll: 6
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4
+          }
+        },
+        {
+          breakpoint: 420,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        }
+      ]
+    })
+  },
+  reinit: function() {
+
+  }
+}
+
+//slider date
+/* $dateSlider.elem.on('next', function() {
+  
+})
+$dateSlider.elem.on('prev', function() {
+  
+})
+
+$dateSlider.init(); */
