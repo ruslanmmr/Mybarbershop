@@ -325,7 +325,6 @@ function slider() {
         navitem.on('click', function(event) {
           event.preventDefault();
           slideIndex = $(this).parent().index();
-          console.log(slideIndex)
           slider.slick('slickGoTo', slideIndex);
           pag();
         });
@@ -695,7 +694,6 @@ function tabs() {
     $(this).addClass('active');
     $tabBlock.find('.tab-block__tab').hide()
     $tabBlock.find('.tab-block__tab').eq(order).fadeIn(200);
-    console.log(order)
   })
 }
 
@@ -726,7 +724,7 @@ let $dateSlider = {
     $dateSlider.elem.removeClass('visible');
     setTimeout(() => {
       this.elem.slick('unslick');
-      this.elem.remove();
+      this.slide.remove();
       if(direction=='next') {
         $dateSlider.elem.trigger('next');
       } else {
@@ -755,7 +753,6 @@ let $dateSlider = {
       })
       this.nextSlideControl.on('click', function(event) {
         event.preventDefault()
-        console.log($('.slick-slide:last-child'))
         if($('.slick-slide:last-child').hasClass('slick-active') && $dateSlider.inload == false) {
           $dateSlider.changeMonth('next');
         } else {
@@ -824,18 +821,15 @@ let $dateSlider = {
         }
       ]
     })
-  },
-  reinit: function() {
-
   }
 }
 
 //slider date
 /* $dateSlider.elem.on('next', function() {
-  
+  console.log('++')
 })
 $dateSlider.elem.on('prev', function() {
-  
-})
+  console.log('--')
+}) */
 
-$dateSlider.init(); */
+//$dateSlider.init();
