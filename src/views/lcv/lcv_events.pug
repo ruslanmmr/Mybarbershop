@@ -1,0 +1,157 @@
+doctype html
+html(lang="ru")
+  head
+    include ../blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include ../blocks/header
+        .page__container.container
+          aside.aside
+            include ../blocks/lcv-nav
+          main.main
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Добавить событие
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section.row
+                    .form__group.col-xl-3.col-6
+                      .form__item
+                        span.item-label Фото:
+                        .image-load-area
+                          a(href="#").button.button_type-img-load Загрузить<br> изображение
+                          a(href="#").button.button_type-close
+                            i.fas.fa-times
+                    .form__group.col-xl-9.col-12
+                      .row
+                        .form__item.col-xl-6.col-12
+                          span.item-label Название:
+                          input(type="text").input.input_style4
+                        .form__item.col-xl-6.col-12
+                          span.item-label Адрес:
+                          input(type="text").input.input_style4
+                        .form__item.col-xl-6.col-12
+                          span.item-label Дата и время проведения:
+                          input(type="text").input.input_style4
+                        .form__item.col-xl-6.col-12
+                          span.item-label Email:
+                          input(type="email").input.input_style4
+                    .form__group.col-xl-3.col-sm-4.col-12
+                  .form__section
+                    //организатор
+                    .form__item.mb-30
+                      span.item-label Ведущий:
+                      .row
+                        .col-xl-3.col-6
+                          .image-load-area
+                            a(href="#").button.button_type-img-load.big Загрузить<br> фото
+                            a(href="#").button.button_type-close
+                              i.fas.fa-times
+                        .col-xl-9.col-12
+                          .row
+                            .form__item.col-xl-12
+                              input(type="text" placeholder="ФИО").input.input_style4
+                            .form__item.col-xl-12
+                              textarea(placeholder="Описание").input.input_style4.input_size2
+                        .col-xl-3.col-12
+                          button.button.button_style9.small Удалить
+                    .row
+                      .col-xl-4.col-sm-6.col-12
+                        button.button.button_style7
+                          i.fas.fa-plus
+                          | Добавить
+                  .form__section
+                    .mb-30
+                      .row
+                        //мастер
+                        .form__item.col-xl-3.col-12
+                          span.item-label Приглашенный мастер:
+                          .row.row_compact
+                            .col-12
+                              .image-load-area
+                                a(href="#").button.button_type-img-load Загрузить<br> фото
+                                a(href="#").button.button_type-close
+                                  i.fas.fa-times
+                            .col-xl-12
+                              input(type="text" placeholder="ФИО").input.input_style4
+                            .col-xl-12
+                              button.button.button_style9.small Удалить
+                        //мастер
+                        .form__item.col-xl-3.col-12
+                          span.item-label Приглашенный мастер:
+                          .row.row_compact
+                            .col-12
+                              .image-load-area
+                                a(href="#").button.button_type-img-load Загрузить<br> фото
+                                a(href="#").button.button_type-close
+                                  i.fas.fa-times
+                            .col-xl-12
+                              input(type="text" placeholder="ФИО").input.input_style4
+                            .col-xl-12
+                              button.button.button_style9.small Удалить
+                        .form__item.col-xl-3.col-12
+                          span.item-label Приглашенный мастер:
+                          .row.row_compact
+                            .col-12
+                              .image-load-area
+                                a(href="#").button.button_type-img-load Загрузить<br> фото
+                                a(href="#").button.button_type-close
+                                  i.fas.fa-times
+                            .col-xl-12
+                              input(type="text" placeholder="ФИО").input.input_style4
+                            .col-xl-12
+                              button.button.button_style9.small Удалить
+                    .form__item.row   
+                      .col-xl-4.col-sm-6.col-12
+                        button.button.button_style7
+                          i.fas.fa-plus
+                          | Добавить
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Опубликовать
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Мои события
+                  span.decoration
+              .container
+                .row
+                  .training-item.col-xl-6.col-md-12
+                    .training-item__container
+                      .row
+                        .col-xl-12
+                          .row
+                            .training-item__image.col-xl-4.col-sm-4.col-12
+                              .cover-box
+                                img(data-src="img/gallery/news.jpg", alt="").lazy
+                            .training-item__content.col-xl-8.col-sm-8.col-12
+                              h6.training-item__title.t-size-18 «Повышение квалификации»
+                              ul.training-item__list
+                                li.training-item__item Организатор: 
+                                  strong TOPGUN
+                                li.training-item__item Адрес проведения: м. Беляево, улица Миклухо-Маклая, 40к1
+                                li.training-item__item Время проведения: 
+                                  strong 14:00 - 18:00
+                              .training-item__buttons
+                                .row
+                                  .col-xl-6.col-sm-12
+                                    button.button.button_style9.small
+                                      i.far.fa-trash-alt
+                                      | Удалить
+                                  .col-xl-6.col-sm-12
+                                    a(href="").button.button_style1.small
+                                      | Редактировать
+        //footer
+        include ../blocks/footer
+        //other
+        include ../blocks/popup
+        include ../blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

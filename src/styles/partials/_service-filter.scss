@@ -5,6 +5,9 @@
 }
 .service-filter-form {
   color: #7e8084;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
   .search {
     flex: 1 1 50%;
   }

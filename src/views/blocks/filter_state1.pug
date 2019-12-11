@@ -1,40 +1,45 @@
 .service-filter
   .service-filter__container
-    .service-filter-form
-      .service-filter-form__section.service-filter-form__section_search
-        .search
-          input(type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required).input.input_style1.search__input
-          button.search__button
-            i.fas.fa-search
-      .service-filter-form__section.service-filter-form__section_filter
-        .service-filter-form__container
-          .service-filter-form__title Режим работы:
-          .service-filter-form__content
-            .service-filter-value
-              label.checkbox.label.label_style1.label_value1
-                .service-filter-value__title с утра
-                input(type="checkbox")
-            .service-filter-value
-              label.checkbox.label.label_style1.label_value2
-                .service-filter-value__title до поздна
-                input(type="checkbox")
-            .service-filter-value
-              label.checkbox.label.label_style1.label_value3
-                .service-filter-value__title круглосуточно
-                input(type="checkbox")
-        span.service-filter-form__decoration
-        .service-filter-form__container
-          .service-filter-form__title Стоимость услуг:
-          .service-filter-form__content
-            .service-filter-value
-              label.checkbox(title='от 100 до 550р').label.label_style2.label_value4.tooltip
-                .service-filter-value__title Premium
-                input(type="checkbox")
-            .service-filter-value
-              label.checkbox(title='от 550 до 1000р').label.label_style2.label_value5.tooltip
-                .service-filter-value__title Standard
-                input(type="checkbox")
-            .service-filter-value
-              label.checkbox(title='от 1000р').label.label_style2.label_value6.tooltip
-                .service-filter-value__title Economy
-                input(type="checkbox")
+    form.service-filter-form
+      .container
+        .service-filter-form__section.service-filter-form__section_search
+          .search
+            input(type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required).input.input_style1.search__input
+            button.search__button
+              i.fas.fa-search
+        .service-filter-form__section.service-filter-form__section_filter
+          .service-filter-form__container
+            .service-filter-form__title Режим работы:
+            .service-filter-form__content
+              .service-filter-value
+                label.checkbox.label.label_style1.label_value1
+                  .service-filter-value__title с утра
+                  input(type="checkbox")
+              .service-filter-value
+                label.checkbox.label.label_style1.label_value2
+                  .service-filter-value__title до поздна
+                  input(type="checkbox")
+              .service-filter-value
+                label.checkbox.label.label_style1.label_value3
+                  .service-filter-value__title круглосуточно
+                  input(type="checkbox")
+          span.service-filter-form__decoration
+          .service-filter-form__container
+            .service-filter-form__title Стоимость услуг:
+            .service-filter-form__content
+              .service-filter-value
+                label.checkbox(title='от 100 до 550р').label.label_style2.label_value4.tooltip
+                  .service-filter-value__title Premium
+                  input(type="checkbox")
+              .service-filter-value
+                label.checkbox(title='от 550 до 1000р').label.label_style2.label_value5.tooltip
+                  .service-filter-value__title Standard
+                  input(type="checkbox")
+              .service-filter-value
+                label.checkbox(title='от 1000р').label.label_style2.label_value6.tooltip
+                  .service-filter-value__title Economy
+                  input(type="checkbox")
+    include map
+
+
+  

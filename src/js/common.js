@@ -16,7 +16,7 @@ $(document).ready(function () {
   toggleblocks();
   tabs();
   select();
-  if($dateSlider.elem.length>0) {
+  if($('.date-slider').length>0) {
     $dateSlider.init();
   }
 });
@@ -707,33 +707,23 @@ function select() {
   
 }
 
-
 let $dateSlider = {
-  elem: $('.date-slider__slider'),
-  slide: $('.date-slider-item'),
+  parent: $('.date-slider'),
+  element: $('.date-slider__slider'),
+  month: $('.date-slider__month'),
   loader: $('.date-slider-loader'),
   nextSlideControl: $('.date-slider__content .date-slider__next-m'),
   prevSlideControl: $('.date-slider__content .date-slider__prev-m'),
   nextMControl: $('.date-slider__head .date-slider__next-m'),
   prevMControl: $('.date-slider__head .date-slider__prev-m'),
-  firstInit: true,
-  inload: true,
-  changeMonth: function(direction) {
-    this.inload = true;
-    $dateSlider.loader.addClass('visible');
-    $dateSlider.elem.removeClass('visible');
-    setTimeout(() => {
-      this.elem.slick('unslick');
-      this.slide.remove();
-      if(direction=='next') {
-        $dateSlider.elem.trigger('next');
-      } else {
-        $dateSlider.elem.trigger('prev');
-      }
-    }, 500)
-  },
+  inload: false,
+  firstLoad: true,
   init: function() {
-    if(this.firstInit==true) {
+    this.slide = $('.date-slider-item');
+    this.element = $('.date-slider__slider');
+    if(this.firstLoad==true) {
+      this.firstLoad=false;
+      //events
       this.nextMControl.on('click', function() {
         if($dateSlider.inload==false) {
           $dateSlider.changeMonth('next');
@@ -748,36 +738,33 @@ let $dateSlider = {
         if($('.slick-slide:first-child').hasClass('slick-active') && $dateSlider.inload == false) {
           $dateSlider.changeMonth('prev');
         } else {
-          $dateSlider.elem.slick('slickPrev')
+          $dateSlider.element.slick('slickPrev')
         }
       })
-      this.nextSlideControl.on('click', function(event) {
-        event.preventDefault()
+      this.nextSlideControl.on('click', function() {
         if($('.slick-slide:last-child').hasClass('slick-active') && $dateSlider.inload == false) {
           $dateSlider.changeMonth('next');
         } else {
-          $dateSlider.elem.slick('slickNext')
+          $dateSlider.element.slick('slickNext')
         }
       })
-    }
-
-    this.elem.on('edge', function(event, slick, direction){
-      if($dateSlider.inload == false) {
-        if(direction=='right') {
-          $dateSlider.changeMonth('prev');
-        } else if(direction=='left' && $('.slick-slide:last-child').hasClass('slick-active')) {
-          $dateSlider.changeMonth('next');
+      this.element.on('edge', function(event, slick, direction){
+        if($dateSlider.inload == false) {
+          if(direction=='right') {
+            $dateSlider.changeMonth('prev');
+          } else if(direction=='left' && $('.slick-slide:last-child').hasClass('slick-active')) {
+            $dateSlider.changeMonth('next');
+          }
         }
-      }
+      });
+    }
+    //
+    this.element.on('init', function(){
+      $dateSlider.inload = false;
+      $dateSlider.loader.removeClass('visible');
+      $dateSlider.element.addClass('visible');
     });
-    this.elem.on('init', function(){
-      if($dateSlider.inload == true) {
-        $dateSlider.loader.removeClass('visible');
-        $dateSlider.inload = false;
-      }
-      $dateSlider.elem.addClass('visible');
-    }); 
-    this.elem.slick({
+    this.element.slick({
       infinite: false,
       dots: false,
       arrows: false,
@@ -821,15 +808,20 @@ let $dateSlider = {
         }
       ]
     })
+  },
+  changeMonth: function(direction) {
+    this.inload = true;
+    $dateSlider.loader.addClass('visible');
+    $dateSlider.element.removeClass('visible');
+    setTimeout(() => {
+      this.element.slick('unslick');
+      this.slide.remove();
+      if(direction=='next') {
+        $dateSlider.parent.trigger('next');
+      } else {
+        $dateSlider.parent.trigger('prev');
+      }
+    }, 500)
   }
 }
 
-//slider date
-/* $dateSlider.elem.on('next', function() {
-  console.log('++')
-})
-$dateSlider.elem.on('prev', function() {
-  console.log('--')
-}) */
-
-//$dateSlider.init();

@@ -86,6 +86,7 @@
     position: relative;
     z-index: 3;
     border-radius: 100%;
+    transform: rotate(-0.35deg);
     &:after {
       content: '';
       display: block;
@@ -140,7 +141,7 @@
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
     white-space: nowrap;
     transition: 0.2s;
@@ -193,6 +194,7 @@
     transition: .2s;
     position: relative;
     line-height: 30px;
+    min-height: 30px;
     span {
       padding: 0 10px 0 25px;
       display: block;

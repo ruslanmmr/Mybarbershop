@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mybarbershop</title>
-    <!--base(href='http://localhost:9000/')-->
-    <base href="https://ruslanmmr.github.io/Mybarbershop/dest/">
+    <base href="http://localhost:9000/">
+    <!--base(href='https://ruslanmmr.github.io/Mybarbershop/dest/')-->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="styles/libs.min.css">
     <link rel="stylesheet" href="styles/common.min.css">
@@ -36,6 +36,7 @@
                   <li class="nav__item"> <a class="nav__link" href="work.html">Ищу работу</a></li>
                   <li class="nav__item"> <a class="nav__link" href="sotrydniki.html">ищу сотрудника</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">барахолка</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">Обучение</a></li>
                 </ul>
               </nav>
               <div class="sub-nav">
@@ -316,6 +317,58 @@
                   </div>
                 </div>
                 <div class="popup1-form__section t-a-center"><a class="button button_style6" href="#">зарегистрироваться</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--получить доступ-->
+        <div class="popup popup1" id="dostup">
+          <div class="popup__container">
+            <div class="popup1__head"><span class="popup1__title">Укажите ваши контактные данные:</span></div>
+            <div class="popup1__content">
+              <form class="form" action="">
+                <div class="form__section">
+                  <div class="row">
+                    <div class="form__input col-xl-12">
+                      <input class="input input_style4" type="text" placeholder="ФИО:" required>
+                    </div>
+                    <div class="form__input col-xl-12">
+                      <input class="input input_style4" type="text" placeholder="Контактный телефон:" required>
+                    </div>
+                    <div class="form__input col-xl-12">
+                      <input class="input input_style4" type="email" placeholder="e-mail:">
+                    </div>
+                  </div>
+                </div>
+                <div class="form__section">
+                  <button class="button button_style4" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--cообщите об ошибке-->
+        <div class="popup popup1" id="oshibka">
+          <div class="popup__container">
+            <div class="popup1__head"><span class="popup1__title">Опишите ошибку:</span></div>
+            <div class="popup1__content">
+              <form class="form" action="">
+                <div class="form__section">
+                  <div class="row">
+                    <div class="form__input col-xl-12">
+                      <input class="input input_style4" type="text" placeholder="Имя:" required>
+                    </div>
+                    <div class="form__input col-xl-12">
+                      <input class="input input_style4" type="text" placeholder="Контактный телефон:" required>
+                    </div>
+                    <div class="form__input col-xl-12">
+                      <textarea class="input input_style4 input_size2" type="email" placeholder="Текст соообщения:"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__section">
+                  <button class="button button_style4" type="submit">Отправить</button>
+                </div>
               </form>
             </div>
           </div>

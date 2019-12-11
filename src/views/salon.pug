@@ -138,7 +138,18 @@ html(lang="ru")
                         span.col-xl-4
                           strong 9000 р.
             include blocks/place
-            include blocks/news-module
+            //или right
+            .brbr-info-section.left
+              .container
+                .brbr-info-section__container
+                  span.brbr-info-section__title.t-size-18 Вы владелец?
+                  .row
+                    .brbr-info-section__item.col-xl-3
+                      a(href="javascript:;" data-src="#dostup").button.button_style4.small.modal-link
+                        | Получить доступ
+                    .brbr-info-section__item.col-xl-3
+                      a(href="javascript:;" data-src="#oshibka").button.button_style1.small.modal-link
+                        | Cообщить об ошибке
         //footer
         include blocks/footer
         //other

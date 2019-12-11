@@ -47,7 +47,6 @@
             textarea.input.input_style4.input_size2(placeholder="Опишите причину:")
         .form__section
           button(type='submit').button.button_style4 Отправить жалобу
-
 //regisrtation
 .popup.popup1(id="registration")
   .popup__container
@@ -167,3 +166,37 @@
                     i.fab.fa-yandex
         .popup1-form__section.t-a-center
           a(href="#").button.button_style6 зарегистрироваться
+//получить доступ
+.popup.popup1(id="dostup")
+  .popup__container
+    .popup1__head
+      span.popup1__title Укажите ваши контактные данные:
+    .popup1__content
+      form(action="").form
+        .form__section
+          .row
+            .form__input.col-xl-12
+              input(type="text" placeholder="ФИО:" required).input.input_style4
+            .form__input.col-xl-12
+              input(type="text" placeholder="Контактный телефон:" required).input.input_style4
+            .form__input.col-xl-12
+              input(type="email" placeholder="e-mail:").input.input_style4
+        .form__section
+          button(type='submit').button.button_style4 Отправить
+//cообщите об ошибке
+.popup.popup1(id="oshibka")
+  .popup__container
+    .popup1__head
+      span.popup1__title Опишите ошибку:
+    .popup1__content
+      form(action="").form
+        .form__section
+          .row
+            .form__input.col-xl-12
+              input(type="text" placeholder="Имя:" required).input.input_style4
+            .form__input.col-xl-12
+              input(type="text" placeholder="Контактный телефон:" required).input.input_style4
+            .form__input.col-xl-12
+              textarea(type="email" placeholder="Текст соообщения:").input.input_style4.input_size2
+        .form__section
+          button(type='submit').button.button_style4 Отправить

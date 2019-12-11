@@ -130,6 +130,7 @@ a {
     }
     &.small {
       line-height: 28px;
+      font-size: 14px;
     }
   }
   &_style2 {
@@ -160,6 +161,7 @@ a {
       white-space: normal;
       line-height: 20px;
       padding: 5px 15px;
+      font-size: 14px;
     }
   }
   &_style5 {
@@ -202,6 +204,13 @@ a {
     padding: 15px;
     line-height: $line-height-main;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &.big {
+      height: 150px;
+    }
     &:hover {
       color: $gray-color3;
     }
@@ -230,6 +239,7 @@ a {
     }
     &.small {
       line-height: 28px;
+      font-size: 14px;
     }
   }
   &_style8 {
@@ -263,6 +273,7 @@ a {
     }
     &.small {
       line-height: 30px;
+      font-size: 14px;
     }
   }
   &_style10 {
@@ -276,6 +287,7 @@ a {
     }
     &.small {
       line-height: 30px;
+      font-size: 14px;
     }
     &.active {
       color: $orange-color1;
@@ -378,7 +390,29 @@ a {
   fill: #000;
   transition: 0.2s;
 }
-
+.brbr-info-section {
+  &.left {
+    text-align: left;
+    .row {
+      justify-content: flex-start;
+    }
+  }
+  &.right {
+    text-align: right;
+    .row {
+      justify-content: flex-end;
+    }
+  }
+  &__title {
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__container {
+    //padding: 15px;
+    border-radius: 4px;
+    //border: 1px solid $orange-color1;
+  }
+}
 //select
 .select {
   background-color: #fff;
@@ -1238,6 +1272,7 @@ a {
   }
 }
 .date-slider-loader {
+  pointer-events: none;
   position: absolute;
   width: 200px;
   height: auto;
@@ -2018,6 +2053,9 @@ a {
       justify-content: flex-end;
     }
   }
+  &__time {
+    margin-bottom: 10px;
+  }
   &__image {
     width: 174px;
     margin: 0 auto;
@@ -2042,6 +2080,7 @@ a {
     display: block;
     padding-left: 25px;
     position: relative;
+    margin-bottom: 10px;
     i {
       position: absolute;
       left: 0;
@@ -2051,7 +2090,6 @@ a {
       margin-top: 2px;
     }
   }
-  .button,
   .socials {
     margin-top: 10px;
   }
