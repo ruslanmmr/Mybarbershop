@@ -11,7 +11,7 @@ $(document).ready(function () {
   checkboxCheck();
   fadeInWindows();
   scrollbar();
-  searchCity();
+  //searchCity();
   funcybox();
   toggleblocks();
   tabs();

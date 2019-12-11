@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            //окошко
+            section.section
+              .map-window
+                .map-window__left
+                  a(href="#").map-window__logo
+                    img(src="img/logos/topgun.png" alt="topgun")
+                  a(href="#").map-window__link подробнее
+                .map-window__right
+                  span.map-window__title Topgun
+                  p.map-window__text м. Ясенево, Новоясеневский проспект, 9
+                  span.map-window__time часы работы<br> 10-10
+            //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
