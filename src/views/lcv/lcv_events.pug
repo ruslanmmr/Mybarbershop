@@ -41,7 +41,18 @@ html(lang="ru")
                         .form__item.col-xl-6.col-12
                           span.item-label Email:
                           input(type="email").input.input_style4
-                    .form__group.col-xl-3.col-sm-4.col-12
+                    .form__group.col-xl-12
+                      .row
+                        .form__item.col-xl-3.col-sm-4.col-12
+                          span.item-label Тип события:
+                          .select
+                            select
+                              option(value="") 2222
+                              option(value="") 192290
+                              option(value="") 199331
+                        .form__item.col-xl-9.col-sm-8.col-12
+                          span.item-label Место проведения: переместите маркер на карте в нужное место:
+                          include ../blocks/map
                   .form__section
                     //организатор
                     .form__item.mb-30

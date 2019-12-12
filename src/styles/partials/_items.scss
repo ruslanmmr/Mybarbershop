@@ -193,6 +193,9 @@ a {
     align-items: center;
     padding: 0;
     color: $gray-color1;
+    i {
+      margin: 0 !important;
+    }
     &:hover {
       color: $gray-color2;
     }
