@@ -37,6 +37,13 @@
       padding-top: 34%;
     }
   }
+  &_size3 {
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 50%;
+    }
+  }
   /* 
   &__background {
     position: absolute;

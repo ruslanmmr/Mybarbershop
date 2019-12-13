@@ -36,6 +36,11 @@
     margin-bottom: 30px;
   }
 }
+.mb-50 {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
 .mb-20 {
   &:not(:last-child) {
     margin-bottom: 20px;

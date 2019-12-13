@@ -1,0 +1,42 @@
+doctype html
+html(lang="ru")
+  head
+    include ../blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include ../blocks/header
+        .page__container.container
+          aside.aside
+            include ../blocks/lcv-nav
+          main.main
+            .banner.banner_size3.mb-30.lazy(data-src='img/banner/buh.jpg')
+            .container
+              .mb-30
+                p Наша компания оказывает бухгалтерские услуги предпринимателям на любой системе налогообложения. Упрощенка, Патент или ОСНО – вы останетесь довольны качеством обслуживания.
+                p Для вашего удобства разработаны готовые тарифы на бухгалтерское сопровождение ИП и ООО. Стоимость обслуживания напрямую зависит от размера компании и сложности бухгалтерии. Если готовые варианты вас не устроят, мы сконструируем индивидуальный тариф с учетом особенностей бизнеса.
+              .mb-30
+                .mb-20
+                  .f-w-b.t-t-u.c-main.t-size-18 Бухгалтерский и налоговый учет еще не оптимизирован?
+                  p.p-l Проанализируем бизнес модель и поможем подобрать систему налогообложения.
+                .mb-20
+                  .f-w-b.t-t-u.c-main.t-size-18 Прошлый бухгалтер допустил массу ошибок?
+                  p.p-l Произведем правки прошлых периодов.
+                .mb-20
+                  .f-w-b.t-t-u.c-main.t-size-18 Бухучет не удовлетворяет текущие потребности?
+                  p.p-l Проанализируем, разработаем документы, наладим документооборот.
+                .mb-20
+                  .f-w-b.t-t-u.c-main.t-size-18 Сменили аутсорсинговую компанию?
+                  p.p-l Подхватим дела и быстро включимся в работу.
+              .row
+                .col-xl-4.col-sm-6.col-12
+                  a(href="javascript:;" data-src="#dostup").button.button_style4.modal-link Оставить заявку
+        //footer
+        include ../blocks/footer
+        //other
+        include ../blocks/popup
+        include ../blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

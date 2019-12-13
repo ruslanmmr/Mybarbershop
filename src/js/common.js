@@ -637,6 +637,24 @@ function checkboxCheck() {
       }
     }
   })
+  
+  if($('.kate-check-block').length>0) {
+    totalPrice()
+  }
+}
+function totalPrice() {
+  let totalVal = 0,
+      $totalVal = $('.form__total-price span'),
+      $item = $('.kate-check-block');
+
+  $item.each(function() {
+    if($(this).find('input').prop('checked') ) {
+      totalVal = totalVal+(+$(this).find('input').data('price'));
+    }
+  })
+
+  $totalVal.text(totalVal + ' р.');
+  $('.total-price').val(totalVal + ' р.');
 }
 
 //toggle
