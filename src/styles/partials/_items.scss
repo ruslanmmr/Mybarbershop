@@ -1977,7 +1977,7 @@ a {
     transition: 0.2s;
   }
   &__image {
-    height: 280px;
+    height: 290px;
     display: block;
     flex-shrink: 0;
     &:hover {
@@ -1989,13 +1989,12 @@ a {
   &__text {
     background-color: rgba(12, 17, 21, 0.7);
     padding: 20px;
-    height: calc(100% - 280px);
+    height: calc(100% - 290px);
   }
   &__title {
     font-weight: 800;
     margin: 0;
     font-size: 26px;
-    line-height: 1.1;
     display: block;
     color: $orange-color1;
   }
@@ -2168,6 +2167,20 @@ a {
   &__title {
     color: $orange-color1;
     margin-top: -0.2em;
+  }
+  &__s-image {
+    .cover-box {
+      transition: .25s;
+      border-radius: 4px;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 60%;
+      }
+    }
   }
 }
 .rating-module {

@@ -127,6 +127,10 @@
   min-width: 220px;
   padding: 10px 0 0 0;
   box-shadow: $shadow;
+  .nicescroll-rails {
+    left: auto !important;
+    right: 0 !important;
+  }
   &__triangle {
     position: absolute;
     top: 0px;
@@ -177,7 +181,8 @@
     padding: 0;
     list-style: none;
   }
-  &__item {
+  &__item,
+  .reaspektSearchCity {
     display: block;
     border-bottom: 1px solid $gray-color1;
     color: #fff;
@@ -186,13 +191,23 @@
       display: block;
     }
   }
-  &__link {
+  .reaspektNotFound {
+    pointer-events: none;
+    border-bottom: 1px solid $gray-color1;
+    color: $gray-color1 !important;
+  }
+  &__link,
+  .reaspektSearchCity a,
+  .reaspektNotFound {
     text-decoration: none;
     display: block;
     color: inherit;
-    padding: 10px;
-    line-height: 1;
+    padding: 7px 10px;
+    line-height: 20px;
     transition: 0.2s;
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     &:hover {
       color: $orange-color1;
     }

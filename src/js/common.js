@@ -42,7 +42,7 @@ let windowW = Math.max(window.innerWidth, document.documentElement.clientWidth),
     $scroll = $('.scroll-area');
 
 function scrollbar() {
-  $('.scroll-area').niceScroll({
+  $scroll.niceScroll({
     cursorcolor: "#fff",
     cursorwidth: "5px",
     cursorborder: "0",
@@ -51,6 +51,9 @@ function scrollbar() {
     bouncescroll: false,
     autohidemode: false
   });
+  setInterval(function() {
+    $scroll.getNiceScroll().resize();
+  }, 100)
 }
 
 //поиск
