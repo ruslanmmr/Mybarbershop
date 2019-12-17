@@ -575,10 +575,10 @@ function funcybox() {
   $.fancybox.defaults.animationEffect = 'fade'
   $.fancybox.defaults.backFocus = 'false'
 
-  $(".popup-link").fancybox({
+  /* $(".popup-link").fancybox({
     autoFocus: false,
     loop: true
-  });
+  }); */
   
   $(".modal-link").fancybox({
     autoFocus: false,
@@ -596,6 +596,7 @@ function funcybox() {
 
     return false;
   });
+  
 }
 
 
@@ -627,6 +628,7 @@ function checkbox() {
 //в остальных ситуация для изменения вида чекбоксов выполняется эта функция
 function checkboxCheck() {
   $checkbox = $('.checkbox');
+
   $checkbox.each(function() {
     if($(this).find('input').prop('checked') || $('#' + $(this).attr('for')).prop('checked')) {
       $(this).addClass('checked');
@@ -643,8 +645,11 @@ function checkboxCheck() {
   
   if($('.kate-check-block').length>0) {
     totalPrice()
+    console.log('++')
   }
 }
+
+
 function totalPrice() {
   let totalVal = 0,
       $totalVal = $('.form__total-price span'),

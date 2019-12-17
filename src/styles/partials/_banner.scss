@@ -11,8 +11,12 @@
   }
   &_type2 {
     margin: 40px 0;
-    .banner-slide {
-      height: 300px;
+    .cover-box {
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 27%;
+      }
     }
   }
   &_type3 {
@@ -44,7 +48,12 @@
       padding-top: 50%;
     }
   }
-  /* 
+  /* <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="248px" height="20px">
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 1.08718701019764, 0, 0, 1.08718701019764,-13.0181788952086, 18.1539025764823)" font-size="22.075px"><tspan font-size="22.075px" font-family="BERNIERShade" fill="#FFFFFF">MYBARBERSHOP&#32;&#1084;&#1086;&#1077;&#32;&#1084;&#1077;&#1089;&#1090;&#1086;</tspan></text>
+</svg>
   &__background {
     position: absolute;
     width: 100%;
@@ -160,7 +169,7 @@
     }
     &_type2 {
       .banner-slide {
-        height: 260px;
+        //height: 260px;
       }
     }
   }
@@ -194,7 +203,7 @@
     }
     &_type2 {
       .banner-slide {
-        height: 170px;
+        //height: 170px;
       }
     }
     &_type3 {

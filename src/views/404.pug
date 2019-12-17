@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            section.section.s404.t-a-center
+              .container
+                span.c-main.t-size-28 ошибка<br> 
+                span.c-main 404
+                span.t-size-42.c-gray Извините,<br> 
+                span.t-size-18.c-gray такой страницы не существует
+                .d-line
+                a(href="#").s404__link.link.t-size-24 MYBARBERSHOP мое место
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

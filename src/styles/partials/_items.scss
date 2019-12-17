@@ -1079,6 +1079,29 @@ a {
 .decorated {
   position: relative;
 }
+.d-line {
+  border-top: 1px dashed $orange-color1;
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: $orange-color1;
+  }
+  &:before {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  &:after {
+    right: 0;
+    transform: translateX(100%);
+  }
+}
 .decoration {
   border-top: 1px dashed $orange-color1;
   width: 50vw;
@@ -2183,6 +2206,41 @@ a {
     }
   }
 }
+.s404 {
+  .d-line {
+    width: 100%;
+    max-width: 420px;
+    margin: 40px 0;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  span {
+    &:first-child {
+      font-size: 30px;
+    }
+    &:nth-child(2) {
+      font-size: 180px;
+      font-weight: 100;
+      line-height: 1;
+      margin-bottom: 0.15em;
+      margin-top: -0.05em;
+    }
+    &:nth-child(3) {
+      font-weight: 700;
+    } 
+  }
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Berniershade';
+    text-shadow: 2px 2px 2px #000000;
+  }
+}
 .rating-module {
   ul {
     margin: 0;
@@ -2797,6 +2855,9 @@ a {
     span:first-child {
       font-size: 24px;
     }
+  }
+  .s404 span:nth-child(2) {
+    font-size: 120px;
   }
 }
 
