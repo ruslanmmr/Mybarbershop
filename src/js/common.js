@@ -207,7 +207,7 @@ function nav() {
 function lazy() {
   $(".lazy").Lazy({
     effectTime: 0,
-    threshold: 500,
+    threshold: 0,
     imageBase: false,
     defaultImage: false,
     afterLoad: function(element) {

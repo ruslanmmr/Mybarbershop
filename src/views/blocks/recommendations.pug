@@ -2,8 +2,8 @@ mixin slide()
   .slide.recommendations-block
     a(href="#").recommendations-block__container
       .recommendations-block__head(style='background-image:url("../img/backgrounds/brand-background.png")')
-        .recommendations-block__image
-          img(alt="")&attributes(attributes)
+        .recommendations-block__image.cover-box.cover-box_contain
+          img.lazy(alt="")&attributes(attributes)
       .recommendations-block__content
         block
 
@@ -16,19 +16,19 @@ section.section.recommendations
   .recommendations__container
     .container
       .slider.slider_arrows.slider_arrows.slider_default.recommendations-slider
-        +slide()(src="img/logos/barbarossa.png")
+        +slide()(data-src="img/logos/barbarossa.png")
           span.recommendations-block__description Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
-        +slide()(src="img/logos/topgun.png")
+        +slide()(data-src="img/logos/topgun.png")
           span.recommendations-block__description Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
-        +slide()(src="img/logos/barbarossa.png")
+        +slide()(data-src="img/logos/barbarossa.png")
           span.recommendations-block__description Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
-        +slide()(src="img/logos/topgun.png")
+        +slide()(data-src="img/logos/topgun.png")
           span.recommendations-block__description Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
-        +slide()(src="img/logos/barbarossa.png")
+        +slide()(data-src="img/logos/barbarossa.png")
           span.recommendations-block__description Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
-        +slide()(src="img/logos/topgun.png")
+        +slide()(data-src="img/logos/topgun.png")
           span.recommendations-block__description Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
-        +slide()(src="img/logos/topgun.png")
+        +slide()(data-src="img/logos/topgun.png")
           span.recommendations-block__description Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16
 
         
