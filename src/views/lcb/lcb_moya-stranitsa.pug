@@ -96,18 +96,28 @@ html(lang="ru")
                         .form__item.col-xl-6.col-12
                           span.item-label Место работы:
                           input(type="text" placeholder="Место работы:").input.input_style4
+                    .form__item.col-xl-12
+                      span.item-label Ссылка:
+                      input(type="text" placeholder="").input.input_style4
                     .form__group.col-xl-12
                       .row
                         .form__item.col-xl-auto
-                          label.checkbox
+                          label.checkbox.toggle-checkbox
                             input(type="checkbox" name="val1")
                             i.fas.fa-check
                             span Готов рассмотреть предложения по работе
-                        .form__item.col-xl-auto
-                          label.checkbox
-                            input(type="checkbox" name="val1")
-                            i.fas.fa-check
-                            span Подработка
+                        .col-xl-12.toggle-item
+                          .row
+                            .form__item.col-xl-3.col-sm-6.col-12
+                              span.item-label Желаемая зарплата:
+                              input(type="text" placeholder="").input.input_style4
+                            .col-xl-3.col-sm-6.col-12
+                              span.item-label Тип занятости:
+                              .select
+                                select
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
                   .form__section.row
                     .form__item.col-xl-4.col-sm-6.col-12
                       button.button.button_style1 Сохранить
