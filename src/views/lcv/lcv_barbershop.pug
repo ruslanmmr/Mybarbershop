@@ -75,37 +75,66 @@ html(lang="ru")
                           span.item-label Название:
                           input(type="text").input.input_style4
                         .form__item.col-xl-6.col-12
-                          span.item-label Адрес:
-                          input(type="text").input.input_style4
-                        .form__item.col-xl-6.col-12
                           span.item-label Сайт:
                           input(type="text").input.input_style4
                         .form__item.col-xl-6.col-12
                           span.item-label Email:
                           input(type="email").input.input_style4
-                    .form__group.col-xl-3.col-sm-4.col-12
+                        .form__item.col-xl-6.col-12
+                          span.item-label Ссылка на онлйн запись:
+                          input(type="text").input.input_style4
+                    .form__group.col-xl-6.col-sm-5.col-12
                       .form__item
                         span.item-label Телефоны:
                         .row
-                          .col-xl-12.col-6
+                          .col-xl-6.col-sm-12.col-6
                             input(type="text" placeholder="+7(***)***-**-**").input.input_style4
-                          .col-xl-12.col-6
+                          .col-xl-6.col-sm-12.col-6
                             input(type="text" placeholder="+7(***)***-**-**").input.input_style4
-                    .form__group.col-xl-9.col-sm-8.col-12
+                    .form__group.col-xl-5.col-lg-6.col-sm-7.col-12
                       .row
                         .form__item.col-xl-12
                           span.item-label Время работы:
                           .row.row_compact
-                            .form__input.col-xl-4.col-sm-6.col-12
+                            .form__input.col-xl
                               span c
                               input(type="text").input.input_style4
                               span до
                               input(type="text").input.input_style4
-                            .form__input.col-xl-8.col-sm-6.col-12
+                            .form__input.col-xl-auto
                               label.checkbox
                                 input(type="checkbox")
                                 i.fas.fa-check
                                 span круглосуточно
+                    .form__group.col-xl-12
+                      .row
+                        .form__group.col-xl-3
+                          .row  
+                            .form__item.col-xl-12
+                              span.item-label ВКонтакте:
+                              input(type="text").input.input_style4
+                            .form__item.col-xl-12
+                              span.item-label Facebook:
+                              input(type="text").input.input_style4
+                            .form__item.col-xl-12
+                              span.item-label Instagram:
+                              input(type="text").input.input_style4
+                            .form__item.col-xl-12
+                              span.item-label Одноклассники:
+                              input(type="text").input.input_style4
+                            .form__item.col-xl-12
+                              span.item-label Twitter:
+                              input(type="text").input.input_style4
+                        .form__group.col-xl-9
+                          .row
+                            .form__item.col-xl-12
+                              span.item-label Адрес*:
+                              input(type="text").input.input_style4
+                            .form__item.col-xl-12
+                              span.item-label Местоположение барбершопа: переместите маркер на карте в нужное место:
+                              .map
+                                .map__container
+                                  div(id='map')
                   .form__section.row
                     .form__group.col-xl-4.col-sm-6.col-12
                       button.button.button_style1 Сохранить
@@ -123,6 +152,7 @@ html(lang="ru")
                       textarea.input.input_style4.input_size1
                     .form__item.col-xl-12
                       span.item-label Ссылка на видео:
+                      span.info-label Допускается вставка видео с сервиса Youtube (видео с других ресурсов не будет размещено) Ссылка должна иметь вид https://www.youtube.com/embed/
                       input(type="text").input.input_style4
                   .form__section.row
                     .form__item.col-xl-4.col-sm-6.col-12

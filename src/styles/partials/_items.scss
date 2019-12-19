@@ -337,6 +337,15 @@ a {
   font-size: 12px;
   line-height: 1;
 }
+.info-label {
+  border-radius: 4px;
+  background-color: rgba(255, 138, 0, 0.2);
+  display: inline-block;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
 .w-out-label {
   padding-top: 20px;
 }
