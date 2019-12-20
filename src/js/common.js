@@ -300,8 +300,16 @@ function slider() {
       slideCount576 = 1;
       slideCount420 = 1;
     }
-    if ($(this).hasClass('banner__slider')) {
+    if ($(this).is('.banner_type1 .banner__slider')) {
       centerMode = true;
+    }
+    if ($(this).is('.banner_type2 .banner__slider')) {
+      slideCount = 2;
+      slideCount1200 = 2;
+      slideCount1024 = 2;
+      slideCount768 = 2;
+      slideCount576 = 1;
+      slideCount420 = 1;
     }
     if ($(this).hasClass('awards-slider')) {
       slideCount = 5;
