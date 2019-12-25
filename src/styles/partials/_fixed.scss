@@ -106,19 +106,25 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 102;
+  z-index: 10000;
   font-weight: 400;
-  padding: 12px 20px;
+  padding: 10px 20px;
   user-select: none;
+  font-size: 14px;
   &_success {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
   }
+  &_alert {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+  }
   &_error {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
   }
 }
 .popup-window {
