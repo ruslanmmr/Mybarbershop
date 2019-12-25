@@ -192,12 +192,15 @@ a {
     justify-content: center;
     align-items: center;
     padding: 0;
-    color: $gray-color1;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0 4px 0 4px;
     i {
       margin: 0 !important;
     }
     &:hover {
-      color: $gray-color2;
+      background-color: rgba(0,0,0,0.8);
+      //background-color: rgba(0,0,0,0.8);
     }
   }
   &_type-img-load {
@@ -214,12 +217,15 @@ a {
     &.big {
       height: 150px;
     }
+    &.size2 {
+      height: 240px;
+    }
     &:hover {
       color: $gray-color3;
     }
   }
   &_type-img-add {
-    height: 103px;
+    height: 100px;
     color: $gray-color2;
     padding: 15px;
     line-height: $line-height-main;
@@ -378,6 +384,44 @@ a {
     }
   }
 }
+//city-list
+.city_list,
+.list_s_bbsh {
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: $shadow;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 0;
+  position: absolute;
+  bottom: 15px; 
+  left: 10px;
+  transform: translateY(100%);
+  transition: 0.2s;
+  list-style: none;
+  z-index: 9;
+  min-width: calc(100% - 20px);
+  max-height: 220px;
+  overflow-y: auto;
+}
+.city_item,
+.bbsh_item {
+  color: #000;
+  cursor: pointer;
+  font-weight: 400;
+  padding: 7px 10px;
+  outline: none;
+  transition: 0.2s;
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-color1;
+  }
+  &:hover {
+    color: $orange-color1;
+    background-color: #f0f0f0;
+  }
+}
+
 .image-load-area {
   position: relative;
   .button_type-close {
@@ -1460,7 +1504,6 @@ a {
     visibility: visible;
   }
 }
-
 .date-slider {
   &__month {
     margin: 0 10px;
@@ -1600,7 +1643,6 @@ a {
     justify-content: center;
   }
 }
-
 .decorative-line {
   position: relative;
   font-family: 'Font Awesome 5 Free';
@@ -1779,7 +1821,6 @@ a {
     display: block;
   }
 }
-
 .baraholka-item {
   &__container {  
     padding: 20px;
@@ -1836,8 +1877,6 @@ a {
     }
   }
 }
-
-
 .my-brbr-block {
   &__container {  
     padding: 20px;
@@ -2035,7 +2074,6 @@ a {
     margin-top: 5px;
   }
 }
-
 .alert-main-message {
   background-color: #fc8a25;
   position: relative;
@@ -2054,7 +2092,6 @@ a {
     display: none;
   }
 }
-
 .small-news-block {
   height: auto;
   &__container {
@@ -2350,7 +2387,7 @@ a {
   }
 }
 .salon-info {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(101, 102, 106);
   padding: 15px 0;
   .socials {
     &__list {
@@ -2541,11 +2578,7 @@ a {
   }
 }
 
-
-
-
 //responsive
-
 @media all and(max-width: 1200px) {
   .section {
     &_with-banner {

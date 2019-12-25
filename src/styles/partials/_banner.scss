@@ -168,11 +168,6 @@
         height: 500px;
       }
     }
-    &_type2 {
-      .banner-slide {
-        //height: 260px;
-      }
-    }
   }
 }
 @media all and(max-width: 768px) {
@@ -200,11 +195,6 @@
     &_type1 {
       .banner-slide {
         height: 350px;
-      }
-    }
-    &_type2 {
-      .banner-slide {
-        //height: 170px;
       }
     }
     &_type3 {
