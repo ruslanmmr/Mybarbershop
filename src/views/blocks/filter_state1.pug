@@ -12,31 +12,37 @@
             .service-filter-form__title Режим работы:
             .service-filter-form__content
               .service-filter-value
-                label.checkbox.label.label_style1.label_value1
+                label.checkbox.label
                   .service-filter-value__title с утра
+                  img.icon(src="img/icons/sun.svg", alt="icon")
                   input(type="checkbox")
               .service-filter-value
-                label.checkbox.label.label_style1.label_value2
+                label.checkbox.label
                   .service-filter-value__title до поздна
+                  img.icon(src="img/icons/night.svg", alt="icon")
                   input(type="checkbox")
               .service-filter-value
-                label.checkbox.label.label_style1.label_value3
+                label.checkbox.label
                   .service-filter-value__title круглосуточно
+                  img.icon(src="img/icons/24.svg", alt="icon")
                   input(type="checkbox")
           span.service-filter-form__decoration
           .service-filter-form__container
             .service-filter-form__title Стоимость услуг:
             .service-filter-form__content
               .service-filter-value
-                label.checkbox(title='от 100 до 550р').label.label_style2.label_value4.tooltip
+                label.checkbox(title='от 100 до 550р').label.tooltip
+                  img.icon(src="img/icons/лицо золото.svg", alt="icon")
                   .service-filter-value__title Premium
                   input(type="checkbox")
               .service-filter-value
-                label.checkbox(title='от 550 до 1000р').label.label_style2.label_value5.tooltip
+                label.checkbox(title='от 550 до 1000р').label.tooltip
+                  img.icon(src="img/icons/лицо бронза.svg", alt="icon")
                   .service-filter-value__title Standard
                   input(type="checkbox")
               .service-filter-value
-                label.checkbox(title='от 1000р').label.label_style2.label_value6.tooltip
+                label.checkbox(title='от 1000р').label.tooltip
+                  img.icon(src="img/icons/лицо серебро.svg", alt="icon")
                   .service-filter-value__title Economy
                   input(type="checkbox")
     .mb-20.container

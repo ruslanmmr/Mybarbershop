@@ -26,7 +26,7 @@
     justify-content: space-between;
     align-items: center;
     &_search {
-      padding-bottom: 6px;
+      margin-bottom: 6px;
       flex-wrap: wrap;
     }
     &_filter {
@@ -59,13 +59,20 @@
     }
   }
   &__title {
-    padding: 5px 10px 5px 0;
+    margin: 0 10px 0 0;
+    line-height: 30px;
     white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 14px;
   }
 }
 .service-filter-value {
   padding: 3px;
   user-select: none;
+  &__title {
+    line-height: 20px;
+    display: inline-block;
+  }
   input {
     display: none;
   }
@@ -80,63 +87,21 @@
       background-color: #888a90;
       color: #fff;
     }
-    &_style1 {
-      display: flex;
-      align-items: center;
-      &:after {
-        content: '';
-        display: block;
-        margin-left: 5px;
-        width: 20px;
-        height: 20px;
-        background-position: center right !important;
+    .icon {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 0 0 0 5px;
+      &:first-child {
+        margin: 0 5px 0 0;
       }
     }
-    &_style2 {
-      &:before {
-        content: '';
-        display: block;
+    &_type2 {
+      .icon {
+        fill: $orange-color1;
+        height: 20px;
+        width: 17px;
         margin-right: 5px;
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        background: url('../img/icons/ico-head.png') no-repeat;
-        background-size: auto 100%;
-        background-position: center center;
-      }
-    }
-    &_value1 {
-      &:after {
-        width: 28px;
-        background: url('../img/icons/ico-sun.png') no-repeat;
-        background-size: auto 100%;
-      }
-    }
-    &_value2 {
-      &:after {
-        background: url('../img/icons/ico-moon.png') no-repeat;
-        background-size: 100% auto;
-      }
-    }
-    &_value3 {
-      &:after {
-        background: url('../img/icons/ico-24.png') no-repeat;
-        background-size: 100% auto;
-      }
-    }
-    &_value4 {
-      &:before {
-        background-color: $orange-color1;
-      }
-    }
-    &_value5 {
-      &:before {
-        background-color: #c2925b;
-      }
-    }
-    &_value6 {
-      &:before {
-        background-color: #bababa;
       }
     }
   }
@@ -156,19 +121,20 @@
     background-color: rgba(136, 138, 144, 0.15);
   }
 }
+@media all and(max-width: 992px) {
+  .service-filter-form {
+    &__container {
+      display: block;
+    }
+  }
+}
 @media all and(max-width: 576px) {
   .service-filter-form__section_filter {
     display: block;
   }
   .service-filter-form {
-    &__container {
-      display: block;
-    }
     &__title {
-      padding: 10px 0 5px 0;
-    }
-    &__section_search {
-      padding-bottom: 0;
+      margin: 0;
     }
   }
   .service-filter-form__search-count {

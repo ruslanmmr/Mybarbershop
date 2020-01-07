@@ -57,203 +57,108 @@
             <section class="section">
               <div class="section__head">
                 <div class="decorated"><span class="decoration"></span>
-                  <h5 class="section__head-title">Анкета</h5><span class="decoration"></span>
+                  <h5 class="section__head-title">барберы нашего города</h5><span class="decoration"></span>
                 </div>
               </div>
               <div class="container">
-                <div class="form">
-                  <div class="form__section row">
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">Фамилия / Имя / Отчество:</span>
-                      <input class="input input_style4" type="text">
+                <form class="service-filter-form">
+                  <div class="service-filter-form__section service-filter-form__section_search">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Placeholder и тд. ..." required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
                     </div>
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">e- mail:</span>
-                      <input class="input input_style4" type="email">
-                    </div>
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">Город проживания</span>
-                      <input class="input input_style4" type="text">
-                    </div>
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">Район проживания</span>
-                      <input class="input input_style4" type="text">
-                    </div>
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">Телефон:</span>
-                      <input class="input input_style4" type="text" placeholder="+7(***)***-**-**">
-                    </div>
-                    <div class="form__item col-xl-4 col-sm-6 col-12"><span class="item-label">Дата рождения:</span>
-                      <div class="row">
-                        <div class="col-xl-4">
-                          <div class="select">
-                            <select>
-                              <option value="" data-display="День">День</option>
-                              <option value="">1</option>
-                              <option value="">2</option>
-                              <option value="">3</option>
-                            </select>
-                          </div>
+                  </div>
+                  <div class="service-filter-form__section service-filter-form__section_filter">
+                    <div class="service-filter-form__container">
+                      <div class="service-filter-form__title">Режим работы:</div>
+                      <div class="service-filter-form__content">
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style1 label_value1">
+                            <div class="service-filter-value__title">с утра</div>
+                            <input type="checkbox">
+                          </label>
                         </div>
-                        <div class="col-xl-4">
-                          <div class="select">
-                            <select>
-                              <option value="" data-display="День">Месяц</option>
-                              <option value="">1</option>
-                              <option value="">2</option>
-                              <option value="">3</option>
-                            </select>
-                          </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style1 label_value2">
+                            <div class="service-filter-value__title">до поздна</div>
+                            <input type="checkbox">
+                          </label>
                         </div>
-                        <div class="col-xl-4"> 
-                          <div class="select">
-                            <select>
-                              <option value="" data-display="День">Год</option>
-                              <option value="">1</option>
-                              <option value="">2</option>
-                              <option value="">3</option>
-                            </select>
-                          </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_style1 label_value3">
+                            <div class="service-filter-value__title">круглосуточно</div>
+                            <input type="checkbox">
+                          </label>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="form__section row">
-                    <div class="form__item col-xl-4 col-sm-6 col-12">
-                      <button class="button button_style1">Сохранить</button>
+                    <div class="service-filter-form__container">
+                      <div class="service-filter-form__title">Опыт:</div>
+                      <div class="service-filter-form__content">
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_type2 tooltip" title="Опыт до 1 года">
+                            <svg class="icon">
+                              <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
+                            </svg>
+                            <div class="service-filter-value__title">Профи</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_type2 tooltip" title="Опыт от 1 до 2 лет">
+                            <svg class="icon">
+                              <use xlink:href="img/icons/barbers-sprite.svg#barber"></use>
+                            </svg>
+                            <div class="service-filter-value__title">Барбер</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_type2 tooltip" title="Опыт от 2 лет">
+                            <svg class="icon">
+                              <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
+                            </svg>
+                            <div class="service-filter-value__title">Стажер</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="section">
-              <div class="section__head">
-                <div class="decorated"><span class="decoration"></span>
-                  <h5 class="section__head-title">Моё место</h5><span class="decoration"></span>
-                </div>
-              </div>
-              <div class="container">
-                <div class="banner banner_size1 mb-30 lazy" data-src="img/banner/moe-mesto-banner.jpg"></div>
-                <form class="form row row_center" action="">
-                  <div class="form__item col-xl-4 col-sm-6 col-12">
-                    <input class="input input_style4" type="text" placeholder="Выберите барбершоп:">
-                  </div>
-                  <div class="form__item col-xl-4 col-sm-6 col-12">
-                    <button class="button button_style1 small">Подписать мое место!</button>
+                    <div class="service-filter-form__container">
+                      <div class="service-filter-form__title">По рейтингу:</div>
+                      <div class="service-filter-form__content">
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_type2 tooltip" title="Опыт до 1 года">
+                            <svg class="icon">
+                              <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
+                            </svg>
+                            <div class="service-filter-value__title">Профи</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_type2 tooltip" title="Опыт от 1 до 2 лет">
+                            <svg class="icon">
+                              <use xlink:href="img/icons/barbers-sprite.svg#barber"></use>
+                            </svg>
+                            <div class="service-filter-value__title">Барбер</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                        <div class="service-filter-value">
+                          <label class="checkbox label label_type2 tooltip" title="Опыт от 2 лет">
+                            <svg class="icon">
+                              <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
+                            </svg>
+                            <div class="service-filter-value__title">Стажер</div>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
-            </section>
-            <section class="section">
-              <div class="section__head">
-                <div class="decorated"><span class="decoration"></span>
-                  <h5 class="section__head-title">будешь моделью?</h5><span class="decoration"></span>
-                </div>
-              </div>
-              <div class="mb-30">
-                <div class="container">
-                  <div class="banner banner_size2 lazy" data-src="img/banner/banner-model.jpg"></div>
-                </div>
-              </div>
-              <div class="mb-30">
-                <p class="c-main t-a-center">Вам будут доступны на выбор салоны в которые требуются модели, записавшись вы получаете услугу абсолютно БЕСПЛАТНО!</p>
-              </div>
-              <form class="form" action="">
-                <div class="form__section">
-                  <div class="container">
-                    <div class="row row_center">
-                      <div class="form__item col-xl-3 col-sm-4 col-6">
-                        <label class="checkbox checkbox_type-model">
-                          <input type="radio" name="val" checked><span>Бритье</span><img src="img/icons/ico-shaving.png" alt="">
-                        </label>
-                      </div>
-                      <div class="form__item col-xl-3 col-sm-4 col-6">
-                        <label class="checkbox checkbox_type-model">
-                          <input type="radio" name="val"><span>Стрижка</span><img src="img/icons/ico-haircut.png" alt="">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__section">
-                  <div class="container">
-                    <div class="service-filter">
-                      <div class="service-filter__container">
-                        <form class="service-filter-form">
-                          <div class="container">
-                            <div class="service-filter-form__section service-filter-form__section_search">
-                              <div class="search">
-                                <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
-                                <button class="search__button"><i class="fas fa-search"></i></button>
-                              </div>
-                            </div>
-                            <div class="service-filter-form__section service-filter-form__section_filter">
-                              <div class="service-filter-form__container">
-                                <div class="service-filter-form__title">Режим работы:</div>
-                                <div class="service-filter-form__content">
-                                  <div class="service-filter-value">
-                                    <label class="checkbox label">
-                                      <div class="service-filter-value__title">с утра</div><img class="icon" src="img/icons/sun.svg" alt="icon">
-                                      <input type="checkbox">
-                                    </label>
-                                  </div>
-                                  <div class="service-filter-value">
-                                    <label class="checkbox label">
-                                      <div class="service-filter-value__title">до поздна</div><img class="icon" src="img/icons/night.svg" alt="icon">
-                                      <input type="checkbox">
-                                    </label>
-                                  </div>
-                                  <div class="service-filter-value">
-                                    <label class="checkbox label">
-                                      <div class="service-filter-value__title">круглосуточно</div><img class="icon" src="img/icons/24.svg" alt="icon">
-                                      <input type="checkbox">
-                                    </label>
-                                  </div>
-                                </div>
-                              </div><span class="service-filter-form__decoration"></span>
-                              <div class="service-filter-form__container">
-                                <div class="service-filter-form__title">Стоимость услуг:</div>
-                                <div class="service-filter-form__content">
-                                  <div class="service-filter-value">
-                                    <label class="checkbox label tooltip" title="от 100 до 550р"><img class="icon" src="img/icons/лицо золото.svg" alt="icon">
-                                      <div class="service-filter-value__title">Premium</div>
-                                      <input type="checkbox">
-                                    </label>
-                                  </div>
-                                  <div class="service-filter-value">
-                                    <label class="checkbox label tooltip" title="от 550 до 1000р"><img class="icon" src="img/icons/лицо бронза.svg" alt="icon">
-                                      <div class="service-filter-value__title">Standard</div>
-                                      <input type="checkbox">
-                                    </label>
-                                  </div>
-                                  <div class="service-filter-value">
-                                    <label class="checkbox label tooltip" title="от 1000р"><img class="icon" src="img/icons/лицо серебро.svg" alt="icon">
-                                      <div class="service-filter-value__title">Economy</div>
-                                      <input type="checkbox">
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                        <div class="mb-20 container">
-                          <div class="row row_center">
-                            <div class="col-xl-auto col-12"><a class="button button_style4 small" href="#"><i class="fas fa-location-arrow"></i>Ближайший барбершоп</a></div>
-                          </div>
-                        </div>
-                        <div class="map">
-                          <div class="map__container">
-                            <div id="map"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__section"> 
-                  <div class="map">
-                    <div class="map__container">
-                      <div id="map"></div>
-                    </div>
-                  </div>
-                </div>
-              </form>
             </section>
           </main>
         </div>

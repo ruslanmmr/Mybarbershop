@@ -1,0 +1,90 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container
+          main.main
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title барберы нашего города
+                  span.decoration
+              .container
+                form.service-filter-form
+                  .service-filter-form__section.service-filter-form__section_search
+                    .search
+                      input(type="text" placeholder="Placeholder и тд. ..." required).input.input_style1.search__input
+                      button.search__button
+                        i.fas.fa-search
+                  .service-filter-form__section.service-filter-form__section_filter
+                    .service-filter-form__container
+                      .service-filter-form__title Режим работы:
+                      .service-filter-form__content
+                        .service-filter-value
+                          label.checkbox.label.label_style1.label_value1
+                            .service-filter-value__title с утра
+                            input(type="checkbox")
+                        .service-filter-value
+                          label.checkbox.label.label_style1.label_value2
+                            .service-filter-value__title до поздна
+                            input(type="checkbox")
+                        .service-filter-value
+                          label.checkbox.label.label_style1.label_value3
+                            .service-filter-value__title круглосуточно
+                            input(type="checkbox")
+                    .service-filter-form__container
+                      .service-filter-form__title Опыт:
+                      .service-filter-form__content
+                        .service-filter-value
+                          label.checkbox(title='Опыт до 1 года').label.label_type2.tooltip
+                            svg.icon
+                              use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                            .service-filter-value__title Профи
+                            input(type="checkbox")
+                        .service-filter-value
+                          label.checkbox(title='Опыт от 1 до 2 лет').label.label_type2.tooltip
+                            svg.icon
+                              use(xlink:href="img/icons/barbers-sprite.svg#barber")
+                            .service-filter-value__title Барбер
+                            input(type="checkbox")
+                        .service-filter-value
+                          label.checkbox(title='Опыт от 2 лет').label.label_type2.tooltip
+                            svg.icon
+                              use(xlink:href="img/icons/barbers-sprite.svg#beginner")
+                            .service-filter-value__title Стажер
+                            input(type="checkbox")
+                    .service-filter-form__container
+                      .service-filter-form__title По рейтингу:
+                      .service-filter-form__content
+                        .service-filter-value
+                          label.checkbox(title='Опыт до 1 года').label.label_type2.tooltip
+                            svg.icon
+                              use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                            .service-filter-value__title Профи
+                            input(type="checkbox")
+                        .service-filter-value
+                          label.checkbox(title='Опыт от 1 до 2 лет').label.label_type2.tooltip
+                            svg.icon
+                              use(xlink:href="img/icons/barbers-sprite.svg#barber")
+                            .service-filter-value__title Барбер
+                            input(type="checkbox")
+                        .service-filter-value
+                          label.checkbox(title='Опыт от 2 лет').label.label_type2.tooltip
+                            svg.icon
+                              use(xlink:href="img/icons/barbers-sprite.svg#beginner")
+                            .service-filter-value__title Стажер
+                            input(type="checkbox")
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

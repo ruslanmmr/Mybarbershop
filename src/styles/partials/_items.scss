@@ -2215,6 +2215,7 @@ a {
     transition: 0.2s;
     &.active {
       color: $orange-color1;
+      pointer-events: none;
     }
     &:hover {
       color: $orange-color1;
