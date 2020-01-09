@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mybarbershop</title>
+    <!--title Mybarbershop-->
     <!--base(href='http://localhost:9000/')-->
     <base href="https://ruslanmmr.github.io/Mybarbershop/dest/">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -61,103 +61,115 @@
                 </div>
               </div>
               <div class="container">
-                <form class="service-filter-form">
-                  <div class="service-filter-form__section service-filter-form__section_search">
-                    <div class="search">
-                      <input class="input input_style1 search__input" type="text" placeholder="Placeholder и тд. ..." required>
-                      <button class="search__button"><i class="fas fa-search"></i></button>
+                <div class="mb-30">
+                  <form class="service-filter-form">
+                    <div class="service-filter-form__section service-filter-form__section_search">
+                      <div class="search">
+                        <input class="input input_style1 search__input" type="text" placeholder="Placeholder и тд. ..." required>
+                        <button class="search__button"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                    <div class="service-filter-form__section service-filter-form__section_filter">
+                      <div class="service-filter-form__container">
+                        <div class="service-filter-form__title">Режим работы:</div>
+                        <div class="service-filter-form__content">
+                          <div class="service-filter-value">
+                            <label class="checkbox label">
+                              <div class="service-filter-value__title">с утра</div><img class="icon" src="img/icons/sun.svg" alt="icon">
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="checkbox label">
+                              <div class="service-filter-value__title">до поздна</div><img class="icon" src="img/icons/night.svg" alt="icon">
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="checkbox label">
+                              <div class="service-filter-value__title">круглосуточно</div><img class="icon" src="img/icons/24.svg" alt="icon">
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-filter-form__container">
+                        <div class="service-filter-form__title">Опыт:</div>
+                        <div class="service-filter-form__content">
+                          <div class="service-filter-value">
+                            <label class="checkbox label label_type2 tooltip" title="Опыт до 1 года">
+                              <svg class="icon">
+                                <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
+                              </svg>
+                              <div class="service-filter-value__title">Профи</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="checkbox label label_type2 tooltip" title="Опыт от 1 до 2 лет">
+                              <svg class="icon">
+                                <use xlink:href="img/icons/barbers-sprite.svg#barber"></use>
+                              </svg>
+                              <div class="service-filter-value__title">Барбер</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="checkbox label label_type2 tooltip" title="Опыт от 2 лет">
+                              <svg class="icon">
+                                <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
+                              </svg>
+                              <div class="service-filter-value__title">Стажер</div>
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-filter-form__container">
+                        <div class="service-filter-form__title">По рейтингу:</div>
+                        <div class="service-filter-form__content">
+                          <div class="service-filter-value">
+                            <label class="checkbox label label_type3 label_s-size tooltip" title="минимальный (начальный) рейтинг"><img class="icon" src="img/icons/звезда 1 серая.svg" alt="icon">
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="checkbox label label_type3 label_s-size tooltip" title="средний рейтинг"><img class="icon" src="img/icons/2 звезды серые.svg" alt="icon">
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="checkbox label label_type3 label_s-size tooltip" title="высокий рейтинг"><img class="icon" src="img/icons/3 звезды белые.svg" alt="icon">
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="checkbox label label_type3 tooltip" title="Мастер высочайшего класса (VIP)"><img class="icon" src="img/icons/звезда 1 золотая.svg" alt="icon">
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                          <div class="service-filter-value">
+                            <label class="checkbox label label_type3 tooltip" title="Международный уровень (VIP+)"><img class="icon" src="img/icons/звезда в колосках.svg" alt="icon">
+                              <input type="checkbox">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="row">
+                  <div class="bbs-block col-xl-3">
+                    <div class="bbs-block__container">
+                      <div class="bbs-block__image cover-box"><img class="lazy" data-src="img/photo.jpg" alt=""></div>
+                      <div class="bbs-block__top">
+                        <svg class="icon">
+                          <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                  <div class="service-filter-form__section service-filter-form__section_filter">
-                    <div class="service-filter-form__container">
-                      <div class="service-filter-form__title">Режим работы:</div>
-                      <div class="service-filter-form__content">
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style1 label_value1">
-                            <div class="service-filter-value__title">с утра</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style1 label_value2">
-                            <div class="service-filter-value__title">до поздна</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_style1 label_value3">
-                            <div class="service-filter-value__title">круглосуточно</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="service-filter-form__container">
-                      <div class="service-filter-form__title">Опыт:</div>
-                      <div class="service-filter-form__content">
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_type2 tooltip" title="Опыт до 1 года">
-                            <svg class="icon">
-                              <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
-                            </svg>
-                            <div class="service-filter-value__title">Профи</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_type2 tooltip" title="Опыт от 1 до 2 лет">
-                            <svg class="icon">
-                              <use xlink:href="img/icons/barbers-sprite.svg#barber"></use>
-                            </svg>
-                            <div class="service-filter-value__title">Барбер</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_type2 tooltip" title="Опыт от 2 лет">
-                            <svg class="icon">
-                              <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
-                            </svg>
-                            <div class="service-filter-value__title">Стажер</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="service-filter-form__container">
-                      <div class="service-filter-form__title">По рейтингу:</div>
-                      <div class="service-filter-form__content">
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_type2 tooltip" title="Опыт до 1 года">
-                            <svg class="icon">
-                              <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
-                            </svg>
-                            <div class="service-filter-value__title">Профи</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_type2 tooltip" title="Опыт от 1 до 2 лет">
-                            <svg class="icon">
-                              <use xlink:href="img/icons/barbers-sprite.svg#barber"></use>
-                            </svg>
-                            <div class="service-filter-value__title">Барбер</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                        <div class="service-filter-value">
-                          <label class="checkbox label label_type2 tooltip" title="Опыт от 2 лет">
-                            <svg class="icon">
-                              <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
-                            </svg>
-                            <div class="service-filter-value__title">Стажер</div>
-                            <input type="checkbox">
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                </div>
               </div>
             </section>
           </main>

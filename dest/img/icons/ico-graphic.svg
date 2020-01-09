@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="18.779mm" height="17.568mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1877.9 1756.8"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#FEFEFE;stroke-width:50;stroke-miterlimit:22.9256}
+    .str2 {stroke:#FEFEFE;stroke-width:50;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str0 {stroke:#FEFEFE;stroke-width:50;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_937440000">
+   <g>
+    <line class="fil0 str0" x1="488.1" y1="343.07" x2="58.91" y2= "343.07" />
+   </g>
+   <g>
+    <line class="fil0 str0" x1="486.16" y1="709.3" x2="56.97" y2= "709.3" />
+   </g>
+   <g>
+    <line class="fil0 str0" x1="488.1" y1="1044.22" x2="58.91" y2= "1044.22" />
+   </g>
+   <g>
+    <line class="fil0 str0" x1="481.71" y1="1408.52" x2="52.53" y2= "1408.52" />
+   </g>
+   <circle class="fil0 str1" cx="488.1" cy="343.07" r="103.74"/>
+   <circle class="fil0 str1" cx="486.16" cy="709.3" r="103.74"/>
+   <circle class="fil0 str1" cx="488.1" cy="1044.22" r="103.74"/>
+   <circle class="fil0 str1" cx="481.71" cy="1408.52" r="103.74"/>
+   <polyline class="fil0 str1" points="1034.18,288.15 1142.98,429.21 1255.27,289.48 "/>
+   <path class="fil0 str2" d="M1404.01 1280l-1.3 351.36c-0.14,41.46 -33.98,75.44 -75.44,75.44l-1011.87 0c-41.5,0 -75.45,-33.95 -75.45,-75.44l0 -1505.92c0,-41.49 33.95,-75.44 75.45,-75.44l1011.87 0c41.49,0 75.32,33.99 75.44,75.44l2.35 803.59"/>
+   <polyline class="fil0 str1" points="1029.37,611.81 1138.17,752.87 1250.46,613.14 "/>
+   <polyline class="fil0 str1" points="1034.18,920 1142.98,1061.06 1255.27,921.33 "/>
+   <path class="fil0 str1" d="M1825.37 608.89c-8.8,-77.48 -53.71,-112.41 -134.73,-104.79l-533.97 848.37 -17.47 184.64 142.23 -92.33 543.94 -835.89z"/>
+   <line class="fil0 str1" x1="1167.95" y1="1334.54" x2="1316.36" y2= "1437.29" />
+   <line class="fil0 str1" x1="1623.73" y1="610.41" x2="1764.68" y2= "702.14" />
+  </g>
+ </g>
+</svg>

@@ -59,7 +59,7 @@
     }
   }
   &__title {
-    margin: 0 10px 0 0;
+    margin: 0 5px 0 0;
     line-height: 30px;
     white-space: nowrap;
     flex: 0 0 auto;
@@ -72,36 +72,44 @@
   &__title {
     line-height: 20px;
     display: inline-block;
+    margin: 0 3px;
   }
   input {
     display: none;
   }
   .label {
-    padding: 5px 10px;
+    padding: 5px;
     transition: 0.3s;
     border-radius: 4px;
     display: flex;
     align-items: center;
     position: relative;
+    background-color: rgba(136, 138, 144, 0.1);
     &.checked {
-      background-color: #888a90;
+      background-color: rgba(136, 138, 144, 0.7);
       color: #fff;
     }
     .icon {
       display: block;
       width: 20px;
       height: 20px;
-      margin: 0 0 0 5px;
-      &:first-child {
-        margin: 0 5px 0 0;
-      }
+      margin: 0 3px 0 3px;
     }
     &_type2 {
       .icon {
         fill: $orange-color1;
         height: 20px;
         width: 17px;
-        margin-right: 5px;
+      }
+    }
+    &_type3 {
+      .icon {
+        width: auto;
+      }
+    }
+    &_s-size {
+      .icon {
+        padding: 3px;
       }
     }
   }

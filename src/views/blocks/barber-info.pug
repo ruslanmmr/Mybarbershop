@@ -1,4 +1,4 @@
-section.section.barber-info
+//section.section.barber-info
   .section__head
     .decorated
       span.decoration
@@ -16,7 +16,6 @@ section.section.barber-info
             .row
               .col-xl-12
                 .row.row_jc-sb
-                  h1.barber-info__title.t-size-28.col-xl-auto Александр Иванов
                   .barber-info__experience.col-xl-auto
                     span.barber-info__experience-item 
                       span.t-size-24 32
@@ -26,9 +25,7 @@ section.section.barber-info
                       | стаж
                   .col-xl-auto
                     .number-block
-                      //кликнуть можно сюда, логику не знаю какая будет, ничего не делал
                       .number-block__show-btn
-                      //
                       .number-block__title Показать телефон
                       a(href="tel:79258008080").number-block__number +7 925 
                         span xxx-xx-xx
@@ -69,9 +66,9 @@ section.section.barber-info
                         span 2-я Рощинская ул., 1А,
                   .barber-info__buttons.col-xl-12
                     .row
-                      .col-xl-5.col-12
+                      .col-xl-6.col-12
                         a(href="#").button.button_style1.share-trigger Поделиться
-                      .col-xl-7.col-12
+                      .col-xl-6.col-12
                         a(href="#").button.button_style4 Записаться
       .col-xl-7.col-md-6.col-sm-12
         .mb-30
@@ -93,6 +90,107 @@ section.section.barber-info
             .decorated
               span.decoration
               strong.title-head__title.t-size-28.t-t-u видео презентация
+              span.decoration
+          .video
+            <iframe src="https://www.youtube.com/embed/Kvm-BoVdWV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+section.section.barber-info
+  .section__head
+    .decorated
+      span.decoration
+      h5.section__head-title Барбер Александр Иванов
+      span.decoration
+  .container
+    .row
+      .col-xl-4.col-sm-5.col-12
+        .barber-info__image.mb-20
+          .cover-box
+            img(data-src="img/photo.jpg", alt="").lazy
+        .barber-info__buttons
+          .mb-20
+            a(href="#").button.button_style1.share-trigger
+              i.fas.fa-share
+              | Поделиться
+          .mb-20
+            a(href="#").button.button_style4
+              | Записаться
+      .col-xl-8.col-sm-7.col-12
+        .mb-30
+          .title-head.mb-20
+            .decorated
+              span.decoration
+              strong.title-head__title.t-size-20.t-t-u Основная информация
+              span.decoration
+          .row.row_ai-c
+            .barber-info__experience.col-xl-auto
+              span.barber-info__experience-item 
+                span.t-size-24 32
+                | возраст
+              span.barber-info__experience-item 
+                span.t-size-24 5
+                | стаж
+            .col-xl-auto
+              .number-block
+                .number-block__show-btn
+                .number-block__title Показать телефон
+                a(href="tel:79258008080").number-block__number +7 925 
+                  span xxx-xx-xx
+            .socials.socials_style2.col-xl-auto
+              ul.socials__list.row.row_compact
+                li.socials__item.col-xl-auto
+                  a(href="#").socials__link
+                    i.fab.fa-facebook-f
+                li.socials__item.col-xl-auto
+                  a(href="#").socials__link
+                    i.fab.fa-vk
+                //li.socials__item.col-xl-auto
+                  a(href="#").socials__link
+                    i.fab.fa-instagram
+                //li.socials__item.col-xl-auto
+                  a(href="#").socials__link
+                    i.fab.fa-odnoklassniki
+                //li.socials__item.col-xl-auto
+                  a(href="#").socials__link
+                    i.fab.fa-twitter
+            .col-xl-auto  
+                  span.item-label Знание языка:
+                  .row.row_compact
+                    .col-xl-auto
+                      label.checkbox.view-only
+                        i.fas.fa-check
+                        span Русский
+                    //.col-xl-auto
+                      label.checkbox.view-only
+                        i.fas.fa-check
+                        span Английский
+        .mb-30
+          .title-head.mb-20
+            .decorated
+              span.decoration
+              strong.title-head__title.t-size-20.t-t-u Место работы
+              span.decoration
+          .mb-message.mb-message_static.mb-message_alert Информация не указана либо вообще убирать эти секции если тут пусто.
+          //.row
+            .col-xl-auto
+              img(src="img/logos/britva.jpg", alt="").barber-info__barbershop-image
+            .col-xl
+              h6.t-size-24.f-w-n BRITVA / Moscow
+              span 2-я Рощинская ул., 1А,
+        .mb-30
+          .title-head.mb-20
+            .decorated
+              span.decoration
+              strong.title-head__title.t-size-20.t-t-u О себе
+              span.decoration
+          p
+            | «В профессию я пришел неожиданно. Ждал своей очереди в парикмахерской и заметил, как выходящие клиенты тепло благодарили своих мастеров. Бла бла бла.»
+          p
+            strong.c-main.t-t-u КЛИЕНТЫ:  
+            | «У меня своя сложившаяся аудитория. В основном это преуспевающие мужчины 30–45 лет. Для меня важно устанавливать эмоциональный контакт с людьми, которые ко мне ходят. Просто безучастно стричь людей на автомате я не могу».
+        //.mb-30
+          .title-head.mb-20
+            .decorated
+              span.decoration
+              strong.title-head__title.t-size-20.t-t-u Видео Презентация
               span.decoration
           .video
             <iframe src="https://www.youtube.com/embed/Kvm-BoVdWV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

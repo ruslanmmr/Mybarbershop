@@ -12,15 +12,17 @@ html(lang="ru")
           main.main
             //окошко
             section.section
-              .map-window
-                .map-window__left
-                  a(href="#").map-window__logo
-                    img(src="img/logos/topgun.png" alt="topgun")
-                  a(href="#").map-window__link подробнее
-                .map-window__right
-                  span.map-window__title Topgun
-                  p.map-window__text м. Ясенево, Новоясеневский проспект, 9
-                  span.map-window__time часы работы<br> 10-10
+              .map-window.map-window_type2
+                .map-window__body
+                  span.map-window__title TOPGUN Рижская
+                  p.map-window__text Россия, Москва, проспект Мира, 75с1
+                  p.map-window__text
+                    strong АДМИНИСТРАТОРЫ
+                    |  - 1 вакансии
+                .map-window__buttons
+                  a.map-window__link(href='/barbershops/moskva/topgun_1290/') подробнее
+                  a.map-window__link.modal-link(data-fancybox='', data-src='#resume', data-bbsh='1290', data-types='resume', data-vak1='0', data-vak2='1', data-vak3='0', data-vak4='0', href='javascript:;') отправить резюме
+
             //footer
         include blocks/footer
         //other
