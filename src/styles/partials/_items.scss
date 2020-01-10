@@ -1968,7 +1968,16 @@ a {
   &__section-title {
     margin-bottom: 15px;
   }
-
+  &__logo {
+    .cover-box {
+      width: 70px;
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+    }
+  }
   &__lvl {
     .icon {
       fill: #fff;

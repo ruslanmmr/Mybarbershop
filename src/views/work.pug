@@ -17,7 +17,7 @@ html(lang="ru")
                   span.decoration
                   h1.section__head-title Сейчас требуются
                   span.decoration
-              form(action="").form
+              form(action="").form.mb-30
                 .form__section
                   .container
                     .row.row_center
@@ -75,8 +75,65 @@ html(lang="ru")
                             i.fas.fa-search
                       .form__item.col-xl-12
                         span.searched-label.t-size-24 всего найдено: <strong>30</strong> мест
-                .form__section
-                  include blocks/map
+              .mb-30
+                include blocks/map
+              .container.mb-30
+                .row
+                  .my-vacancy-block.col-xl-12
+                    .my-vacancy-block__container
+                      .row
+                        .my-vacancy-block__section.col-xl-6.col-12
+                          .row
+                            .my-vacancy-block__logo.col-xl-auto
+                              .cover-box.cover-box_contain
+                                img.lazy(data-src='img/logos/topgun.png' alt="")
+                            .my-vacancy-block__lvl.col-xl-auto
+                              svg.icon
+                                use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                            .col-xl
+                              span.my-vacancy-block__title Салону Топгантребуется Барбер профессионал.
+                              span.my-vacancy-block__wage Зарплата от 50 000 руб.
+                        .my-vacancy-block__section.col-xl-6.col-12
+                          span.my-vacancy-block__section-title Требования:
+                          .row
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Знание языка:
+                              .row.row_compact
+                                .col-xl-auto
+                                  label.checkbox.view-only
+                                    i.fas.fa-check
+                                    span Русский
+                                .col-xl-auto
+                                  label.checkbox.view-only
+                                    i.fas.fa-check
+                                    span Английский
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Пол:
+                              span Мужчина/Женщина
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Опыт работы:
+                              span от 4 лет
+                        .my-vacancy-block__section.col-xl-12
+                          span.my-vacancy-block__section-title Дополнительная информация:
+                          .row
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Город:
+                              span Москва
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Адрес:
+                              span Москва, Проспект Вернадского, д. 77, корп. 5
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Время работы:
+                              span с 12:30 до 21:00
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Описание вакансии:
+                              span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        .my-vacancy-block__buttons.col-xl-12
+                          .row
+                            .col-xl-4.col-sm-12
+                              button.button.button_style4.small
+                                | Откликнуться
+
             include blocks/banner2
             include blocks/news-module
         //footer
