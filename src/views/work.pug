@@ -88,8 +88,14 @@ html(lang="ru")
                               .cover-box.cover-box_contain
                                 img.lazy(data-src='img/logos/topgun.png' alt="")
                             .my-vacancy-block__lvl.col-xl-auto
-                              svg.icon
+                              //svg.icon
                                 use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                              //svg.icon
+                                use(xlink:href="img/icons/barbers-sprite.svg#barber")
+                              //svg.icon
+                                use(xlink:href="img/icons/barbers-sprite.svg#beginner")
+                              svg.icon
+                                use(xlink:href="img/icons/barbers-sprite.svg#girl")
                             .col-xl
                               span.my-vacancy-block__title Салону Топгантребуется Барбер профессионал.
                               span.my-vacancy-block__wage Зарплата от 50 000 руб.
@@ -127,7 +133,12 @@ html(lang="ru")
                               span с 12:30 до 21:00
                             .my-vacancy-block__item.col-xl-auto
                               span.item-label Описание вакансии:
-                              span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                              .text-container
+                                .text-parent
+                                  .text-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                .js-text-more
+                                  a(href="javascript:void(0)" data-show-text='Развернуть описание' data-hide-text='Свернуть описание').link.link_type2 Развернуть описание
                         .my-vacancy-block__buttons.col-xl-12
                           .row
                             .col-xl-4.col-sm-12

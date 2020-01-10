@@ -46,6 +46,11 @@
     margin-bottom: 20px;
   }
 }
+.mb-15 {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
 
 .col-1,
 .col-2,

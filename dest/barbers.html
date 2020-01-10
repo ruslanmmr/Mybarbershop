@@ -97,8 +97,8 @@
                         <div class="service-filter-form__title">Опыт:</div>
                         <div class="service-filter-form__content">
                           <div class="service-filter-value">
-                            <label class="checkbox label label_type2 tooltip" title="Опыт до 1 года">
-                              <svg class="icon">
+                            <label class="checkbox label tooltip" title="Опыт до 1 года">
+                              <svg class="icon m-fill" viewBox="0 0 108.9 191.3">
                                 <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
                               </svg>
                               <div class="service-filter-value__title">Профи</div>
@@ -106,8 +106,8 @@
                             </label>
                           </div>
                           <div class="service-filter-value">
-                            <label class="checkbox label label_type2 tooltip" title="Опыт от 1 до 2 лет">
-                              <svg class="icon">
+                            <label class="checkbox label tooltip" title="Опыт от 1 до 2 лет">
+                              <svg class="icon m-fill" viewBox="0 0 117.1 180.1">
                                 <use xlink:href="img/icons/barbers-sprite.svg#barber"></use>
                               </svg>
                               <div class="service-filter-value__title">Барбер</div>
@@ -115,8 +115,8 @@
                             </label>
                           </div>
                           <div class="service-filter-value">
-                            <label class="checkbox label label_type2 tooltip" title="Опыт от 2 лет">
-                              <svg class="icon">
+                            <label class="checkbox label tooltip" title="Опыт от 2 лет">
+                              <svg class="icon m-fill" viewBox="0 0 123.9 174.4">
                                 <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
                               </svg>
                               <div class="service-filter-value__title">Стажер</div>
@@ -129,27 +129,42 @@
                         <div class="service-filter-form__title">По рейтингу:</div>
                         <div class="service-filter-form__content">
                           <div class="service-filter-value">
-                            <label class="checkbox label label_type3 label_s-size tooltip" title="минимальный (начальный) рейтинг"><img class="icon" src="img/icons/звезда 1 серая.svg" alt="icon">
+                            <label class="checkbox label tooltip" title="минимальный (начальный) рейтинг">
+                              <svg class="icon smaller" viewBox="0 0 1 1">
+                                <use xlink:href="img/icons/stars-sprite.svg#star1gray"></use>
+                              </svg>
                               <input type="checkbox">
                             </label>
                           </div>
                           <div class="service-filter-value">
-                            <label class="checkbox label label_type3 label_s-size tooltip" title="средний рейтинг"><img class="icon" src="img/icons/2 звезды серые.svg" alt="icon">
+                            <label class="checkbox label tooltip" title="средний рейтинг">
+                              <svg class="icon smaller" viewBox="0 0 3970 1850">
+                                <use xlink:href="img/icons/stars-sprite.svg#star2gray"></use>
+                              </svg>
                               <input type="checkbox">
                             </label>
                           </div>
                           <div class="service-filter-value">
-                            <label class="checkbox label label_type3 label_s-size tooltip" title="высокий рейтинг"><img class="icon" src="img/icons/3 звезды белые.svg" alt="icon">
+                            <label class="checkbox label tooltip" title="высокий рейтинг">
+                              <svg class="icon smaller" viewBox="0 0 5990 1850">
+                                <use xlink:href="img/icons/stars-sprite.svg#star3white"></use>
+                              </svg>
                               <input type="checkbox">
                             </label>
                           </div>
                           <div class="service-filter-value">
-                            <label class="checkbox label label_type3 tooltip" title="Мастер высочайшего класса (VIP)"><img class="icon" src="img/icons/звезда 1 золотая.svg" alt="icon">
+                            <label class="checkbox label tooltip" title="Мастер высочайшего класса (VIP)">
+                              <svg class="icon" viewBox="0 0 1 1">
+                                <use xlink:href="img/icons/stars-sprite.svg#star1gold"></use>
+                              </svg>
                               <input type="checkbox">
                             </label>
                           </div>
                           <div class="service-filter-value">
-                            <label class="checkbox label label_type3 tooltip" title="Международный уровень (VIP+)"><img class="icon" src="img/icons/звезда в колосках.svg" alt="icon">
+                            <label class="checkbox label tooltip" title="Международный уровень (VIP+)">
+                              <svg class="icon" viewBox="0 0 116 87">
+                                <use xlink:href="img/icons/stars-sprite.svg#star1top"></use>
+                              </svg>
                               <input type="checkbox">
                             </label>
                           </div>
@@ -158,15 +173,112 @@
                     </div>
                   </form>
                 </div>
+                <!--nothing-->
+                <div class="mb-message mb-message_static mb-message_alert mb-30">Совпадений не найдено.</div>
                 <div class="row">
-                  <div class="bbs-block col-xl-3">
+                  <!--block-->
+                  <div class="bbs-block col-xl-3 col-md-4 col-sm-6 col-12">
                     <div class="bbs-block__container">
-                      <div class="bbs-block__image cover-box"><img class="lazy" data-src="img/photo.jpg" alt=""></div>
-                      <div class="bbs-block__top">
-                        <svg class="icon">
-                          <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
-                        </svg>
+                      <div class="bbs-block__content mb-15"> <a class="bbs-block__image mb-15" href="#">
+                          <div class="cover-box"><img class="lazy" data-src="img/photo.jpg" alt=""></div></a>
+                        <div class="bbs-block__top mb-15">
+                          <div class="bbs-block__l">
+                            <svg class="icon bbs-block__experience tooltip" viewBox="0 0 108.9 191.3" title="опыт">
+                              <use xlink:href="img/icons/barbers-sprite.svg#topbarber"></use>
+                            </svg>
+                            <h5 class="f-w-n t-size-18">Эдуард</h5>
+                          </div>
+                          <svg class="icon tooltip bbs-block__rank" viewBox="0 0 1 1" title="ранг">
+                            <use xlink:href="img/icons/stars-sprite.svg#star1gray"></use>
+                          </svg>
+                        </div>
+                        <div class="bbs-block__salon"><strong>“Бородач”<br> </strong>Красных курсантов, 12</div>
                       </div>
+                      <div class="bbs-block__button"><a class="button button_style4 small">Записаться</a></div>
+                    </div>
+                  </div>
+                  <!--block-->
+                  <div class="bbs-block col-xl-3 col-md-4 col-sm-6 col-12">
+                    <div class="bbs-block__container"> 
+                      <div class="bbs-block__content mb-15"><a class="bbs-block__image mb-15" href="#">
+                          <div class="cover-box"><img class="lazy" data-src="img/photo.jpg" alt=""></div></a>
+                        <div class="bbs-block__top mb-15">
+                          <div class="bbs-block__l">
+                            <svg class="icon bbs-block__experience tooltip" viewBox="0 0 117.1 180.1" title="опыт">
+                              <use xlink:href="img/icons/barbers-sprite.svg#barber"></use>
+                            </svg>
+                            <h5 class="f-w-n t-size-18">Эдуард "fffff"</h5>
+                          </div>
+                          <svg class="icon bbs-block__rank tooltip" viewBox="0 0 3970 1850" title="ранг">
+                            <use xlink:href="img/icons/stars-sprite.svg#star2gray"></use>
+                          </svg>
+                        </div>
+                        <div class="bbs-block__salon mb-15"><strong>“Бородач”<br> </strong>Красных курсантов, 12  Красных курсантов, 12 </div>
+                      </div>
+                      <div class="bbs-block__button"><a class="button button_style4 small">Записаться</a></div>
+                    </div>
+                  </div>
+                  <!--block-->
+                  <div class="bbs-block col-xl-3 col-md-4 col-sm-6 col-12">
+                    <div class="bbs-block__container"> 
+                      <div class="bbs-block__content mb-15"><a class="bbs-block__image mb-15" href="#">
+                          <div class="cover-box"><img class="lazy" data-src="img/photo.jpg" alt=""></div></a>
+                        <div class="bbs-block__top mb-15">
+                          <div class="bbs-block__l">
+                            <svg class="icon bbs-block__experience tooltip" viewBox="0 0 123.9 174.4" title="опыт">
+                              <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
+                            </svg>
+                            <h5 class="f-w-n t-size-18">Эдуард "fffff"</h5>
+                          </div>
+                          <svg class="icon bbs-block__rank tooltip" viewBox="0 0 5990 1850" title="ранг">
+                            <use xlink:href="img/icons/stars-sprite.svg#star3white"></use>
+                          </svg>
+                        </div>
+                        <div class="bbs-block__salon mb-15"><strong>“Бородач”<br> </strong>Красных курсантов, 12  Красных курсантов, 12 </div>
+                      </div>
+                      <div class="bbs-block__button"><a class="button button_style4 small">Записаться</a></div>
+                    </div>
+                  </div>
+                  <!--block-->
+                  <div class="bbs-block col-xl-3 col-md-4 col-sm-6 col-12">
+                    <div class="bbs-block__container"> 
+                      <div class="bbs-block__content mb-15"><a class="bbs-block__image mb-15" href="#">
+                          <div class="cover-box"><img class="lazy" data-src="img/photo.jpg" alt=""></div></a>
+                        <div class="bbs-block__top mb-15">
+                          <div class="bbs-block__l">
+                            <svg class="icon bbs-block__experience tooltip" viewBox="0 0 123.9 174.4" title="опыт">
+                              <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
+                            </svg>
+                            <h5 class="f-w-n t-size-18">Эдуард "fffff"</h5>
+                          </div>
+                          <svg class="icon bbs-block__rank tooltip" viewBox="0 0 1 1" title="ранг">
+                            <use xlink:href="img/icons/stars-sprite.svg#star1gold"></use>
+                          </svg>
+                        </div>
+                        <div class="bbs-block__salon mb-15"><strong>“Бородач”<br> </strong>Красных курсантов, 12  Красных курсантов, 12 </div>
+                      </div>
+                      <div class="bbs-block__button"><a class="button button_style4 small">Записаться</a></div>
+                    </div>
+                  </div>
+                  <!--block-->
+                  <div class="bbs-block col-xl-3 col-md-4 col-sm-6 col-12">
+                    <div class="bbs-block__container"> 
+                      <div class="bbs-block__content mb-15"><a class="bbs-block__image mb-15" href="#">
+                          <div class="cover-box"><img class="lazy" data-src="img/photo.jpg" alt=""></div></a>
+                        <div class="bbs-block__top mb-15">
+                          <div class="bbs-block__l">
+                            <svg class="icon bbs-block__experience tooltip" viewBox="0 0 123.9 174.4" title="опыт">
+                              <use xlink:href="img/icons/barbers-sprite.svg#beginner"></use>
+                            </svg>
+                            <h5 class="f-w-n t-size-18">Эдуард "fffff"</h5>
+                          </div>
+                          <svg class="icon bbs-block__rank tooltip" viewBox="0 0 116 87" title="ранг">
+                            <use xlink:href="img/icons/stars-sprite.svg#star1top"></use>
+                          </svg>
+                        </div>
+                        <div class="bbs-block__salon mb-15"><strong>“Бородач”<br> </strong>Красных курсантов, 12  Красных курсантов, 12 </div>
+                      </div>
+                      <div class="bbs-block__button"><a class="button button_style4 small">Записаться</a></div>
                     </div>
                   </div>
                 </div>

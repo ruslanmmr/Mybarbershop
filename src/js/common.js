@@ -11,10 +11,10 @@ $(document).ready(function () {
   checkboxCheck();
   fadeInWindows();
   scrollbar();
-  //searchCity();
   funcybox();
   toggleblocks();
   tabs();
+  textMoreToggle();
   select();
   if($('.date-slider').length>0) {
     $dateSlider.init();
@@ -29,9 +29,10 @@ $(window).resize(function () {
   autoHeight();
 
   $('img').each(function() {
-    //imagesResize($(this))
+    imagesResize($(this))
   });
 });
+
 
 //global variables
 let windowW = Math.max(window.innerWidth, document.documentElement.clientWidth),
@@ -55,7 +56,6 @@ function scrollbar() {
     $scroll.getNiceScroll().resize();
   }, 100)
 }
-
 //поиск
 function searchCity() {
   let $input = $('#windowCity').find('.input'),
@@ -163,6 +163,54 @@ function fadeInWindows() {
     } 
     else if($window.current.el!==undefined && $window.current.el.hasClass('active') && $(event.target).closest($window.current.el).length == 0) {
       $window.current.hide();
+    }
+  })
+}
+
+//text descriptions
+function textMoreToggle() {
+  let element = $('.text-container');
+
+  element.each(function() {
+    let $container = $(this).find('.text-parent'),
+      $content = $(this).find('.text-content'),
+      $btn = $(this).find('.js-text-more'),
+      showText = $btn.find('.link').data('show-text'),
+      hideText = $btn.find('.link').data('hide-text'),
+      maxh = $container.height(),
+      hc;
+
+    function check() {
+      hc = $content.height();
+      if(hc>maxh) {
+        $btn.show();
+      } else {
+        $btn.hide();
+      }
+      if($container.hasClass('active')) {
+        $(this).css('max-height', hc)
+      }
+    }
+    check();
+    $(window).resize(function () {
+      check();
+    });
+    $btn.find('.link').on('click', function(event) {
+      event.preventDefault();
+      toggleNav()
+    })
+    function toggleNav() {
+      if(!$container.hasClass('active')) {
+        $container.addClass('active');
+        $container.css('max-height', hc);
+        $btn.find('.link').addClass('active');
+        $btn.find('.link').text(hideText);
+      } else {
+        $container.removeClass('active');
+        $container.css('max-height', maxh);
+        $btn.find('.link').removeClass('active');
+        $btn.find('.link').text(showText);
+      }
     }
   })
 }

@@ -18,7 +18,24 @@ a {
   &:hover {
     opacity: 0.8;
   }
+  &_type2 {
+    color: $gray-color1;
+    border-bottom: 1px solid $gray-color1;
+    &:hover {
+      border-color: transparent;
+    }
+  }
 }
+.text-parent {
+  max-height: 65px;
+  overflow: hidden;
+  transition: max-height .3s ease-out;
+}
+.js-text-more {
+  margin-top: 5px;
+  display: none;
+}
+
 
 .b-nav {
   margin: 0;
@@ -556,6 +573,9 @@ a {
   height: 40px;
   fill: #000;
   transition: 0.2s;
+  &.m-fill {
+    fill: $orange-color1;
+  }
 }
 .brbr-info-section {
   &.left {
@@ -2171,14 +2191,47 @@ a {
     border-radius: 4px;
     border: 1px solid $orange-color1;
     position: relative;
+    height: 100%;
   }
   &__image {
     position: relative;
-    &:before {
-      content: '';
-      display: block;
-      padding-top: 100%;
+    display: block;
+    .cover-box {
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
     }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  &__l {
+    display: flex;
+    align-items: center;
+  }
+  &__rank {
+    height: 20px;
+    width: auto;
+  }
+  &__experience {
+    height: 30px;
+    width: auto;
+    fill: #fff;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 .job-offer-block {

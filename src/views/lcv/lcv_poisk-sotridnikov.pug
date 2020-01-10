@@ -119,6 +119,7 @@ html(lang="ru")
                   span.decoration
               .container
                 .row
+                  //block
                   .my-vacancy-block.col-xl-12
                     .my-vacancy-block__container
                       .row
@@ -164,7 +165,12 @@ html(lang="ru")
                               span с 12:30 до 21:00
                             .my-vacancy-block__item.col-xl-auto
                               span.item-label Описание вакансии:
-                              span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                              .text-container
+                                .text-parent
+                                  .text-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .js-text-more
+                                  a(href="javascript:void(0)" data-show-text='Развернуть описание' data-hide-text='Свернуть описание').link.link_type2 Развернуть описание
                         .my-vacancy-block__buttons.col-xl-12
                           .row
                             .col-xl-4.col-sm-6
@@ -218,7 +224,12 @@ html(lang="ru")
                               span с 12:30 до 21:00
                             .my-vacancy-block__item.col-xl-auto
                               span.item-label Описание вакансии:
-                              span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut pharetra leo. Aliquam mattis volutpat turpis, nec posuere neque dapibus ut. Ut condimentum.
+                              .text-container
+                                .text-parent
+                                  .text-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                .js-text-more
+                                  a(href="javascript:void(0)" data-show-text='Развернуть описание' data-hide-text='Свернуть описание').link.link_type2 Развернуть описание
                         .my-vacancy-block__buttons.col-xl-12
                           .row
                             .col-xl-4.col-sm-6

@@ -46,20 +46,20 @@ html(lang="ru")
                         .service-filter-form__title Опыт:
                         .service-filter-form__content
                           .service-filter-value
-                            label.checkbox(title='Опыт до 1 года').label.label_type2.tooltip
-                              svg.icon
+                            label.checkbox(title='Опыт до 1 года').label.tooltip
+                              svg.icon.m-fill(viewBox="0 0 108.9 191.3")
                                 use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
                               .service-filter-value__title Профи
                               input(type="checkbox")
                           .service-filter-value
-                            label.checkbox(title='Опыт от 1 до 2 лет').label.label_type2.tooltip
-                              svg.icon
+                            label.checkbox(title='Опыт от 1 до 2 лет').label.tooltip
+                              svg.icon.m-fill(viewBox="0 0 117.1 180.1")
                                 use(xlink:href="img/icons/barbers-sprite.svg#barber")
                               .service-filter-value__title Барбер
                               input(type="checkbox")
                           .service-filter-value
-                            label.checkbox(title='Опыт от 2 лет').label.label_type2.tooltip
-                              svg.icon
+                            label.checkbox(title='Опыт от 2 лет').label.tooltip
+                              svg.icon.m-fill(viewBox="0 0 123.9 174.4")
                                 use(xlink:href="img/icons/barbers-sprite.svg#beginner")
                               .service-filter-value__title Стажер
                               input(type="checkbox")
@@ -67,35 +67,129 @@ html(lang="ru")
                         .service-filter-form__title По рейтингу:
                         .service-filter-form__content
                           .service-filter-value
-                            label.checkbox(title='минимальный (начальный) рейтинг').label.label_type3.label_s-size.tooltip
-                              img.icon(src="img/icons/звезда 1 серая.svg", alt="icon")
+                            label.checkbox(title='минимальный (начальный) рейтинг').label.tooltip
+                              svg.icon.smaller(viewBox="0 0 1 1")
+                                use(xlink:href="img/icons/stars-sprite.svg#star1gray")
                               input(type="checkbox")
                           .service-filter-value
-                            label.checkbox(title='средний рейтинг').label.label_type3.label_s-size.tooltip
-                              img.icon(src="img/icons/2 звезды серые.svg", alt="icon")
+                            label.checkbox(title='средний рейтинг').label.tooltip
+                              svg.icon.smaller(viewBox="0 0 3970 1850")
+                                use(xlink:href="img/icons/stars-sprite.svg#star2gray")
                               input(type="checkbox")
                           .service-filter-value
-                            label.checkbox(title='высокий рейтинг').label.label_type3.label_s-size.tooltip
-                              img.icon(src="img/icons/3 звезды белые.svg", alt="icon")
+                            label.checkbox(title='высокий рейтинг').label.tooltip
+                              svg.icon.smaller(viewBox="0 0 5990 1850")
+                                use(xlink:href="img/icons/stars-sprite.svg#star3white")
                               input(type="checkbox")
                           .service-filter-value
-                            label.checkbox(title='Мастер высочайшего класса (VIP)').label.label_type3.tooltip
-                              img.icon(src="img/icons/звезда 1 золотая.svg", alt="icon")
+                            label.checkbox(title='Мастер высочайшего класса (VIP)').label.tooltip
+                              svg.icon(viewBox="0 0 1 1")
+                                use(xlink:href="img/icons/stars-sprite.svg#star1gold")
                               input(type="checkbox")
                           .service-filter-value
-                            label.checkbox(title='Международный уровень (VIP+)').label.label_type3.tooltip
-                              img.icon(src="img/icons/звезда в колосках.svg", alt="icon")
+                            label.checkbox(title='Международный уровень (VIP+)').label.tooltip
+                              svg.icon(viewBox="0 0 116 87")
+                                use(xlink:href="img/icons/stars-sprite.svg#star1top")
                               input(type="checkbox")
+                //nothing
+                .mb-message.mb-message_static.mb-message_alert.mb-30 Совпадений не найдено.
                 .row
-                  .bbs-block.col-xl-3
+                  //block
+                  .bbs-block.col-xl-3.col-md-4.col-sm-6.col-12
                     .bbs-block__container
-                      .bbs-block__image.cover-box
-                        img(data-src="img/photo.jpg", alt="").lazy
-                      .bbs-block__top
-                        svg.icon
-                          use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                      .bbs-block__content.mb-15 
+                        a(href="#").bbs-block__image.mb-15
+                          .cover-box
+                            img(data-src="img/photo.jpg", alt="").lazy
+                        .bbs-block__top.mb-15
+                          .bbs-block__l
+                            svg.icon.bbs-block__experience.tooltip(viewBox="0 0 108.9 191.3" title='опыт')
+                              use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                            h5.f-w-n.t-size-18 Эдуард
+                          svg.icon.tooltip.bbs-block__rank(viewBox="0 0 1 1" title='ранг')
+                            use(xlink:href="img/icons/stars-sprite.svg#star1gray")
+                        .bbs-block__salon
+                          strong “Бородач”<br> 
+                          | Красных курсантов, 12
+                      .bbs-block__button
+                        a.button.button_style4.small Записаться
+                  //block
+                  .bbs-block.col-xl-3.col-md-4.col-sm-6.col-12
+                    .bbs-block__container 
+                      .bbs-block__content.mb-15
+                        a(href="#").bbs-block__image.mb-15
+                          .cover-box
+                            img(data-src="img/photo.jpg", alt="").lazy
+                        .bbs-block__top.mb-15
+                          .bbs-block__l
+                            svg.icon.bbs-block__experience.tooltip(viewBox="0 0 117.1 180.1" title='опыт')
+                              use(xlink:href="img/icons/barbers-sprite.svg#barber")
+                            h5.f-w-n.t-size-18 Эдуард "fffff"
+                          svg.icon.bbs-block__rank.tooltip(viewBox="0 0 3970 1850" title='ранг')
+                            use(xlink:href="img/icons/stars-sprite.svg#star2gray")
+                        .bbs-block__salon.mb-15
+                          strong “Бородач”<br> 
+                          | Красных курсантов, 12  Красных курсантов, 12 
+                      .bbs-block__button
+                        a.button.button_style4.small Записаться
+                  //block
+                  .bbs-block.col-xl-3.col-md-4.col-sm-6.col-12
+                    .bbs-block__container 
+                      .bbs-block__content.mb-15
+                        a(href="#").bbs-block__image.mb-15
+                          .cover-box
+                            img(data-src="img/photo.jpg", alt="").lazy
+                        .bbs-block__top.mb-15
+                          .bbs-block__l
+                            svg.icon.bbs-block__experience.tooltip(viewBox="0 0 123.9 174.4" title='опыт')
+                              use(xlink:href="img/icons/barbers-sprite.svg#beginner")
+                            h5.f-w-n.t-size-18 Эдуард "fffff"
+                          svg.icon.bbs-block__rank.tooltip(viewBox="0 0 5990 1850" title='ранг')
+                            use(xlink:href="img/icons/stars-sprite.svg#star3white")
+                        .bbs-block__salon.mb-15
+                          strong “Бородач”<br> 
+                          | Красных курсантов, 12  Красных курсантов, 12 
+                      .bbs-block__button
+                        a.button.button_style4.small Записаться
+                  //block
+                  .bbs-block.col-xl-3.col-md-4.col-sm-6.col-12
+                    .bbs-block__container 
+                      .bbs-block__content.mb-15
+                        a(href="#").bbs-block__image.mb-15
+                          .cover-box
+                            img(data-src="img/photo.jpg", alt="").lazy
+                        .bbs-block__top.mb-15
+                          .bbs-block__l
+                            svg.icon.bbs-block__experience.tooltip(viewBox="0 0 123.9 174.4" title='опыт')
+                              use(xlink:href="img/icons/barbers-sprite.svg#beginner")
+                            h5.f-w-n.t-size-18 Эдуард "fffff"
+                          svg.icon.bbs-block__rank.tooltip(viewBox="0 0 1 1" title='ранг')
+                            use(xlink:href="img/icons/stars-sprite.svg#star1gold")
+                        .bbs-block__salon.mb-15
+                          strong “Бородач”<br> 
+                          | Красных курсантов, 12  Красных курсантов, 12 
+                      .bbs-block__button
+                        a.button.button_style4.small Записаться
+                  //block
+                  .bbs-block.col-xl-3.col-md-4.col-sm-6.col-12
+                    .bbs-block__container 
+                      .bbs-block__content.mb-15
+                        a(href="#").bbs-block__image.mb-15
+                          .cover-box
+                            img(data-src="img/photo.jpg", alt="").lazy
+                        .bbs-block__top.mb-15
+                          .bbs-block__l
+                            svg.icon.bbs-block__experience.tooltip(viewBox="0 0 123.9 174.4" title='опыт')
+                              use(xlink:href="img/icons/barbers-sprite.svg#beginner")
+                            h5.f-w-n.t-size-18 Эдуард "fffff"
+                          svg.icon.bbs-block__rank.tooltip(viewBox="0 0 116 87" title='ранг')
+                            use(xlink:href="img/icons/stars-sprite.svg#star1top")
+                        .bbs-block__salon.mb-15
+                          strong “Бородач”<br> 
+                          | Красных курсантов, 12  Красных курсантов, 12 
+                      .bbs-block__button
+                        a.button.button_style4.small Записаться
 
-                      
         //footer
         include blocks/footer
         //other

@@ -13,7 +13,8 @@
   }
   &__container {
     display: flex;
-    padding: 0 15px;
+    padding: 0 10px;
+    flex-wrap: wrap;
   }
   &__content {
     display: flex;
@@ -30,7 +31,7 @@
       flex-wrap: wrap;
     }
     &_filter {
-      margin: 0 -15px;
+      margin: 0 -10px;
     }
   }
   &__search-count {
@@ -91,25 +92,11 @@
     }
     .icon {
       display: block;
-      width: 20px;
+      width: auto;
       height: 20px;
       margin: 0 3px 0 3px;
-    }
-    &_type2 {
-      .icon {
-        fill: $orange-color1;
-        height: 20px;
-        width: 17px;
-      }
-    }
-    &_type3 {
-      .icon {
-        width: auto;
-      }
-    }
-    &_s-size {
-      .icon {
-        padding: 3px;
+      &.smaller {
+        padding: 2px 0;
       }
     }
   }
