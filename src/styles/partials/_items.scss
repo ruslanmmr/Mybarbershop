@@ -1958,6 +1958,32 @@ a {
     }
   }
 }
+.b-barber-exp {
+  font-size: 14px;
+  &__container {
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid $orange-color1;
+    position: relative;
+  }
+  &__logo {
+    .cover-box {
+      height: 90px;
+      width: 90px;
+    }
+  }
+  &__bbs-title {
+    margin-bottom: 5px;
+  }
+  &__bbs-adres {
+    //color: $gray-color1;
+  }
+  &__date {
+    display: block;
+    margin-bottom: 5px;
+    //color: $gray-color1;
+  }
+}
 .my-vacancy-block {
   font-size: 14px;
   &__container {
