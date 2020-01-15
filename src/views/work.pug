@@ -80,10 +80,10 @@ html(lang="ru")
               .container.mb-30
                 .row
                   .my-vacancy-block.col-xl-12
-                    .my-vacancy-block__container
+                    .my-vacancy-block__container.toggle-group
                       .row
-                        .my-vacancy-block__section.col-xl-6.col-12
-                          .row
+                        .my-vacancy-block__section.col-xl-12
+                          .row.row_ai-c
                             .my-vacancy-block__logo.col-xl-auto
                               .cover-box.cover-box_contain
                                 img.lazy(data-src='img/logos/topgun.png' alt="")
@@ -97,9 +97,9 @@ html(lang="ru")
                               svg.icon
                                 use(xlink:href="img/icons/barbers-sprite.svg#girl")
                             .col-xl
-                              span.my-vacancy-block__title Салону Топгантребуется Барбер профессионал.
+                              span.my-vacancy-block__title Салону Топган требуется Барбер профессионал.
                               span.my-vacancy-block__wage Зарплата от 50 000 руб.
-                        .my-vacancy-block__section.col-xl-6.col-12
+                        .my-vacancy-block__section.col-xl-6.col-sm-12
                           span.my-vacancy-block__section-title Требования:
                           .row
                             .my-vacancy-block__item.col-xl-auto
@@ -119,7 +119,7 @@ html(lang="ru")
                             .my-vacancy-block__item.col-xl-auto
                               span.item-label Опыт работы:
                               span от 4 лет
-                        .my-vacancy-block__section.col-xl-12
+                        .my-vacancy-block__section.col-xl-6.col-sm-12
                           span.my-vacancy-block__section-title Дополнительная информация:
                           .row
                             .my-vacancy-block__item.col-xl-auto
@@ -131,7 +131,7 @@ html(lang="ru")
                             .my-vacancy-block__item.col-xl-auto
                               span.item-label Время работы:
                               span с 12:30 до 21:00
-                            .my-vacancy-block__item.col-xl-auto
+                            //.my-vacancy-block__item.col-xl-12
                               span.item-label Описание вакансии:
                               .text-container
                                 .text-parent
@@ -139,8 +139,12 @@ html(lang="ru")
                                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 .js-text-more
                                   a(href="javascript:void(0)" data-show-text='Развернуть описание' data-hide-text='Свернуть описание').link.link_type2 Развернуть описание
+                        .my-vacancy-block__section.col-xl-12.toggle-content
+                          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
                         .my-vacancy-block__buttons.col-xl-12
                           .row
+                            .col-xl-4.col-sm-12
+                              button.button.button_style1.small.toggle-button(data-hide-text='Скрыть описание вакансии' data-show-text='Показать описание вакансии') Показать описание вакансии
                             .col-xl-4.col-sm-12
                               button.button.button_style4.small
                                 | Откликнуться

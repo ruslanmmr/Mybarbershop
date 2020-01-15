@@ -2966,6 +2966,11 @@ a {
       height: 220px;
     }
   }
+  .my-vacancy-block {
+    &__lvl {
+      display: none;
+    }
+  }
   .training-item {
     &__image {
       .cover-box {

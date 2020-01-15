@@ -798,11 +798,16 @@ let $dateSlider = {
   prevSlideControl: $('.date-slider__content .date-slider__prev-m'),
   nextMControl: $('.date-slider__head .date-slider__next-m'),
   prevMControl: $('.date-slider__head .date-slider__prev-m'),
+  date: new Date(),
   inload: false,
   firstLoad: true,
   init: function() {
     this.slide = $('.date-slider-item');
+    //this.slides = this.slide.length();
     this.element = $('.date-slider__slider');
+    
+    this.day = this.date.getDate();
+
     if(this.firstLoad==true) {
       this.firstLoad=false;
       //events
@@ -830,7 +835,7 @@ let $dateSlider = {
           $dateSlider.element.slick('slickNext')
         }
       })
-      this.element.on('edge', function(event, slick, direction){
+      /* this.element.on('edge', function(event, slick, direction){
         if($dateSlider.inload == false) {
           if(direction=='right') {
             $dateSlider.changeMonth('prev');
@@ -838,7 +843,7 @@ let $dateSlider = {
             $dateSlider.changeMonth('next');
           }
         }
-      });
+      }); */
     }
     //
     this.element.on('init', function(){
@@ -846,6 +851,9 @@ let $dateSlider = {
       $dateSlider.loader.removeClass('visible');
       $dateSlider.element.addClass('visible');
     });
+
+    //$current = this.day > this.slides - slidesToShow ? this.day - (slidesToShow - 1) : this.day
+
     this.element.slick({
       infinite: false,
       dots: false,
@@ -890,6 +898,18 @@ let $dateSlider = {
         }
       ]
     })
+    let slide = this.day,
+        slides = this.slide.length;
+    
+        
+    if(slide>slides-7 && windowW>1200) {
+      slide = slides-6;
+    } else if(slide>slides-7 && windowW>768) {
+      slide = slides-5;
+    }
+
+    this.element.slick('slickGoTo',slide-1,true);
+
   },
   changeMonth: function(direction) {
     this.inload = true;
