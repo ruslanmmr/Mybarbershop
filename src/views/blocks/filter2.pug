@@ -1,0 +1,53 @@
+.service-filter
+  .service-filter__container
+    form.service-filter-form
+      .container
+        .service-filter-form__section.service-filter-form__section_search.type2
+          .row
+            .service-filter-form__input.col-xl-8.col-sm-6.col-12
+              input(type="text" placeholder="Улица / Выбрать сеть / мастер и тд. ..." required).input.input_style1.search__input
+            .service-filter-form__input.col-xl-4.col-sm-6.col-12
+              input(type="text" placeholder="Выбрать город:" required).input.input_style1.search__input
+              //.list_s_bbsh
+                .bbsh_item(data-bid='10619') Барбершоп Москва, Россия, Москва,
+        .service-filter-form__section.service-filter-form__section_filter
+          .service-filter-form__container
+            .service-filter-form__title Режим работы:
+            .service-filter-form__content
+              .service-filter-value
+                label.checkbox.label
+                  .service-filter-value__title с утра
+                  img.icon(src="img/icons/sun.svg", alt="icon")
+                  input(type="checkbox")
+              .service-filter-value
+                label.checkbox.label
+                  .service-filter-value__title до поздна
+                  img.icon(src="img/icons/night.svg", alt="icon")
+                  input(type="checkbox")
+              .service-filter-value
+                label.checkbox.label
+                  .service-filter-value__title круглосуточно
+                  img.icon(src="img/icons/24.svg", alt="icon")
+                  input(type="checkbox")
+          span.service-filter-form__decoration
+          .service-filter-form__container
+            .service-filter-form__title Стоимость услуг:
+            .service-filter-form__content
+              .service-filter-value
+                label.checkbox(title='от 100 до 550р').label.tooltip
+                  img.icon(src="img/icons/лицо золото.svg", alt="icon")
+                  .service-filter-value__title Premium
+                  input(type="checkbox")
+              .service-filter-value
+                label.checkbox(title='от 550 до 1000р').label.tooltip
+                  img.icon(src="img/icons/лицо бронза.svg", alt="icon")
+                  .service-filter-value__title Standard
+                  input(type="checkbox")
+              .service-filter-value
+                label.checkbox(title='от 1000р').label.tooltip
+                  img.icon(src="img/icons/лицо серебро.svg", alt="icon")
+                  .service-filter-value__title Economy
+                  input(type="checkbox")
+
+
+  

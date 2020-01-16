@@ -8,6 +8,7 @@
   &:not(:last-child) {
     margin-bottom: 20px;
   }
+  
   .search {
     flex: 1 1 50%;
   }
@@ -29,6 +30,9 @@
     &_search {
       margin-bottom: 6px;
       flex-wrap: wrap;
+      &.type2 {
+        display: block;
+      }
     }
     &_filter {
       margin: 0 -10px;
