@@ -11,7 +11,7 @@ html(lang="ru")
         .page__container
           main.main
             include blocks/barber-info
-            section.section.portfolio
+            section.section
               .section__head
                 .decorated
                   span.decoration
@@ -26,7 +26,7 @@ html(lang="ru")
             include blocks/portfolio
             include blocks/awards
             include blocks/banner2
-            section.section.portfolio
+            section.section
               .section__head
                 .decorated
                   span.decoration
@@ -63,7 +63,7 @@ html(lang="ru")
                           span.b-barber-exp__date 2017 - 2019
                           span.b-barber-exp__bbs-adres Москва, 2-я Рощинская ул., 1А,
             //include blocks/publications
-            section.section.portfolio
+            section.section
               .section__head
                 .decorated
                   span.decoration
@@ -80,6 +80,28 @@ html(lang="ru")
                 //.row.row_center
                   .col-xl-4.col-md-6.col-12
                     a(href="news.html").button.button_style4 Архив публикаций
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Барбер готов рассмотреть предложение о работе
+                  span.decoration
+              .container
+                .mb-20
+                  .row.row_center
+                    .b-barber-cond.col-xl-auto  
+                      .b-barber-cond__container
+                        i.far.fa-clock
+                        | Тип занятости: 
+                        span Полная
+                    .b-barber-cond.col-xl-auto  
+                      .b-barber-cond__container
+                        i.fas.fa-ruble-sign
+                        | Желаемая зарплата: 
+                        span 50 000 р.
+                .map
+                  .map__container   
+            
         //footer
         include blocks/footer
         //other

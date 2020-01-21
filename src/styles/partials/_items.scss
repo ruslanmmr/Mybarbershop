@@ -476,6 +476,22 @@ a {
   }
 }
 
+.b-barber-cond {
+  &__container {
+    padding: 0 20px;
+    border-radius: 4px;
+    background-color: $orange-color1;
+    color: #000;
+    line-height: 30px;
+    font-size: 14px;
+    i {
+      margin-right: 8px;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+}
 
 .map-window {
   padding: 8px;
@@ -2766,6 +2782,9 @@ a {
     &__head {
       font-size: 32px;
       margin: 0 0 30px 0;
+      .decorated {
+        margin: 0 30px;
+      }
     }
     &:first-child {
       margin-top: 65px;
@@ -2931,7 +2950,7 @@ a {
   }
   .section {
     &__head {
-      font-size: 26px;
+      font-size: 22px;
       &-title {
         br {
           display: block;
