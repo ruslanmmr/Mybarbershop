@@ -740,8 +740,12 @@ function toggleblocks() {
       $content.removeClass('active');
       $btns.each(function() {
         $(this).removeClass('active');
-        if($(this).data('hide-text')!==undefined) {
-          $(this).text($(this).data('show-text'))
+        if($(this).data('show-text')!==undefined) {
+          if($(this).find('span').length>0) {
+            $(this).find('span').text($(this).data('show-text'))
+          } else {
+            $(this).text($(this).data('show-text'))
+          }
         }
       })
     } else {
@@ -750,7 +754,12 @@ function toggleblocks() {
       $btns.each(function() {
         $(this).addClass('active');
         if($(this).data('hide-text')!==undefined) {
-          $(this).text($(this).data('hide-text'))
+          if($(this).find('span').length>0) {
+            $(this).find('span').text($(this).data('hide-text'))
+            console.log('2')
+          } else {
+            $(this).text($(this).data('hide-text'))
+          }  
         }
       })
     }

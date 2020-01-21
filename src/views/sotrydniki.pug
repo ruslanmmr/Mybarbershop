@@ -66,7 +66,7 @@ html(lang="ru")
                               span до
                               input(type="text").input.input_style4
                               span руб
-                    .form__group.col-xl-12
+                    .form__group.col-xl-12.toggle-group
                       .row  
                         .form__item.col-xl-auto
                           span.item-label Знание языка:
@@ -94,6 +94,42 @@ html(lang="ru")
                                 input(type="checkbox")
                                 i.fas.fa-check
                                 span Женщина
+                        .form__item.col-xl-auto.col-12
+                          a(href="#").button.button_style4.toggle-button(data-hide-text='Свернуть карту' data-show-text='Показать на карте') 
+                            i.fas.fa-location-arrow
+                            span Показать соискателей на карте
+                        .form__item.col-xl-3.col-sm-6.col-12
+                          button.button.button_style1
+                            i.fas.fa-times
+                            | Сбросить фильтр
+                        .form__item.col-xl-12.toggle-content
+                          .row
+                            .form__item.col-xl-12
+                              span.item-label Радиус поиска:
+                              .row.row_compact
+                                .col-xl-auto
+                                  label.checkbox
+                                    input(type="radio" name='1')
+                                    i.fas.fa-check
+                                    span 1км
+                                .col-xl-auto
+                                  label.checkbox
+                                    input(type="radio" name='1')
+                                    i.fas.fa-check
+                                    span 2км
+                                .col-xl-auto
+                                  label.checkbox
+                                    input(type="radio" name='1')
+                                    i.fas.fa-check
+                                    span 5км
+                                .col-xl-auto
+                                  label.checkbox
+                                    input(type="radio" name='1')
+                                    i.fas.fa-check
+                                    span 10км
+                            .col-xl-12
+                              .map
+                                .map__container            
                 .mb-30
                   .row
                     .job-offer-block.col-xl-12
@@ -137,9 +173,14 @@ html(lang="ru")
                                           span Русский
                               .job-offer-block__buttons.col-xl-12
                                 .row
+                                  .col-xl-auto.col-sm-12
+                                    a(href="#").button.button_style4.small
+                                      i.fas.fa-location-arrow
+                                      | Предпочитаемая зона работы
                                   .col-xl-4.col-sm-12
                                     button.button.button_style1.small
                                       | Пригласить
+                                  
                     .job-offer-block.col-xl-12
                       .job-offer-block__container
                         .row
