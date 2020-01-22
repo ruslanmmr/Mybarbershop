@@ -2688,19 +2688,18 @@ a {
     position: absolute;
     top: 15px;
     right: 0;
-    width: 400px;
+    width: 450px;
     text-align: right;
     span {
       white-space: nowrap;
       font-size: 18px;
       line-height: 21px;
     }
-    img {
+    .icon {
       height: 40px;
-      width: auto;
       display: block;
       margin: 0 0 0 auto;
-      padding: 0 20px;
+      fill: #fff;
     }
   }
   &__description {
@@ -2758,8 +2757,41 @@ a {
 }
 @media all and(max-width: 768px) {
   .service-table {
+    &__title {
+      display: block;
+      position: relative;
+      padding: 5px 0;
+      margin: 10px 0 ;
+      i {
+        position: absolute;
+        top: 8px;
+        right: 0;
+      }
+    }
+    &__row {
+      &:first-child {
+        .service-table__price {
+          padding: 0 0 5px 0;
+        }
+        .service-table__title {
+          line-height: 1;
+          margin: 0 0 20px 0;
+        }
+      }
+    }
     &__price {
-      width: 250px;
+      position: static;
+      width: 100%;
+      padding-bottom: 15px;
+      text-align: left;
+      padding: 0 0 17px 0;
+      span {
+        line-height: 1;
+      }
+      .icon {
+        margin: 0 auto 0 5px;
+        padding: 0;
+      }
     }
   }
   .salon-info {
@@ -2905,44 +2937,6 @@ a {
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 1;
-    }
-  }
-  .service-table {
-    &__title {
-      display: block;
-      position: relative;
-      padding: 5px 0;
-      margin: 10px 0 ;
-      i {
-        position: absolute;
-        top: 8px;
-        right: 0;
-      }
-    }
-    &__row {
-      &:first-child {
-        .service-table__price {
-          padding: 0 0 5px 0;
-        }
-        .service-table__title {
-          line-height: 1;
-          margin: 0 0 20px 0;
-        }
-      }
-    }
-    &__price {
-      position: static;
-      width: 280px;
-      padding-bottom: 15px;
-      text-align: left;
-      padding: 0 0 17px 0;
-      span {
-        line-height: 1;
-      }
-      img {
-        margin: 0 0 0 10px;
-        padding: 0;
-      }
     }
   }
   .w-out-label {
