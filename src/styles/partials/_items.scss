@@ -2606,6 +2606,8 @@ a {
     margin-bottom: 10px;
     filter: grayscale(100%);
     transition: 0.2s;
+    flex: 0 0 auto;
+    height: auto;
     &:before {
       content: '';
       display: block;
@@ -2613,6 +2615,9 @@ a {
     }
   }
   &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     &:hover {
       .barbers-slide__photo {
         filter: grayscale(0);
@@ -2623,14 +2628,22 @@ a {
     border-radius: 4px;
     border: 1px solid $orange-color1;
     padding: 15px;
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__title {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 15px;
-    img {
+    span {
+      flex: 1 1 100%;
+    }
+    .icon {
+      width: 40px;
       height: 40px;
+      flex-shrink: 0;
+      fill: #fff;
     }
   }
 }

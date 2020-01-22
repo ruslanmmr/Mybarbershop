@@ -6,7 +6,12 @@ mixin slide(name)
       .barbers-slide__content
         .barbers-slide__title.t-size-24
           span.barbers-slide__name=name
-          img(src="img/icons/ico-topbarber.png", alt="")
+          svg.icon
+            use(xlink:href="img/icons/barbers-sprite.svg#barber")
+          //svg.icon
+            use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+          //svg.icon
+            use(xlink:href="img/icons/barbers-sprite.svg#beginner")
         a(href="#").button.button_style1 Записаться онлайн
 
 section.section
@@ -18,7 +23,7 @@ section.section
   .container
     .barbers__container
       .slider.slider_arrows.slider_default.barbers-slider
-        +slide('Эдуард')
-        +slide('Эдуард')
+        +slide('Гайворонских Александр Валерьевич')
+        +slide('Гайворонских')
         +slide('Эдуард')
         +slide('Эдуард')
