@@ -15,6 +15,12 @@
     height: 1px;
     background-color: $gray-color1;
   }
+  &__text {
+    font-family: 'GOGOIA-Regular';
+    width: 100%;
+    fill: #21242b;
+  }
+  // 280.77 21
   .container {
     height: 100%;
   }
@@ -141,7 +147,7 @@
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     white-space: nowrap;
     transition: 0.2s;
@@ -323,6 +329,7 @@
       display: flex;
       align-items: center;
       padding: 0 15px;
+      font-size: 16px;
       &:hover {
         background-color: #535457;
       }

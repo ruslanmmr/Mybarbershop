@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mybarbershop</title>
-    <!--base(href='http://localhost:9000/')-->
-    <base href="https://ruslanmmr.github.io/Mybarbershop/dest/">
+    <base href="http://localhost:9000/">
+    <!--base(href='https://ruslanmmr.github.io/Mybarbershop/dest/')-->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="styles/libs.min.css">
     <link rel="stylesheet" href="styles/common.min.css">
@@ -21,12 +21,15 @@
                   <div class="logo__image"><img src="img/logos/logo.svg" alt="logo"></div></a></div>
               <nav class="nav">
                 <div class="nav__head">
-                  <form class="nav__search">
-                    <div class="search">
-                      <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
-                      <button class="search__button"><i class="fas fa-search"></i></button>
-                    </div>
-                  </form>
+                  <svg class="header__text" viewBox="0 -10 280.77 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <text font-size="11.33">мы не стрижем и не бреем, но мы знаем, кто делает это лучше в твоем городе!</text>
+                  </svg>
+                  <!--form.nav__search
+                  .search
+                    input(type="text" placeholder="Поиск" required).input.input_style1.search__input
+                    button.search__button
+                      i.fas.fa-search
+                  -->
                   <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
                 </div>
                 <ul class="nav__list">
@@ -37,6 +40,7 @@
                   <li class="nav__item"> <a class="nav__link" href="sotrydniki.html">ищу сотрудника</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">барахолка</a></li>
                   <li class="nav__item"> <a class="nav__link" href="#">Обучение</a></li>
+                  <li class="nav__item"> <a class="nav__link" href="#">Контакты</a></li>
                 </ul>
               </nav>
               <div class="sub-nav">
@@ -56,7 +60,7 @@
           <main class="main">
                         <div class="banner banner_type1">
                           <div class="banner__container">
-                            <div class="slider slider_dots banner__slider">
+                            <div class="slider slider_dots banner__slider js-autoslide">
                               <div class="slide banner-slide">
                                 <div class="banner-slide__background cover-box"><img class="lazy" alt="banner" data-src="img/banner/moe-mesto.jpg"></div>
                               </div>

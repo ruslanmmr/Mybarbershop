@@ -324,7 +324,8 @@ function slider() {
       arrows = false,
       dots = false,
       centerMode = false,
-      adaptiveHeight = false;
+      adaptiveHeight = false,
+      autoplay = false;
 
     if ($(this).hasClass('slider_dots')) {
       dots = true;
@@ -347,6 +348,9 @@ function slider() {
       slideCount768 = 2;
       slideCount576 = 1;
       slideCount420 = 1;
+    }
+    if($(this).hasClass('js-autoslide')) {
+      autoplay = true;
     }
     if ($(this).is('.banner_type1 .banner__slider')) {
       centerMode = true;
@@ -406,6 +410,8 @@ function slider() {
       centerMode: centerMode,
       slidesToShow: slideCount,
       slidesToScroll: slideCount,
+      autoplay: autoplay,
+      autoplaySpeed: 6000,
       responsive: [{
           breakpoint: 1200,
           settings: {
