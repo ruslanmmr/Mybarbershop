@@ -19,6 +19,7 @@
     font-family: 'GOGOIA-Regular';
     width: 100%;
     fill: #21242b;
+    font-weight: 700;
   }
   // 280.77 21
   .container {
@@ -134,6 +135,7 @@
   justify-content: space-between;
   &__search {
     width: 100%;
+    display: none;
   }
   &__list {
     display: flex;
@@ -290,6 +292,9 @@
     &__item_mobile-open {
       display: block;
     }
+    &__text {
+      display: none;
+    }
     .container {
       padding: 0 0 0 20px;
     }
@@ -306,6 +311,7 @@
     display: block;
     &__search {
       padding: 15px;
+      display: block;
     }
     &__head {
       background-color: #535457;

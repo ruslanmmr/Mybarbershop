@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mybarbershop</title>
-    <!--base(href='http://localhost:9000/')-->
-    <base href="https://ruslanmmr.github.io/Mybarbershop/dest/">
+    <base href="http://localhost:9000/">
+    <!--base(href='https://ruslanmmr.github.io/Mybarbershop/dest/')-->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="styles/libs.min.css">
     <link rel="stylesheet" href="styles/common.min.css">
@@ -24,12 +24,12 @@
                   <svg class="header__text" viewBox="0 -10 280.77 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <text font-size="11.33">мы не стрижем и не бреем, но мы знаем, кто делает это лучше в твоем городе!</text>
                   </svg>
-                  <!--form.nav__search
-                  .search
-                    input(type="text" placeholder="Поиск" required).input.input_style1.search__input
-                    button.search__button
-                      i.fas.fa-search
-                  -->
+                  <form class="nav__search">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                  </form>
                   <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
                 </div>
                 <ul class="nav__list">
@@ -61,7 +61,7 @@
             <div class="account-nav">
               <ul class="account-nav__list">
                 <li class="account-nav__item"><a class="account-nav__link" href="lcv/lcv_dannie.html">Мои данные</a></li>
-                <li class="account-nav__item"><a class="account-nav__link" href="lcv/lcv_barbershop.html">Мой Барбершоп</a></li>
+                <li class="account-nav__item"><a class="account-nav__link active" href="lcv/lcv_barbershops.html">Мои Барбершопы</a></li>
                 <li class="account-nav__item"><a class="account-nav__link" href="lcv/lcv_moi-sotrudniki.html">Мои сотрудники</a></li>
                 <li class="account-nav__item"><a class="account-nav__link" href="lcv/lcv_poisk-sotridnikov.html">Поиск сотрудников</a></li>
                 <li class="account-nav__item"><a class="account-nav__link" href="lcv/lcv_poisk-modelei.html">Поиск моделей</a></li>
@@ -98,6 +98,18 @@
                         </div>
                         <div class="form__item col-xl-6 col-12"><span class="item-label">Номер телефона:</span>
                           <input class="input input_style4" type="text" placeholder="+7(***)***-**-**">
+                        </div>
+                        <div class="form__item col-xl-6 col-12"><span class="item-label">Место работы:</span>
+                          <div class="select">
+                            <select>
+                              <option value="" data-display="Выберите барбершоп">Выберите барбершоп</option>
+                              <option value="">Барбершоп 1</option>
+                              <option value="">Барбершоп 1</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form__item col-xl-6 col-12"><span class="item-label">Ссылка на онлайн-запись:</span>
+                          <input class="input input_style4" type="text">
                         </div>
                       </div>
                     </div>
@@ -199,6 +211,7 @@
                                     <div class="col-xl"><span class="my-brbr-block__title">Макс, 32 года</span><span class="my-brbr-block__adress">ул. 26 Бакинских коммисаров, 23, 107</span></div>
                                   </div>
                                 </div>
+                                <div class="col-xl-auto"><span class="item-label">Место работы:</span><span class="t-size-16">Topgun Южная</span></div>
                                 <div class="col-xl-auto col-sm-12"><span class="item-label">Знание языка:</span>
                                   <div class="row row_compact">
                                     <div class="col-xl-auto">

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mybarbershop</title>
-    <!--base(href='http://localhost:9000/')-->
-    <base href="https://ruslanmmr.github.io/Mybarbershop/dest/">
+    <base href="http://localhost:9000/">
+    <!--base(href='https://ruslanmmr.github.io/Mybarbershop/dest/')-->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="styles/libs.min.css">
     <link rel="stylesheet" href="styles/common.min.css">
@@ -25,12 +25,12 @@
                   <svg class="header__text" viewBox="0 -10 280.77 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <text font-size="11.33">мы не стрижем и не бреем, но мы знаем, кто делает это лучше в твоем городе!</text>
                   </svg>
-                  <!--form.nav__search
-                  .search
-                    input(type="text" placeholder="Поиск" required).input.input_style1.search__input
-                    button.search__button
-                      i.fas.fa-search
-                  -->
+                  <form class="nav__search">
+                    <div class="search">
+                      <input class="input input_style1 search__input" type="text" placeholder="Поиск" required>
+                      <button class="search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                  </form>
                   <button class="nav__close mobile-button"><i class="fas fa-times"></i></button>
                 </div>
                 <ul class="nav__list">
@@ -221,12 +221,16 @@
                       <div class="title-head mb-20">
                         <div class="decorated"><span class="decoration"></span><strong class="title-head__title t-size-20 t-t-u">Место работы</strong><span class="decoration"></span></div>
                       </div>
-                      <!--.mb-message.mb-message_static.mb-message_alert Информация не указана либо вообще убирать эти секции если тут пусто.-->
                       <div class="row">
-                        <div class="col-xl-auto"><img class="barber-info__barbershop-image" src="img/logos/britva.jpg" alt=""></div>
-                        <div class="col-xl">
-                          <h6 class="t-size-20 f-w-n">BRITVA / Moscow</h6><span>2-я Рощинская ул., 1А,</span>
+                        <div class="col-xl-12">
+                          <div class="mb-message mb-message_static mb-message_alert">Информация не указана</div>
                         </div>
+                        <!--.col-xl-autoimg(src="img/logos/britva.jpg", alt="").barber-info__barbershop-image
+                        -->
+                        <!--.col-xl
+                        h6.t-size-20.f-w-n BRITVA / Moscow
+                        span 2-я Рощинская ул., 1А,
+                        -->
                       </div>
                     </div>
                     <div class="mb-30">

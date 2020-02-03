@@ -2226,6 +2226,27 @@ a {
     height: 20%;
   }
 }
+.mbbsh-block {
+  font-size: 14px;
+  &__container {
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid $orange-color1;
+    position: relative;
+  }
+  &__logo {
+    .cover-box {
+      height: 70px;
+      width: 70px;
+    }
+  }
+  &__bbs-title {
+    margin-bottom: 5px;
+  }
+  &__bbs-adres {
+    //color: $gray-color1;
+  }
+}
 .bbs-block {
   &__container {  
     padding: 15px;
