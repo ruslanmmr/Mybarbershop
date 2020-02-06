@@ -1,0 +1,419 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcv-nav
+          main.main
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Создать вакансию
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section.row
+                    .form__group.col-xl-12
+                      .row
+                        .form__item.col-xl-auto
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val' checked)
+                            span Барбер
+                        .form__item.col-xl-auto
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Администратор
+                        .form__item.col-xl-auto
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Управляющий
+                        .form__item.col-xl-auto
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Другое
+                    .form__group.col-xl-12
+                      .row
+                        .form__group.col-xl-7.col-sm-12
+                          .row
+                            .form__item.col-xl-12
+                              span.item-label Наименование вакансии:
+                              input(type="text").input.input_style4
+                            .form__item.col-xl-6.col-12
+                              span.item-label Заработная плата:
+                              .row
+                                .form__input.col-xl-12
+                                  span от
+                                  input(type="text").input.input_style4
+                                  span до
+                                  input(type="text").input.input_style4
+                                  span руб
+                            .form__item.col-xl-6.col-12
+                              span.item-label Время работы:
+                              .row
+                                .form__input.col-xl-12
+                                  span с
+                                  input(type="text").input.input_style4
+                                  span до
+                                  input(type="text").input.input_style4
+                        .form__item.col-xl-5.col-sm-12
+                          span.item-label Описание вакансии:
+                          textarea.input.input_style4.input_size2
+                    .form__group.col-xl-12
+                      .row
+                        .form__item.col-xl-4.col-12
+                          span.item-label Опыт работы:
+                          .form__input
+                            .select
+                              select
+                                option(value="" data-display="без опыта") без опыта
+                                option(value="") до года
+                                option(value="") от 1 до 3-х лет
+                                option(value="") более 3-х лет
+                        .form__item.col-xl-auto
+                          span.item-label Знание языка:
+                          .row.row_compact
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Русский
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Английский
+                        .form__item.col-xl-auto
+                          span.item-label Пол:
+                          .row.row_compact
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Мужчина
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Женщина
+                        .form__item.col-xl-3.col-sm-4.col-12
+                          span.item-label Город:
+                          input(type="text" value="Москва").input.input_style4
+                        .form__item.col-xl-4.col-12
+                          span.item-label Адрес:
+                          input(type="text").input.input_style4
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Создать вакансию
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Мои вакансии
+                  span.decoration
+              .container
+                .row
+                  //block
+                  .my-vacancy-block.col-xl-12
+                    .my-vacancy-block__container
+                      .row
+                        .my-vacancy-block__section.col-xl-6.col-12
+                          .row
+                            .my-vacancy-block__lvl.col-xl-auto
+                              svg.icon
+                                use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                            .col-xl
+                              span.my-vacancy-block__title Салону «Фея на Вернадке» требуется Барбер профессионал.
+                              span.my-vacancy-block__wage Зарплата от 50 000 руб.
+                        .my-vacancy-block__section.col-xl-6.col-12
+                          span.my-vacancy-block__section-title Требования:
+                          .row
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Знание языка:
+                              .row.row_compact
+                                .col-xl-auto
+                                  label.checkbox.view-only
+                                    i.fas.fa-check
+                                    span Русский
+                                .col-xl-auto
+                                  label.checkbox.view-only
+                                    i.fas.fa-check
+                                    span Английский
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Пол:
+                              span Мужчина/Женщина
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Опыт работы:
+                              span от 4 лет
+                        .my-vacancy-block__section.col-xl-12
+                          span.my-vacancy-block__section-title Дополнительная информация:
+                          .row
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Город:
+                              span Москва
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Адрес:
+                              span Москва, Проспект Вернадского, д. 77, корп. 5
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Время работы:
+                              span с 12:30 до 21:00
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Описание вакансии:
+                              .text-container
+                                .text-parent
+                                  .text-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                .js-text-more
+                                  a(href="javascript:void(0)" data-show-text='Развернуть описание' data-hide-text='Свернуть описание').link.link_type2 Развернуть описание
+                        .my-vacancy-block__buttons.col-xl-12
+                          .row
+                            .col-xl-4.col-sm-6
+                              button.button.button_style7.small
+                                i.far.fa-eye-slash
+                                | Скрыть
+                            .col-xl-4.col-sm-6
+                              button.button.button_style9.small
+                                i.far.fa-trash-alt
+                                | Удалить
+                            .col-xl-4.col-sm-12
+                              button.button.button_style1.small
+                                | Редактировать
+                  .my-vacancy-block.col-xl-12.hidden
+                    .my-vacancy-block__container
+                      .row
+                        .my-vacancy-block__section.col-xl-6.col-12
+                          .row
+                            .my-vacancy-block__lvl.col-xl-auto
+                              img(src="img/icons/ico-woman.png", alt="").icon
+                            .col-xl
+                              span.my-vacancy-block__title Салону «Фея на Вернадке» требуется уборщица.
+                              span.my-vacancy-block__wage Зарплата от 150 000 руб.
+                        .my-vacancy-block__section.col-xl-6.col-12
+                          span.my-vacancy-block__section-title Требования:
+                          .row
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Знание языка:
+                              .row.row_compact
+                                .col-xl-auto
+                                  label.checkbox.view-only
+                                    i.fas.fa-check
+                                    span Русский
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Пол:
+                              span Женщина
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Опыт работы:
+                              span Без опыта
+                        .my-vacancy-block__section.col-xl-12
+                          span.my-vacancy-block__section-title Дополнительная информация:
+                          .row
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Город:
+                              span Москва
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Адрес:
+                              span Москва, Проспект Вернадского, д. 77, корп. 5
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Время работы:
+                              span с 12:30 до 21:00
+                            .my-vacancy-block__item.col-xl-auto
+                              span.item-label Описание вакансии:
+                              .text-container
+                                .text-parent
+                                  .text-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                .js-text-more
+                                  a(href="javascript:void(0)" data-show-text='Развернуть описание' data-hide-text='Свернуть описание').link.link_type2 Развернуть описание
+                        .my-vacancy-block__buttons.col-xl-12
+                          .row
+                            .col-xl-4.col-sm-6
+                              button.button.button_style7.small
+                                i.far.fa-eye
+                                | Показать
+                            .col-xl-4.col-sm-6
+                              button.button.button_style9.small
+                                i.far.fa-trash-alt
+                                | Удалить
+                            .col-xl-4.col-sm-12
+                              button.button.button_style1.small
+                                | Редактировать
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Поиск персонала
+                  span.decoration
+              .container
+                .form__section.row
+                  .form__group.col-xl-12
+                    .row
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type2
+                          input(type="radio" name='val' checked)
+                          span Барбер
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type2
+                          input(type="radio" name='val')
+                          span Администратор
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type2
+                          input(type="radio" name='val')
+                          span Управляющий
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type2
+                          input(type="radio" name='val')
+                          span Другое
+                  .form__group.col-xl-12
+                    .row
+                      .form__item.col-xl-4.col-sm-6.col-12
+                        span.item-label Опыт работы:
+                        .form__input
+                          .select
+                            select
+                              option(value="" data-display="без опыта") без опыта
+                              option(value="") до года
+                              option(value="") от 1 до 3-х лет
+                              option(value="") более 3-х лет
+                      .form__item.col-xl-4.col-sm-6.col-12
+                        span.item-label Тип занятости:
+                        .form__input
+                          .select
+                            select
+                              option(value="" data-display="Полная") Полная
+                              option(value="") Неолная
+                              option(value="") Подмена
+                      .form__item.col-xl-4.col-sm-6.col-12
+                        span.item-label Заработная плата:
+                        .row
+                          .form__input.col-xl-12
+                            span от
+                            input(type="text").input.input_style4
+                            span до
+                            input(type="text").input.input_style4
+                            span руб
+                  .form__group.col-xl-12
+                    .row  
+                      .form__item.col-xl-auto
+                        span.item-label Знание языка:
+                        .row.row_compact
+                          .col-xl-auto
+                            label.checkbox
+                              input(type="checkbox")
+                              i.fas.fa-check
+                              span Русский
+                          .col-xl-auto
+                            label.checkbox
+                              input(type="checkbox")
+                              i.fas.fa-check
+                              span Английский
+                      .form__item.col-xl-auto
+                        span.item-label Пол:
+                        .row.row_compact
+                          .col-xl-auto
+                            label.checkbox
+                              input(type="checkbox")
+                              i.fas.fa-check
+                              span Мужчина
+                          .col-xl-auto
+                            label.checkbox
+                              input(type="checkbox")
+                              i.fas.fa-check
+                              span Женщина
+                .form__section.row
+                  .job-offer-block.col-xl-12
+                    .job-offer-block__container
+                      .row
+                        .job-offer-block__image.col-xl-3.col-sm-4.col-12
+                          a(href="#" title='Перейти в профиль').cover-box
+                            img(data-src="img/gallery/barber2.jpg", alt="").lazy
+                        .job-offer-block__content.col-xl-9.col-sm-8.col-12
+                          .row
+                            .job-offer-block__info.col-xl-12
+                              .row
+                                .col-xl-12
+                                  .row
+                                    .job-offer-block__lvl.col-xl-auto
+                                      svg.icon
+                                        use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                                    .col-xl
+                                      .job-offer-block__title
+                                        a(href="#") Руслан, 25 лет, Барбер »
+                                      span Желаемая зарплата 100 000 р
+                                .col-xl-auto
+                                  span.item-label Опыт работы:
+                                  span 2 года
+                                .col-xl-auto
+                                  span.item-label Тип занятости:
+                                  span Полная
+                                .col-xl-auto
+                                  span.item-label Последнее место работы:
+                                  span «TOPGUN», ул. Акад. Анохина, 7
+                                .col-xl-auto
+                                  span.item-label Знание языка:
+                                  .row.row_compact
+                                    .col-xl-auto
+                                      label.checkbox.view-only
+                                        i.fas.fa-check
+                                        span Английский
+                                    .col-xl-auto
+                                      label.checkbox.view-only
+                                        i.fas.fa-check
+                                        span Русский
+                            .job-offer-block__buttons.col-xl-12
+                              .row
+                                .col-xl-4.col-sm-12
+                                  button.button.button_style1.small
+                                    | Пригласить
+                  .job-offer-block.col-xl-12
+                    .job-offer-block__container
+                      .row
+                        .job-offer-block__image.col-xl-3.col-sm-4.col-12
+                          a(href="#" title='Перейти в профиль').cover-box
+                            img(data-src="img/gallery/uborshchica-photo.jpg", alt="").lazy
+                        .job-offer-block__content.col-xl-9.col-sm-8.col-12
+                          .row
+                            .job-offer-block__info.col-xl-12
+                              .row
+                                .col-xl-12
+                                  .row
+                                    .job-offer-block__lvl.col-xl-auto
+                                      img(src="img/icons/ico-woman.png", alt="").icon
+                                    .col-xl
+                                      .job-offer-block__title
+                                        a(href="#") Оля, 18 лет, Уборщица »
+                                      span Желаемая зарплата 20 000 р
+                                .col-xl-auto
+                                  span.item-label Опыт работы:
+                                  span 5 лет
+                                .col-xl-auto
+                                  span.item-label Тип занятости:
+                                  span Полная
+                                .col-xl-auto
+                                  span.item-label Знание языка:
+                                  .row.row_compact
+                                    .col-xl-auto
+                                      label.checkbox.view-only
+                                        i.fas.fa-check
+                                        span Русский
+                            .job-offer-block__buttons.col-xl-12
+                              .row
+                                .col-xl-4.col-sm-12
+                                  button.button.button_style1.small
+                                    | Пригласить
+                .form__section.row
+                  .form__item.col-xl-4.col-sm-6.col-12
+                    button.button.button_style7 Показать еще
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

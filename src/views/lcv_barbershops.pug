@@ -1,0 +1,116 @@
+mixin usluga()
+  .form__section.row
+    .form__group.col-xl-12
+      .row
+        .form__item.col-xl-4.col-sm-8.col-12
+          span.item-label Наименование услуги:
+          input(type="text").input.input_style4
+        .form__item.col-xl-2.col-sm-4.col-6
+          span.item-label Стоимость услуги:
+          input(type="text").input.input_style4
+        .form__item.col-xl-2.col-sm-4.col-6
+          span.item-label ТОП Барбер:
+          .form__input
+            svg.icon
+              use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+            input(type="text").input.input_style4
+        .form__item.col-xl-2.col-sm-4.col-6
+          span.item-label Барбер:
+          .form__input
+            svg.icon
+              use(xlink:href="img/icons/barbers-sprite.svg#barber")
+            input(type="text").input.input_style4
+        .form__item.col-xl-2.col-sm-4.col-6
+          span.item-label Стажер:
+          .form__input
+            svg.icon
+              use(xlink:href="img/icons/barbers-sprite.svg#beginner")
+            input(type="text").input.input_style4
+    .form__group.col-xl-12
+      .row
+        .form__item.col-xl-9.col-sm-12.toggle-group
+          .row
+            .col-xl-auto
+              a(href="#").button.button_style8.toggle-button Описание услуги:
+                i.fas.fa-angle-double-right
+            .col-xl.col-12.toggle-content
+              textarea.input.input_style4.input_size2
+        .form__item.col-xl-3.col-sm-4.col-12
+          button.button.button_style9.small Удалить услугу
+
+
+
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcv-nav
+          main.main
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Мои барбершопы
+                  span.decoration
+              .container
+                .mb-30
+                  .row
+                    .col-xl-4.col-md-6.col-12
+                      a(href="#").button.button_style4
+                        i.fas.fa-plus
+                        | Добавить барбершоп
+                .row
+                  .mbbsh-block.col-xl-4.col-md-6.col-12
+                    .mbbsh-block__container
+                      .row.row_medium
+                        .mbbsh-block__logo.col-xl-auto
+                          .cover-box.cover-box_contain
+                            img(data-src="img/logos/chop-chop.jpg", alt="logo").lazy
+                        .mbbsh-block__content.col-xl
+                          h5.mbbsh-block__bbs-title.t-size-18 Chop-chop
+                          span.mbbsh-block__bbs-adres Москва, 2-я Рощинская ул., 1А,
+                        .mbbsh-block__content.col-xl-12
+                          .row.row_medium
+                            .col-xl-6
+                              a(href="lcv/lcv_barbershop.html").button.button_style1.small
+                                | Редактировать
+                            .col-xl-6
+                              a(href="#").button.button_style9.small
+                                i.far.fa-trash-alt
+                                | Удалить
+                  .mbbsh-block.col-xl-4.col-md-6.col-12
+                    .mbbsh-block__container
+                      .row.row_medium
+                        .mbbsh-block__logo.col-xl-auto
+                          .cover-box.cover-box_contain
+                            img(data-src="img/logos/chop-chop.jpg", alt="logo").lazy
+                        .mbbsh-block__content.col-xl
+                          h5.mbbsh-block__bbs-title.t-size-18 Chop-chop 2
+                          span.mbbsh-block__bbs-adres Москва
+                        .mbbsh-block__content.col-xl-12
+                          .row.row_medium
+                            .col-xl-6
+                              a(href="lcv/lcv_barbershop.html").button.button_style1.small
+                                | Редактировать
+                            .col-xl-6
+                              a(href="#").button.button_style9.small
+                                i.far.fa-trash-alt
+                                | Удалить
+
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+        .mb-message.mb-message_success Данные успешно сохранены!
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

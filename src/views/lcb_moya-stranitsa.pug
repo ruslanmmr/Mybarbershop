@@ -1,0 +1,381 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcb-nav
+          main.main
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Анкета
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section.row
+                    .form__item.col-xl-3.col-sm-4.col-6
+                      span.item-label Фото:
+                      .image-load-area
+                        a(href="#").button.button_type-img-load.size2 Загрузить<br> изображение
+                        a(href="#").button.button_type-close
+                          i.fas.fa-times
+                    .form__group.col-xl-9.col-sm-8.col-12
+                      .row
+                        .form__item.col-xl-6.col-12
+                          span.item-label Фамилия/Имя/Отчество/Ник
+                          input(type="text" placeholder="Фамилия/Имя/Отчество/Ник").input.input_style4
+                        .form__item.col-xl-6.col-12
+                          span.item-label e-mail:
+                          input(type="email" placeholder="e-mail:").input.input_style4
+                        .form__item.col-xl-6.col-12
+                          span.item-label Район проживания:
+                          input(type="text" placeholder="Район проживания:").input.input_style4
+                        .form__item.col-xl-6.col-12
+                          span.item-label Номер телефона:
+                          input(type="text" placeholder="+7(***)***-**-**").input.input_style4
+                        .form__item.col-xl-12
+                          span.item-label Дата рождения:
+                          .row
+                            .form__input.col-xl-4
+                              .select
+                                select
+                                  option(value="" data-display="День") День
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .form__input.col-xl-4
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") Февраль
+                                  option(value="") Март
+                                  option(value="") Май
+                            .form__input.col-xl-4
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1990
+                                  option(value="") 1991
+                        .form__item.col-xl-6.col-12
+                          span.item-label Место работы:
+                          input(type="text" placeholder="Место работы:").input.input_style4
+                        .form__item.col-xl-6.col-12
+                          span.item-label Ссылка на онлайн запись:
+                          input(type="text" placeholder="").input.input_style4
+                    .form__group.col-xl-12
+                      .row
+                        .form__item.col-xl-auto
+                          span.item-label Пол:
+                          .row.row_compact
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="radio" name='1')
+                                i.fas.fa-check
+                                span Мужской
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="radio" name='1')
+                                i.fas.fa-check
+                                span Женский
+                        .form__item.col-xl-auto
+                          span.item-label Знание языка:
+                          .row.row_compact
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Русский
+                            .col-xl-auto
+                              label.checkbox
+                                input(type="checkbox")
+                                i.fas.fa-check
+                                span Английский
+                    .form__group.col-xl-12
+                      .row
+                        .form__item.col-xl-4.col-12
+                          span.item-label Facebook:
+                          input(type="text" placeholder="https://facebook.com/username").input.input_style4
+                        .form__item.col-xl-4.col-12
+                          span.item-label Twitter:
+                          input(type="text" placeholder="https://twitter.com/username").input.input_style4
+                        .form__item.col-xl-4.col-12
+                          span.item-label ВКонтакте:
+                          input(type="text" placeholder="https://vk.com/username").input.input_style4
+                        .form__item.col-xl-4.col-12
+                          span.item-label Одноклассники:
+                          input(type="text" placeholder="https://ok.ru/username").input.input_style4
+                        .form__item.col-xl-4.col-12
+                          span.item-label Instagram:
+                          input(type="text" placeholder="https://instagram.com/username").input.input_style4
+                    .form__group.col-xl-12
+                      .row
+                        .form__item.col-xl-auto
+                          label.checkbox.toggle-checkbox
+                            input(type="checkbox" name="val1")
+                            i.fas.fa-check
+                            span Готов рассмотреть предложения по работе
+                        .col-xl-12.toggle-item
+                          .row
+                            .form__item.col-xl-3.col-sm-6.col-12
+                              span.item-label Желаемая зарплата:
+                              input(type="text" placeholder="").input.input_style4
+                            .form__item.col-xl-3.col-sm-6.col-12
+                              span.item-label Тип занятости:
+                              .select
+                                select
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .form__item.col-xl-6.col-12
+                              span.item-label Город работы:
+                              input(type="text" placeholder="").input.input_style4
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Сохранить
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title О себе
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section.row
+                    .form__item.col-xl-12
+                      span.item-label О себе, клиенты, мой опыт:
+                      textarea.input.input_style4.input_size1
+                    .form__item.col-xl-12
+                      span.item-label Ссылка на видео:
+                      input(type="text").input.input_style4
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Сохранить
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Моё портфолио
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section.row
+                    .form__item.col-xl-3.col-6
+                      span.item-label Фото:
+                      .image-load-area.loaded
+                        a(href="#").button.button_type-img-load Загрузить<br> изображение
+                        a(href="#").button.button_type-close
+                          i.fas.fa-times
+                    .form__item.col-xl-9.col-6
+                      span.item-label Описание:
+                      textarea.input.input_style4.input_size2
+                    .form__item.col-xl-3.col-sm-4.col-12
+                      button.button.button_style9.small Удалить
+                  .form__section.row
+                    .form__item.col-xl-3.col-6
+                      span.item-label Фото:
+                      .image-load-area
+                        a(href="#").button.button_type-img-load Загрузить<br> изображение
+                        a(href="#").button.button_type-close
+                          i.fas.fa-times
+                    .form__item.col-xl-9.col-6
+                      span.item-label Описание:
+                      textarea.input.input_style4.input_size2
+                    .form__item.col-xl-3.col-sm-4.col-12
+                      button.button.button_style9.small Удалить
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style7
+                        i.fas.fa-plus
+                        | Добавить eщё
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Сохранить
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Мой опыт работы
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section
+                    .row.row_center
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type-experience.tooltip(title='Барбер-профессионал')
+                          input(type="radio" name='val' checked)
+                          svg.icon
+                            use(xlink:href="img/icons/barbers-sprite.svg#topbarber")
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type-experience.tooltip(title='Барбер')
+                          input(type="radio" name='val' checked)
+                          svg.icon
+                            use(xlink:href="img/icons/barbers-sprite.svg#barber")
+                      .form__item.col-xl-auto
+                        label.checkbox.checkbox_type-experience.tooltip(title='Барбер-новичок')
+                          input(type="radio" name='val' checked)
+                          svg.icon
+                            use(xlink:href="img/icons/barbers-sprite.svg#beginner")
+                      span.t-a-center.col-xl-12 Общий стаж работы в профессии : <strong class='t-size-24'>1.6</strong> года
+                  .form__section
+                    .form__group.group.group_style1
+                      .row
+                        .form__item.col-xl-3.col-md-6.col-12
+                          span.item-label Место работы:
+                          input(type="text" placeholder='топган, Ясенево').input.input_style4
+                        .form__item.col-xl.col-md-6.col-12
+                          span.item-label Начало работы:
+                          .row
+                            .col-xl-6
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .col-xl-6
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                        .form__item.col-xl.col-md-6.col-12
+                          span.item-label Окончание:
+                          .row
+                            .col-xl
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .col-xl
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                        .form__item.w-out-label.col-xl-auto
+                          label.checkbox
+                            input(type="checkbox" name="")
+                            i.fas.fa-check
+                            span По настоящее время
+                        .col-xl-12
+                          .row.row_flex-end
+                            .form__item.col-xl-3.col-sm-4.col-12
+                              button.button.button_style9.small
+                                i.far.fa-trash-alt
+                                | Удалить
+                    .form__group.group.group_style1
+                      .row
+                        .form__item.col-xl-3.col-md-6.col-12
+                          span.item-label Место работы:
+                          input(type="text" placeholder='топган, Ясенево').input.input_style4
+                        .form__item.col-xl.col-md-6.col-12
+                          span.item-label Начало работы:
+                          .row
+                            .col-xl-6
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .col-xl-6
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                        .form__item.col-xl.col-md-6.col-12
+                          span.item-label Окончание:
+                          .row
+                            .col-xl
+                              .select
+                                select
+                                  option(value="" data-display="Месяц") Месяц
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                            .col-xl
+                              .select
+                                select
+                                  option(value="" data-display="Год") Год
+                                  option(value="") 1
+                                  option(value="") 2
+                                  option(value="") 3
+                        .form__item.w-out-label.col-xl-auto
+                          label.checkbox
+                            input(type="checkbox" name="")
+                            i.fas.fa-check
+                            span По настоящее время
+                        .col-xl-12
+                          .row.row_flex-end
+                            .form__item.col-xl-3.col-sm-4.col-12
+                              button.button.button_style9.small
+                                i.far.fa-trash-alt
+                                | Удалить
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style7
+                        i.fas.fa-plus
+                        | Добавить место работы
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Сохранить
+            section.section
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Мои награды
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section.row
+                    .form__item.col-xl-3.col-6
+                      span.item-label Фото:
+                      .image-load-area.loaded
+                        a(href="#").button.button_type-img-load Загрузить<br> изображение
+                        a(href="#").button.button_type-close
+                          i.fas.fa-times
+                    .form__item.col-xl-9.col-6
+                      span.item-label Описание:
+                      textarea.input.input_style4.input_size2
+                    .form__item.col-xl-3.col-sm-4.col-12
+                      button.button.button_style9.small Удалить
+                  .form__section.row
+                    .form__item.col-xl-3.col-6
+                      span.item-label Фото:
+                      .image-load-area
+                        a(href="#").button.button_type-img-load Загрузить<br> изображение
+                        a(href="#").button.button_type-close
+                          i.fas.fa-times
+                    .form__item.col-xl-9.col-6
+                      span.item-label Описание:
+                      textarea.input.input_style4.input_size2
+                    .form__item.col-xl-3.col-sm-4.col-12
+                      button.button.button_style9.small Удалить
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style7
+                        i.fas.fa-plus
+                        | Добавить eщё
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Сохранить
+            include blocks/addCode
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+        .mb-message.mb-message_error Какая-то ошибка!
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

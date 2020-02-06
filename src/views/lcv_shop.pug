@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcv-nav
+          main.main
+            .banner.banner_size3.mb-30.lazy(data-src='img/banner/shop.jpg')
+            .container
+              .row.row_center
+                .col-xl-4.col-sm-6.col-12
+                  a(href="javascript:;" data-src="#email").button.button_style1.modal-link Получить уведомление
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

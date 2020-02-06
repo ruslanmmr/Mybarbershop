@@ -99,7 +99,7 @@
     z-index: 1;
     background-size: cover;
     &[data-filter] {
-      filter: blur(5px);
+      //filter: blur(5px);
       &:after {
         content: '';
         display: block;
@@ -107,7 +107,7 @@
         width: 100%;
         height: 100%;
         z-index: 2;
-        background: rgba(0,0,0,.8);
+        background: rgba(0,0,0,.7);
       }
     }
   }

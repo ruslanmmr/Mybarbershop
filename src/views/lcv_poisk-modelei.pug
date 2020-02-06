@@ -1,0 +1,48 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcv-nav
+          main.main
+            section.section.section_with-banner
+              .banner.banner_type3.cover-box
+                img(data-src="img/banner/models-banner.png", alt="").lazy
+              .section__head
+                .decorated
+                  span.decoration
+                  h5.section__head-title Кто вам нужен ?
+                  span.decoration
+              .container
+                span.info-label.mb-20 Какой то текст
+                form(action="").form
+                  .form__section.row.row_center
+                    .form__item.col-xl-3.col-sm-4.col-6
+                      label.checkbox.checkbox_type-model
+                        input(type="checkbox" name='val' checked)
+                        span Бритье
+                        img(src="img/icons/ico-shaving.svg", alt="")
+                    .form__item.col-xl-3.col-sm-4.col-6
+                      label.checkbox.checkbox_type-model
+                        input(type="checkbox" name='val')
+                        span Стрижка
+                        img(src="img/icons/ico-haircut.svg", alt="")
+                  .form__section.row.row_center
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style1 Опубликовать на странице <strong>FREE</strong>
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      a.button.button_style4 Сделать рассылку
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
