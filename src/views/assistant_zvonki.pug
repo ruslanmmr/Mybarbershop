@@ -1,0 +1,80 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcv-nav
+          main.main
+            section.section
+              .section__head.small
+                .decorated
+                  span.decoration
+                  h5.section__head-title Звонки
+                  span.decoration
+              .container
+                .mb-30
+                  .row
+                    .col-xl-4.col-sm-6.col-12
+                      .input-date
+                        i.far.fa-calendar-alt
+                        input(placeholder="Сортировка по дате:").input.input_style4.js-picker-date
+                mixin row(title)
+                  tr
+                    th=title
+                    th 09:18  Вход.
+                    th
+                      span.num-d +7 926 543 44 51
+                    th
+                      audio(src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3" preload="auto")
+                    th.t-a-right
+                      a(href="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3" download).button.button_style-download.small
+                        i.fas.fa-download
+                .table-area.mb-30
+                  table.table
+                    tr
+                      th ФИО
+                      th Время звонка
+                      th Номер телефона
+                      th Слушать
+                      th.t-a-right Скачать
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                .pagination
+                  ul.pagination__list
+                    li
+                      a(href="#")
+                        i.fas.fa-angle-double-left
+                    li
+                      a(href="#") 1
+                    li
+                      a(href="#").active 2
+                    li
+                      a(href="#") 3
+                    li ...
+                    li
+                      a(href="#")
+                        i.fas.fa-angle-double-right
+
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

@@ -19,6 +19,8 @@ $(document).ready(function () {
   if($('.date-slider').length>0) {
     $dateSlider.init();
   }
+  picker.init();
+  audio.init();
 });
 
 $(window).resize(function () {
@@ -942,3 +944,24 @@ let $dateSlider = {
   }
 }
 
+//date/time
+let picker = {
+  init: function() {
+    let $date = $('.js-picker-date');
+
+    flatpickr($date, {
+      "locale": 'ru',
+      disableMobile: "true",
+      dateFormat: "d.m.Y",
+      defaultDate: 'today'
+    });
+  }
+}
+//audio
+let audio = {
+  init: function() {
+    audiojs.events.ready(function() {
+      let audio = audiojs.createAll();
+    });
+  }
+}

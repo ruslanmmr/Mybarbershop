@@ -197,6 +197,9 @@
     padding: 0;
     list-style: none;
   }
+  &__sub-item {
+    padding-left: 20px;
+  }
   &__item,
   .reaspektSearchCity {
     display: block;

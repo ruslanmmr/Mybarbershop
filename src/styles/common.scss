@@ -20,10 +20,12 @@ $shadow: 5px 5px 10px -4px rgba(0,0,0,0.4);
 $orange-color1: #ff8a00;
 $orange-color2: #ca6c00;
 
+$gray-color11: #616161;
 $gray-color1: #a7a9ae;
 $gray-color2: #888a90;
 $gray-color3: #65666a;
 $gray-color4: #0c1115;
+$gray-color5: #353535;
 
 body {
   text-rendering: optimizeSpeed;
@@ -76,24 +78,6 @@ body {
   flex: 0 1 100%;
 }
 
-@media (max-width: 479px) {
-  .added_box {
-    .item {
-      margin: 0 0 15px 0;
-      width: 100%;
-    }
-    .title {
-      span {
-        text-align: center;
-      }
-    }
-    .price {
-      width: 100%;
-      text-align: center;
-    }
-  }
-}
-
 @media all and(max-width: 1200px) {
   .aside {
     flex: 1 0 170px;
@@ -133,6 +117,7 @@ body {
 @import "./partials/gallery";
 @import "./partials/recommendations";
 @import "./partials/map";
+@import "./partials/assistant";
 @import "./partials/news";
 @import "./partials/lc-nav";
 @import "./partials/footer";
@@ -141,3 +126,6 @@ body {
 @import "./partials/portfolio";
 @import "./partials/publications";
 @import "./partials/barber-info";
+
+//кабинет асистента
+@import "./partials/assistant";

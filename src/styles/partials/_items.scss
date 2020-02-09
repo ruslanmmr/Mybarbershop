@@ -122,6 +122,24 @@ a {
     min-height: 150px;
   }
 }
+.input-date {
+  position: relative;
+  input {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  i {
+    pointer-events: none;
+    position: absolute;
+    line-height: 30px;
+    right: 10px;
+    top: 0;
+    right: 10px;
+    color: $gray-color3;
+    z-index: 2;
+  }
+}
 
 .button {
   cursor: pointer;
@@ -342,6 +360,26 @@ a {
     }
     &.active {
       cursor: default;
+    }
+  }
+  &_style-download {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+    background: rgba(255,138,0,.2);
+    i {
+      margin: 0;
+    }
+    &:hover {
+      color: $orange-color1;
+    }
+    &.small {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+      line-height: 30px;
     }
   }
 }
@@ -794,9 +832,12 @@ a {
     border-radius: 4px;
     width: 100%;
     font-weight: 400;
-    padding: 0 20px;
+    padding: 0 10px;
     text-align: center;
     font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     &:hover {
       color: $gray-color3;
       border-color: $gray-color3;
@@ -1021,9 +1062,15 @@ a {
     width: 38px;
     z-index: 2;
     color: #fff;
-    transition: 0.3s;
+    transition: 0.2s;
     &:hover {
       opacity: 0.8;
+    }
+    &.type2 {
+      color: $gray-color2;
+      &:hover {
+        color: #000;
+      }
     }
   }
 }
@@ -1342,6 +1389,10 @@ a {
       text-align: center;
       text-align: center;
     }
+    &.small {
+      font-size: 32px;
+      margin: 0 0 30px 0;
+    }
   }
   &:first-child {
     margin-top: 60px;
@@ -1349,6 +1400,12 @@ a {
   &:last-child {
     margin-bottom: 0;
   }
+}
+.brdr-b {
+  border-radius: 4px;
+  //border: 1px solid $orange-color1;
+  padding: 15px;
+  background-color: rgba(255,138,0,0.1);
 }
 .number-block {
   background-color: $orange-color1;
@@ -2243,9 +2300,6 @@ a {
   &__bbs-title {
     margin-bottom: 5px;
   }
-  &__bbs-adres {
-    //color: $gray-color1;
-  }
 }
 .bbs-block {
   &__container {  
@@ -2749,6 +2803,35 @@ a {
     }
   }
 }
+.block-request {
+  line-height: 20px;
+  font-weight: 400;
+  &__container {
+    border-radius: 4px;
+    border: 1px solid $orange-color1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__index {
+    color: $orange-color1;
+    white-space: nowrap;
+    strong {
+      color: #fff;
+    }
+  }
+  &__resault {
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+  &__left {
+    display: flex;
+  }
+  &__title {
+    color: $orange-color1;
+    margin-left: 30px;
+  }
+}
 
 //responsive
 @media all and(max-width: 1200px) {
@@ -2767,6 +2850,18 @@ a {
   .big-news-block {
     &__text {
       padding: 20px;
+    }
+  }
+  .section {
+    &__head {
+      font-size: 32px;
+      margin: 0 0 30px 0;
+      &.small {
+        font-size: 28px;
+      }
+      .decorated {
+        margin: 0 30px;
+      }
     }
   }
   .salon-info {
@@ -2845,13 +2940,6 @@ a {
   }
   .section {
     margin: 30px 0 50px 0;
-    &__head {
-      font-size: 32px;
-      margin: 0 0 30px 0;
-      .decorated {
-        margin: 0 30px;
-      }
-    }
     &:first-child {
       margin-top: 65px;
     }
@@ -2891,6 +2979,18 @@ a {
   }
 }
 @media all and(max-width: 576px) {
+  .block-request {
+    &__container {
+      display: block;
+    }
+    &__left {
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    &__title {
+      text-align: right;
+    }
+  }
   .title-head {
     justify-content: center;
     &__title {
@@ -2979,6 +3079,9 @@ a {
   .section {
     &__head {
       font-size: 22px;
+      &.small {
+        font-size: 22px;
+      }
       &-title {
         br {
           display: block;

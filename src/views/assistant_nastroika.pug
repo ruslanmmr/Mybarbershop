@@ -1,0 +1,102 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcv-nav
+          main.main
+            section.section
+              .section__head.small
+                .decorated
+                  span.decoration
+                  h5.section__head-title Настройка клиентской базы
+                  span.decoration
+              .container
+                .mb-30
+                  .row
+                    .col-xl-4.col-sm-6.col-12
+                      .search
+                        input(type="text" placeholder="ФИО / Номер телефона" required).input.input_style1.search__input
+                        button.search__button
+                          i.fas.fa-search
+                mixin row(title)
+                  tr
+                    th=title
+                    th 
+                      span.num-d +7 926 543 44 51
+                    th
+                      label.checkbox
+                        input(type="checkbox" checked)
+                        i.fas.fa-check
+                    th
+                      label.checkbox
+                        input(type="checkbox" checked)
+                        i.fas.fa-check
+                    th
+                      label.checkbox
+                        input(type="checkbox")
+                        i.fas.fa-check
+                    th
+                      label.checkbox
+                        input(type="checkbox")
+                        i.fas.fa-check
+                    th
+                      label.checkbox
+                        input(type="checkbox")
+                        i.fas.fa-check
+                    th
+                      label.checkbox
+                        input(type="checkbox" checked)
+                        i.fas.fa-check
+                .table-area.mb-30
+                  table.table
+                    tr
+                      th ФИО
+                      th Номер телефона
+                      th Подтверждение<br> звонка
+                      th Оценка<br> качества
+                      th Пригласить<br> на коррекцию
+                      th Пригласить<br> через месяц
+                      th Пригласить<br>  через неделю
+                      th Звонок<br> за 45 м.
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                    +row('Авгурзалигу А.В.')
+                    +row('Алексей Д.А.')
+                .pagination
+                  ul.pagination__list
+                    li
+                      a(href="#")
+                        i.fas.fa-angle-double-left
+                    li
+                      a(href="#") 1
+                    li
+                      a(href="#").active 2
+                    li
+                      a(href="#") 3
+                    li ...
+                    li
+                      a(href="#")
+                        i.fas.fa-angle-double-right
+
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

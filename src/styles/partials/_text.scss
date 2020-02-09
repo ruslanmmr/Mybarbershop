@@ -34,6 +34,9 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   text-align: center;
 }
+.t-a-right {
+  text-align: right;
+}
 .t-size-64 {
   font-size: 64px;
   line-height: 1.15;
@@ -59,6 +62,9 @@ h1, h2, h3, h4, h5, h6 {
 .t-size-12 {
   font-size: 12px;
 }
+.t-size-14 {
+  font-size: 12px;
+}
 .t-size-16 {
   font-size: 16px;
 }
@@ -73,6 +79,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .f-w-b {
   font-weight: 700;
+}
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media all and(max-width: 1400px) {

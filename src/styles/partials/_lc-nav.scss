@@ -8,11 +8,18 @@
   &__item {
     border-bottom: 1px solid $orange-color1;
   }
+  &__sub-item {
+    margin-left: 20px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray-color2;
+    }
+  }
   &__link {
     display: block;
     text-decoration: none;
-    padding: 6px 0;
+    padding: 7px 0;
     transition: 0.2s;
+    line-height: 20px;
     &:hover {
       color: $orange-color1;
     }

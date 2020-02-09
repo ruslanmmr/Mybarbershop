@@ -1,0 +1,79 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcv-nav
+          main.main
+            section.section
+              .section__head.small
+                .decorated
+                  span.decoration
+                  h5.section__head-title баланс
+                  span.decoration
+              .container
+                .brdr-b.mb-30
+                  .row.row_medium.row_ai-c
+                    .col-xl
+                      | Ваш баланс: 
+                      span.t-size-18.f-w-b 10000 руб.
+                    .col-xl-auto.col-12
+                      a(href="javasript:void(0)").button.button_style4.small Пополнить баланс
+                .mb-30
+                  .title-head.mb-20
+                    .decorated
+                      span.decoration
+                      strong.title-head__title.t-size-20.t-t-u Ваш тариф
+                      span.decoration
+                  .brdr-b.mb-30.toggle-group
+                    .row.row_medium.row_ai-c
+                      .col-xl
+                        | Ваш тариф: 
+                        strong.t-size-18 1000 руб. 
+                        span.c-gray.t-size-14.nowrap ( Действителен до: <strong>20.02.20</strong> )
+                      .col-xl-auto.col-12
+                        .row.row_medium
+                          .col-xl-auto
+                            a(href="#").button.button_style1.small.toggle-button(data-hide-text='Скрыть' data-show-text='Подробнее') Подробнее
+                          .col-xl
+                            a(href="javasript:void(0)").button.button_style4.small Изменить тариф
+                      .col-xl-12.toggle-content
+                        p sdsfj;lsdjf lsjdf' sjdf';skdf sldkf;  ;skd';k 
+
+                .mb-30
+                  .title-head.mb-20
+                    .decorated
+                      span.decoration
+                      strong.title-head__title.t-size-20.t-t-u История платежей
+                      span.decoration
+                  .table-area.mb-30
+                    table.table.bordered
+                      tr
+                        th Дата
+                        th.t-a-right Внесенная сумма
+                      tr
+                        th 09.01.20
+                        th.t-a-right 1500 руб.
+                      tr
+                        th 10.01.20
+                        th.t-a-right 15400 руб.
+                      tr
+                        th 11.01.20
+                        th.t-a-right 154400 руб.
+
+
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

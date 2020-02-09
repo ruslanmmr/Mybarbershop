@@ -1,0 +1,91 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .background.lazy(data-src='img/backgrounds/background.jpg')
+    .wrapper
+      .page
+        include blocks/header
+        .page__container.container
+          aside.aside
+            include blocks/lcv-nav
+          main.main
+            section.section
+              .section__head.small
+                .decorated
+                  span.decoration
+                  h5.section__head-title МОИ помощники
+                  span.decoration
+              .container
+                form(action="").form
+                  .form__section.row
+                    .form__group.col-xl-12
+                      .row.row_compact
+                        .form__item.col-xl-auto.col-12
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val' checked)
+                            span Контекстная реклама
+                        .form__item.col-xl-auto.col-12
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Сео продвижение
+                        .form__item.col-xl-auto.col-12
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Дизайерские задачи
+                        .form__item.col-xl-auto.col-12
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Бухгалтерские вопросы
+                        .form__item.col-xl-auto.col-12
+                          label.checkbox.checkbox_type2
+                            input(type="radio" name='val')
+                            span Вопросы по сайту
+                    .form__item.col-xl-12
+                      input(type="text" placeholder="Тема письма:").input.input_style4
+                    .form__item.col-xl-12
+                      textarea(placeholder="Опишите задачу:").input.input_style4.input_size2
+                    .form__item.col-xl-auto
+                      label.button.button_style1.small
+                        i.far.fa-file-alt
+                        | Прикрепить файлы
+                        input(type="file" multiple hidden)
+                  .form__section.row
+                    .form__item.col-xl-4.col-sm-6.col-12
+                      button.button.button_style4 Отправить заявку
+            section.section
+              .section__head.small
+                .decorated
+                  span.decoration
+                  h5.section__head-title мои заявки
+                  span.decoration
+              .container
+                .block-request.mb-10
+                  .block-request__container
+                    .block-request__left
+                      span.block-request__index № 
+                        strong 00475
+                      span.block-request__title «Как решить проблему»
+                    .block-request__resault
+                      span.c-main На рассмотрении 
+                      | / 
+                      span.c-gray Подтверждена
+                .block-request.mb-10
+                  .block-request__container
+                    .block-request__left
+                      span.block-request__index № 
+                        strong 00474
+                      span.block-request__title «Оплата»
+                    .block-request__resault
+                      span.c-gray На рассмотрении 
+                      | / 
+                      span.c-main Подтверждена  
+        //footer
+        include blocks/footer
+        //other
+        include blocks/popup
+        include blocks/fixed
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
