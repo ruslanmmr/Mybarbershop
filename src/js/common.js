@@ -294,6 +294,7 @@ function tooltip() {
     trigger: 'custom',
     animationDuration: 100,
     trackerInterval: 100,
+    delay: 0,
     triggerOpen: {
       click: true, // For mouse
       touchstart: true, // For touch device
