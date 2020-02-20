@@ -182,6 +182,3 @@ gulp.task("deploy", function () {
         compress: true
     }));
 });
-
-
-//данные vh210 YiOiwshbjOS2
