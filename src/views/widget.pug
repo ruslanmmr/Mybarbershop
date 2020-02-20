@@ -6,66 +6,46 @@ html(lang="ru")
     .background.lazy(data-src='img/backgrounds/background.jpg')
     .wrapper
       .page
-        include blocks/header
-        .page__container
-          main.main
-            section.section
-              .section__head.small
-                .decorated
-                  span.decoration
-                  h5.section__head-title Записаться в барбершоп
-                  span.decoration
-              .container
-                .row.row_center
-                  .mbbsh-block.widget-block.col-xl-auto
-                    .mbbsh-block__container
-                      .row.row_medium
-                        .mbbsh-block__logo.col-xl-auto
-                          a(href="#").cover-box.cover-box_contain
-                            img.lazy.ww.visible(alt='logo', src='img/logos/chop-chop.jpg', style='')
-                        .mbbsh-block__content.col-xl
-                          .mbbsh-block__bbs-link.t-size-18
-                            a(href="#") «APACHES»
-                          span.mbbsh-block__bbs-adres ул. Сущёвский Вал, 22
-                        .mbbsh-block__content.col-xl-12
-                          .socials.socials_style2
-                            ul.socials__list.row.row_compact
-                              li.socials__item.col-xl-auto
-                                a(href="#" title='Через Y-clients').socials__link.tooltip
-                                  svg.icon(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 141.3 131.8' xml:space='preserve')
-                                    path(d='M125.4,8.5c-7.7,9.9-14.9,20.1-22.6,29.9C92.2,51.8,82.1,65.5,71.4,78.8c-1.7,2.1-2.8,4.3-3.5,6.9\
-                                    c-3.3,12.6-6.2,24.5-9.8,37.7c-1.2,6.8-3.6,8.4-10.7,8.4c-3.3,0-18.1,0-22.2,0c-6.8,0-9.3-3.3-8.1-10\
-                                    c2.3-12.6,4.8-25.1,7.4-37.5c0.5-2.4,0.3-4.5-0.5-6.7c-6-17-11.9-33.9-18.1-50.8C3.7,20.9,1.1,15,0.2,8.7C-0.7,2,1.2,0,7.9,0\
-                                    c7.4-0.1,14.8,0,22.2,0c4.5,0,7.4,1.9,8.7,6.4c3.2,11,6.4,22,9.7,33c0.5,1.8,0.5,4.3,2.9,4.7c2.4,0.4,3.1-2,4.2-3.6\
-                                    c8.6-12.3,17.8-24.3,25.8-37.1c1.3-2,3.2-3.3,5.7-3.3c11.2,0,22.3-0.2,33.5,0C126,0.2,128.3,4.7,125.4,8.5z')
-                                    path(d='M108.9,65.2c1.1,11.1,5.7,15.9,16.2,16.3c8.8,0.4,16.3-7.5,16.2-16.3c-0.1-8.9-7.6-16.1-16.5-16\
-                                    C115.8,49.4,108.9,56.4,108.9,65.2z')
-                              li.socials__item.col-xl-auto
-                                a(href="#" title=' Через Whatsapp').socials__link.tooltip
-                                  i.fab.fa-whatsapp
-                              li.socials__item.col-xl-auto
-                                a(href="#" title='Через Viber').socials__link.tooltip
-                                  i.fab.fa-viber
-                              li.socials__item.col-xl-auto
-                                a(href="#" title='Через Telegram').socials__link.tooltip
-                                  i.fab.fa-telegram-plane
-                              li.socials__item.col-xl-auto
-                                a(href="#" title='Через Vkontakte').socials__link.tooltip
-                                  i.fab.fa-vk 
-                              li.socials__item.col-xl-auto
-                                a(href="#" title='Через Facebook').socials__link.tooltip
-                                  i.fab.fa-facebook-f
-                              li.socials__item.col-xl-auto
-                                a(href="#" title='Через Instagram').socials__link.tooltip
-                                  i.fab.fa-instagram
-                              li.socials__item.col-xl-auto
-                                a(href="#" title='Через chto eto?').socials__link.socials__link_arrow.tooltip
-                                  i.fas.fa-location-arrow
-        //footer
-        include blocks/footer
-        //other
-        include blocks/popup
-        include blocks/fixed
+        main.main
+          .container
+            .widget-item
+              .d-line.mb-10
+              a(href="https://mybarbershop.ru/").widget-item__logo.mb-10
+                img(src="img/logos/logo.svg" alt="logo")
+              .d-line.mb-10
+              .mb-10
+                p.widget-item__text Записаться в барбершоп «APACHES»<br> ул. Сущёвский Вал, 22, через:
+              .mb-15
+                .row.row_medium.row_center
+                  .col-xl-auto
+                    a(href="#").widget-item-link
+                      img(src="img/icons/yclients.svg", alt="icon")
+                  .col-xl-auto
+                    a(href="#").widget-item-link
+                      img(src="img/icons/whatsup.svg", alt="icon")
+                  .col-xl-auto
+                    a(href="#").widget-item-link
+                      img(src="img/icons/viber.svg", alt="icon")
+                  .col-xl-auto
+                    a(href="#").widget-item-link
+                      img(src="img/icons/telegram.svg", alt="icon")
+                  .col-xl-auto
+                    a(href="#").widget-item-link
+                      img(src="img/icons/vk.svg", alt="icon")
+                  .col-xl-auto
+                    a(href="#").widget-item-link
+                      img(src="img/icons/facebook.svg", alt="icon")
+                  .col-xl-auto
+                    a(href="#").widget-item-link
+                      img(src="img/icons/instagram.svg", alt="icon")
+                  .col-xl-auto
+                    a(href="#").widget-item-link
+                      img(src="img/icons/route.svg", alt="icon")
+              .mb-15.t-a-center
+                a(href="https://mybarbershop.ru/").s404__link.link.t-size-24.c-main MYBARBERSHOP
+              a(href="#").widget-item__bbsh.mb-15
+                img(src="img/logos/topgun.png" alt="logo")
+              .d-line
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="js/libs.min.js")                  
     script(src="js/common.min.js")
