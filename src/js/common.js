@@ -21,6 +21,7 @@ $(document).ready(function () {
   }
   picker.init();
   audio.init();
+  mobilew.init();
 });
 
 $(window).resize(function () {
@@ -964,5 +965,20 @@ let audio = {
     audiojs.events.ready(function() {
       let audio = audiojs.createAll();
     });
+  }
+}
+
+let mobilew = {
+  trigger: $('.socials-widget__button'),
+  element: $('.socials-widget'),
+  container: $('.socials-widget__content'),
+  init: function() {
+    $(document).on('click', function(event) {
+      if($(event.target).closest(mobilew.trigger).length>0) {
+        mobilew.element.toggleClass('active')
+      } else if($(event.target).closest(mobilew.trigger).length==0 && $(event.target).closest(mobilew.element).length==0) {
+        mobilew.element.removeClass('active')
+      }
+    })
   }
 }
