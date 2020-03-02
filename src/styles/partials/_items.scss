@@ -2407,6 +2407,21 @@ a,button,input {
     height: 55px;
     width: 55px;
     display: block;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &_ynavigator {
+      display: flex;
+      background-color: #fff;
+      border-radius: 5px;
+      img {
+        width: 60%;
+        height: 60%;
+        margin: auto;
+      }
+    }
     &:hover {
       opacity: 0.8;
     }
