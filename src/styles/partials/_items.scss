@@ -2407,6 +2407,8 @@ a,button,input {
     height: 55px;
     width: 55px;
     display: block;
+    border-radius: 5px;
+    overflow: hidden;
     img {
       display: block;
       width: 100%;
