@@ -805,6 +805,15 @@ function select() {
   } else {
     $('.select').addClass('mobile-select');
   }
+
+  $('select').on('change', function(){
+    console.log($(this).find('option:checked'))
+    if($(this).find('option:checked').data('toggle')!==undefined) {
+      $(this).parents('.select-toggle').addClass('active');
+    } else {
+      $(this).parents('.select-toggle').removeClass('active');
+    }
+  })
   
 }
 

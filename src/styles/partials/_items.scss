@@ -2974,6 +2974,16 @@ a,button,input {
     margin-left: 30px;
   }
 }
+.select-toggle {
+  &__item {
+    display: none;
+  }
+  &.active {
+    .select-toggle__item {
+      display: block;
+    }
+  }
+}
 
 //responsive
 @media all and(max-width: 1200px) {

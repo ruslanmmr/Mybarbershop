@@ -19,11 +19,25 @@ html(lang="ru")
                   span.decoration
               .container
                 .mb-30
-                  .row
-                    .col-xl-4.col-sm-6.col-12
+                  .row.select-toggle
+                    .col-xl-3.col-sm-4.col-12
+                      .select
+                        select
+                          option(value="1") Выбрать дату:
+                          option(value="2") Сегодня
+                          option(value="3") Вчера
+                          option(value="4") Последние 30 дней
+                          option(value="5" data-toggle) Диапазон
+                    .col-xl-3.col-sm-4.col-12.select-toggle__item
                       .input-date
                         i.far.fa-calendar-alt
                         input(placeholder="Сортировка по дате:").input.input_style4.js-picker-date
+                    .col-xl-3.col-sm-4.col-12.select-toggle__item
+                      .input-date
+                        i.far.fa-calendar-alt
+                        input(placeholder="Сортировка по дате:").input.input_style4.js-picker-date
+                    .col-xl-3.col-sm-4.col-12
+                      button.button.button_style1.small Применить
                 mixin row(title)
                   tr
                     th=title

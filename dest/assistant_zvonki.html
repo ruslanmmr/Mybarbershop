@@ -86,11 +86,30 @@
               </div>
               <div class="container">
                 <div class="mb-30">
-                  <div class="row">
-                    <div class="col-xl-4 col-sm-6 col-12">
+                  <div class="row select-toggle">
+                    <div class="col-xl-3 col-sm-4 col-12">
+                      <div class="select">
+                        <select>
+                          <option value="1">Выбрать дату:</option>
+                          <option value="2">Сегодня</option>
+                          <option value="3">Вчера</option>
+                          <option value="4">Последние 30 дней</option>
+                          <option value="5" data-toggle>Диапазон</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 col-12 select-toggle__item">
                       <div class="input-date"><i class="far fa-calendar-alt"></i>
                         <input class="input input_style4 js-picker-date" placeholder="Сортировка по дате:">
                       </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 col-12 select-toggle__item">
+                      <div class="input-date"><i class="far fa-calendar-alt"></i>
+                        <input class="input input_style4 js-picker-date" placeholder="Сортировка по дате:">
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4 col-12">
+                      <button class="button button_style1 small">Применить</button>
                     </div>
                   </div>
                 </div>
