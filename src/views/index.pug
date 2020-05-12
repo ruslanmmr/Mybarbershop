@@ -3,29 +3,17 @@ html(lang="ru")
   head
     include blocks/head
   body
-    .mb-message.mb-message_alert Какое-то Предупреждение!
     .background.lazy(data-src='img/backgrounds/background.jpg')
-    .alert-main-message
-      .alert-main-message__desktop
-        | Внимание! Сайт находиться в режиме бетта тестирования. Если вы обнаружили ошибку в работе - нажмите Ctrl+Enter 
-      .alert-main-message__mobile Внимание! Сайт находиться в режиме бетта тестирования.
     .wrapper
       .page
         include blocks/header
         .page__container
           main.main
             include blocks/banner-main
-            include blocks/banner2
-            include blocks/gallery
             include blocks/recommendations
             include blocks/banner2
-            section.section
-              .section__head
-                .decorated
-                  span.decoration
-                  h1.section__head-title Подберите барбершоп
-                  span.decoration
-              include blocks/filter_state1
+            include blocks/filter
+            include blocks/gallery
             include blocks/banner2
             include blocks/news-module
         //footer
@@ -34,5 +22,5 @@ html(lang="ru")
         include blocks/popup
         include blocks/fixed
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-    script(src="js/libs.min.js")                  
+    script(src="js/libs.min.js")
     script(src="js/common.min.js")

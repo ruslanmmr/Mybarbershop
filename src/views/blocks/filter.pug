@@ -1,0 +1,71 @@
+section.section.filter-section
+  .section__head
+    .section__head-container.decorated
+      span.decoration
+      h5.section__head-title.section__head-title_stars Поиск барбершопа в 
+        a(href="#") Москве
+      span.decoration
+  .container
+    .filter
+      form(action="#").filter__form
+        .filter__section
+          .row
+            .col-xl-9.col-md-12.order-md-2
+              .row.row_medium
+                .col-xl-4.col-sm-auto
+                  label.checkbox.checkbox_type2
+                    input(type="checkbox" checked)
+                    span Ближайший барбершоп
+                .col-xl-4.col-sm-auto
+                  label.checkbox.checkbox_type2
+                    input(type="checkbox")
+                    span Открыт сейчас
+                .col-xl-4.col-sm-auto
+                  label.checkbox.checkbox_type2
+                    input(type="checkbox")
+                    span Будет открыт в течение часа
+            .filter__resault.col-xl-3.col-md-12.order-md-1 Всего найдено: 207 мест
+        .filter__section
+          .search
+            input(type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required).input.input_style1.search__input
+            button.search__button
+              i.fas.fa-search
+        .filter__section
+          .filter__group
+            .filter__group-title Режим работы:
+            .filter__group-labels
+              label.checkbox
+                span до 22
+                img.icon(src="img/icons/sun.svg", alt="icon")
+                input(type="checkbox")
+              label.checkbox
+                span после 22
+                img.icon(src="img/icons/night.svg", alt="icon")
+                input(type="checkbox")
+              label.checkbox
+                span круглосуточно
+                img.icon(src="img/icons/24.svg", alt="icon")
+                input(type="checkbox")
+          span.filter-form__decoration
+          .filter__group
+            .filter__group-title Стоимость услуг:
+            .filter__group-labels
+              label.checkbox
+                img.icon(src="img/icons/лицо золото.svg", alt="icon")
+                span выше 1500 р
+                input(type="checkbox")
+              label.checkbox
+                img.icon(src="img/icons/лицо бронза.svg", alt="icon")
+                span 500-1500 р
+                input(type="checkbox")
+              label.checkbox
+                img.icon(src="img/icons/лицо серебро.svg", alt="icon")
+                span до 500 р
+                input(type="checkbox")
+    .filter__map.toggle-group
+      .map.toggle-content.mb-20
+        .map__container
+          div(id='map')
+      .row.filter__map-more
+        .col-xl-3.col-sm-4.col-auto
+          a(href="javascript:void(0);").button.button_style4.small.toggle-button(data-hide-text='Свернуть карту' data-show-text='Показать на карте') Показать на карте

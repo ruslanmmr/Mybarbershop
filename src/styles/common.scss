@@ -12,7 +12,6 @@
 	}
 }
 @include font-face("Berniershade", "../fonts/Berniershade");
-//@include font-face("GOGOIA-Regular", "../fonts/GOGOIA-Regular");
 
 $line-height-main: 1.35;
 $shadow: 5px 5px 10px -4px rgba(0,0,0,0.4);
@@ -108,6 +107,11 @@ body {
   }
 }
 
+/* ----- Grid ----- */
+@import "./partials/grid";
+/* ----- Helpers ----- */
+@import "./partials/helpers";
+
 @import "./partials/items";
 @import "./partials/text";
 @import "./partials/slider";
@@ -116,7 +120,13 @@ body {
 @import "./partials/banner";
 @import "./partials/gallery";
 @import "./partials/recommendations";
+
+/* ----- Map ----- */
 @import "./partials/map";
+
+/* ----- Filter ----- */
+@import "./partials/filter";
+
 @import "./partials/assistant";
 @import "./partials/news";
 @import "./partials/lc-nav";

@@ -10,9 +10,12 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
-.ymaps-2-1-75-ground-pane {
+//map fix color
+.ymaps-2-1-76-ground-pane {
   filter: invert(1) saturate(5%) grayscale(100%);
 }
+
+
 #map {
   position: absolute;
   width: 100%;

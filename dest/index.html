@@ -9,12 +9,7 @@
     <link rel="stylesheet" href="styles/common.min.css">
   </head>
   <body>
-    <div class="mb-message mb-message_alert">Какое-то Предупреждение!</div>
     <div class="background lazy" data-src="img/backgrounds/background.jpg"></div>
-    <div class="alert-main-message">
-      <div class="alert-main-message__desktop">Внимание! Сайт находиться в режиме бетта тестирования. Если вы обнаружили ошибку в работе - нажмите Ctrl+Enter </div>
-      <div class="alert-main-message__mobile">Внимание! Сайт находиться в режиме бетта тестирования.</div>
-    </div>
     <div class="wrapper">
       <div class="page">
         <header class="header">
@@ -60,8 +55,9 @@
           <main class="main">
             <div class="banner banner_type1">
               <div class="myplace"><a class="myplace__link tooltip modal modal-link" href="javascript:;" data-src="#auth" title="для того чтобы назначить барбершоп по умолчанию ЗАРЕГИСТРИРУЙТЕСЬ!"><img class="myplace__image" src="img/logos/myplace.svg" alt=""></a></div>
-              <div class="banner__container">
-                <div class="slider slider_dots banner__slider"><a class="slide banner-slide" href="javascript:;" data-fancybox data-src="#registration">
+              <div class="banner__container container">
+                <div class="banner__slider slider slider_dots js-autoslide">
+                  <!--slide--><a class="slide banner-slide" href="javascript:;" data-fancybox data-src="#registration">
                     <div class="banner-slide__background cover-box" data-filter><img class="lazy" data-src="img/banner/banner-image1.jpg" alt="#"></div>
                     <div class="banner-slide__container">
                       <div class="container">
@@ -69,39 +65,171 @@
                         <div class="banner-slide__sub-title">и получи больше возможностей...</div>
                       </div>
                     </div></a>
+                  <!--slide-->
                   <div class="slide banner-slide">
                     <div class="banner-slide__background cover-box" data-filter><img class="lazy" data-src="img/banner/banner-salon.jpg" alt="#"></div>
                     <div class="banner-slide__container">
                       <div class="container">
                         <div class="banner-slide__title">заголовок</div>
-                        <div class="banner-slide__sub-title">описание к заголовку, или текст</div>
+                        <div class="banner-slide__sub-title">Описание к заголовку, или текст....</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="banner banner_type2">
-              <div class="banner__container">
-                <div class="container">
-                  <div class="slider slider_dots banner__slider">
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/первый.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/карта.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/новый год.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/платформа.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/поток.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/работа.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/школы.jpg"></a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <section class="gallery section">
+            <section class="section recommendations">
               <div class="section__head">
                 <div class="section__head-container decorated"><span class="decoration"></span>
                   <h5 class="section__head-title section__head-title_icons">мы рекомендуем</h5><span class="decoration"></span>
                 </div>
               </div>
+              <div class="recommendations__container">
+                <div class="container">
+                  <div class="slider slider_arrows slider_arrows slider_default recommendations-slider">
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
+                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/barbarossa.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
+                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/topgun.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
+                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/barbarossa.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
+                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/topgun.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
+                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/barbarossa.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
+                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/topgun.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
+                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
+                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/topgun.png"></div>
+                                    </div>
+                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
+                                    </div></a></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="banner banner_type2">
+              <div class="banner__container container">
+                <div class="banner__slider slider slider_dots js-autoslide">
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/первый.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/карта.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/новый год.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/платформа.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/поток.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/работа.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/школы.jpg"></a></div>
+                </div>
+              </div>
+            </div>
+            <section class="section filter-section">
+              <div class="section__head">
+                <div class="section__head-container decorated"><span class="decoration"></span>
+                  <h5 class="section__head-title section__head-title_stars">Поиск барбершопа в <a href="#">Москве</a></h5><span class="decoration"></span>
+                </div>
+              </div>
+              <div class="container">
+                <div class="filter">
+                  <form class="filter__form" action="#">
+                    <div class="filter__section">
+                      <div class="row">
+                        <div class="col-xl-9 col-md-12 order-md-2">
+                          <div class="row row_medium">
+                            <div class="col-xl-4 col-sm-auto">
+                              <label class="checkbox checkbox_type2">
+                                <input type="checkbox" checked><span>Ближайший барбершоп</span>
+                              </label>
+                            </div>
+                            <div class="col-xl-4 col-sm-auto">
+                              <label class="checkbox checkbox_type2">
+                                <input type="checkbox"><span>Открыт сейчас</span>
+                              </label>
+                            </div>
+                            <div class="col-xl-4 col-sm-auto">
+                              <label class="checkbox checkbox_type2">
+                                <input type="checkbox"><span>Будет открыт в течение часа</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter__resault col-xl-3 col-md-12 order-md-1">Всего найдено: 207 мест</div>
+                      </div>
+                    </div>
+                    <div class="filter__section">
+                      <div class="search">
+                        <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
+                        <button class="search__button"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                    <div class="filter__section">
+                      <div class="filter__group">
+                        <div class="filter__group-title">Режим работы:</div>
+                        <div class="filter__group-labels">
+                          <label class="checkbox"><span>до 22</span><img class="icon" src="img/icons/sun.svg" alt="icon">
+                            <input type="checkbox">
+                          </label>
+                          <label class="checkbox"><span>после 22</span><img class="icon" src="img/icons/night.svg" alt="icon">
+                            <input type="checkbox">
+                          </label>
+                          <label class="checkbox"><span>круглосуточно</span><img class="icon" src="img/icons/24.svg" alt="icon">
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                      </div><span class="filter-form__decoration"></span>
+                      <div class="filter__group">
+                        <div class="filter__group-title">Стоимость услуг:</div>
+                        <div class="filter__group-labels">
+                          <label class="checkbox"><img class="icon" src="img/icons/лицо золото.svg" alt="icon"><span>выше 1500 р</span>
+                            <input type="checkbox">
+                          </label>
+                          <label class="checkbox"><img class="icon" src="img/icons/лицо бронза.svg" alt="icon"><span>500-1500 р</span>
+                            <input type="checkbox">
+                          </label>
+                          <label class="checkbox"><img class="icon" src="img/icons/лицо серебро.svg" alt="icon"><span>до 500 р</span>
+                            <input type="checkbox">
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="filter__map toggle-group">
+                  <div class="map toggle-content mb-20">
+                    <div class="map__container">
+                      <div id="map"></div>
+                    </div>
+                  </div>
+                  <div class="row filter__map-more">
+                    <div class="col-xl-3 col-sm-4 col-auto"><a class="button button_style4 small toggle-button" href="javascript:void(0);" data-hide-text="Свернуть карту" data-show-text="Показать на карте">Показать на карте</a></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="gallery section">
               <div class="gallery__wrap">
                 <div class="container">
                   <div class="gallery__container">
@@ -202,167 +330,16 @@
                 </div>
               </div>
             </section>
-            <section class="section recommendations">
-              <div class="section__head">
-                <div class="section__head-container decorated"><span class="decoration"></span>
-                  <h5 class="section__head-title section__head-title_icons">мы рекомендуем</h5><span class="decoration"></span>
-                </div>
-              </div>
-              <div class="recommendations__container">
-                <div class="container">
-                  <div class="slider slider_arrows slider_arrows slider_default recommendations-slider">
-                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
-                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/barbarossa.png"></div>
-                                    </div>
-                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                    </div></a></div>
-                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
-                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/topgun.png"></div>
-                                    </div>
-                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                    </div></a></div>
-                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
-                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/barbarossa.png"></div>
-                                    </div>
-                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                    </div></a></div>
-                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
-                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/topgun.png"></div>
-                                    </div>
-                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                    </div></a></div>
-                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
-                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/barbarossa.png"></div>
-                                    </div>
-                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты и СПА,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                    </div></a></div>
-                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
-                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/topgun.png"></div>
-                                    </div>
-                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                    </div></a></div>
-                                <div class="slide recommendations-block"><a class="recommendations-block__container" href="#">
-                                    <div class="recommendations-block__head" style="background-image:url(&quot;../img/backgrounds/колоски.svg&quot;)">
-                                      <div class="recommendations-block__image cover-box cover-box_contain"><img class="lazy" alt="" data-src="img/logos/topgun.png"></div>
-                                    </div>
-                                    <div class="recommendations-block__content"><span class="recommendations-block__description">Салоны красоты,<br> барбершоп,<br> м. Ясенево,<br> Голубинская улица, 16</span>
-                                    </div></a></div>
-                  </div>
-                </div>
-              </div>
-            </section>
             <div class="banner banner_type2">
-              <div class="banner__container">
-                <div class="container">
-                  <div class="slider slider_dots banner__slider">
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/первый.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/карта.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/новый год.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/платформа.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/поток.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/работа.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/школы.jpg"></a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <section class="section">
-              <div class="section__head">
-                <div class="decorated"><span class="decoration"></span>
-                  <h1 class="section__head-title">Подберите барбершоп</h1><span class="decoration"></span>
-                </div>
-              </div>
-              <div class="service-filter">
-                <div class="service-filter__container">
-                  <form class="service-filter-form">
-                    <div class="container">
-                      <div class="service-filter-form__section service-filter-form__section_search">
-                        <div class="search">
-                          <input class="input input_style1 search__input" type="text" placeholder="Город / метро Арбатская / улица Арбат / Выбрать сеть / мастер и тд. ..." required>
-                          <button class="search__button"><i class="fas fa-search"></i></button>
-                        </div>
-                      </div>
-                      <div class="service-filter-form__section service-filter-form__section_filter">
-                        <div class="service-filter-form__container">
-                          <div class="service-filter-form__title">Режим работы:</div>
-                          <div class="service-filter-form__content">
-                            <div class="service-filter-value">
-                              <label class="checkbox label">
-                                <div class="service-filter-value__title">с утра</div><img class="icon" src="img/icons/sun.svg" alt="icon">
-                                <input type="checkbox">
-                              </label>
-                            </div>
-                            <div class="service-filter-value">
-                              <label class="checkbox label">
-                                <div class="service-filter-value__title">до поздна</div><img class="icon" src="img/icons/night.svg" alt="icon">
-                                <input type="checkbox">
-                              </label>
-                            </div>
-                            <div class="service-filter-value">
-                              <label class="checkbox label">
-                                <div class="service-filter-value__title">круглосуточно</div><img class="icon" src="img/icons/24.svg" alt="icon">
-                                <input type="checkbox">
-                              </label>
-                            </div>
-                          </div>
-                        </div><span class="service-filter-form__decoration"></span>
-                        <div class="service-filter-form__container">
-                          <div class="service-filter-form__title">Стоимость услуг:</div>
-                          <div class="service-filter-form__content">
-                            <div class="service-filter-value">
-                              <label class="checkbox label tooltip" title="от 100 до 550р"><img class="icon" src="img/icons/лицо золото.svg" alt="icon">
-                                <div class="service-filter-value__title">Premium</div>
-                                <input type="checkbox">
-                              </label>
-                            </div>
-                            <div class="service-filter-value">
-                              <label class="checkbox label tooltip" title="от 550 до 1000р"><img class="icon" src="img/icons/лицо бронза.svg" alt="icon">
-                                <div class="service-filter-value__title">Standard</div>
-                                <input type="checkbox">
-                              </label>
-                            </div>
-                            <div class="service-filter-value">
-                              <label class="checkbox label tooltip" title="от 1000р"><img class="icon" src="img/icons/лицо серебро.svg" alt="icon">
-                                <div class="service-filter-value__title">Economy</div>
-                                <input type="checkbox">
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                  <div class="mb-20 container">
-                    <div class="row row_center">
-                      <div class="col-xl-auto col-12"><a class="button button_style4 small" href="#"><i class="fas fa-location-arrow"></i>Ближайший барбершоп</a></div>
-                    </div>
-                  </div>
-                  <div class="map">
-                    <div class="map__container">
-                      <div id="map"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <div class="banner banner_type2">
-              <div class="banner__container">
-                <div class="container">
-                  <div class="slider slider_dots banner__slider">
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/первый.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/карта.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/новый год.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/платформа.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/поток.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/работа.jpg"></a></div>
-                                <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/школы.jpg"></a></div>
-                  </div>
+              <div class="banner__container container">
+                <div class="banner__slider slider slider_dots js-autoslide">
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/первый.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/карта.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/новый год.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/платформа.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/поток.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/работа.jpg"></a></div>
+                              <div class="slide banner-slide"><a class="banner-slide__background cover-box" href="#"><img class="lazy banner-slide__image" alt="" data-src="img/школы.jpg"></a></div>
                 </div>
               </div>
             </div>
@@ -817,7 +794,7 @@
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/libs.min.js">                 </script>
+    <script src="js/libs.min.js"></script>
     <script src="js/common.min.js"></script>
   </body>
 </html>

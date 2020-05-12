@@ -1,19 +1,21 @@
 .banner.banner_type1
   include myplace
-  .banner__container
-    .slider.slider_dots.banner__slider
-      a(href="javascript:;" data-fancybox data-src="#registration").slide.banner-slide
+  .banner__container.container
+    .banner__slider.slider.slider_dots.js-autoslide
+      //slide
+      a.slide.banner-slide(href="javascript:;" data-fancybox data-src="#registration")
         .banner-slide__background.cover-box(data-filter)
           img(data-src="img/banner/banner-image1.jpg" alt="#").lazy
         .banner-slide__container
           .container
             .banner-slide__title ЗарЕГИСТРИРУйся
             .banner-slide__sub-title и получи больше возможностей...
+      //slide
       .slide.banner-slide
         .banner-slide__background.cover-box(data-filter)
           img(data-src="img/banner/banner-salon.jpg" alt="#").lazy
         .banner-slide__container
-            .container
-              .banner-slide__title заголовок
-              .banner-slide__sub-title описание к заголовку, или текст
+          .container
+            .banner-slide__title заголовок
+            .banner-slide__sub-title Описание к заголовку, или текст....
       

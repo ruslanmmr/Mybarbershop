@@ -1,0 +1,64 @@
+.mb-30 {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.mb-50 {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+.mb-20 {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.mb-15 {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.mb-5 {
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+.mb-10 {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.c-main {
+  color: $orange-color1;
+}
+.c-gray {
+  color: $gray-color1;
+}
+.t-t-u {
+  text-transform: uppercase;
+}
+.t-a-center {
+  display: block;
+  text-align: center;
+}
+.t-a-right {
+  text-align: right;
+}
+.p-l {
+  padding-inline-start: 2em;
+}
+.f-w-n {
+  font-weight: normal;
+}
+.f-w-m {
+  font-weight: 500;
+}
+.f-w-b {
+  font-weight: 700;
+}
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

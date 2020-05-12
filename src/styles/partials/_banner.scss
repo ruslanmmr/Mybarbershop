@@ -6,10 +6,20 @@
   background-position: center center;
   &_type1 {
     .banner-slide {
-      height: 100vh;
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 56.25%;
+      }
+      &__background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
     }
   }
-  //увше
   &_type2 {
     margin: 40px 0;
     .cover-box {
@@ -49,45 +59,11 @@
       padding-top: 50%;
     }
   }
-  /* <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="248px" height="20px">
-<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 1.08718701019764, 0, 0, 1.08718701019764,-13.0181788952086, 18.1539025764823)" font-size="22.075px"><tspan font-size="22.075px" font-family="BERNIERShade" fill="#FFFFFF">MYBARBERSHOP&#32;&#1084;&#1086;&#1077;&#32;&#1084;&#1077;&#1089;&#1090;&#1086;</tspan></text>
-</svg>
-  &__background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-size: cover;
-  } */
   .slick-list {
-    overflow: visible;
     padding: 0 !important;
   }
   .slick-slider {
     margin: 0 auto;
-    max-width: 2560px;
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      background-color: rgba(0, 0, 0, 0.8);
-      left: 0;
-      z-index: 3;
-    }
-    &:before {
-      left: -100%;
-    }
-    &:after {
-      left: 100%;
-    }
   }
   &_bg {
     background: #111111;
@@ -99,7 +75,6 @@
     z-index: 1;
     background-size: cover;
     &[data-filter] {
-      //filter: blur(5px);
       &:after {
         content: '';
         display: block;
@@ -131,19 +106,17 @@
     margin: 0;
     color: $orange-color1;
     text-transform: uppercase;
-    font-size: 82px;
+    font-size: 72px;
     font-weight: 700;
   }
   &__sub-title {
-    font-size: 36px;
+    font-size: 32px;
     margin: 0;
     font-weight: 300;
   }
 }
 
-@media all and(max-width: 1300px) {
-  
-}
+
 @media all and(max-width: 1200px) {
   .banner-slide {
     &__title {
@@ -154,10 +127,8 @@
     }
   }
   .banner {
-    &_type2 {
-      .container {
-        padding: 0;
-      }
+    &__container {
+      padding: 0;
     }
   }
 }
@@ -216,7 +187,4 @@
       padding-bottom: 40px;
     }
   }
-}
-@media all and(max-width: 400px) {
-  
 }

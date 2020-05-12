@@ -17,26 +17,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
 }
 
-.p-l {
-  padding-inline-start: 2em;
-}
-
-.c-main {
-  color: $orange-color1;
-}
-.c-gray {
-  color: $gray-color1;
-}
-.t-t-u {
-  text-transform: uppercase;
-}
-.t-a-center {
-  display: block;
-  text-align: center;
-}
-.t-a-right {
-  text-align: right;
-}
 .t-size-64 {
   font-size: 64px;
   line-height: 1.15;
@@ -71,20 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 .t-size-18 {
   font-size: 18px;
 }
-.f-w-n {
-  font-weight: normal;
-}
-.f-w-m {
-  font-weight: 500;
-}
-.f-w-b {
-  font-weight: 700;
-}
-.nowrap {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 
 @media all and(max-width: 1400px) {
   .t-size-64 {
