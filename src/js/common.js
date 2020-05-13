@@ -16,6 +16,7 @@ $(document).ready(function () {
   tabs();
   textMoreToggle();
   select();
+  rating();
   if($('.date-slider').length>0) {
     $dateSlider.init();
   }
@@ -990,4 +991,61 @@ let mobilew = {
       }
     })
   }
+}
+
+function rating() {
+
+  $(document).on('click', '.js-rating__star', function(event) {
+    let $parent = $(event.target).closest('.js-rating');
+    if(!$parent.hasClass('js-rating_readonly')) {
+      let $star = $(event.target).closest('.js-rating__star'),
+        $stars = $star.parents('.js-rating').find('.js-rating__star'),
+        $input = $star.parents('.js-rating').find('input'),
+        count = $star.attr('data-index');
+      $input.val(count);
+      $stars.each(function(index){
+        if(index<count) {
+          $(this).addClass('active');
+        } else {
+          $(this).removeClass('active');
+        }
+      })
+    }
+  })
+  
+  $(document).on('mousemove mouseleave', '.js-rating__list', function(event) {
+    let $parent = $(event.target).closest('.js-rating');
+    if(!$parent.hasClass('js-rating_readonly')) {
+      let $star = $(event.target).closest('.js-rating__star'),
+        $rating = $(event.target).closest('.js-rating__list'),
+        $stars = $rating.find('.js-rating__star'),
+        $input = $rating.parents('.js-rating').find('input');
+      if(event.type=='mousemove' && device.desktop() && $rating.length>0) {
+        let x = event.clientX-$rating.offset().left,
+            w = $rating.width(),
+            value = x/w*5;
+        $stars.each(function(index){
+          if(value>index) {
+            $(this).addClass('active');
+          } else {
+            $(this).removeClass('active');
+          }
+        })
+      }
+      if(event.type=='mouseleave' && device.desktop() && $rating.length>0) {
+        let count = $input.val();
+        if(count>0) {
+          $stars.each(function(index){
+            if(index<count) {
+              $(this).addClass('active');
+            } else {
+              $(this).removeClass('active');
+            }
+          })
+        } else {
+          $stars.removeClass('active');
+        }
+      }
+    }
+  })
 }

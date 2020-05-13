@@ -1,0 +1,371 @@
+//section
+section.section
+  .section__head
+    .decorated
+      span.decoration
+      h1.section__head-title Комментарии
+      span.decoration
+  .container
+    .product-item-detail-tab-content(data-entity='tab-container', data-value='comments')
+      #soc_comments_div_13113.bx_soc_comments_div.bx_important.bx_blue
+        #soc_comments_13113.bx-catalog-tab-section-container
+          .bx-catalog-tab-body-container
+            .bx-catalog-tab-container
+              #soc_comments_13113BLOG_cont
+                #bx-cat-soc-comments-blg_13113
+                  #comp_a697cd740742a257dac9496a2493c2c3
+                    #blg-comment-4.blog-comments
+                      a(name='comments')
+                      #form_comment_(style='display:none;')
+                        #form_c_del(style='display:none;')
+                          .blog-comment-form
+                      .mb-20
+                        .row
+                          .col-xl-auto
+                            a(href="javascript:void(0);").button.button_style4.small
+                              i.far.fa-comment
+                              | Добавить комментарий
+                      a(name='0')
+                        #err_comment_0
+                          .feed-add-error
+                            .blog-errors.blog-note-box.blog-note-error
+                              #blg-com-err.blog-error-text Вы должны ввести текст сообщения
+                        #form_comment_0
+                        #new_comment_cont_0
+                        #new_comment_0(style='display:none;')
+                        // placeholder for past editor
+                        #form_comment_0
+                        .blog-comment-nav
+                          | Страницы: 
+                          a#blog-comment-nav-t1.blog-comment-nav-item.blog-comment-nav-item-sel(href='/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1#comments', onclick="return bcNav('1', this)") 1
+                          a#blog-comment-nav-t2.blog-comment-nav-item(href='/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?pagen=2&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1#comments', onclick="return bcNav('2', this)") 2
+                        #record-BLOG_4-0-placeholder.blog-comment-edit.feed-com-add-block.blog-post-edit(style='display: block;')
+                          form#POST_BLOG_COMMENT_FORM(method='POST', name='form_comment', action='/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/bitrix/blog.post.comment/adapt/ajax.php', style='display: block;')
+                            input#parentId(type='hidden', name='parentId', value='0')
+                            input#edit_id(type='hidden', name='edit_id', value='0')
+                            input#act(type='hidden', name='act', value='add')
+                            input(type='hidden', name='post', value='Y')
+                            input(type='hidden', name='IBLOCK_ID', value='7')
+                            input(type='hidden', name='ELEMENT_ID', value='13113')
+                            input(type='hidden', name='SITE_ID', value='s1')
+                            input#sessid(type='hidden', name='sessid', value='e9a6d4246589748d86ead9c0978b23b8')
+                            .blog-comment-fields
+                              .js-rating
+                                label.js-rating__label Оценка:
+                                ul.js-rating__list
+                                  li.js-rating__item
+                                    a(href="javascript:void(0);" data-index='1').js-rating__star
+                                      i.fas.fa-star
+                                  li.js-rating__item
+                                    a(href="javascript:void(0);" data-index='2').js-rating__star
+                                      i.fas.fa-star
+                                  li.js-rating__item
+                                    a(href="javascript:void(0);" data-index='3').js-rating__star
+                                      i.fas.fa-star
+                                  li.js-rating__item
+                                    a(href="javascript:void(0);" data-index='4').js-rating__star
+                                      i.fas.fa-star
+                                  li.js-rating__item
+                                    a(href="javascript:void(0);" data-index='5').js-rating__star
+                                      i.fas.fa-star
+                                input(type='text', name='RATING' hidden)
+                              #divPOST_COMMENT_MESSAGE.feed-add-post(style='')
+                                .feed-add-post-dnd
+                                  .feed-add-post-dnd-inner
+                                    span.feed-add-post-dnd-icon
+                                    span.feed-add-post-dnd-text
+                                      | Загрузить файл или картинку
+                                      span Перетащить с помощью Drag'n'drop
+                                .feed-add-post-dnd-notice
+                                  .feed-add-post-dnd-inner
+                                    span.feed-add-post-dnd-icon
+                                    span.feed-add-post-dnd-text Перетащите файлы
+                                .feed-add-post-form.feed-add-post-edit-form
+                                  .feed-add-post-text
+                                    #bx-html-editor-POST_COMMENT_MESSAGE.bx-html-editor(style='width: 100%; height: 200px; min-width: 350px; min-height: 100px;')
+                                      #bx-html-editor-tlbr-cnt-POST_COMMENT_MESSAGE.bxhtmled-toolbar-cnt(style='opacity: inherit; width: 100%;')
+                                        #bx-html-editor-tlbr-POST_COMMENT_MESSAGE.bxhtmled-toolbar
+                                          span.bxhtmled-top-bar-left-wrap(style='display: none;')
+                                          span.bxhtmled-top-bar-wrap(style='')
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-bold(title='Полужирный', data-bx-type='action', data-bx-action='bold')
+                                              i
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-italic(title='Курсив', data-bx-type='action', data-bx-action='italic')
+                                              i
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-underline(title='Подчеркнутый', data-bx-type='action', data-bx-action='underline')
+                                              i
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-remove-format(title='Удалить форматирование', data-bx-type='action', data-bx-action='removeFormat')
+                                              i
+                                            span.bxhtmled-top-bar-separator
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-code(title='Оформление текста в виде кода', data-bx-type='action', data-bx-action='code')
+                                              i
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-quote(title='Оформление текста в виде цитаты', data-bx-type='action', data-bx-action='quote')
+                                              i
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-smile(title='Смайлы')
+                                              i
+                                            span.bxhtmled-top-bar-separator
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-fullscreen(title='Развернуть на весь экран', data-bx-type='action', data-bx-action='fullscreen')
+                                              i
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-bbcode(title='Режим BB-Code')
+                                              i
+                                            span.bxhtmled-top-bar-btn.bxhtmled-button-more(title='Еще...', style='display: none;')
+                                              i
+                                          span.bxhtmled-top-bar-right-wrap(style='display: none;')
+                                          span.bxhtmled-top-bar-hidden-wrap
+                                      #bx-html-editor-search-cnt-POST_COMMENT_MESSAGE.bxhtmled-search-cnt(style='display: none;')
+                                      #bx-html-editor-area-cnt-POST_COMMENT_MESSAGE.bxhtmled-area-cnt(style='top: 34px; width: 1337px; height: 166px;')
+                                        #bx-html-editor-iframe-cnt-POST_COMMENT_MESSAGE.bxhtmled-iframe-cnt(style='width: 1334px; height: 166px; top: 0px; left: 0px;')
+                                          iframe.bx-editor-iframe(width='0', height='0', style='width: 100%; height: 100%;')
+                                        #bx-html-editor-ta-cnt-POST_COMMENT_MESSAGE.bxhtmled-textarea-cnt(style='display: none; width: 1334px; height: 166px; top: 0px; left: 0px;')
+                                          textarea.bxhtmled-textarea
+                                        #bx-html-editor-res-over-POST_COMMENT_MESSAGE.bxhtmled-resizer-overlay
+                                        #bx-html-editor-split-resizer-POST_COMMENT_MESSAGE.bxhtmled-split-resizer-hor(style='display: none;')
+                                      #bx-html-editor-nav-cnt-POST_COMMENT_MESSAGE.bxhtmled-nav-cnt(style='display: none;')
+                                      #bx-html-editor-tskbr-cnt-POST_COMMENT_MESSAGE.bxhtmled-taskbar-cnt.bxhtmled-taskbar-hidden(style='display: none; height: 166px; width: 0px;')
+                                        #bx-html-editor-tskbr-top-POST_COMMENT_MESSAGE.bxhtmled-taskbar-top-cnt
+                                        #bx-html-editor-tskbr-res-POST_COMMENT_MESSAGE.bxhtmled-taskbar-resizer
+                                          .bxhtmled-right-side-split-border
+                                            .bxhtmled-right-side-split-btn(data-bx-tsk-split-but='Y')
+                                        #bxhed-tskbr-search-nothing-POST_COMMENT_MESSAGE.bxhtmled-taskbar-search-nothing Ничего не найдено
+                                        #bxhed-tskbr-search-cnt-POST_COMMENT_MESSAGE.bxhtmled-taskbar-search-cont(data-bx-type='taskbar_search')
+                                          #bxhed-tskbr-search-ali-POST_COMMENT_MESSAGE.bxhtmled-search-alignment
+                                            input#bxhed-tskbr-search-inp-POST_COMMENT_MESSAGE.bxhtmled-search-inp(type='text', placeholder='Поиск...')
+                                          .bxhtmled-search-cancel(data-bx-type='taskbar_search_cancel', title='Отменить фильтрацию')
+                                      #bx-html-editor-file-dialogs-POST_COMMENT_MESSAGE(style='display: none;')
+                                      input#bxed_POST_COMMENT_MESSAGE(type='hidden', name='comment', value='')
+                                    div(style='display:none;')
+                                      input(type='text', tabindex='10', onfocus="LHEPostForm.getEditor('POST_COMMENT_MESSAGE').Focus()", name='hidden_focus')
+                                  #post-buttons-bottom.feed-add-post-form-but-wrap
+                                #lhe_buttons_POST_BLOG_COMMENT_FORM.feed-add-post-buttons
+                                  button#lhe_button_submit_POST_BLOG_COMMENT_FORM.ui-btn.ui-btn-sm.ui-btn-primary Отправить
+                                  button#lhe_button_cancel_POST_BLOG_COMMENT_FORM.ui-btn.ui-btn-sm.ui-btn-link Отменить
+                              #nocommentreason(style='display:none;') Пользователям запрещена вставка ссылок.
+                              .blog-comment-buttons.row
+                                .col-xl-auto
+                                  label.button.button_style4.small
+                                    i.fas.fa-share-square
+                                    | Добавить комментарий
+                                    input#post-button(tabindex='10', value='Отправить', type='button', name='sub-post', onclick='submitCommentNew()' hidden)
+                            input#upload-cid(type='hidden', name='blog_upload_cid', value='')
+                            input(name='ENTITY_XML_ID', type='hidden', value='BLOG_4')
+                            input(name='ENTITY_TYPE', type='hidden', value='BG')
+                            input(name='ENTITY_ID', type='hidden', value='4')
+                            input(name='comment_post_id', type='hidden', value='4')
+                            input(name='logId', type='hidden', value='')
+                      a(name='9')
+                      .blog-comment(style='padding-left:0em;')
+                        #blg-comment-9
+                          .blog-comment-cont.blog-comment-user-391.blog-comment-author
+                            .blog-comment-cont-white
+                              .blog-comment-info
+                                .blog-author Админ Админов
+                                .blog-comment-date 12.05.2020 21:31:35
+                                .js-rating.js-rating_readonly
+                                  ul.js-rating__list
+                                    li.js-rating__item
+                                      .js-rating__star.active
+                                        i.fas.fa-star
+                                    li.js-rating__item
+                                      .js-rating__star.active
+                                        i.fas.fa-star
+                                    li.js-rating__item
+                                      .js-rating__star.active
+                                        i.fas.fa-star
+                                    li.js-rating__item
+                                     .js-rating__star
+                                        i.fas.fa-star
+                                    li.js-rating__item
+                                      .js-rating__star
+                                        i.fas.fa-star
+                              .blog-clear-float
+                              .blog-comment-content
+                                | Рейтинг комментария:  ---- 9----												апрапрапрапрапр												
+                                .blog-comment-meta
+                                  span.blog-comment-answer
+                                    a(href='javascript:void(0)', onclick="return replyCommentNew('9', '4')") Ответить
+                                  span.blog-vert-separator
+                                  span.blog-vert-separator
+                                  span.blog-comment-edit
+                                    a(href='javascript:void(0)', onclick="return editCommentNew('9', 4)") Редактировать
+                                  span.blog-vert-separator
+                                  span.blog-comment-show
+                                    a(href='javascript:void(0)', onclick="return hideShowComment('/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?hide_comment_id=9&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1&sessid=e9a6d4246589748d86ead9c0978b23b8&IBLOCK_ID=7&ELEMENT_ID=13113', '9');", title='Скрыть')
+                                      | Скрыть
+                                  span.blog-vert-separator
+                                  span.blog-comment-delete
+                                    a(href='javascript:void(0)', onclick="if(confirm('Вы уверены, что хотите удалить комментарий?')) deleteComment('/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?delete_comment_id=9&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1&sessid=e9a6d4246589748d86ead9c0978b23b8&IBLOCK_ID=7&ELEMENT_ID=13113', '9');", title='Удалить')
+                                      | Удалить
+                                  span.blog-vert-separator
+                                  span.blog-comment-delete.blog-comment-spam
+                                    a(href='/bitrix/admin/blog_comment.php?lang=ru&set_filter=Y&filter_author_id=391', title='Администрировать все комментарии пользователя') Спам?
+                          .blog-clear-float
+                        #err_comment_9
+                        #form_comment_9
+                        #new_comment_cont_9(style='padding-left:2.5em;')
+                        #new_comment_9(style='display:none;')
+                        // placeholder for past editor
+                        #record-BLOG_4-9-placeholder.blog-comment-edit.feed-com-add-block.blog-post-edit(style='display:none;')
+                      a(name='10')
+                      .blog-comment(style='padding-left:0em;')
+                        #blg-comment-10
+                          .blog-comment-cont.blog-comment-user-391.blog-comment-author
+                            .blog-comment-cont-white
+                              .blog-comment-info
+                                .blog-author Админ Админов
+                                .blog-comment-date 12.05.2020 21:32:05
+                              .blog-clear-float
+                              .blog-comment-content
+                                | Рейтинг комментария: 4 ---- 10----												вапвапвапвапвапвапвап												
+                                .blog-comment-meta
+                                  span.blog-comment-answer
+                                    a(href='javascript:void(0)', onclick="return replyCommentNew('10', '4')") Ответить
+                                  span.blog-vert-separator
+                                  span.blog-vert-separator
+                                  span.blog-comment-edit
+                                    a(href='javascript:void(0)', onclick="return editCommentNew('10', 4)") Редактировать
+                                  span.blog-vert-separator
+                                  span.blog-comment-show
+                                    a(href='javascript:void(0)', onclick="return hideShowComment('/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?hide_comment_id=10&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1&sessid=e9a6d4246589748d86ead9c0978b23b8&IBLOCK_ID=7&ELEMENT_ID=13113', '10');", title='Скрыть')
+                                      | Скрыть
+                                  span.blog-vert-separator
+                                  span.blog-comment-delete
+                                    a(href='javascript:void(0)', onclick="if(confirm('Вы уверены, что хотите удалить комментарий?')) deleteComment('/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?delete_comment_id=10&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1&sessid=e9a6d4246589748d86ead9c0978b23b8&IBLOCK_ID=7&ELEMENT_ID=13113', '10');", title='Удалить')
+                                      | Удалить
+                                  span.blog-vert-separator
+                                  span.blog-comment-delete.blog-comment-spam
+                                    a(href='/bitrix/admin/blog_comment.php?lang=ru&set_filter=Y&filter_author_id=391', title='Администрировать все комментарии пользователя') Спам?
+                          .blog-clear-float
+                        #err_comment_10
+                        #form_comment_10
+                        #new_comment_cont_10(style='padding-left:2.5em;')
+                        #new_comment_10(style='display:none;')
+                        // placeholder for past editor
+                        #record-BLOG_4-10-placeholder.blog-comment-edit.feed-com-add-block.blog-post-edit(style='display:none;')
+                      .blog-comment(style='padding-left:0em;')
+                        #blg-comment-11
+                          .blog-comment-cont.blog-comment-user-391.blog-comment-author
+                            .blog-comment-cont-white
+                              .blog-comment-info
+                                .blog-author Админ Админов
+                                .blog-comment-date 13.05.2020 16:49:56
+                              .blog-clear-float
+                              .blog-comment-content
+                                | Рейтинг комментария:  ---- 11----												Новый комент 
+                                b Болд 
+                                i
+                                  | Италик
+                                  br
+                                i
+                                  .blog-post-quote(title='Цитата')
+                                    table.blogquote
+                                      tbody
+                                        tr
+                                          td Цитата......
+                                b
+                                  .blog-post-quote(title='Цитата')
+                                    table.blogquote
+                                      tbody
+                                        tr
+                                          td
+                                            img.bx-smile(src='https://mybarbershop.ru/bitrix/images/main/smiles/2/bx_smile_facepalm.png', border='0', data-code=':facepalm:', data-definition='UHD', alt=':facepalm:', style='width:20px;height:20px;', title='Разочарование')
+                                            img.bx-smile(src='https://mybarbershop.ru/bitrix/images/main/smiles/2/bx_smile_idea.png', border='0', data-code=':idea:', data-definition='UHD', alt=':idea:', style='width:20px;height:20px;', title='Идея')
+                                .blog-comment-meta
+                                  span.blog-comment-answer
+                                    a(href='javascript:void(0)', onclick="return replyCommentNew('11', '4')") Ответить
+                                  span.blog-vert-separator
+                                  span.blog-vert-separator
+                                  span.blog-comment-edit
+                                    a(href='javascript:void(0)', onclick="return editCommentNew('11', 4)") Редактировать
+                                  span.blog-vert-separator
+                                  span.blog-comment-show
+                                    a(href='javascript:void(0)', onclick="return hideShowComment('/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?hide_comment_id=11&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1&sessid=e9a6d4246589748d86ead9c0978b23b8&IBLOCK_ID=7&ELEMENT_ID=13113', '11');", title='Скрыть')
+                                      | Скрыть
+                                  span.blog-vert-separator
+                                  span.blog-comment-delete
+                                    a(href='javascript:void(0)', onclick="if(confirm('Вы уверены, что хотите удалить комментарий?')) deleteComment('/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?delete_comment_id=11&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1&sessid=e9a6d4246589748d86ead9c0978b23b8&IBLOCK_ID=7&ELEMENT_ID=13113', '11');", title='Удалить')
+                                      | Удалить
+                                  span.blog-vert-separator
+                                  span.blog-comment-delete.blog-comment-spam
+                                    a(href='/bitrix/admin/blog_comment.php?lang=ru&set_filter=Y&filter_author_id=391', title='Администрировать все комментарии пользователя') Спам?
+                          .blog-clear-float
+                        #err_comment_11
+                        #form_comment_11
+                        #new_comment_cont_11(style='padding-left:2.5em;')
+                        #new_comment_11(style='display:none;')
+                        // placeholder for past editor
+                        #record-BLOG_4-11-placeholder.blog-comment-edit.feed-com-add-block.blog-post-edit(style='display:none;')
+                      .blog-comment(style='padding-left:0em;')
+                        #blg-comment-9
+                          .blog-textinfo.blog-note-box
+                            .blog-textinfo-text
+                              | Комментарий был удален
+                        #err_comment_9
+                        #form_comment_9
+                        #new_comment_cont_9(style='padding-left:2.5em;')
+                        #new_comment_9(style='display:none;')
+                        // placeholder for past editor
+                        #record-BLOG_4-9-placeholder.blog-comment-edit.feed-com-add-block.blog-post-edit(style='display:none;')
+                      .blog-comment(style='padding-left:0em;')
+                        #blg-comment-18
+                          .blog-comment-cont.blog-comment-user-391.blog-comment-author
+                            .blog-comment-cont-white
+                              .blog-comment-info
+                                .blog-author Админ Админов
+                                .blog-comment-date 13.05.2020 20:25:49
+                                .js-rating.js-rating_readonly
+                                  ul.js-rating__list
+                                    li.js-rating__item
+                                      .js-rating__star.active
+                                        i.fas.fa-star
+                                    li.js-rating__item
+                                      .js-rating__star.active
+                                        i.fas.fa-star
+                                    li.js-rating__item
+                                      .js-rating__star.active
+                                        i.fas.fa-star
+                                    li.js-rating__item
+                                     .js-rating__star
+                                        i.fas.fa-star
+                                    li.js-rating__item
+                                      .js-rating__star
+                                        i.fas.fa-star
+                              .blog-clear-float
+                              .blog-comment-content
+                                | Рейтинг комментария:  ---- 18----												
+                                .blog-post-quote(title='Цитата')
+                                  table.blogquote
+                                    tbody
+                                      tr
+                                        td
+                                          .blog-post-code(title='Код')
+                                            table.blogcode
+                                              tbody
+                                                tr
+                                                  td
+                                                    pre.
+                                                      \nfdgfdgdfg                                
+                                .blog-comment-meta
+                                  span.blog-comment-answer
+                                    a(href='javascript:void(0)', onclick="return replyCommentNew('18', '4')") Ответить
+                                  span.blog-vert-separator
+                                  span.blog-vert-separator
+                                  span.blog-comment-edit
+                                    a(href='javascript:void(0)', onclick="return editCommentNew('18', 4)") Редактировать
+                                  span.blog-vert-separator
+                                  span.blog-comment-show
+                                    a(href='javascript:void(0)', onclick="return hideShowComment('/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?hide_comment_id=18&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1&sessid=e9a6d4246589748d86ead9c0978b23b8&IBLOCK_ID=7&ELEMENT_ID=13113', '18');", title='Скрыть')
+                                      | Скрыть
+                                  span.blog-vert-separator
+                                  span.blog-comment-delete
+                                    a(href='javascript:void(0)', onclick="if(confirm('Вы уверены, что хотите удалить комментарий?')) deleteComment('/bitrix/templates/bbs_main/components/bitrix/catalog.comments/.default/ajax.php?delete_comment_id=18&IBLOCK_ID=7&ELEMENT_ID=13113&SITE_ID=s1&sessid=e9a6d4246589748d86ead9c0978b23b8&IBLOCK_ID=7&ELEMENT_ID=13113', '18');", title='Удалить')
+                                      | Удалить
+                                  span.blog-vert-separator
+                                  span.blog-comment-delete.blog-comment-spam
+                                    a(href='/bitrix/admin/blog_comment.php?lang=ru&set_filter=Y&filter_author_id=391', title='Администрировать все комментарии пользователя') Спам?
+                          .blog-clear-float
+                        #err_comment_18
+                        #form_comment_18
+                        #new_comment_cont_18(style='padding-left:2.5em;')
+                        #new_comment_18(style='display:none;')
+                        // placeholder for past editor
+                        #record-BLOG_4-18-placeholder.blog-comment-edit.feed-com-add-block.blog-post-edit(style='display:none;')
+
